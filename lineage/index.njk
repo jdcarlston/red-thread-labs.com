@@ -1,0 +1,32 @@
+---
+layout: layouts/base.njk
+title: Research Roots
+kicker: Lineage
+subtitle: The teachers, researchers and traditions woven into Practice Labs.
+description: The research and teachers behind Practice Labs, with links to the original studies.
+permalink: /lineage/
+---
+{% include "partials/page-header.njk" %}
+<main id="main" class="reading">
+  <div class="reading__inner">
+    <p class="lede">Practice Labs draws on more than a century of research into how people bond, change and grow. These pages credit the people whose work it builds on, explain what we take from each, and link straight to the original research so you can read it yourself.</p>
+    {%- for cluster in lineage.clusters | clustersWithEntries(lineageVisible) %}
+    <section class="cluster" id="{{ cluster.id }}" aria-labelledby="{{ cluster.id }}-title">
+      <h2 id="{{ cluster.id }}-title" class="cluster__title">{{ cluster.title }}</h2>
+      <p class="cluster__blurb">{{ cluster.blurb }}</p>
+      <ul class="entry-cards">
+        {%- for entry in lineageVisible | inCluster(cluster.id) %}
+        <li class="entry-card{% if entry.status != 'published' %} is-draft{% endif %}">
+          <a href="/lineage/{{ entry.slug }}/">
+            {%- if entry.status != "published" %}<span class="draft-badge">Draft · in review</span>{% endif %}
+            <h3>{{ entry.title }}</h3>
+            <p class="entry-card__people">{{ entry.people | safe }}</p>
+            <p class="entry-card__tagline">{{ entry.tagline | safe }}</p>
+          </a>
+        </li>
+        {%- endfor %}
+      </ul>
+    </section>
+    {%- endfor %}
+  </div>
+</main>

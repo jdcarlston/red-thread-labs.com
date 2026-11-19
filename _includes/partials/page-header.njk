@@ -1,0 +1,16 @@
+{#- Inner-page header: the roots photo toned to oxblood, faint threads in the menu bar, then the page title.
+    Set `kicker`, `title` and optional `subtitle` / `kickerLink` in the page.
+    The photo comes from `header` (image, position, zoom) if the page sets one, otherwise site.defaultHeader. -#}
+{%- set h = header or site.defaultHeader -%}
+<div class="page-head">
+  <img class="page-head__photo" src="{{ h.image | media }}" alt="" aria-hidden="true" style="object-position: {{ h.position or 'center' }}; transform: scale({{ h.zoom or 1 }}); transform-origin: {{ h.position or 'center' }}">
+  <div class="page-head__tint" aria-hidden="true"></div>
+  <div class="page-head__veil" aria-hidden="true"></div>
+  {% menuThreads %}
+  {% include "partials/header.njk" %}
+  <div class="page-head__title">
+    {%- if kicker %}<p class="kicker">{% if kickerLink %}<a href="{{ kickerLink }}">{{ kicker | safe }}</a>{% else %}{{ kicker | safe }}{% endif %}{% if kickerExtra %} · {{ kickerExtra | safe }}{% endif %}</p>{% endif %}
+    <h1>{{ heading or title }}</h1>
+    {%- if subtitle %}<p class="page-head__subtitle">{{ subtitle | safe }}</p>{% endif %}
+  </div>
+</div>

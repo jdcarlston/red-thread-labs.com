@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1932 1932" width="1932" height="1932">
+  <!-- Red Thread Labs mark, oxblood variant: reddish-black circle at 85%, faint coral edge, cream triangle -->
+  <circle cx="966" cy="994" r="882" fill="#4A1410" fill-opacity="0.85" stroke="#FF7777" stroke-opacity="0.35" stroke-width="14"/>
+  <polygon points="966,118 198,1435 1729,1435" fill="none" stroke="#E8E5E0" stroke-width="34" stroke-linejoin="miter"/>
+  <line x1="561" y1="1227" x2="1345" y2="1227" stroke="#6E6A65" stroke-width="6"/>
+  <polyline points="198,1435 561,1227 966,529 1345,1227 1729,1435" fill="none" stroke="#FF7777" stroke-width="15" stroke-linejoin="round"/>
+  <circle cx="966" cy="529" r="37" fill="#FF7777"/><circle cx="561" cy="1227" r="37" fill="#FF7777"/><circle cx="1345" cy="1227" r="37" fill="#FF7777"/>
+  <circle cx="966" cy="118" r="54" fill="#FFFFFF" stroke="#FF7777" stroke-width="15"/><circle cx="198" cy="1435" r="54" fill="#FFFFFF" stroke="#FF7777" stroke-width="15"/><circle cx="1729" cy="1435" r="54" fill="#FFFFFF" stroke="#FF7777" stroke-width="15"/>
+</svg>

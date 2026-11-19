@@ -1,0 +1,63 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: lineageVisible
+  size: 1
+  alias: entry
+permalink: "/lineage/{{ entry.slug }}/"
+eleventyComputed:
+  title: "{{ entry.title }}"
+  description: "{{ entry.title }}: part of Research Roots, the lineage behind Practice Labs."
+kicker: Research Roots
+kickerLink: /lineage/
+---
+{%- set cluster = lineage.clusters | clusterById(entry.cluster) -%}
+{%- set kickerExtra = cluster.title -%}
+{%- set header = entry.header or cluster.header -%}
+{%- set subtitle = entry.people + " · " + entry.field -%}
+{% include "partials/page-header.njk" %}
+<main id="main" class="reading">
+  <article class="reading__inner entry">
+    {%- if entry.status != "published" %}<p class="draft-banner">Draft · in review. This page is only visible while previewing; it won’t be published until its status is set to “published”.</p>{% endif %}
+    <p class="entry__tagline">{{ entry.tagline | safe }}</p>
+
+    <section class="entry__section entry__who">
+      <h2 class="label">Who they were</h2>
+      {%- for p in entry.who %}<p>{{ p | safe }}</p>{% endfor %}
+    </section>
+
+    <section class="entry__section">
+      <h2 class="label">Key concepts</h2>
+      <ul class="concepts">
+        {%- for c in entry.concepts %}<li class="concept"><h3>{{ c.term }}</h3><p>{{ c.def | safe }}</p></li>{% endfor %}
+      </ul>
+    </section>
+
+    <section class="entry__practice">
+      <h2 class="label label--light">In the Practice Labs</h2>
+      <p>{{ entry.inPractice | safe }}</p>
+    </section>
+
+    <section class="entry__section entry__sources">
+      <h2 class="label">Sources</h2>
+      <ul class="sources">
+        {%- for s in entry.sources %}
+        <li>{{ s.cite | safe }}{% if s.url %} <a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.label or "Read the source" }} <span aria-hidden="true">↗</span><span class="sr-only">(opens in a new tab)</span></a>{% endif %}</li>
+        {%- endfor %}
+      </ul>
+      {%- set relatedShown = [] -%}
+      {%- for slug in entry.related %}{% set r = lineageVisible | entryBySlug(slug) %}{% if r %}{% set relatedShown = (relatedShown.push(r), relatedShown) %}{% endif %}{% endfor %}
+      {%- if relatedShown.length %}
+      <p class="related">Related: {% for r in relatedShown %}<a href="/lineage/{{ r.slug }}/">{{ r.title }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
+      {%- endif %}
+    </section>
+
+    {%- if entry.heartLine %}<p class="heart-line">{{ entry.heartLine | safe }}</p>{% endif %}
+
+    <nav class="entry__pager" aria-label="Research Roots pages">
+      <a href="/lineage/">← Research Roots</a>
+      {%- set nextEntry = lineageVisible[pagination.pageNumber + 1] %}
+      {%- if nextEntry %}<a href="/lineage/{{ nextEntry.slug }}/">Next: {{ nextEntry.title }} →</a>{% endif %}
+    </nav>
+  </article>
+</main>

@@ -1,0 +1,14 @@
+<footer class="site-footer">
+  <div class="site-footer__brand">
+    {% logo "oxblood", 44 %}
+    <p class="site-footer__line">Being Cherished. Choosing Real Love.</p>
+  </div>
+  {%- set iconsClass = "site-footer__icons" %}
+  {% include "partials/contact-icons.njk" %}
+  <div class="site-footer__contact">
+    <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+    {%- if site.phone %}<a href="tel:{{ site.phone | replace(' ', '') }}">{{ site.phone }}</a>{% endif %}
+    <span>{{ site.mailingAddress }}</span>
+    <span>Red Thread Labs LLC · © {{ year }}</span>
+  </div>
+</footer>

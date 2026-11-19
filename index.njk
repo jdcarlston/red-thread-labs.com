@@ -1,0 +1,21 @@
+---
+layout: layouts/base.njk
+title: Red Thread Labs
+headerStyle: home
+bodyClass: page-home
+---
+<div class="hero">
+  {#- Background: the Windward Weave turned on its side, under an oxblood veil. -#}
+  <img class="hero__photo" src="{{ 'img/hero-weave-sideways.jpg' | media }}" alt="" aria-hidden="true">
+  <div class="hero__veil" aria-hidden="true"></div>
+  {% include "partials/header.njk" %}
+  <main id="main" class="hero__stage">
+    <div class="hero__art">{% heroArtwork %}</div>
+    <div class="hero__text">
+      <h1 class="hero__title">{{ site.name }}</h1>
+      <p class="hero__tagline">{{ site.tagline }}</p>
+    </div>
+  </main>
+  {%- set iconsClass = "hero__icons" %}
+  {% include "partials/contact-icons.njk" %}
+</div>

@@ -1,0 +1,46 @@
+---
+layout: layouts/base.njk
+title: Contact
+kicker: Contact
+subtitle: Questions about a lab, coaching, or bringing Practice Labs to your team. Send a note and we’ll write back.
+description: Get in touch with Red Thread Labs.
+permalink: /contact/
+---
+{#- This form is handled by Netlify Forms. Each message is emailed to the address below once
+    "Form notifications" are turned on in Netlify (Site configuration → Forms → Form notifications). -#}
+{% include "partials/page-header.njk" %}
+<main id="main" class="reading">
+  <div class="reading__inner contact">
+    <div class="contact__intro">
+      <p class="lede">Messages from this form come straight to <a href="mailto:{{ site.email }}">{{ site.email }}</a>. You can also email that address directly{% if site.phone %} or call <a href="tel:{{ site.phone | replace(' ', '') }}">{{ site.phone }}</a>{% endif %}.</p>
+      <p class="lede">Ready to talk? <a href="{{ site.bookingUrl }}" target="_blank" rel="noopener">Book a free conversation <span aria-hidden="true">↗</span><span class="sr-only">(opens Calendly in a new tab)</span></a>.</p>
+    </div>
+    <form class="contact-form" name="contact" method="POST" action="/contact/thanks/" data-netlify="true" netlify-honeypot="company">
+      <input type="hidden" name="form-name" value="contact">
+      <p class="sr-only"><label>Leave this empty: <input name="company" tabindex="-1" autocomplete="off"></label></p>
+      <div class="field">
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="email">Your email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label for="topic">What’s it about?</label>
+        <select id="topic" name="topic">
+          <option>Practice Labs and events</option>
+          <option>Coaching</option>
+          <option>Retreats and gatherings</option>
+          <option>Bringing Practice Labs to a team</option>
+          <option>Something else</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="7" required></textarea>
+      </div>
+      <button class="btn btn--send" type="submit">Send message</button>
+    </form>
+  </div>
+</main>

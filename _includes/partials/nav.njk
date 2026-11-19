@@ -1,0 +1,20 @@
+{#- Menu items, with the Lineage submenu filled from the published lineage clusters. -#}
+{%- macro navItems(site, lineage, lineageVisible, page) -%}
+{%- for item in site.nav -%}
+  {%- set children = item.children -%}
+  {%- if item.fromLineage -%}
+    {%- set children = [{ label: "Research Roots", href: "/lineage/" }] -%}
+    {%- for c in lineage.clusters | clustersWithEntries(lineageVisible) -%}
+      {%- set children = (children.push({ label: c.title, href: "/lineage/#" + c.id }), children) -%}
+    {%- endfor -%}
+  {%- endif -%}
+  <li class="{{ 'has-sub' if children }}">
+    <a href="{{ item.href }}"{% if page.url.startsWith(item.href) and item.href != '#' %} aria-current="page"{% endif %}>{{ item.label }}</a>
+    {%- if children %}
+    <ul class="sub">
+      {%- for child in children %}<li><a href="{{ child.href }}">{{ child.label }}</a></li>{% endfor %}
+    </ul>
+    {%- endif %}
+  </li>
+{%- endfor -%}
+{%- endmacro -%}
