@@ -13,7 +13,7 @@ module.exports = {
   // (npm run media:upload), set useBucket to true and every page loads them from there instead.
   media: {
     base: "https://media.red-thread-labs.com",
-    useBucket: false,
+    useBucket: true,
   },
 
   // The photo behind an inner page's header, unless the page or its lineage cluster sets its own.

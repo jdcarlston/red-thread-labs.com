@@ -4,7 +4,7 @@
   "scripts": {
     "build": "eleventy",
     "start": "eleventy --serve",
-    "media:upload": "rclone copy media r2:red-thread-labs-media --exclude .DS_Store --progress"
+    "media:upload": "rclone copy media r2-rtl:red-thread-labs-media --exclude .DS_Store --progress"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.8"
