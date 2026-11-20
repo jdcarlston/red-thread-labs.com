@@ -91,14 +91,19 @@ photos load from your Mac, so you can see them before uploading.
 
 ## Research Roots (the lineage pages)
 
-Each entry is its own file in `research-roots/`, laid out like `research-roots/attachment-theory.js`.
+Each entry is its own plain-text file in `research-roots/`, like `research-roots/attachment-theory.md`:
+labeled fields between the `---` lines at the top. Text uses Markdown: `*italic*`, `**bold**`,
+`[link text](https://doi.org/...)`.
 
-- **Add an entry:** `npm run new:lineage -- <slug> <cluster>`, for example
-  `npm run new:lineage -- sue-johnson attachment`. This copies `research-roots/_template.js`
-  to `research-roots/sue-johnson.js` with the slug, cluster and order filled in. Replace the
-  placeholder text; every field is explained in the template.
-- **Clusters** (and their order on `/lineage/`) are in `research-roots/clusters.js`.
+- **Edit in the site editor:** while previewing, open http://localhost:8080/admin/ in Chrome or Edge,
+  choose "Work with Local Repository" and pick this folder. Save, then commit and push as usual.
+- **Or edit the file** in any text editor.
+- **Add an entry:** "New Research Roots page" in the editor, or `npm run new:lineage -- <slug> <cluster>`,
+  for example `npm run new:lineage -- sue-johnson attachment`. That copies
+  `scripts/research-roots-template.md` to `research-roots/sue-johnson.md` with the slug, cluster and
+  order filled in; every field is explained in the template.
+- **Clusters** (and their order on `/lineage/`) are in `research-roots/clusters.yml`.
 - **Order within a cluster:** the `order` number, lowest first (10, 20, 30...).
-- **Publish:** change `status: "review"` to `status: "published"`. Review entries only show
+- **Publish:** change `status: review` to `status: published`. Review entries only show
   while previewing, with a DRAFT ribbon.
 - Edits to these files show up in the preview without restarting it.

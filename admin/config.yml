@@ -1,0 +1,125 @@
+# The site editor at /admin (Sveltia CMS).
+#
+# While previewing (npm start): open http://localhost:8080/admin/ in Chrome or Edge,
+# choose "Work with Local Repository" and pick this project's folder. Saving writes the
+# files on your Mac; then commit and push as usual. The editor never runs git itself.
+#
+# On the live site: "Sign In Using Access Token" with a GitHub personal access token.
+#
+# What's editable here: Research Roots pages and Markdown blog posts. The other pages are
+# hand-built HTML (.njk) and are edited in a text editor.
+
+backend:
+  name: github
+  repo: jdcarlston/red-thread-labs.com
+  branch: main
+
+media_folder: media/img
+public_folder: /img
+
+collections:
+  # ---------- Research Roots: one file per page in research-roots/ ----------
+  - name: research-roots
+    label: Research Roots
+    label_singular: Research Roots page
+    description: The lineage behind Practice Labs. Text fields use Markdown, *italic*, **bold**, [link text](https://doi.org/...). New pages start as drafts (status "review"), visible only while previewing.
+    folder: research-roots
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    slug: "{{fields.slug}}"
+    summary: "{{title}} · {{people}}  ({{status}})"
+    sortable_fields: [title, cluster, order, status]
+    view_groups:
+      - { label: Cluster, field: cluster }
+      - { label: Status, field: status }
+    fields:
+      - { name: slug, label: Page address, widget: string, pattern: ['^[a-z0-9]+(-[a-z0-9]+)*$', 'Lowercase words joined by hyphens, like sue-johnson'], hint: "The page appears at /lineage/<this>/. Don't change it once a page is published." }
+      - { name: status, label: Status, widget: select, default: review, options: [ { label: "Review (draft, preview only)", value: review }, { label: "Published (live)", value: published } ] }
+      - name: cluster
+        label: Cluster
+        widget: select
+        options:
+          - { label: "Attachment & bonding", value: attachment }
+          - { label: "Relationships, desire & connection", value: relationships }
+          - { label: "Nervous system & neuroscience", value: nervous-system }
+          - { label: "Therapy & emotional skill", value: therapy }
+          - { label: "NLP & change work", value: change-work }
+          - { label: "Perception & the predictive brain", value: perception }
+          - { label: "Systems, logic & mind", value: systems }
+          - { label: "Philosophy of love & the person", value: philosophy }
+          - { label: "Contemplative & wisdom traditions", value: contemplative }
+          - { label: "Myth & story", value: mythopoetic }
+          - { label: "Facilitation, strategy & original work", value: facilitation }
+        hint: Clusters themselves are listed in research-roots/clusters.yml. A new one must be added there and here.
+      - { name: order, label: Order in cluster, widget: number, value_type: int, default: 100, hint: "Lower comes first: 10, 20, 30…" }
+      - { name: title, label: Title, widget: string, hint: "What the page is called, e.g. Attachment Theory" }
+      - { name: people, label: People, widget: string, hint: "Shown under the title, e.g. John Bowlby (1907–1990) & Mary Ainsworth" }
+      - { name: field, label: Field of study, widget: string }
+      - { name: tagline, label: Tagline, widget: string, hint: "One line, in plain words, of what this research means for a person." }
+      - name: header
+        label: Header photo (optional)
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - { name: image, label: Image, widget: string, hint: "e.g. img/heart.jpg (the file goes in media/img/)" }
+          - { name: position, label: Position, widget: string, default: "50% 50%" }
+          - { name: zoom, label: Zoom, widget: number, value_type: float, default: 1 }
+      - { name: who, label: Who they were, widget: list, field: { name: paragraph, label: Paragraph, widget: text }, hint: "Two short paragraphs: what they found, and why it matters." }
+      - name: concepts
+        label: Key concepts
+        widget: list
+        summary: "{{fields.term}}"
+        fields:
+          - { name: term, label: Term, widget: string }
+          - { name: def, label: Definition, widget: text }
+      - { name: context, label: Context (the oxblood panel), widget: text, hint: "How this connects to the work. Be honest about the evidence." }
+      - name: exercise
+        label: In the Practice Labs (exercise)
+        widget: object
+        fields:
+          - { name: title, label: Exercise name, widget: string }
+          - { name: time, label: Time, widget: string, hint: "e.g. About 15 minutes" }
+          - { name: steps, label: Steps, widget: list, field: { name: step, label: Step, widget: text } }
+          - { name: why, label: Why this works, widget: text }
+      - name: sources
+        label: Sources
+        widget: list
+        summary: "{{fields.cite}}"
+        fields:
+          - { name: cite, label: Citation, widget: text }
+          - { name: url, label: Link, widget: string, required: false, hint: "A DOI link (https://doi.org/...) where one exists" }
+          - { name: label, label: Link text, widget: select, required: false, options: [Read the study, View the book, Find the book, Visit the site, Read the book, Read the advisory] }
+      - { name: related, label: Related pages, widget: relation, collection: research-roots, value_field: slug, search_fields: [title, people], display_fields: [title], multiple: true, required: false }
+      - { name: heartLine, label: Heart-line (closing line), widget: string }
+
+  # ---------- Blog: Markdown posts in blog/posts/ ----------
+  # (Posts written as .njk, like Agape, are edited in a text editor.)
+  - name: blog
+    label: Blog posts
+    label_singular: Blog post
+    folder: blog/posts
+    extension: md
+    format: frontmatter
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} · {{date | date('YYYY-MM-DD')}}"
+    sortable_fields: [date, title]
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: dek, label: Dek (one-line summary), widget: string }
+      - { name: date, label: Date, widget: datetime, date_format: YYYY-MM-DD, time_format: false, picker_utc: true, format: YYYY-MM-DD }
+      - { name: permalink, label: Page address, widget: string, hint: "e.g. /blog/my-post-title/" }
+      - { name: medium_url, label: Original on Medium, widget: string, required: false }
+      - name: header
+        label: Header photo (optional)
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - { name: image, label: Image, widget: string }
+          - { name: position, label: Position, widget: string, default: "50% 50%" }
+          - { name: zoom, label: Zoom, widget: number, value_type: float, default: 1 }
+      - { name: body, label: Post, widget: markdown }

@@ -27,6 +27,8 @@ module.exports = function (eleventyConfig) {
   // Research Roots entries live in research-roots/ (read by _data/lineage.js); rebuild when they change.
   eleventyConfig.addWatchTarget("./research-roots/");
   eleventyConfig.addPassthroughCopy("assets");
+  // The site editor (Sveltia CMS) at /admin. Its settings are in admin/config.yml.
+  eleventyConfig.addPassthroughCopy("admin");
   // Photos ship with the site only while the media bucket is off; once it's on they load from Cloudflare.
   if (!useBucket) eleventyConfig.addPassthroughCopy("media");
   // Files that must keep their old addresses: images already sent in emails and shared links,
