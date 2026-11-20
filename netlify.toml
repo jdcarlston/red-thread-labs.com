@@ -1,0 +1,42 @@
+# Red Thread Labs — Netlify configuration
+#
+# Netlify runs `npm run build` (Eleventy), which writes the finished site to _site/.
+# The serverless functions live in netlify/functions and answer at /api/... — each
+# function declares its own route with `export const config = { path: ... }`.
+# Their keys (Square, Kit, Resend) live in Netlify → Site configuration →
+# Environment variables, never in this repo.
+
+[build]
+  command = "npm run build"
+  publish = "_site"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# The Love Lab event page moved to /love. Keep the old address (and any old
+# QR codes or shared links) working.
+[[redirects]]
+  from = "/cherished-and-chosen.html"
+  to = "/love/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cherished-and-chosen"
+  to = "/love/"
+  status = 301
+  force = true
+
+# A stray copy of the Date Ability Lab page used to live in the images folder.
+[[redirects]]
+  from = "/img/date-ability-lab.html"
+  to = "/love/"
+  status = 301
+  force = true

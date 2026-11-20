@@ -64,3 +64,41 @@ The form on `/contact/` uses Netlify Forms. After the site is on Netlify, turn o
 The live site still runs from the old files in the shared drive (`!Red Thread Labs/04 Website`).
 Don't link this repo to Netlify until the pages that need to stay live (blog posts such as
 `blog/essay-agape.html`, events, offers) have been moved over, or they'll disappear.
+
+## Pages moved from the old site
+
+| Address | File | Notes |
+|---|---|---|
+| `/level-up/` | `level-up/index.njk` | The old home page (Level-Up Sessions) |
+| `/love/` | `love/index.njk` | The Love Lab event page |
+| `/blog/`, `/blog/essay-agape.html` | `blog/index.njk`, `blog/posts/agape.njk` | Add a post: copy `agape.njk` in `blog/posts/` and change the front matter |
+| `/date-ability-lab-application-form.html` | `date-ability-lab-application-form.njk` | Now sends to the Netlify form `love-ability-application` |
+
+**Private pages** live in `private/`, which git never sends to GitHub. They build in your
+preview on your Mac, but they are not on the live site. Share them another way when needed.
+
+**Shared pieces:** `partials/signup.njk` (mailing-list form, saved to Netlify and Kit), `partials/booking.njk`
+(consult / Level-Up / mail-list cards, links in `_data/booking.js`), `partials/blog-cta.njk`.
+
+**Server functions** live in `netlify/functions/` (checkout, seats, Square webhook, subscribe) and answer at `/api/...`.
+Their keys are environment variables in Netlify, never in this repo. The reminder scripts are in `netlify/scripts/`.
+
+**Old addresses kept alive:** `legacy/` is copied to the top of the site, so `legacy/img/rtl-email-logo.png`
+is still at `/img/rtl-email-logo.png` for emails already sent. Redirects are in `netlify.toml`.
+
+**New photos:** put them in `media/img/`, then run `npm run media:upload`. While previewing (`npm start`)
+photos load from your Mac, so you can see them before uploading.
+
+## Research Roots (the lineage pages)
+
+Each entry is its own file in `research-roots/`, laid out like `research-roots/attachment-theory.js`.
+
+- **Add an entry:** `npm run new:lineage -- <slug> <cluster>`, for example
+  `npm run new:lineage -- sue-johnson attachment`. This copies `research-roots/_template.js`
+  to `research-roots/sue-johnson.js` with the slug, cluster and order filled in. Replace the
+  placeholder text; every field is explained in the template.
+- **Clusters** (and their order on `/lineage/`) are in `research-roots/clusters.js`.
+- **Order within a cluster:** the `order` number, lowest first (10, 20, 30...).
+- **Publish:** change `status: "review"` to `status: "published"`. Review entries only show
+  while previewing, with a DRAFT ribbon.
+- Edits to these files show up in the preview without restarting it.

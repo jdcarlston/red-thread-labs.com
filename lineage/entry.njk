@@ -13,7 +13,7 @@ kickerLink: /lineage/
 ---
 {%- set cluster = lineage.clusters | clusterById(entry.cluster) -%}
 {%- set kickerExtra = cluster.title -%}
-{%- set header = entry.header or cluster.header -%}
+{%- set header = entry.header or cluster.header or site.lineageHeader -%}
 {%- set subtitle = entry.people + " · " + entry.field -%}
 {% include "partials/page-header.njk" %}
 <main id="main" class="reading">
@@ -33,9 +33,14 @@ kickerLink: /lineage/
       </ul>
     </section>
 
-    <section class="entry__practice">
-      <h2 class="label label--light">In the Practice Labs</h2>
-      <p>{{ entry.inPractice | safe }}</p>
+    {#- Left column: Context, then Sources. Right column: In the Practice Labs.
+        Side by side on wide screens, stacked on phones. #}
+    <div class="entry__pair">
+    <div class="entry__side">
+    {#- Context: how this research connects to the work (entry.context), on the oxblood background. #}
+    <section class="entry__context">
+      <h2 class="label label--light">Context</h2>
+      <p>{{ entry.context | safe }}</p>
     </section>
 
     <section class="entry__section entry__sources">
@@ -45,14 +50,33 @@ kickerLink: /lineage/
         <li>{{ s.cite | safe }}{% if s.url %} <a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.label or "Read the source" }} <span aria-hidden="true">↗</span><span class="sr-only">(opens in a new tab)</span></a>{% endif %}</li>
         {%- endfor %}
       </ul>
-      {%- set relatedShown = [] -%}
+    </section>
+    </div>
+
+    {#- In the Practice Labs: a practical exercise adapted from the research's own methods (entry.exercise). #}
+    {%- if entry.exercise %}
+    <section class="entry__section exercise">
+      <h2 class="label">In the Practice Labs</h2>
+      <h3 class="exercise__title">{{ entry.exercise.title | safe }}</h3>
+      {%- if entry.exercise.time %}<p class="exercise__time">{{ entry.exercise.time }}</p>{% endif %}
+      <ol class="exercise__steps">
+        {%- for step in entry.exercise.steps %}<li>{{ step | safe }}</li>{% endfor %}
+      </ol>
+      {%- if entry.exercise.why %}<p class="exercise__why"><strong>Why this works:</strong> {{ entry.exercise.why | safe }}</p>{% endif %}
+      <p class="exercise__care">This is a practice, not therapy. Go at your own pace, and stop if it stirs up more than you want to hold right now. If it does, bring it to someone you trust, your therapist or coach, or <a href="/contact/">a conversation with us</a>.</p>
+    </section>
+    {%- endif %}
+    </div>
+
+
+    {%- if entry.heartLine %}<p class="heart-line">{{ entry.heartLine | safe }}</p>{% endif %}
+
+    {#- Related pages, under the heart-line. #}
+    {%- set relatedShown = [] -%}
       {%- for slug in entry.related %}{% set r = lineageVisible | entryBySlug(slug) %}{% if r %}{% set relatedShown = (relatedShown.push(r), relatedShown) %}{% endif %}{% endfor %}
       {%- if relatedShown.length %}
       <p class="related">Related: {% for r in relatedShown %}<a href="/lineage/{{ r.slug }}/">{{ r.title }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
       {%- endif %}
-    </section>
-
-    {%- if entry.heartLine %}<p class="heart-line">{{ entry.heartLine | safe }}</p>{% endif %}
 
     <nav class="entry__pager" aria-label="Research Roots pages">
       <a href="/lineage/">← Research Roots</a>

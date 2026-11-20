@@ -1,5 +1,8 @@
 node_modules/
 _site/
 .DS_Store
-rtl-site-update.tgz
-rtl-site.tgz
+lineage-src.tgz
+rtl-*.tgz
+
+# Pages and notes that must never be public. They build on your Mac only.
+private/

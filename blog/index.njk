@@ -1,0 +1,28 @@
+---
+layout: layouts/base.njk
+title: Blog
+kicker: Red Thread Labs
+heading: Blog
+subtitle: Essays by JD Carlston on love, desire, and how people change.
+description: Essays by JD Carlston on love, desire, and how people change.
+ogImage: /img/heart.png
+permalink: /blog/
+scripts: ["signup.js"]
+---
+{#- Lists every post in blog/posts/, newest first. -#}
+{% include "partials/page-header.njk" %}
+<main id="main" class="reading">
+  <div class="reading__inner">
+    <ul class="post-list">
+      {%- for post in collections.post | reverse %}
+      <li>
+        <p class="label">{{ post.data.kind or "Essay" }} · {{ post.date | longDate }}</p>
+        <h2><a href="{{ post.url }}">{{ post.data.title | safe }}</a></h2>
+        <p class="soft">{{ post.data.dek }}</p>
+        <a class="post-list__more" href="{{ post.url }}">Read the essay →</a>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</main>
+{% include "partials/blog-cta.njk" %}

@@ -1,0 +1,48 @@
+{#- "Choose where to start": the mailing list plus the two ways to book.
+
+    {% from "partials/booking.njk" import bookingOptions %}
+    {{ bookingOptions(source="Level-Up page", consultWas="$93", price="$500", priceWas="$993", rate="Intro rate.") }}
+
+    Links come from _data/booking.js. The page needs scripts: ["signup.js"]. -#}
+{%- from "partials/signup.njk" import signup -%}
+{%- macro bookingOptions(source, consultWas, price, priceWas, rate) -%}
+<section class="section" id="book">
+  <h2>Choose where <em>to start</em></h2>
+  <hr class="rule">
+  <p class="soft">Something in you is ready or you wouldn’t be here. Pick the entry point that fits where you are right now.</p>
+  <ul class="cards">
+    <li class="card">
+      <p class="label">Good place to begin</p>
+      <h3>{{ booking.consult.name }}</h3>
+      <p class="card__price">Free / {{ booking.consult.length }}{% if consultWas %} <s>{{ consultWas }}</s>{% endif %}</p>
+      <p>We look at what you want to change. You leave knowing exactly what your next move needs to be.</p>
+      <div class="card__actions">
+        <a class="btn btn--primary" href="{{ booking.consult.calendly }}">Book a consult →</a>
+        <p class="signup__fine">No payment needed. You’ll pick a time on the next screen.</p>
+      </div>
+    </li>
+    <li class="card card--featured">
+      <p class="label">Ready to move</p>
+      <h3>{{ booking.levelUp.name }}</h3>
+      <p class="card__price">{{ price }} / {{ booking.levelUp.length }}{% if priceWas %} <s>{{ priceWas }}</s>{% endif %}</p>
+      <p>{{ rate }} Two hours. Massive results.</p>
+      <p><em>“…better than a year of therapy.”</em></p>
+      <p>You leave as who you want to be in the moments that matter most.</p>
+      <div class="card__actions">
+        <a class="btn btn--primary" href="{{ booking.levelUp.onlineSquare }}">Book online · pay {{ price }}</a>
+        <a class="btn btn--ghost" href="{{ booking.levelUp.inPersonCalendly }}">Book in person ({{ booking.levelUp.inPersonWhere }})</a>
+        <p class="signup__fine">Online sessions are paid through Square. In-person sessions are paid in person. Prefer cash? <a href="mailto:{{ site.email }}">Contact JD</a>.</p>
+      </div>
+    </li>
+    <li class="card">
+      <p class="label">Stay close</p>
+      <h3>Join the Mail List</h3>
+      <p class="card__price">Free</p>
+      <p>Get free insights from JD, first notice on Love Labs and Crucible workshops, and give-back 1:1 sessions as they become available. Real content, real value.</p>
+      <div class="card__actions">
+        {{ signup(source=source, button="Get notified →", names=true, fine="Unsubscribe anytime with one click.", id="book-signup") }}
+      </div>
+    </li>
+  </ul>
+</section>
+{%- endmacro %}

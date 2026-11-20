@@ -6,27 +6,71 @@ subtitle: The teachers, researchers and traditions woven into Practice Labs.
 description: The research and teachers behind Practice Labs, with links to the original studies.
 permalink: /lineage/
 ---
+{%- set header = site.lineageHeader -%}
 {% include "partials/page-header.njk" %}
 <main id="main" class="reading">
   <div class="reading__inner">
     <p class="lede">Practice Labs draws on more than a century of research into how people bond, change and grow. These pages credit the people whose work it builds on, explain what we take from each, and link straight to the original research so you can read it yourself.</p>
-    {%- for cluster in lineage.clusters | clustersWithEntries(lineageVisible) %}
-    <section class="cluster" id="{{ cluster.id }}" aria-labelledby="{{ cluster.id }}-title">
-      <h2 id="{{ cluster.id }}-title" class="cluster__title">{{ cluster.title }}</h2>
-      <p class="cluster__blurb">{{ cluster.blurb }}</p>
-      <ul class="entry-cards">
-        {%- for entry in lineageVisible | inCluster(cluster.id) %}
-        <li class="entry-card{% if entry.status != 'published' %} is-draft{% endif %}">
-          <a href="/lineage/{{ entry.slug }}/">
-            {%- if entry.status != "published" %}<span class="draft-badge">Draft · in review</span>{% endif %}
-            <h3>{{ entry.title }}</h3>
-            <p class="entry-card__people">{{ entry.people | safe }}</p>
-            <p class="entry-card__tagline">{{ entry.tagline | safe }}</p>
-          </a>
-        </li>
-        {%- endfor %}
-      </ul>
+
+    {#- The map: drawn by assets/js/lineage-map.js from the entries below. -#}
+    <section class="lineage-map" aria-labelledby="lineage-map-title">
+      <h2 id="lineage-map-title" class="cluster__title">How it all connects</h2>
+      <p class="cluster__blurb">Start with the big picture, then open a cluster to see its pages and how they link to each other.</p>
+      <div class="lineage-map__frame">
+        <div class="lineage-map__stage">
+          <button type="button" class="lineage-map__back" id="lineage-map-back" hidden>← All clusters</button>
+          <svg id="lineage-map" class="lineage-map__svg" role="group" aria-label="Map of the Research Roots"></svg>
+        </div>
+        <aside id="lineage-map-panel" class="lineage-map__panel" aria-live="polite"></aside>
+      </div>
+      <script type="application/json" id="lineage-map-data">{{ lineageVisible | lineageMapData(lineage.clusters) | safe }}</script>
+      <script src="/assets/js/lineage-map.js" defer></script>
     </section>
-    {%- endfor %}
+    {#- Browse: filter chips and search (assets/js/lineage-browse.js), then one side-scrolling row per cluster. -#}
+    <section class="browse" aria-label="Browse the Research Roots">
+      <div class="browse__bar">
+        <div class="browse__chips" role="group" aria-label="Show one cluster">
+          <button type="button" class="chip is-on" data-filter="all" aria-pressed="true">All</button>
+          {%- for cluster in lineage.clusters | clustersWithEntries(lineageVisible) %}
+          <button type="button" class="chip" data-filter="{{ cluster.id }}" aria-pressed="false">{{ cluster.short or cluster.title }}</button>
+          {%- endfor %}
+        </div>
+        <label class="browse__search">
+          <span class="visually-hidden">Search the Research Roots</span>
+          <input type="search" id="browse-search" placeholder="Search names and ideas: shame, Gottman, nervous system…" autocomplete="off">
+        </label>
+        <p class="browse__count" id="browse-count" aria-live="polite"></p>
+      </div>
+
+      {%- for cluster in lineage.clusters | clustersWithEntries(lineageVisible) %}
+      <section class="cluster" id="{{ cluster.id }}" data-cluster="{{ cluster.id }}" aria-labelledby="{{ cluster.id }}-title">
+        <div class="cluster__head">
+          <div>
+            <h2 id="{{ cluster.id }}-title" class="cluster__title">{{ cluster.title }}</h2>
+            <p class="cluster__blurb">{{ cluster.blurb }}</p>
+          </div>
+          <div class="row-nav" aria-hidden="true">
+            <button type="button" class="row-nav__btn" data-dir="-1" tabindex="-1">‹</button>
+            <button type="button" class="row-nav__btn" data-dir="1" tabindex="-1">›</button>
+          </div>
+        </div>
+        <ul class="entry-cards entry-cards--row">
+          {%- for entry in lineageVisible | inCluster(cluster.id) %}
+          <li class="entry-card{% if entry.status != 'published' %} is-draft{% endif %}"
+              data-search="{{ [entry.title, entry.people, entry.field, entry.tagline, cluster.title] | join(' ') | striptags | lower }} {% for c in entry.concepts %}{{ c.term | striptags | lower }} {% endfor %}">
+            <a href="/lineage/{{ entry.slug }}/">
+              {%- if entry.status != "published" %}<span class="draft-badge">Draft · in review</span>{% endif %}
+              <h3>{{ entry.title }}</h3>
+              <p class="entry-card__people">{{ entry.people | safe }}</p>
+              <p class="entry-card__tagline">{{ entry.tagline | safe }}</p>
+            </a>
+          </li>
+          {%- endfor %}
+        </ul>
+      </section>
+      {%- endfor %}
+      <p class="browse__empty" id="browse-empty" hidden>Nothing matches that yet. Try another word, or <button type="button" class="link-button" id="browse-clear">clear the search</button>.</p>
+    </section>
+    <script src="/assets/js/lineage-browse.js" defer></script>
   </div>
 </main>

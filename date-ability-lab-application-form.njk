@@ -1,0 +1,154 @@
+---
+layout: layouts/base.njk
+title: Apply to Cohort 001
+kicker: The Love Ability Lab · Alpha Cohort 001 · Salt Lake City
+heading: Apply to Cohort <em>001</em>
+subtitle: Five questions. Honest answers. We review within 48 hours. The application is where the work begins.
+description: Apply to Cohort 001 of the Love Ability Lab.
+header: { image: "img/photo-window.jpg", position: "50% 40%", zoom: 1 }
+permalink: /date-ability-lab-application-form.html
+scripts: ["steps.js"]
+---
+{#- Moved from the old site's date-ability-lab-application-form.html. The old form didn't send anywhere;
+    this one is a Netlify form called "love-ability-application". Each application shows up in
+    Netlify → Forms, and is emailed to you once form notifications are turned on. -#}
+{% include "partials/page-header.njk" %}
+
+<main id="main" class="reading">
+  <div class="reading__inner">
+    <div class="prose">
+      <p>We review every application personally. We’re not looking for the right credentials — we’re looking for honest self-awareness and a genuine willingness to practice in front of peers. Those two things are more predictive of a useful lab experience than anything else you could tell us.</p>
+      <p>This form takes most people 15–20 minutes to complete carefully. If you rush it, we’ll be able to tell. Take your time.</p>
+    </div>
+
+    <form class="stepped" name="love-ability-application" method="POST" action="/date-ability-lab-application-form.html?sent=1" data-netlify="true" netlify-honeypot="bot-field" data-steps novalidate>
+      <input type="hidden" name="form-name" value="love-ability-application">
+      <input type="hidden" name="role" value="participant">
+      <p class="sr-only"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <div class="stepped__progress" aria-hidden="true"><span></span></div>
+      <p class="stepped__count" aria-live="polite">Page 1 of 4</p>
+
+      <fieldset data-step>
+        <legend>How you’re <em>showing up</em></legend>
+        <p class="field__note">You’re applying as a participant. You are here to practice. To observe your own ways of showing up. To work with a small cohort of peers on real connection skills in a structured lab environment. <em>The lab is built for you.</em></p>
+        <div class="field"><label for="first-name">First name</label><input id="first-name" name="first_name" type="text" autocomplete="given-name" required></div>
+        <div class="field"><label for="last-name">Last name</label><input id="last-name" name="last_name" type="text" autocomplete="family-name" required></div>
+        <div class="field"><label for="email">Email address</label><p class="field__note">Where we’ll send your acceptance, your audit, and any pre-lab communications.</p><input id="email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="phone">Phone (optional)</label><p class="field__note">Only used if there’s a time-sensitive question about your application.</p><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+        <div class="field"><label for="how-heard">How did you hear about this?</label>
+          <select id="how-heard" name="how_heard">
+            <option value="">Select one</option>
+            <option value="friend-referral">Friend or colleague referred me</option>
+            <option value="social-media">Social media</option>
+            <option value="search">Search (Google, etc.)</option>
+            <option value="event">Met someone at an event</option>
+            <option value="jd-direct">JD reached out directly</option>
+            <option value="podcast-article">Podcast or article</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <fieldset data-step hidden>
+        <legend>Your <em>context</em></legend>
+        <p class="field__note">Where you are, what’s running, and what you’ve already tried.</p>
+        <div class="field">
+          <p class="label">Q1 · Timeline</p>
+          <label>Where are you in your divorce timeline — and what made you apply now?</label>
+          <p class="field__note">There’s no wrong answer here. “Still processing” and “five years out and finally ready” are both legitimate starting points. We want to know what’s moving in you right now, not where you think you should be.</p>
+          <div class="choices" role="radiogroup">
+            <label><input type="radio" name="timeline" value="0-6mo" required><span>0–6 months out<small>Still in the acute phase</small></span></label>
+            <label><input type="radio" name="timeline" value="6-18mo"><span>6–18 months out<small>Starting to look forward</small></span></label>
+            <label><input type="radio" name="timeline" value="18mo-3yr"><span>1.5–3 years out<small>Back in the dating world</small></span></label>
+            <label><input type="radio" name="timeline" value="3yr-plus"><span>3+ years out<small>Pattern is fully visible now</small></span></label>
+          </div>
+        </div>
+        <div class="field"><label for="why-now">What made you apply right now?</label><textarea id="why-now" name="why_now" rows="3"></textarea></div>
+        <div class="field">
+          <p class="label">Q2 · What Keeps Happening</p>
+          <label for="pattern">Describe what keeps happening in your dating or early relationships. What’s the thing that keeps coming back?</label>
+          <p class="field__note">Be specific. “I self-sabotage” is a category. “I start pulling back exactly when someone starts getting genuinely interested” is specific. The more precisely you can name this, the more we can work with it in the lab.</p>
+          <textarea id="pattern" name="pattern" rows="6" required></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset data-step hidden>
+        <legend>What you’ve <em>tried</em>, what you <em>want</em></legend>
+        <p class="field__note">No judgment on what you’ve already done. We want the honest map.</p>
+        <div class="field">
+          <p class="label">Q3 · Prior Attempts</p>
+          <label>What have you tried so far? What happened?</label>
+          <p class="field__note">Other workshops, therapy, books, apps, advice from friends, time alone, dating coaches. What moved the needle, what didn’t, and if you know why — tell us. If you don’t know why, that’s fine. That’s part of what we’re here to figure out.</p>
+          <div class="choices">
+            <label><input type="checkbox" name="tried[]" value="therapy"><span>Therapy / counseling</span></label>
+            <label><input type="checkbox" name="tried[]" value="coaching"><span>Dating or relationship coaching</span></label>
+            <label><input type="checkbox" name="tried[]" value="workshops"><span>Workshops or retreats</span></label>
+            <label><input type="checkbox" name="tried[]" value="books"><span>Books / self-study</span></label>
+            <label><input type="checkbox" name="tried[]" value="apps"><span>Dating apps / online dating</span></label>
+            <label><input type="checkbox" name="tried[]" value="nothing"><span>Nothing structured yet</span></label>
+          </div>
+          <textarea name="tried_details" rows="4" aria-label="What happened"></textarea>
+        </div>
+        <div class="field">
+          <p class="label">Q4 · What Changes</p>
+          <label for="dateable-means">What would showing up as the person you want to be actually mean to you? What changes?</label>
+          <p class="field__note">Not the fantasy outcome. The specific felt sense. What’s different about Tuesday evening, a year from now? Be honest about the thing you actually want, not the version of it you think sounds reasonable to say out loud.</p>
+          <textarea id="dateable-means" name="dateable_means" rows="6" required></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset data-step hidden>
+        <legend>The practice <em>question</em></legend>
+        <p class="field__note">The last required question, and the most important one.</p>
+        <div class="field">
+          <p class="label">Q5 · In the Room</p>
+          <label>This lab involves practicing connection skills in front of a small group of peers and receiving direct feedback on what you’re doing. Are you in?</label>
+          <p class="field__note">Yes, no, or tell us what gives you pause — all three are acceptable answers. We’d rather know now than discover it in the room. The practice is the work. The feedback is the data. Both are non-optional, but your honest hesitation is useful information.</p>
+          <div class="choices" role="radiogroup">
+            <label><input type="radio" name="in_room" value="yes" required><span>Yes — I understand what the lab involves and I’m in.</span></label>
+            <label><input type="radio" name="in_room" value="mostly"><span>Mostly — I have some hesitation I’d like to name.</span></label>
+            <label><input type="radio" name="in_room" value="tell-us"><span>Let me tell you what gives me pause.</span></label>
+          </div>
+        </div>
+        <div class="field" data-show-when="in_room=mostly,tell-us" hidden>
+          <label for="hesitation">Tell us what’s giving you pause.</label>
+          <p class="field__note">This doesn’t disqualify you — it helps us place you correctly.</p>
+          <textarea id="hesitation" name="hesitation" rows="3"></textarea>
+        </div>
+        <div class="field">
+          <label for="anything-else">Anything you want us to know that the questions didn’t ask?</label>
+          <p class="field__note">Optional. But if there’s something important to your context that none of the above captured, this is the place.</p>
+          <textarea id="anything-else" name="anything_else" rows="3"></textarea>
+        </div>
+        <div class="consent">
+          <input id="consent" name="consent" type="checkbox" value="agreed" required>
+          <div>
+            <p><strong>About your data.</strong> You’re applying to a research lab. We collect your application responses and, if you attend, your in-lab data (observations and feedback). This is your data — you are the scientist. We use aggregate, anonymized data to improve the curriculum and, eventually, to publish research. We never share your individual information without your explicit consent.</p>
+            <p>By submitting this application you acknowledge that: (1) your responses will be reviewed by Love Labs / Red Thread Labs staff; (2) if accepted, you’ll receive communications about the lab; (3) you can withdraw at any time before the event for a full refund of your seat fee.</p>
+            <label for="consent"><strong>I understand and agree. I’m applying as a scientist collecting my own data — not as a patient receiving a treatment.</strong></label>
+          </div>
+        </div>
+      </fieldset>
+
+      <p class="stepped__error" role="alert"></p>
+      <div class="stepped__nav">
+        <button class="btn btn--ghost" type="button" data-back hidden>← Back</button>
+        <button class="btn btn--primary" type="button" data-next>Continue →</button>
+        <button class="btn btn--primary" type="submit" data-submit hidden>Submit Application →</button>
+      </div>
+    </form>
+
+    <section class="section stepped__done" hidden tabindex="-1">
+      <h2>Application <em>received</em></h2>
+      <hr class="rule">
+      <p class="lede">You’ll hear from us within 48 hours. Check your inbox — and your spam folder, just in case.</p>
+      <div class="prose">
+        <p><strong>What happens next:</strong></p>
+        <p>We review every application personally. If you’re a fit, you’ll receive an acceptance confirmation, a payment link for your $93 alpha seat, and your Current State Audit — the pre-work that starts the lab before the lab starts.</p>
+        <p>If the timing or fit isn’t right for Cohort 001, we’ll tell you directly — and tell you when Cohort 002 opens if that’s a better match.</p>
+        <p>We don’t ghost applicants.</p>
+      </div>
+      <p class="heart-line">Being Cherished. Choosing Real Love.</p>
+    </section>
+  </div>
+</main>

@@ -1,0 +1,132 @@
+---
+layout: layouts/base.njk
+title: The Love Lab
+ogTitle: "The Love Lab · Next lab in January"
+heading: The Love Lab
+hero:
+  image: img/love-lab-candles.jpg
+  position: 50% 60%
+  kicker: Red Thread Labs presents
+  tagline: An interactive experience for creating loving connection<br>+ healthier relationships
+  date: January
+  place: Salt Lake City
+  cta: Join the list
+  note: The list hears the date first and gets first pick of seats<br>Dinner included · Intimate by design
+description: The next Love Lab is in January in Salt Lake City. An interactive evening for creating loving connection + healthier relationships, with dinner included. Join the list to get the date first and first pick of seats.
+ogImage: /img/cherished-and-chosen-share.jpg
+permalink: /love/
+scripts: ["signup.js"]
+---
+{%- from "partials/signup.njk" import signup -%}
+{#- Moved from the old site's love/index.html. The sign-up saves to the Netlify "mailing-list" form and to Kit. -#}
+{% include "partials/event-hero.njk" %}
+
+<section class="band" aria-label="Event details">
+  <div class="band__inner">
+    <ul class="facts">
+      <li><span class="label">When</span><strong>January</strong><span>Date goes to the list first</span></li>
+      <li><span class="label">Where</span><strong>Salt Lake City</strong><span>Address sent with your confirmation</span></li>
+      <li><span class="label">Seats</span><strong>Limited</strong><span>Intimate by design</span></li>
+      <li><span class="label">Dinner</span><strong>Included</strong><span>Every dietary need covered</span></li>
+    </ul>
+    <div class="btn-row"><a class="btn btn--primary" href="#join">Join the list</a></div>
+  </div>
+</section>
+
+<main id="main" class="band band--alt">
+  <div class="band__inner">
+    <section class="section">
+      <p class="label">Single or partnered</p>
+      <p class="statement">The way you give, receive and experience love is shaped by <em>habits you may not even realize</em> you’re carrying.</p>
+      <hr class="rule">
+    </section>
+
+    <section class="section">
+      <p class="label">The evening</p>
+      <h2>The Love Lab</h2>
+      <hr class="rule">
+      <p class="lede">An interactive experience designed to help you notice your patterns and practice something different, together.</p>
+      <p class="soft">Simple teaching, guided exercises and real-life practice, over dinner.</p>
+    </section>
+
+    <section class="section">
+      <h2>What we’ll cover</h2>
+      <hr class="rule">
+      <ol class="steps">
+        <li><span class="steps__num">1</span><p>Recognize habits that get in the way of connection</p></li>
+        <li><span class="steps__num">2</span><p>Understand how you give and receive love</p></li>
+        <li><span class="steps__num">3</span><p>Practice skills you can actually use after you leave</p></li>
+      </ol>
+    </section>
+
+    <section class="section">
+      <p class="label">Who it’s for</p>
+      <h2>Bring a partner, a friend<br>or just yourself.</h2>
+      <hr class="rule">
+      <p class="lede">Singles, couples, ’cules and friends are all welcome. Eat dinner, learn, laugh and practice with real people in a warm, welcoming room.</p>
+      <p class="soft">Every exercise has an opt-out, and what’s shared in the room stays in the room.</p>
+    </section>
+  </div>
+</main>
+
+<section class="band band--center">
+  <div class="band__inner">
+    <p class="label">The goal</p>
+    <p class="statement">Leave feeling easier to love,<br><em>and better at loving.</em></p>
+    <hr class="rule">
+  </div>
+</section>
+
+<section class="band band--alt">
+  <div class="band__inner">
+    {% include "partials/about-jd.njk" %}
+  </div>
+</section>
+
+<section class="band" id="join">
+  <div class="band__inner">
+    <p class="label">Next lab · January</p>
+    <h2>Join the list</h2>
+    <hr class="rule">
+    <p class="soft">Be the first to hear the January date and get first pick of seats. You’ll also get Love Labs updates and new writing.</p>
+    {{ signup(source="Love Lab January list", button="Join the list →", names=true, id="join") }}
+  </div>
+</section>
+
+<section class="band band--alt">
+  <div class="band__inner">
+    <section class="section">
+      <p class="label">Can’t wait until January?</p>
+      <h2>Holiday Huddle</h2>
+      <hr class="rule">
+      <p class="lede">Stay close to each other through the holidays. Three coaching sessions over six weeks, plus text support between sessions for the moments that come up in real time.</p>
+      <p class="soft">$600. Couples who come together pay the same. Spots are limited.</p>
+      <div class="btn-row"><a class="btn btn--primary" href="https://square.link/u/fxH8RSeB">Book the Holiday Huddle</a></div>
+      <p class="soft">Questions first? <a href="mailto:{{ site.email }}?subject=Holiday%20Huddle">Email JD</a> or DM “HUDDLE” on Instagram.</p>
+    </section>
+
+    <section class="section">
+      <h2>Questions</h2>
+      <hr class="rule">
+      <div class="faq">
+        <details><summary>Do I need to bring a partner?</summary><p>No. Bring a partner, a friend or just yourself. If you come on your own, you’ll pair with others for short exercises. Partners, ’cules and friend groups are welcome too.</p></details>
+        <details><summary>Will I have to share personal things?</summary><p>Only what you choose. Every exercise has an opt-out, and what’s shared in the room stays in the room.</p></details>
+        <details><summary>Is this therapy?</summary><p>No. It’s skill practice with honest feedback. You are the scientist of your own life; the lab gives you the instruments.</p></details>
+        <details><summary>Is dinner included?</summary><p>Yes. Let us know about dietary needs or allergies for everyone in your group when you reserve.</p></details>
+        <details><summary>What’s the refund policy?</summary><p>Tickets are non-refundable, but they are transferable. If you can’t make it, you’re welcome to pass your seat to someone else. Just email <a href="mailto:{{ site.email }}">{{ site.email }}</a> with their name so we can update the guest list.</p></details>
+        <details><summary>Want to go deeper after?</summary><p>1:1 coaching is available through our network of coaches. <a href="mailto:{{ site.email }}">Tell us what you’re working on</a> and we’ll connect you with the right fit.</p></details>
+      </div>
+    </section>
+  </div>
+</section>
+
+<section class="cta-photo">
+  <img src="{{ 'img/love-lab-candles.jpg' | media }}" alt="" aria-hidden="true" loading="lazy">
+  <div class="band__inner">
+    <p class="label">Next lab</p>
+    <p class="big-word">January</p>
+    <p class="label">Salt Lake City</p>
+    <div class="btn-row"><a class="btn btn--primary" href="#join">Join the list</a></div>
+    <p class="soft">Hear the date first · Dinner included</p>
+  </div>
+</section>

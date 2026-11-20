@@ -3,8 +3,8 @@
 
 module.exports = {
   name: "Red Thread Labs",
-  url: "https://red-thread-labs.com",
-  tagline: "Find the habit loops shaping your life. Choose what you weave next.",
+  url: "https://www.red-thread-labs.com",
+  tagline: "Practice Labs to shift the habit loops shaping your life. Choose what you weave next.",
   email: "contact@red-thread-labs.com",
   mailingAddress: "P.O. Box 266, Draper, UT 84020",
 
@@ -16,18 +16,26 @@ module.exports = {
     useBucket: true,
   },
 
-  // The photo behind an inner page's header, unless the page or its lineage cluster sets its own.
+  // The photo behind an inner page's header, unless the page sets its own with `header:` in its front matter.
   // position = which part of the photo stays in view; zoom = how far it's enlarged (1 = not at all).
-  defaultHeader: { image: "img/roots-web.jpg", position: "75% 0%", zoom: 1.25 },
+  defaultHeader: { image: "img/love-lab-table.jpg", position: "50% 55%", zoom: 1 },
+  // The roots photo is only for the Research Roots (lineage) pages, unless an entry or cluster sets its own.
+  lineageHeader: { image: "img/roots-web.jpg", position: "75% 0%", zoom: 1.25 },
 
   // Ways to reach Red Thread Labs. These fill the icon rail on the right of the home page and the footer.
   // Leave a value empty ("") and its icon is simply left out.
   phone: "", // TODO: business phone, e.g. "+1 801 555 0100"
   bookingUrl: "https://calendly.com/jdcarlston/preliminary-consult",
   contactUrl: "/contact/", // the contact form, which emails the address above
-  linkedin: "https://www.linkedin.com/in/jdcarlston",
+  linkedin: "", // TODO: Red Thread Labs company page on LinkedIn, e.g. "https://www.linkedin.com/company/red-thread-labs"
+  linkedinPersonal: "https://www.linkedin.com/in/jdcarlston", // JD's own profile, used until the company page is set
   instagram: "https://www.instagram.com/red.thread.labs/",
+  instagramPersonal: "https://www.instagram.com/jaidy.93/",
   facebook: "", // TODO: Facebook page URL
+
+  // JD's other sites, linked from the About pages.
+  maddercraft: "https://maddercraft.com",
+  jdcarlston: "https://jdcarlston.com",
 
   nav: [
     {
@@ -41,20 +49,25 @@ module.exports = {
         { label: "For teams", href: "#" },
       ],
     },
-    { label: "Events", href: "#" },
-    { label: "Level-Up", href: "#" },
+    {
+      label: "Events",
+      href: "/love/",
+      children: [{ label: "The Love Lab", href: "/love/" }],
+    },
+    { label: "Level-Up", href: "/level-up/" },
     {
       label: "Lineage",
       href: "/lineage/",
       // Cluster links are built from _data/lineage.js, so only clusters with published pages show.
       fromLineage: true,
     },
-    { label: "Blog", href: "#" },
+    { label: "Blog", href: "/blog/" },
     {
       label: "About",
-      href: "#",
+      href: "/about/",
       children: [
-        { label: "JD Carlston", href: "#" },
+        { label: "Red Thread Labs", href: "/about/" },
+        { label: "JD Carlston", href: "/about/jd/" },
         { label: "Contact", href: "/contact/" },
       ],
     },

@@ -5,10 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if title and title != site.name %}{{ title }} · {% endif %}{{ site.name }}</title>
   <meta name="description" content="{{ description or site.tagline }}">
+  {#- private: true keeps a page out of search engines. It's still reachable by anyone with the link. #}
+  {%- if private %}
+  <meta name="robots" content="noindex, nofollow">
+  {%- endif %}
+  <link rel="canonical" href="{{ page.url | absoluteUrl }}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:url" content="{{ page.url | absoluteUrl }}">
+  <meta property="og:title" content="{{ ogTitle or title or site.name }}">
+  <meta property="og:description" content="{{ description or site.tagline }}">
+  {%- if ogImage %}
+  <meta property="og:image" content="{{ ogImage | absoluteUrl }}">
+  <meta name="twitter:card" content="summary_large_image">
+  {%- endif %}
   <link rel="icon" href="/assets/img/rtl-logo-oxblood.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,200..800;1,9..40,200..800&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&display=swap">
+  {#- Fonts are served from this site (assets/fonts), so they look the same everywhere. #}
+  <link rel="preload" href="/assets/fonts/dm-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/fraunces-latin-wght-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body class="{{ bodyClass }}">
@@ -16,5 +30,8 @@
   {{ content | safe }}
   {% include "partials/footer.njk" %}
   <script src="/assets/js/menu.js" defer></script>
+  {%- for script in scripts %}
+  <script src="/assets/js/{{ script }}" defer></script>
+  {%- endfor %}
 </body>
 </html>

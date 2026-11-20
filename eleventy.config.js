@@ -6,24 +6,45 @@ const site = require("./_data/site");
 
 // While previewing (npm start) pages marked status: "review" are shown, with a DRAFT ribbon.
 // A normal build (npm run build, and Netlify) only includes published pages.
-const reviewMode = process.env.ELEVENTY_RUN_MODE === "serve" || process.env.RTL_REVIEW === "1";
+const previewing = process.env.ELEVENTY_RUN_MODE === "serve";
+const reviewMode = previewing || process.env.RTL_REVIEW === "1";
+
+// Photos load from the Cloudflare media bucket on the live site. While previewing on your Mac
+// they load from the media/ folder instead, so a new photo shows up before you've uploaded it.
+// RTL_LOCAL_MEDIA=1 npm run build does the same for a one-off build (handy for testing).
+const useBucket = site.media.useBucket && !previewing && process.env.RTL_LOCAL_MEDIA !== "1";
 
 function visibleEntries() {
   return lineage.entries.filter((e) => e.status === "published" || (reviewMode && e.status === "review"));
 }
 
 module.exports = function (eleventyConfig) {
+  // private/ is in .gitignore, so it never reaches GitHub or the live site, but it should still
+  // build in your preview. Eleventy skips git-ignored files by default; turn that off, and list
+  // what it should skip in .eleventyignore instead.
+  eleventyConfig.setUseGitIgnore(false);
+
+  // Research Roots entries live in research-roots/ (read by _data/lineage.js); rebuild when they change.
+  eleventyConfig.addWatchTarget("./research-roots/");
   eleventyConfig.addPassthroughCopy("assets");
   // Photos ship with the site only while the media bucket is off; once it's on they load from Cloudflare.
-  if (!site.media.useBucket) eleventyConfig.addPassthroughCopy("media");
+  if (!useBucket) eleventyConfig.addPassthroughCopy("media");
+  // Files that must keep their old addresses: images already sent in emails and shared links,
+  // and the old favicon. legacy/img/x.png is served at /img/x.png.
+  eleventyConfig.addPassthroughCopy({ legacy: "/" });
 
   // {{ "img/roots-web.jpg" | media }} gives the right address for a file in media/, wherever it's served from.
   eleventyConfig.addFilter("media", (file) =>
-    site.media.useBucket ? `${site.media.base}/${file}` : `/media/${file}`
+    useBucket ? `${site.media.base}/${file}` : `/media/${file}`
   );
   eleventyConfig.addWatchTarget("lib/");
 
   eleventyConfig.addGlobalData("reviewMode", reviewMode);
+  // {{ page.date | longDate }} -> "May 14, 2026"
+  eleventyConfig.addFilter("longDate", (d) =>
+    new Date(d).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" })
+  );
+  eleventyConfig.addFilter("absoluteUrl", (path) => new URL(path, site.url).href);
   eleventyConfig.addGlobalData("year", new Date().getFullYear());
   eleventyConfig.addGlobalData("lineageVisible", visibleEntries);
 
@@ -39,10 +60,28 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("clustersWithEntries", (clusters, entries) =>
     clusters.filter((c) => entries.some((e) => e.cluster === c.id))
   );
+  // The data the lineage map (assets/js/lineage-map.js) draws from, as JSON for a <script> tag.
+  // Only the fields the map shows; HTML tags are stripped so the map can use them as plain text.
+  eleventyConfig.addFilter("lineageMapData", (entries, clusters) => {
+    const plain = (s) => String(s || "").replace(/<[^>]+>/g, "").replace(/&amp;/g, "&");
+    const shown = clusters.filter((c) => entries.some((e) => e.cluster === c.id));
+    const slugs = new Set(entries.map((e) => e.slug));
+    const data = {
+      clusters: shown.map((c) => ({ id: c.id, title: c.title, short: c.short || c.title, blurb: c.blurb })),
+      entries: entries.map((e) => ({
+        slug: e.slug, cluster: e.cluster, title: plain(e.title), people: plain(e.people),
+        tagline: plain(e.tagline), draft: e.status !== "published",
+        related: (e.related || []).filter((r) => slugs.has(r)),
+      })),
+    };
+    return JSON.stringify(data).replace(/</g, "\\u003c");
+  });
 
   return {
     dir: { input: ".", includes: "_includes", data: "_data", output: "_site" },
     templateFormats: ["njk", "md", "html"],
     htmlTemplateEngine: "njk",
+    // Markdown pages (blog posts) can use {{ "img/x.jpg" | media }} for their pictures.
+    markdownTemplateEngine: "njk",
   };
 };

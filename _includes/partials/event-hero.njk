@@ -1,0 +1,22 @@
+{#- A full-height event hero: a photo behind the menu, title, date and call to action (the Love Lab "flyer").
+    Set in the page's front matter:
+      hero: { image, position, kicker, tagline, dateLabel, date, place, cta, ctaHref, note } -#}
+<div class="event-hero">
+  <img class="event-hero__photo" src="{{ hero.image | media }}" alt="" aria-hidden="true" style="object-position: {{ hero.position or 'center' }}">
+  <div class="event-hero__veil" aria-hidden="true"></div>
+  {% menuThreads %}
+  {% include "partials/header.njk" %}
+  <div class="event-hero__body">
+    {%- if hero.kicker %}<p class="kicker">{{ hero.kicker }}</p>{% endif %}
+    <h1 class="event-hero__title">{{ (heading or title) | safe }}</h1>
+    <hr class="rule">
+    {%- if hero.tagline %}<p class="event-hero__tagline">{{ hero.tagline | safe }}</p>{% endif %}
+    {%- if hero.date %}
+    <p class="label">{{ hero.dateLabel or "Next lab" }}</p>
+    <p class="big-word">{{ hero.date }}</p>
+    {%- if hero.place %}<p class="label">{{ hero.place }}</p>{% endif %}
+    {%- endif %}
+    {%- if hero.cta %}<a class="btn btn--primary" href="{{ hero.ctaHref or '#join' }}">{{ hero.cta }}</a>{% endif %}
+    {%- if hero.note %}<p class="event-hero__note">{{ hero.note | safe }}</p>{% endif %}
+  </div>
+</div>

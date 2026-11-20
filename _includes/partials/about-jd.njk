@@ -1,0 +1,16 @@
+{#- The short "About JD" block used on event and offer pages. The full story is on /about/jd/.
+    Change it here and every page that includes it updates.
+    Set aboutHeading before including it to change the heading (default "Your guide, JD"). -#}
+<section class="section">
+  <h2>{{ (aboutHeading or "Your guide, <em>JD</em>") | safe }}</h2>
+  <hr class="rule">
+  <div class="about">
+    <img src="{{ 'img/jd-lighting-candles.jpg' | media }}" alt="JD Carlston lighting candles at a Love Lab dinner" loading="lazy">
+    <div class="prose">
+      <p><strong>JD Carlston is a Human Engineer.</strong> She spent more than twenty years leading engineering teams and architecture, most recently as Director of Product Engineering at Stack Overflow. Now she brings that same rigor to the patterns that shape how people love, work and belong: see the pattern, test one change, practice until it holds.</p>
+      <p>She studied directly with Dr. Robert Dee McDonald, NLP architect, clinical researcher and co-founder of the <a href="https://teloscenter.com" target="_blank" rel="noopener">Telos Healing Center</a>, and has woven his teaching together with attachment science, nervous-system work and decades of leading people into a method of her own: <strong>Practice Labs</strong>.</p>
+      <p>Since her teens she has coached, trained peer supporters, facilitated groups for volunteer and philanthropic organizations, and hosted gatherings; she is also a crisis responder, and has held rituals and ceremonies since 2012. JD and her husband Chick did this work on themselves first. At Red Thread Labs, we practice before we teach.</p>
+      <p class="about__links"><a href="/about/jd/">More about JD →</a> <a href="{{ site.maddercraft }}" target="_blank" rel="noopener">Her art, music and poetry at MadderCraft ↗</a></p>
+    </div>
+  </div>
+</section>

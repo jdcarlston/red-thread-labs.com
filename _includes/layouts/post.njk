@@ -1,0 +1,23 @@
+---
+layout: layouts/base.njk
+scripts: ["signup.js"]
+---
+{#- Layout for one blog post. The post's front matter sets title, dek (one-line summary),
+    description, date and optionally header (photo). The sign-up and consult link close every post. -#}
+{%- from "partials/signup.njk" import signup -%}
+{%- set kicker = "Blog" -%}
+{%- set kickerLink = "/blog/" -%}
+{%- set subtitle = dek -%}
+{% include "partials/page-header.njk" %}
+<main id="main" class="reading">
+  <article class="reading__inner post">
+    <p class="post__byline">{{ author or "JD Carlston" }} · <time datetime="{{ page.date.toISOString() }}">{{ page.date | longDate }}</time></p>
+    <div class="post__body">
+      {{ content | safe }}
+    </div>
+    {%- if medium_url %}
+    <p class="post__origin">First published on <a href="{{ medium_url }}" rel="noopener">Medium</a>.</p>
+    {%- endif %}
+  </article>
+</main>
+{% include "partials/blog-cta.njk" %}

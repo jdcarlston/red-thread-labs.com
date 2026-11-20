@@ -3,7 +3,9 @@ layout: layouts/base.njk
 title: Red Thread Labs
 headerStyle: home
 bodyClass: page-home
+scripts: ["signup.js"]
 ---
+{%- from "partials/signup.njk" import signup -%}
 <div class="hero">
   {#- Background: the Windward Weave turned on its side, under an oxblood veil. -#}
   <img class="hero__photo" src="{{ 'img/hero-weave-sideways.jpg' | media }}" alt="" aria-hidden="true">
@@ -14,8 +16,11 @@ bodyClass: page-home
     <div class="hero__text">
       <h1 class="hero__title">{{ site.name }}</h1>
       <p class="hero__tagline">{{ site.tagline }}</p>
+      {%- set iconsClass = "hero__icons" %}
+      {% include "partials/contact-icons.njk" %}
+      <div class="hero__signup">
+        {{ signup(source="Home page", button="Join the list", fine="Writing, new labs and first pick of seats. Unsubscribe anytime.", id="home-signup") }}
+      </div>
     </div>
   </main>
-  {%- set iconsClass = "hero__icons" %}
-  {% include "partials/contact-icons.njk" %}
 </div>
