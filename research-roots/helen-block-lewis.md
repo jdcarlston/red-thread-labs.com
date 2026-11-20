@@ -3,7 +3,7 @@ slug: helen-block-lewis
 status: review
 cluster: therapy
 order: 90
-title: Shame and Guilt
+title: Unacknowledged Shame
 people: Helen Block Lewis (1913–1987)
 field: Psychology · Psychoanalysis
 tagline: Shame named out loud loses most of its power.

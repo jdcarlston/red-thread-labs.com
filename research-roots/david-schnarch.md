@@ -19,7 +19,7 @@ concepts:
     def: The pressure of intimacy as a place to grow, not a problem to remove.
   - term: Four points of balance
     def: A solid, flexible self; a quiet mind and calm heart; grounded responding; meaningful endurance.
-context: Schnarch is part of the differentiation backbone of the labs, and the namesake of our Crucibles. His idea that intimacy asks you to grow, not just to be comforted, is a hard and hopeful one.
+context: Schnarch is part of the differentiation backbone of the labs. His idea that intimacy asks you to grow, not just to be comforted, is a hard and hopeful one.
 exercise:
   title: Hold on to yourself
   time: About 10 minutes to prepare, then in the moment

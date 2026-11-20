@@ -24,7 +24,7 @@ module.exports = {
 
   // Ways to reach Red Thread Labs. These fill the icon rail on the right of the home page and the footer.
   // Leave a value empty ("") and its icon is simply left out.
-  phone: "", // TODO: business phone, e.g. "+1 801 555 0100"
+  phone: "801-477-0497",
   bookingUrl: "https://calendly.com/jdcarlston/preliminary-consult",
   contactUrl: "/contact/", // the contact form, which emails the address above
   linkedin: "", // TODO: Red Thread Labs company page on LinkedIn, e.g. "https://www.linkedin.com/company/red-thread-labs"
