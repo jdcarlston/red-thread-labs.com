@@ -14,7 +14,7 @@ permalink: /contact/
 {%- set ways = [
   { label: "Email", text: site.email, href: "mailto:" + site.email },
   { label: "Phone", text: site.phone, href: ("tel:" + (site.phone | replace(" ", ""))) if site.phone else "" },
-  { label: "Book a free conversation", text: "Pick a time on Calendly", href: site.bookingUrl },
+  { label: "Book a free consultation", text: "Pick a time on Calendly", href: site.bookingUrl },
   { label: "Instagram · Red Thread Labs", text: "@red.thread.labs", href: site.instagram },
   { label: "Instagram · JD", text: "@jaidy.93", href: site.instagramPersonal },
   { label: "LinkedIn · Red Thread Labs", text: "Red Thread Labs", href: site.linkedin },

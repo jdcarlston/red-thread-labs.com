@@ -3,7 +3,8 @@
     The photo comes from `header` (image, position, zoom) if the page sets one, otherwise site.defaultHeader (lineage pages use site.lineageHeader). -#}
 {%- set h = header or site.defaultHeader -%}
 <div class="page-head">
-  <img class="page-head__photo" src="{{ h.image | media }}" alt="" aria-hidden="true" style="object-position: {{ h.position or 'center' }}; transform: scale({{ h.zoom or 1 }}); transform-origin: {{ h.position or 'center' }}">
+  {#- The photo sits in its own clipped box so a zoomed photo stays inside the header, while the menu's dropdowns can hang below it. #}
+  <div class="page-head__media" aria-hidden="true"><img class="page-head__photo" src="{{ h.image | media }}" alt="" aria-hidden="true" style="object-position: {{ h.position or 'center' }}; transform: scale({{ h.zoom or 1 }}); transform-origin: {{ h.position or 'center' }}"></div>
   <div class="page-head__tint" aria-hidden="true"></div>
   <div class="page-head__veil" aria-hidden="true"></div>
   {% menuThreads %}

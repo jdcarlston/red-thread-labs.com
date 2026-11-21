@@ -1,0 +1,101 @@
+---
+layout: layouts/base.njk
+title: Practice Labs
+kicker: Practice Labs
+heading: Practice Labs
+subtitle: Space to explore, test and practice the skills that change how you connect.
+description: How Practice Labs work, and the kinds of labs Red Thread Labs runs, from evening Love Labs to Level-Up Sessions, retreats and labs for teams and organizations.
+header: { image: "img/love-lab-guests.jpg", position: "50% 45%", zoom: 1 }
+ogImage: /img/cherished-and-chosen-share.jpg
+permalink: /practice-labs/
+---
+{#- DRAFT for JD's review: the Practice Labs index. Each section's id matches a link in the
+    Practice Labs menu (_data/site.js), so keep the ids if you rename a heading. -#}
+{% include "partials/page-header.njk" %}
+
+<section class="band">
+  <div class="band__inner">
+    <p class="statement">Insight is a start. <em>Practice is what changes the loop.</em></p>
+    <p class="soft">Most of us already know what we’d like to do differently. A Practice Lab gives you the room to actually try it: with real people, honest feedback and enough repetition that the new way starts to feel like yours.</p>
+  </div>
+</section>
+
+<main id="main" class="reading">
+  <div class="reading__inner">
+    <section class="section" id="how-it-works">
+      <p class="label">How it works</p>
+      <h2>The flow of <em>a lab</em></h2>
+      <hr class="rule">
+      <p class="soft">Every lab, from a two-hour evening to a multi-day immersion, moves through the same arc. You come as the scientist of your own life. We bring the instruments.</p>
+      <ol class="steps steps--five">
+        <li><span class="steps__num">01</span><h3>Arrive</h3><p>We settle in, set clear agreements and get grounded in the room. Every exercise has an opt-out, and what’s shared stays here.</p></li>
+        <li><span class="steps__num">02</span><h3>See</h3><p>A short teaching names one loop, where it comes from and what the research says about it.</p></li>
+        <li><span class="steps__num">03</span><h3>Shift</h3><p>Guided exercises, with a partner or a small group, let you test a new move instead of just talking about it.</p></li>
+        <li><span class="steps__num">04</span><h3>Notice</h3><p>You pay attention to what happens in your body and in the other person, and get honest feedback.</p></li>
+        <li><span class="steps__num">05</span><h3>Prove</h3><p>You leave with one practice to keep testing in your life, so the change holds after the room is gone.</p></li>
+      </ol>
+    </section>
+
+    <section class="section" id="labs">
+      <p class="label">Labs &amp; workshops</p>
+      <h2>Group labs, <em>in person</em></h2>
+      <hr class="rule">
+      <p class="soft">Small rooms, real people, and a different focus for each kind of lab.</p>
+      <ul class="cards">
+        <li class="card" id="love-lab">
+          <p class="label">Next lab · January</p>
+          <h3>The Love Lab</h3>
+          <p>An interactive evening for noticing the patterns underneath how you give and receive love, then practicing something different. Singles, couples and friends welcome.</p>
+          <div class="card__actions"><a class="btn btn--ghost" href="/love/">The Love Lab</a></div>
+        </li>
+        <li class="card" id="reinvention-labs">
+          <p class="label">Coming soon</p>
+          <h3>Reinvention Labs</h3>
+          <p>For people rebuilding after a big change: a divorce, a move, a new chapter of work or life. We map the loops that came with the old life and practice the ones you want to carry into the new one.</p>
+          <div class="card__actions"><a class="btn btn--ghost" href="/contact/">Ask about Reinvention Labs</a></div>
+        </li>
+        <li class="card" id="crucibles">
+          <p class="label">By application</p>
+          <h3>Crucibles</h3>
+          <p>Multi-day immersions for people ready to go deep. Like carbon under heat and pressure, a small group, a held place and days of practice turn insight into who you are.</p>
+          <div class="card__actions"><a class="btn btn--ghost" href="/contact/">Ask about Crucibles</a></div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section" id="level-up">
+      <p class="label">One-on-one and couples</p>
+      <h2>Level-Up <em>Sessions</em></h2>
+      <hr class="rule">
+      <p class="soft">A focused session to name the loop you keep running, shift it where talking alone can’t reach, and leave with something to practice the same day. Follow-ups and support between sessions, so the change has somewhere to land.</p>
+      <div class="btn-row"><a class="btn btn--ghost" href="/level-up/">Level-Up Sessions</a></div>
+    </section>
+
+    <section class="section" id="retreats">
+      <p class="label">Retreats &amp; gatherings</p>
+      <h2>Dinners, retreats <em>and ceremonies</em></h2>
+      <hr class="rule">
+      <p class="soft">Special lab dinners, multi-day retreats, lunch-and-learns, and ceremonies for the turning points of a life. We plan the room, the food, the flow and the care, so the people in it can do the real work.</p>
+      <div class="btn-row"><a class="btn btn--ghost" href="/contact/">Plan something with us</a></div>
+    </section>
+
+    <section class="section" id="teams">
+      <p class="label">For teams &amp; organizations</p>
+      <h2>The same loops <em>run a team</em></h2>
+      <hr class="rule">
+      <p class="soft">How a team decides, disagrees and repairs runs on the same habits as a relationship. We bring Practice Labs and more than twenty years of engineering leadership to teams, leaders and organizations: working sessions, offsites, lunch-and-learns, leadership coaching and labs built around what your organization is actually facing.</p>
+      <div class="btn-row"><a class="btn btn--ghost" href="/contact/">Talk about your team</a></div>
+    </section>
+  </div>
+</main>
+
+<section class="reading">
+  <div class="reading__inner">
+    <section class="section section--center">
+      <h2>Not sure where <em>to start?</em></h2>
+      <hr class="rule">
+      <p class="soft">Tell us what you’re working on. We’ll tell you honestly which lab fits, and if none of ours do, who might be the right fit.</p>
+      <div class="btn-row"><a class="btn btn--primary" href="{{ site.bookingUrl }}" target="_blank" rel="noopener">Book a free consultation</a><a class="btn btn--ghost" href="/contact/">Send a message</a></div>
+    </section>
+  </div>
+</section>

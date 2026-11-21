@@ -3,7 +3,7 @@
 {%- for item in site.nav -%}
   {%- set children = item.children -%}
   {%- if item.fromLineage -%}
-    {%- set children = [{ label: "Research Roots", href: "/lineage/" }] -%}
+    {%- set children = [{ label: "Overview", href: "/lineage/" }] -%}
     {%- for c in lineage.clusters | clustersWithEntries(lineageVisible) -%}
       {%- set children = (children.push({ label: c.title, href: "/lineage/#" + c.id }), children) -%}
     {%- endfor -%}
@@ -12,7 +12,7 @@
     <a href="{{ item.href }}"{% if page.url.startsWith(item.href) and item.href != '#' %} aria-current="page"{% endif %}>{{ item.label }}</a>
     {%- if children %}
     <ul class="sub">
-      {%- for child in children %}<li><a href="{{ child.href }}">{{ child.label }}</a></li>{% endfor %}
+      {%- for child in children %}<li{% if child.nested %} class="sub__nested"{% endif %}><a href="{{ child.href }}">{{ child.label }}</a></li>{% endfor %}
     </ul>
     {%- endif %}
   </li>

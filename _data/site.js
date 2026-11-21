@@ -37,26 +37,29 @@ module.exports = {
   maddercraft: "https://maddercraft.com",
   jdcarlston: "https://jdcarlston.com",
 
+  // A child with `nested: true` is shown indented under the item before it (like Reinvention Labs
+  // and Crucibles under Labs & workshops).
   nav: [
     {
       label: "Practice Labs",
-      href: "#",
+      href: "/practice-labs/",
       children: [
-        { label: "How it works", href: "#" },
-        { label: "Labs & workshops", href: "#" },
-        { label: "Coaching", href: "#" },
-        { label: "Retreats & gatherings", href: "#" },
-        { label: "For teams", href: "#" },
+        { label: "How it works", href: "/practice-labs/#how-it-works" },
+        { label: "Labs & workshops", href: "/practice-labs/#labs" },
+        { label: "Reinvention Labs", href: "/practice-labs/#reinvention-labs", nested: true },
+        { label: "Crucibles", href: "/practice-labs/#crucibles", nested: true },
+        { label: "Level-Up Sessions", href: "/level-up/" },
+        { label: "Retreats & gatherings", href: "/practice-labs/#retreats" },
+        { label: "For Teams & Organizations", href: "/practice-labs/#teams" },
       ],
     },
     {
-      label: "Events",
+      label: "Upcoming Events",
       href: "/love/",
       children: [{ label: "The Love Lab", href: "/love/" }],
     },
-    { label: "Level-Up", href: "/level-up/" },
     {
-      label: "Lineage",
+      label: "Research Roots",
       href: "/lineage/",
       // Cluster links are built from _data/lineage.js, so only clusters with published pages show.
       fromLineage: true,
@@ -67,6 +70,7 @@ module.exports = {
       href: "/about/",
       children: [
         { label: "Red Thread Labs", href: "/about/" },
+        { label: "Mission & values", href: "/about/#mission" },
         { label: "JD Carlston", href: "/about/jd/" },
         { label: "Contact", href: "/contact/" },
       ],

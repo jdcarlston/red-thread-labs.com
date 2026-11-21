@@ -130,6 +130,9 @@ a:hover { color: var(--cream-text); }
 .menu-panel > nav > ul > li > a { font-size: 15px; letter-spacing: 0.24em; text-transform: uppercase; }
 .menu-panel .sub { display: block; position: static; background: none; border: 0; box-shadow: none; padding: 0 0 0 16px; min-width: 0; }
 .menu-panel .sub a { font-size: 16px; letter-spacing: 0.04em; color: var(--muted-on-dark); padding: 6px 0; }
+/* Sub-menu items marked `nested: true` in _data/site.js sit indented under the item before them. */
+.sub .sub__nested a { padding-left: 40px; font-size: 0.92em; }
+.menu-panel .sub .sub__nested a { padding-left: 18px; }
 .menu-panel .btn--book { margin-top: 28px; }
 .menu-panel .btn { padding: 12px 20px; }
 .menu-close {
@@ -186,7 +189,8 @@ body.menu-open { overflow: hidden; }
 /* --------------------------------------------------------------------------
    Inner pages: roots header
    -------------------------------------------------------------------------- */
-.page-head { position: relative; overflow: hidden; background: var(--oxblood-deep); }
+.page-head { position: relative; background: var(--oxblood-deep); }
+.page-head__media { position: absolute; inset: 0; overflow: hidden; }
 .page-head__photo {
   position: absolute; inset: 0; width: 100%; height: 100%;
   object-fit: cover; /* framing (position, zoom) is set per page from its `header` */
@@ -361,6 +365,8 @@ body.menu-open { overflow: hidden; }
 
 /* Numbered steps (See · Shift · Prove, What we'll cover ...) */
 .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+/* Five steps in one row on wide screens (the Practice Labs flow). */
+.steps--five { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
 .steps li { display: flex; flex-direction: column; gap: 10px; padding: 26px; border-radius: 14px; background: var(--paper); box-shadow: 0 1px 0 rgba(29, 28, 26, 0.06); }
 .steps__num { font-family: var(--font-serif); font-size: 34px; line-height: 1; color: var(--red-on-light); }
 .steps h3 { margin: 0; font-size: 19px; font-weight: 700; }
