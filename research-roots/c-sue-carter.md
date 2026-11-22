@@ -29,11 +29,14 @@ exercise:
     - Now think of a relationship where you stay guarded. Which of those conditions is missing?
     - Pick one condition you could ask for, and one you could offer.
     - Try one of them this week and notice how your body responds.
-  why: Carter’s research links bonding biology to felt safety. Most people know their own safety cues only vaguely. Naming them makes it possible to ask for what you need, and to create those conditions for others, instead of pushing yourself to open up while your body is still on guard.
+  why: Carter’s research links bonding biology to felt safety. Most people know their own safety cues only vaguely. Naming them makes it possible to ask for what you need, and to create those conditions for others, instead of pushing yourself to open up while your body is still on guard. A related study of couples who practiced warm, consented touch daily found higher oxytocin and lower stress markers, a small example of safety built on purpose.
 sources:
   - cite: C. Sue Carter (1998), “Neuroendocrine perspectives on social attachment and love,” *Psychoneuroendocrinology* 23(8), 779–818.
     url: https://doi.org/10.1016/S0306-4530(98)00055-9
     label: Read the study
+  - cite: "Julianne Holt-Lunstad, Wendy A. Birmingham & Kathleen C. Light (2008), Influence of a “warm touch” support enhancement intervention among married couples on ambulatory blood pressure, oxytocin, alpha amylase, and cortisol. *Psychosomatic Medicine*, 70(9), 976–985."
+    url: https://scholar.google.com/scholar?q=Holt-Lunstad+2008+warm+touch+support+enhancement+intervention
+    label: Find the paper
 related:
   - young-insel
   - stan-tatkin

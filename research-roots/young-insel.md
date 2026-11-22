@@ -21,15 +21,15 @@ concepts:
     def: Bonding uses reward systems that are old and widely shared among mammals.
 context: "This research supports a core idea in our neuroattraction work: bonding is learned in the reward system, and learning responds to experience. The rush of a spark gets attached to whoever is there when the circuit fires. That helps explain why we can bond to people who aren’t good for us, and why the pattern can change."
 exercise:
-  title: Where does the spark come from?
-  time: About 25 minutes, written
+  title: What are we bonding over?
+  time: About 20 minutes, then two weeks
   steps:
-    - List three people you felt a strong pull toward, past or present.
-    - "For each, note what was happening when the pull was strongest: newness, uncertainty, chasing, reunion after distance, or steady warmth."
-    - Circle anything that shows up more than once.
-    - Now list one or two people who are reliably good to you. Notice whether they give you the same rush.
-    - Write a sentence about what you’d like the spark to attach to from here on.
-  why: The vole studies show bonding is a learning process in the reward system. Broader research on reward learning adds that rewards which come unpredictably tend to feel especially gripping. Seeing which conditions have charged your attractions helps you notice them as they happen and choose where you invest.
+    - Choose one close relationship, a partner or a close friend.
+    - List the routines you share in a typical week, from meals and errands to texts and time in bed.
+    - Mark each one as rewarding (you both tend to enjoy it), neutral, or stressful.
+    - Notice the balance. Is most of your shared time spent on logistics or conflict, with little that feels good together?
+    - Choose one small rewarding thing to add or protect for the next two weeks, and notice how the connection feels afterward.
+  why: Young and Insel’s prairie vole studies found that bonds form when time together coincides with reward chemistry, as oxytocin, vasopressin and dopamine link a partner to good feelings. People are not voles, but the principle that we bond to whoever we share rewarding time with is a useful lens on where a relationship’s glue is coming from.
 sources:
   - cite: Thomas R. Insel & Larry J. Young (2001), “The neurobiology of attachment,” *Nature Reviews Neuroscience* 2(2), 129–136.
     url: https://doi.org/10.1038/35053579

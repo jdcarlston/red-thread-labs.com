@@ -21,15 +21,15 @@ concepts:
     def: Who you take yourself to be shapes what feels possible.
 context: "Dilts’s levels help explain why some changes stick and others don’t. The labs work at several levels at once: new behavior, practiced until it becomes a capability, tested until the belief underneath it shifts."
 exercise:
-  title: Which level is it on?
-  time: About 20 minutes
+  title: Walk the levels
+  time: About 20 minutes, with some floor space
   steps:
-    - Pick something you’ve tried to change before without lasting success.
-    - "Write a sentence about it at each level: Where and when does it happen? What do I do? What skill am I missing? What do I believe about it? What does it say about who I am? What does it mean for my purpose?"
-    - Notice which sentence carries the most charge.
-    - Ask what a change at that level would look like.
-    - Pick one small step that works at that level.
-  why: Dilts’s model suggests change lasts when it addresses the level the problem actually lives on. Writing the issue out at every level often shows where the real sticking point is.
+    - Pick something you’ve tried to change before without lasting success. Lay out six spots on the floor in a line, one for each level, and label them on paper.
+    - "Step onto each spot in turn and answer out loud: Environment (where and when does it happen?). Behavior (what do I do?). Capability (what skill or strategy do I use?). Beliefs and values (what do I believe about it, and what matters to me here?). Identity (who am I in this?). Purpose (what is this in service of, beyond me?)."
+    - At the last spot, pause and notice what you feel when you connect with that larger purpose.
+    - Walk back down the line, carrying that feeling, and at each spot notice what changes in your identity, beliefs, skills and actions when they line up with it.
+    - Write down the one change at the lowest level you’ll make this week.
+  why: This is Dilts’s neuro-logical levels alignment, done on the floor the way he teaches it. Walking the levels in the body, then bringing the higher level back down, shows where the real sticking point is and lines up the smaller levels behind it.
 sources:
   - cite: Robert Dilts (1990), *Changing Belief Systems with NLP*. Meta Publications.
     url: https://search.worldcat.org/search?q=Changing+Belief+Systems+with+NLP+Dilts

@@ -21,15 +21,15 @@ concepts:
     def: Mindfulness, distress tolerance, emotion regulation and interpersonal effectiveness.
 context: Linehan’s balance of acceptance and change runs through the labs. We validate first, because people can’t change while they’re fighting to be understood.
 exercise:
-  title: Radical acceptance, one thing
-  time: About 15 minutes
+  title: DEAR MAN, for one real request
+  time: About 20 minutes, then the real conversation
   steps:
-    - "Pick one fact in your life you keep fighting: something that happened, or something about someone you can’t change. Choose a medium one, not your hardest."
-    - Write it down as a plain fact.
-    - Notice the sentences in your head that start with “It shouldn’t be…” or “It’s not fair that…”
-    - "Try saying: “This is what happened. I don’t have to like it. I can accept that it’s real.” Notice your body as you say it."
-    - Write one thing you can do from here, now that you’re not spending energy fighting the fact.
-  why: Radical acceptance is a core DBT distress-tolerance skill. Linehan teaches that suffering grows when we refuse reality, and that accepting a fact, without approving of it, frees energy for what can change.
+    - Choose something moderate you want to ask of someone close, like help with a chore or more notice before plans change.
+    - "Write your script: Describe the situation with facts only. Express how you feel about it, using “I.” Assert what you’re asking for, clearly. Reinforce: say what’s in it for them, or how it will help you both."
+    - "Then plan how you’ll carry it: stay Mindful (if the talk drifts, calmly return to your request), Appear confident (steady voice, eye contact), and be ready to Negotiate (what else would work?)."
+    - Practice it out loud once, with a partner playing the other person if you can.
+    - Have the real conversation, then note what went well and what you’d adjust.
+  why: DEAR MAN is DBT’s core interpersonal-effectiveness skill, from Linehan’s *DBT Skills Training Manual*. It turns asking for what you want into steps you can rehearse, which is what makes it doable when the stakes feel high.
 sources:
   - cite: Marsha M. Linehan, Hubert E. Armstrong, Alejandra Suarez, Douglas Allmon & Heidi L. Heard (1991), “Cognitive-behavioral treatment of chronically parasuicidal borderline patients,” *Archives of General Psychiatry* 48(12), 1060–1064.
     url: https://doi.org/10.1001/archpsyc.1991.01810360024003

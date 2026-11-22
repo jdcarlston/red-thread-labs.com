@@ -21,15 +21,15 @@ concepts:
     def: Attachment understood as two people building a brain that can regulate itself.
 context: "Schore offers the mechanism under co-regulation: steady, attuned contact in the body builds the ability to steady yourself. It is one reason the labs happen in person. Much of regulation passes face to face, through tone and timing, in ways that are hard to get through a screen."
 exercise:
-  title: Borrowed steadiness
-  time: About 15 minutes
+  title: Face and voice attunement
+  time: About 15 minutes, in pairs
   steps:
-    - Think of a person whose presence has helped you feel steadier. It can be someone from any time in your life.
-    - Picture being with them. Notice their face, their voice, how they sit. Notice what changes in your breathing and shoulders.
-    - "Write down three things they do that help: a pace, a tone, a way of listening."
-    - This week, spend ten minutes with a steady person, in person or by voice, and notice your body before and after.
-    - Ask yourself which of their three things you could offer to someone else.
-  why: Schore’s work describes regulation as something first borrowed from another nervous system and later internalized. Paying attention to how steady people affect your body helps you recognize co-regulation when it happens, and to practice offering it.
+    - Sit facing each other. One person tells a short story, about two minutes, of a recent moment that mattered to them.
+    - The listener pays attention to the teller’s face, eyes and tone of voice rather than the words, and lets their own face respond naturally.
+    - "When the story ends, the listener reflects only the feeling they picked up, and how: “Your voice got quieter when you talked about your sister. It sounded tender, maybe a little sad.”"
+    - The teller says how close that was.
+    - Switch roles, then talk about what it was like to be read through your face and voice instead of your words.
+  why: Schore’s research describes attunement as fast, nonverbal, right-brain-to-right-brain communication through the face, eyes and the music of the voice. Practicing it on purpose, and checking what you read, trains the channel through which people regulate each other.
 sources:
   - cite: "Allan N. Schore (1994), *Affect Regulation and the Origin of the Self: The Neurobiology of Emotional Development*. Lawrence Erlbaum."
     url: https://search.worldcat.org/search?q=Affect+Regulation+and+the+Origin+of+the+Self+Schore

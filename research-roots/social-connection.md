@@ -29,7 +29,7 @@ exercise:
     - "Make it specific: mention something you remember or appreciate about them."
     - Notice how you feel before and after, and how they respond.
     - At the end of the week, pick two people to see in person in the next month.
-  why: Holt-Lunstad’s work shows that social ties affect health, and small, regular contact is how ties are kept alive. A daily reach-out turns a vague wish to connect into a habit.
+  why: Holt-Lunstad’s work shows that social ties affect health, and small, regular contact is how ties are kept alive. The Surgeon General’s 2023 advisory makes the same point for individuals, encouraging people to reach out to a friend or family member for about 15 minutes each day. A daily reach-out turns a vague wish to connect into a habit.
 sources:
   - cite: "Julianne Holt-Lunstad, Timothy B. Smith & J. Bradley Layton (2010), “Social relationships and mortality risk: A meta-analytic review,” *PLoS Medicine* 7(7), e1000316."
     url: https://doi.org/10.1371/journal.pmed.1000316

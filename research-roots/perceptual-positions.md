@@ -27,9 +27,10 @@ exercise:
     - Recall a recent upsetting conversation. Choose a medium one.
     - First, replay it through your own eyes for a moment. Notice what you feel.
     - Now step back and picture the scene from across the room, as a kind observer. See both people.
+    - "Talk to yourself from there, using your own name or “you”: “JD, what’s going on for you here? What do you need?”"
     - "From there, ask: what was each person feeling and needing?"
     - Write down anything you see from the observer position that you couldn’t see from inside.
-  why: Kross and Ayduk’s experiments found that reflecting on a painful memory from a distanced, observer view reduced distress and helped people make sense of it. Practicing that shift builds the observer capacity.
+  why: Kross and Ayduk’s experiments found that reflecting on a painful memory from a distanced, observer view reduced distress and helped people make sense of it. Kross and colleagues later found that talking to yourself by name, or as “you,” has the same steadying effect before a hard moment. Practicing both builds the observer position as a capacity you can call on.
 sources:
   - cite: "Robert L. Selman (1980), *The Growth of Interpersonal Understanding: Developmental and Clinical Analyses*. Academic Press."
     url: https://search.worldcat.org/search?q=The+Growth+of+Interpersonal+Understanding+Selman
@@ -40,6 +41,9 @@ sources:
   - cite: "Ethan Kross, Ozlem Ayduk & Walter Mischel (2005), “When asking ‘why’ does not hurt: Distinguishing rumination from reflective processing of negative emotions,” *Psychological Science* 16(9), 709–715."
     url: https://doi.org/10.1111/j.1467-9280.2005.01600.x
     label: Read the study
+  - cite: "Ethan Kross, Emma Bruehlman-Senecal, Jiyoung Park and others (2014), Self-talk as a regulatory mechanism: How you do it matters. *Journal of Personality and Social Psychology*, 106(2), 304–324."
+    url: https://scholar.google.com/scholar?q=Kross+2014+Self-talk+as+a+regulatory+mechanism+how+you+do+it+matters
+    label: Find the paper
 related:
   - judith-delozier
   - robert-dee-mcdonald

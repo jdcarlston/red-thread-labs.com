@@ -22,15 +22,15 @@ concepts:
     def: Care without skill can’t produce reliable change. Skill without care is empty. To heal and be healed.
 context: "Dr. McDonald is a teacher at the root of JD’s practice. His focus on interoception, and on how body signals become meaning and shape how we regulate ourselves, is why the labs start with what you feel in your body before what you think about it. The line that closes this page is one of his Convictions, the foundational statements of The Destination Method. What JD learned from him, together with the attachment, nervous-system and relationship research across these pages, runs through the nine-rotation curriculum, which is JD’s own original design. To learn his work directly, go to [the Telos Healing Center](https://teloscenter.com)."
 exercise:
-  title: Follow a feeling to its meaning
-  time: About 10 minutes
+  title: The four golden questions
+  time: About 20 minutes, on your own or with a partner asking
   steps:
-    - Think of a recent moment in a relationship that still carries some charge.
-    - Notice where you feel it in your body. Point to the spot.
-    - "Describe it as a sensation, not a story: is it warm or cool, heavy or light, still or moving? What size and shape is it?"
-    - "Ask it, gently: what are you trying to tell me, and what do you need?"
-    - Stay with it for a few breaths and notice whether the sensation, or the meaning you were making about the moment, shifts.
-  why: Research on interoception finds that people who notice their body signals more accurately tend to regulate their emotions more flexibly. Describing a feeling as a sensation before deciding what it means gives you room to choose your response.
+    - "Come home to your body first: feel your feet, your breath, and where you feel the situation in your chest or belly. These questions can only be answered from inside."
+    - "Ask: Do you want to keep having the experience you’re having? If the honest answer is yes, you’re done. If no, go on."
+    - "Ask: What do you want instead? Say it in positive terms, what you want rather than what you don’t, make it something you start and control yourself, and keep it a size you can actually reach."
+    - "Ask: How will you know when you have it? Describe what you’ll see, hear and feel, inside and out, or what you’ll be doing."
+    - "Ask: What within you stops you from having what you want right now? Describe the feelings, thoughts and beliefs in the same sensory detail. That’s what the work is about."
+  why: These four questions, each with conditions its answer has to meet, are at the heart of Dr. McDonald’s Destination Method. You can’t get somewhere until you know where you are, where you want to go, how you’ll know you’ve arrived and what stands in the way. Starting from the body reflects his focus on interoception.
 sources:
   - cite: Telos Healing Center, founded by Rev. Dr. Robert Dee McDonald and Rev. Dr. Luzette McDonald.
     url: https://teloscenter.com

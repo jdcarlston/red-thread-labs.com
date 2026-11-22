@@ -21,15 +21,15 @@ concepts:
     def: A solid, flexible self; a quiet mind and calm heart; grounded responding; meaningful endurance.
 context: Schnarch is part of the differentiation backbone of the labs. His idea that intimacy asks you to grow, not just to be comforted, is a hard and hopeful one.
 exercise:
-  title: Hold on to yourself
-  time: About 10 minutes to prepare, then in the moment
+  title: Hugging till relaxed
+  time: About 10 minutes, with a partner
   steps:
-    - "Think of a moment in a close relationship when you tend to lose yourself: you give in, flare up, or leave."
-    - Write what you believe and want in that situation, in one or two sentences. This is your solid self.
-    - "Choose one way to calm yourself without needing the other person to change: slow breathing, feet on the floor, a phrase like “I can stay.”"
-    - The next time it happens, use your calming move and say your one or two sentences kindly.
-    - Afterward, note how it felt to stay present and stay yourself.
-  why: Schnarch’s approach centers on self-soothing and holding your own position under pressure. Preparing your position and a calming move ahead of time makes it more likely you can stay steady when the pressure comes.
+    - Stand facing each other, each balanced on your own two feet. Neither of you should be leaning on the other.
+    - Put your arms around each other in an ordinary hug.
+    - Focus on yourself, not your partner. Quiet your mind and let your body relax, breath by breath.
+    - If you feel an urge to pull away, cling, or check on how they’re doing, notice it and settle yourself instead.
+    - Stay until you relax, then let go. Talk about what you noticed in yourself, not about how your partner did.
+  why: This is Schnarch’s signature exercise from *Passionate Marriage*. Standing on your own feet while staying close is differentiation in the body, and calming yourself in someone’s arms, instead of needing them to calm you, is the self-soothing his approach is built on.
 sources:
   - cite: "David Schnarch (1997), *Passionate Marriage: Keeping Love and Intimacy Alive in Committed Relationships*. W. W. Norton."
     url: https://search.worldcat.org/search?q=Passionate+Marriage+David+Schnarch

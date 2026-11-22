@@ -21,15 +21,15 @@ concepts:
     def: When control keeps failing, the system changes its references.
 context: "Powers gives the labs an engineering view of patterns. Many relationship behaviors are attempts to keep a picture steady: “I must be needed,” “I must not be abandoned.” Changing the behavior rarely lasts. Changing the picture it serves does."
 exercise:
-  title: Find the set point
-  time: About 15 minutes
+  title: The Method of Levels conversation
+  time: About 20 minutes, in pairs
   steps:
-    - Pick a behavior you repeat in relationships, especially one that comes in different forms (checking your phone, over-explaining, going quiet).
-    - "Ask: what am I trying to keep steady when I do this? Write it as a picture: “I’m trying to keep… at…”"
-    - List the different behaviors you use to keep that picture steady.
-    - Ask whether that set point still serves you.
-    - Write a new reference you’d like to hold instead, and one behavior that would serve it.
-  why: Perceptual control theory says behavior varies to keep a perception at its reference. Finding the reference explains why several different habits keep showing up, and changing it changes all of them at once.
+    - One person is the talker and picks a problem they’re stuck on. The other is the listener.
+    - The talker talks about it freely for about ten minutes. The listener gives no advice, opinions or stories.
+    - "The listener asks only about what’s in the talker’s mind right now: “What’s going through your mind as you say that?” “How do you feel about that?” “What do you notice when you think about it that way?”"
+    - When the talker pauses, smiles, sighs or looks away, the listener gently asks about it, because that often means a different thought just came up in the background.
+    - Switch roles. Then talk about whether a bigger goal, the one the problem was really about, came into view.
+  why: The Method of Levels is the conversation approach Tim Carey developed from Powers’s perceptual control theory. Problems persist when two goals conflict, and the goal that resolves them usually sits one level up. Asking only about background thoughts helps a person shift attention up a level, where they can reorganize on their own.
 sources:
   - cite: "William T. Powers (1973), *Behavior: The Control of Perception*. Aldine."
     url: https://search.worldcat.org/search?q=Behavior+The+Control+of+Perception+Powers
@@ -37,6 +37,9 @@ sources:
   - cite: "William T. Powers (1973), “Feedback: Beyond behaviorism,” *Science* 179(4071), 351–356."
     url: https://doi.org/10.1126/science.179.4071.351
     label: Read the study
+  - cite: "Timothy A. Carey (2006), *The Method of Levels: How to Do Psychotherapy Without Getting in the Way*. Living Control Systems Publishing."
+    url: https://search.worldcat.org/search?q=The+Method+of+Levels+Carey
+    label: Find the book
 related:
   - cybernetics
   - predictive-processing

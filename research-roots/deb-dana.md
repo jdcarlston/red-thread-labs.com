@@ -46,6 +46,5 @@ sources:
 related:
   - bessel-van-der-kolk
   - peter-levine
-  - cesar-millan
 heartLine: Your body can learn the way back to safe.
 ---

@@ -21,15 +21,15 @@ concepts:
     def: Contemplation and care for the world as one practice.
 context: Thich Nhat Hanh’s teaching that presence is the heart of love is close to the center of the labs. Everything we practice depends on being here, with the person in front of you.
 exercise:
-  title: Walking and breathing
-  time: Ten minutes a day, for a week
+  title: Beginning Anew
+  time: About 30 minutes, with a partner or a small group
   steps:
-    - Walk slowly, indoors or out, for ten minutes, with no destination.
-    - "Coordinate your breath and steps: a few steps on the in-breath, a few on the out-breath."
-    - Silently say, “Breathing in, I know I’m breathing in. Breathing out, I know I’m breathing out.”
-    - When your mind wanders, notice where it went and come back to your feet.
-    - Once during the week, offer someone your full presence in the same way, for even five minutes.
-  why: These are practices from Thich Nhat Hanh’s mindfulness teaching. Training attention on breath and steps builds the capacity to be present, which you can then offer to others.
+    - Sit together and place a flower or another small object in the middle. Whoever holds it speaks. Everyone else listens without interrupting or defending.
+    - "Flower watering: name, specifically, a few things you appreciate about the other person."
+    - "Share a regret: something you said or did that may have hurt them, and that you’re sorry for."
+    - "Express a hurt, gently: something they did that hurt you, said with loving speech, as your own experience rather than an accusation. The listener only listens."
+    - Ask for support with something you’re struggling with. Close with a bow, a hug or a simple thank-you.
+  why: Beginning Anew is the practice Thich Nhat Hanh taught at Plum Village for couples, families and communities to renew their relationships, often once a week. Starting with appreciation and listening deeply, without defending, keeps small hurts from building into walls.
 sources:
   - cite: Thich Nhat Hanh (1975), *The Miracle of Mindfulness*. Beacon Press.
     url: https://search.worldcat.org/search?q=The+Miracle+of+Mindfulness+Thich+Nhat+Hanh
@@ -40,6 +40,9 @@ sources:
   - cite: Plum Village, the community he founded.
     url: https://plumvillage.org/
     label: Visit the site
+  - cite: "Thich Nhat Hanh (1998), *Teachings on Love*. Parallax Press."
+    url: https://search.worldcat.org/search?q=Teachings+on+Love+Thich+Nhat+Hanh
+    label: Find the book
 related:
   - default-mode-network
   - martin-buber
