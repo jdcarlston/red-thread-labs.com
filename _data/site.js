@@ -39,18 +39,22 @@ module.exports = {
 
   // A child with `nested: true` is shown indented under the item before it (like Reinvention Labs
   // and Crucibles under Labs & workshops).
+  // `draft: true` hides an item on the live site (it still shows while previewing). Practice Labs is a
+  // draft page for now, so its own links are drafts and the top item links to Level-Up on the live site
+  // (`liveHref`). When the Practice Labs page is published, delete those draft and liveHref markers.
   nav: [
     {
       label: "Practice Labs",
       href: "/practice-labs/",
+      liveHref: "/level-up/",
       children: [
-        { label: "How it works", href: "/practice-labs/#how-it-works" },
-        { label: "Labs & workshops", href: "/practice-labs/#labs" },
-        { label: "Reinvention Labs", href: "/practice-labs/#reinvention-labs", nested: true },
-        { label: "Crucibles", href: "/practice-labs/#crucibles", nested: true },
+        { label: "How it works", href: "/practice-labs/#how-it-works", draft: true },
+        { label: "Labs & workshops", href: "/practice-labs/#labs", draft: true },
+        { label: "Reinvention Labs", href: "/practice-labs/#reinvention-labs", nested: true, draft: true },
+        { label: "Crucibles", href: "/practice-labs/#crucibles", nested: true, draft: true },
         { label: "Level-Up Sessions", href: "/level-up/" },
-        { label: "Retreats & gatherings", href: "/practice-labs/#retreats" },
-        { label: "For Teams & Organizations", href: "/practice-labs/#teams" },
+        { label: "Retreats & gatherings", href: "/practice-labs/#retreats", draft: true },
+        { label: "For Teams & Organizations", href: "/practice-labs/#teams", draft: true },
       ],
     },
     {
@@ -70,7 +74,7 @@ module.exports = {
       href: "/about/",
       children: [
         { label: "Red Thread Labs", href: "/about/" },
-        { label: "Mission & values", href: "/about/#mission" },
+        { label: "Mission & values", href: "/about/#mission", draft: true },
         { label: "JD Carlston", href: "/about/jd/" },
         { label: "Contact", href: "/contact/" },
       ],

@@ -21,17 +21,17 @@ concepts:
     def: The felt sense of belonging and contributing, Adler’s measure of health.
   - term: Encouragement
     def: Discouragement, not badness, drives mistaken goals. Courage restores movement.
-context: Adler’s question, what is this for, is one of the most useful in the labs. Patterns make sense once you see what they’re trying to achieve, and they shift when the goal does.
+context: Adler’s question, what is this for, is one of the most useful in the labs. His early recollections technique is a direct way to find the answer. Patterns make sense once you see what they’re trying to achieve, and they shift when the goal does.
 exercise:
-  title: What is it for?
-  time: About 15 minutes
+  title: Your earliest memory
+  time: About 20 minutes
   steps:
-    - Name a pattern you keep repeating, like always being the helper, avoiding conflict, or starting and not finishing.
-    - "Ask: “If this pattern were trying to get me something, what would it be?” Safety? Belonging? Being special? Not being blamed?"
-    - "Ask: “When did I decide this was the way to get it?”"
-    - Write one other way you could get the same thing now.
-    - "Try it once this week. Use Dreikurs’s phrase if it helps: the courage to be imperfect."
-  why: Adler taught that behavior is organized around goals, often set in childhood. Seeing the goal makes the pattern understandable and opens other routes to the same need.
+    - Write down the earliest single memory you can recall, one specific moment rather than a general “we used to.” Write it in the present tense, as if it’s happening now.
+    - "Add what stands out most: the one image or moment that sticks, and what you were feeling right then."
+    - Read it back as if it were a story about someone else. What does this person seem to believe about themselves, about other people, and about how to get by in the world?
+    - Write that belief as one sentence, like “I have to manage things myself” or “If I’m quiet, I’m safe.”
+    - Notice where that same belief shows up in your relationships today, and write one way you could test a different one this week.
+  why: Early recollections were one of Adler’s main tools. He found that of all the moments a person could remember, the ones they keep reflect their style of life, their guiding beliefs about how life works. Reading a memory for its belief, rather than for what happened, shows the goal a pattern is serving.
 sources:
   - cite: Heinz L. Ansbacher & Rowena R. Ansbacher, eds. (1956), *The Individual Psychology of Alfred Adler*. Basic Books.
     url: https://search.worldcat.org/search?q=The+Individual+Psychology+of+Alfred+Adler+Ansbacher

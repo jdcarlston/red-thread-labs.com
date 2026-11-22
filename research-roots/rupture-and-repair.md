@@ -21,15 +21,15 @@ concepts:
     def: Not perfect attunement, but a reliable return.
 context: "This research sits under a line we teach often: relationships that last don’t have fewer fights, they have better repair. It takes the pressure off. You will fall out of step with the people you love, and the skill is coming back sooner, first in three days, then three hours, then three minutes."
 exercise:
-  title: The three-hour repair
-  time: Ongoing for a week, five minutes to reflect
+  title: The still face, for grown-ups
+  time: About 10 minutes, with a partner you trust
   steps:
-    - "This week, watch for small ruptures: a sharp tone, a missed bid, a moment when you or someone else went cold."
-    - When one happens, note how long it usually takes you to come back.
-    - "Try to make one repair sooner than you normally would. It can be small: “That came out sharper than I meant,” or a hand on the shoulder."
-    - Notice what happens in you and in them after the repair.
-    - At the end of the week, write down what made repair easier and what made it harder.
-  why: Tronick’s studies show that connection isn’t constant. It is lost and found again over and over, and that cycle is what teaches a person the relationship can be trusted. Shortening the time to repair is a skill anyone can practice, at any age.
+    - "Agree on the three parts first, and that either of you can stop at any time. Sit facing each other."
+    - "Connect (one minute): talk and respond to each other warmly, the way you normally would at your best."
+    - "Still face (thirty seconds): one of you goes neutral and unresponsive, face still, while the other keeps trying to connect. Just notice what happens in you."
+    - "Repair (one minute): come back. Respond warmly again, and name what it was like: “That was strange. I’m here.”"
+    - Switch roles. Then talk about what you each did to try to reach the other, and what the repair felt like in your body.
+  why: This is adapted from Tronick’s Still Face experiment, which runs the same three phases with a parent and baby. Babies work hard to re-engage, then come apart, then recover when the parent returns. Feeling a short, safe version as adults shows how much we depend on response, and how quickly repair lands, which is the skill we then practice in daily life.
 sources:
   - cite: Edward Tronick, Heidelise Als, Lauren Adamson, Susan Wise & T. Berry Brazelton (1978), “The infant’s response to entrapment between contradictory messages in face-to-face interaction,” *Journal of the American Academy of Child Psychiatry* 17(1), 1–13.
     url: https://doi.org/10.1016/S0002-7138(09)62273-1

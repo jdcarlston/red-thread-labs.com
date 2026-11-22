@@ -242,6 +242,9 @@ body.menu-open { overflow: hidden; }
 .entry-card__tagline { margin: 6px 0 0; font-family: var(--font-serif); font-style: italic; font-size: 17px; color: var(--oxblood); }
 .entry-card.is-draft a { border: 2px dashed var(--coral); }
 .draft-badge { align-self: flex-start; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red-on-light); }
+/* Drafts while previewing (see "Drafts" in eleventy.config.js). On the live site they aren't built at all. */
+.draft-block { position: relative; margin: 0 -18px 40px; padding: 18px; border: 2px dashed var(--coral); border-radius: 14px; }
+.draft-page-flag { position: fixed; z-index: 60; right: 14px; bottom: 14px; margin: 0; padding: 8px 14px; border-radius: 999px; background: var(--coral); color: var(--ink); font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
 .draft-banner { margin: 0; padding: 14px 18px; border: 2px dashed var(--coral); border-radius: 10px; font-size: 15px; color: var(--red-on-light); }
 
 /* A lineage page */
@@ -370,8 +373,6 @@ body.menu-open { overflow: hidden; }
 
 /* Numbered steps (See · Shift · Prove, What we'll cover ...) */
 .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-/* Five steps in one row on wide screens (the Practice Labs flow). */
-.steps--five { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
 .steps li { display: flex; flex-direction: column; gap: 10px; padding: 26px; border-radius: 14px; background: var(--paper); box-shadow: 0 1px 0 rgba(29, 28, 26, 0.06); }
 .steps__num { font-family: var(--font-serif); font-size: 34px; line-height: 1; color: var(--red-on-light); }
 .steps h3 { margin: 0; font-size: 19px; font-weight: 700; }

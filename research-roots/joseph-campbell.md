@@ -38,6 +38,7 @@ sources:
     url: https://search.worldcat.org/search?q=The+Power+of+Myth+Campbell+Moyers
     label: Find the book
 related:
+  - carl-jung
   - maureen-murdock
   - wizard-of-oz
   - ts-eliot

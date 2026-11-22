@@ -29,7 +29,7 @@ exercise:
     - Circle anything that shows up more than once.
     - Now list one or two people who are reliably good to you. Notice whether they give you the same rush.
     - Write a sentence about what you’d like the spark to attach to from here on.
-  why: The vole studies show bonding is a learning process in the reward system. In people, rewards that come unpredictably tend to feel especially gripping. Seeing which conditions have charged your attractions helps you notice them as they happen and choose where you invest.
+  why: The vole studies show bonding is a learning process in the reward system. Broader research on reward learning adds that rewards which come unpredictably tend to feel especially gripping. Seeing which conditions have charged your attractions helps you notice them as they happen and choose where you invest.
 sources:
   - cite: Thomas R. Insel & Larry J. Young (2001), “The neurobiology of attachment,” *Nature Reviews Neuroscience* 2(2), 129–136.
     url: https://doi.org/10.1038/35053579

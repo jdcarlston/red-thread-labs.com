@@ -1,6 +1,7 @@
 {#- Menu items, with the Lineage submenu filled from the published lineage clusters. -#}
-{%- macro navItems(site, lineage, lineageVisible, page) -%}
+{%- macro navItems(site, lineage, lineageVisible, page, reviewMode) -%}
 {%- for item in site.nav -%}
+{%- if reviewMode or not item.draft -%}
   {%- set children = item.children -%}
   {%- if item.fromLineage -%}
     {%- set children = [{ label: "Overview", href: "/lineage/" }] -%}
@@ -9,12 +10,14 @@
     {%- endfor -%}
   {%- endif -%}
   <li class="{{ 'has-sub' if children }}">
-    <a href="{{ item.href }}"{% if page.url.startsWith(item.href) and item.href != '#' %} aria-current="page"{% endif %}>{{ item.label }}</a>
+    {%- set href = item.href if (reviewMode or not item.liveHref) else item.liveHref %}
+    <a href="{{ href }}"{% if page.url.startsWith(item.href) and item.href != '#' %} aria-current="page"{% endif %}>{{ item.label }}</a>
     {%- if children %}
     <ul class="sub">
-      {%- for child in children %}<li{% if child.nested %} class="sub__nested"{% endif %}><a href="{{ child.href }}">{{ child.label }}</a></li>{% endfor %}
+      {%- for child in children %}{% if reviewMode or not child.draft %}<li{% if child.nested %} class="sub__nested"{% endif %}><a href="{{ child.href }}">{{ child.label }}</a></li>{% endif %}{% endfor %}
     </ul>
     {%- endif %}
   </li>
+{%- endif -%}
 {%- endfor -%}
 {%- endmacro -%}

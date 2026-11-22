@@ -21,15 +21,15 @@ concepts:
     def: Attention to inner signals can be practiced.
 context: Craig gives the felt sense a home in the brain, and gives our somatic practices their purpose. Patterns often show up in the body before the mind notices them. Training attention inward is how people start to catch a pattern early.
 exercise:
-  title: Three-point check-in
-  time: One minute, three times a day, for a week
+  title: Count your heartbeat
+  time: About 5 minutes, once a day for a week
   steps:
-    - Set three reminders a day.
-    - "When one goes off, close your eyes or soften your gaze and notice three things: your breath, your chest or heartbeat, and your belly."
-    - "Name what you notice in one or two plain words each: “fast, tight, warm.”"
-    - "Then ask: if this had an emotion, what would it be?"
-    - At the end of the week, notice whether the signals got easier to read.
-  why: Craig’s work shows that feelings are built from inner body signals. Brief, regular check-ins give your attention practice reading those signals, which makes emotions easier to recognize before they take over.
+    - Sit still. Don’t touch your pulse. Just turn your attention inward, toward your chest.
+    - Set a timer for 30 seconds and silently count each heartbeat you can feel. If you can’t feel any, count none. Don’t guess.
+    - Afterward, take your pulse at your wrist or neck for the same 30 seconds and count it.
+    - Write both numbers down. The closer they are, the more clearly you’re reading the signal.
+    - At the end of the week, notice whether the gap shrank, and whether you’ve started noticing other body signals, like tension or warmth, more readily.
+  why: This is the heartbeat-counting task researchers use to measure interoceptive accuracy, how well a person perceives signals from inside their body. Craig’s work locates this inner sense in the insula and links it to how we feel emotions, so practicing it is practice in the raw material of feeling.
 sources:
   - cite: "A. D. Craig (2002), “How do you feel? Interoception: The sense of the physiological condition of the body,” *Nature Reviews Neuroscience* 3(8), 655–666."
     url: https://doi.org/10.1038/nrn894
@@ -37,6 +37,9 @@ sources:
   - cite: A. D. (Bud) Craig (2015), *How Do You Feel? An Interoceptive Moment with Your Neurobiological Self*. Princeton University Press.
     url: https://search.worldcat.org/search?q=How+Do+You+Feel+Bud+Craig+interoceptive
     label: Find the book
+  - cite: "Rainer Schandry (1981), Heart beat perception and emotional experience. *Psychophysiology*, 18(4), 483–488."
+    url: https://scholar.google.com/scholar?q=Schandry+1981+Heart+beat+perception+and+emotional+experience
+    label: Find the paper
 related:
   - antonio-damasio
   - peter-levine

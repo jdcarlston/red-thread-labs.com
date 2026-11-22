@@ -42,6 +42,22 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("lib/");
 
   eleventyConfig.addGlobalData("reviewMode", reviewMode);
+
+  // ---------- Drafts: things JD hasn't reviewed yet ----------
+  // A whole page:      draft: true in its front matter.
+  // Part of a page:    {% draft %} ... {% enddraft %} around it.
+  // A menu item:       draft: true on it in _data/site.js.
+  // While previewing (npm start, or RTL_REVIEW=1) drafts show with a dashed "Draft" marker.
+  // On the live site (npm run build, Netlify) they're left out entirely, so the site can go
+  // live and each draft goes public when you delete its draft marker.
+  eleventyConfig.addPreprocessor("drafts", "njk,md", (data) => {
+    if (data.draft && !reviewMode) return false; // false = don't build this page
+  });
+  eleventyConfig.addPairedShortcode("draft", (content, note) =>
+    reviewMode
+      ? `<div class="draft-block"><p class="draft-badge">Draft · hidden on the live site${note ? ` · ${note}` : ""}</p>${content}</div>`
+      : ""
+  );
   // {{ page.date | longDate }} -> "May 14, 2026"
   eleventyConfig.addFilter("longDate", (d) =>
     new Date(d).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" })
