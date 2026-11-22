@@ -198,10 +198,11 @@ body.menu-open { overflow: hidden; }
   filter: saturate(0.9) contrast(1.05) brightness(0.92);
 }
 .page-head__tint { position: absolute; inset: 0; background: var(--oxblood); mix-blend-mode: multiply; opacity: 0.4; }
-/* Research Roots pages: the roots photo in black and white, washed in a deep crimson to match the
-   pomegranate red of the Blog header. */
-.page-head--red .page-head__photo { filter: grayscale(1) contrast(1.15) brightness(1.1); }
-.page-head--red .page-head__tint { background: #c0281e; opacity: 0.9; }
+/* Research Roots pages: a strong red filter. The roots photo goes black and white, is recolored crimson
+   (keeping its light and shadow), and a dark fade on the left keeps the title readable. */
+.page-head--red .page-head__photo { filter: grayscale(1) contrast(1.7) brightness(0.72); } /* higher contrast, lower brightness = deeper shadows */
+.page-head--red .page-head__tint { background: #e3100c; mix-blend-mode: color; opacity: 1; }
+.page-head--red .page-head__veil { opacity: 1; background: linear-gradient(180deg, rgba(40, 4, 3, 0.6) 0%, rgba(40, 4, 3, 0) 35%), linear-gradient(90deg, rgba(58, 6, 4, 0.75) 0%, rgba(58, 6, 4, 0.5) 55%, rgba(58, 6, 4, 0.35) 100%); }
 .page-head__veil { position: absolute; inset: 0; background: var(--oxblood-deep); opacity: 0.2; }
 /* A page whose `header` sets color: true keeps the photo in its own colors: no grey-and-red toning,
    just a dark fade on the left and top so the menu and the title stay readable. */
