@@ -55,6 +55,7 @@ module.exports = {
         { label: "Level-Up Sessions", href: "/level-up/" },
         { label: "Retreats & gatherings", href: "/practice-labs/#retreats", draft: true },
         { label: "For Teams & Organizations", href: "/practice-labs/#teams", draft: true },
+        { label: "Families & Friends", href: "/practice-labs/#families", draft: true },
       ],
     },
     {
