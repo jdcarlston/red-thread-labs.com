@@ -14,6 +14,7 @@ kickerLink: /lineage/
 {%- set cluster = lineage.clusters | clusterById(entry.cluster) -%}
 {%- set kickerExtra = cluster.title -%}
 {%- set header = entry.header or cluster.header or site.lineageHeader -%}
+{%- set headerTone = "red" -%}
 {%- set subtitle = entry.people + " · " + entry.field -%}
 {% include "partials/page-header.njk" %}
 <main id="main" class="reading">
