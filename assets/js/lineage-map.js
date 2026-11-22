@@ -174,10 +174,14 @@
     const fs = small() ? 27 : 19;
     const maxChars = small() ? 13 : 18;
     const pos = {};
+    // In a big cluster (more than 16 pages), near the top and bottom of the ring, where labels sit side
+    // by side, every other label sits a little further out so neighbours don't run into each other.
+    const zigzag = n > 16;
     list.forEach((e, i) => {
       const a = -90 + (360 / n) * i;
       const [x, y] = polar(R, a);
-      pos[e.slug] = { x, y, a };
+      const nearTopOrBottom = Math.abs(Math.sin((a * Math.PI) / 180)) > 0.55;
+      pos[e.slug] = { x, y, a, far: zigzag && i % 2 === 1 && nearTopOrBottom };
     });
 
     // links between pages in this cluster
@@ -206,7 +210,7 @@
       g.append(el("circle", { cx: p.x, cy: p.y, r: 12 + Math.min(neighbours[e.slug].size, 10) * 1.2 }));
       if (others) g.append(el("circle", { cx: p.x, cy: p.y, r: 5, class: "lm-node__out" }));
       const cos = Math.cos((p.a * Math.PI) / 180), sin = Math.sin((p.a * Math.PI) / 180);
-      const off = 28 + Math.min(neighbours[e.slug].size, 10) * 1.2;
+      const off = 28 + Math.min(neighbours[e.slug].size, 10) * 1.2 + (p.far ? 44 : 0);
       const lx = p.x + off * cos, ly = p.y + off * sin;
       const anchor = cos > 0.12 ? "start" : cos < -0.12 ? "end" : "middle";
       const lines2 = wrap(e.title, anchor === "middle" ? 14 : maxChars);

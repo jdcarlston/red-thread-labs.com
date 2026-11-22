@@ -6,3 +6,4 @@ rtl-*.tgz
 
 # Pages and notes that must never be public. They build on your Mac only.
 private/
+.wtmp/
