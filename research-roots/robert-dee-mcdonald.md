@@ -22,15 +22,15 @@ concepts:
     def: Care without skill can’t produce reliable change. Skill without care is empty. To heal and be healed.
 context: "Dr. McDonald is a teacher at the root of JD’s practice. His focus on interoception, and on how body signals become meaning and shape how we regulate ourselves, is why the labs start with what you feel in your body before what you think about it. The line that closes this page is one of his Convictions, the foundational statements of The Destination Method. What JD learned from him, together with the attachment, nervous-system and relationship research across these pages, runs through the nine-rotation curriculum, which is JD’s own original design. To learn his work directly, go to [the Telos Healing Center](https://teloscenter.com)."
 exercise:
-  title: The four golden questions
-  time: About 20 minutes, on your own or with a partner asking
+  title: From felt sense to destination
+  time: About 20 minutes, on your own or with a partner asking the questions
   steps:
-    - "Come home to your body first: feel your feet, your breath, and where you feel the situation in your chest or belly. These questions can only be answered from inside."
-    - "Ask: Do you want to keep having the experience you’re having? If the honest answer is yes, you’re done. If no, go on."
-    - "Ask: What do you want instead? Say it in positive terms, what you want rather than what you don’t, make it something you start and control yourself, and keep it a size you can actually reach."
-    - "Ask: How will you know when you have it? Describe what you’ll see, hear and feel, inside and out, or what you’ll be doing."
-    - "Ask: What within you stops you from having what you want right now? Describe the feelings, thoughts and beliefs in the same sensory detail. That’s what the work is about."
-  why: These four questions, each with conditions its answer has to meet, are at the heart of Dr. McDonald’s Destination Method. You can’t get somewhere until you know where you are, where you want to go, how you’ll know you’ve arrived and what stands in the way. Starting from the body reflects his focus on interoception.
+    - "Start in your body. Feel your feet and your breath, then bring to mind a situation you’d like to change. Notice where you feel it: chest, belly, throat. Describe the sensation plainly, its size, weight, temperature or movement."
+    - "Ask: Where am I now? Describe the situation as it is, without judging it."
+    - "Ask: What would I like instead? Say it in positive terms, what you want rather than what you want to stop, and keep it something you can work toward yourself."
+    - "Ask: How will I know I’ve arrived? Imagine it’s already true. What do you see, hear and do? Then notice how your body feels in that picture, and compare it with the sensation you started with."
+    - Write down one small step toward that feeling you can take this week.
+  why: Questions about where you are, where you want to go and how you’ll know you’ve arrived are widely used across NLP and coaching, and they shape much of the Destination Method’s approach. Starting and ending in the body reflects Dr. McDonald’s focus on interoception, using the felt sense of where you are and where you’re going as your guide.
 sources:
   - cite: Telos Healing Center, founded by Rev. Dr. Robert Dee McDonald and Rev. Dr. Luzette McDonald.
     url: https://teloscenter.com
