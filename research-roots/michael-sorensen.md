@@ -35,6 +35,7 @@ sources:
     url: https://search.worldcat.org/search?q=I+Hear+You+Michael+Sorensen
     label: Find the book
 related:
+  - michael-nichols
   - marsha-linehan
   - carl-rogers
   - marshall-rosenberg
