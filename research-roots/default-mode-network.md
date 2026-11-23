@@ -6,7 +6,7 @@ order: 50
 title: The Default Mode Network
 people: Marcus Raichle · Judson Brewer · Robin Carhart-Harris
 field: Neuroimaging
-tagline: The self is a network, not a fact. It can be held more lightly.
+tagline: The voice narrating your life runs on a network, and it can quiet down.
 who:
   - "In [2001, Marcus Raichle and colleagues](https://doi.org/10.1073/pnas.98.2.676) described the default mode network: brain regions most active when the mind turns inward, during rest, daydreaming, memory and thinking about ourselves, and quieter during absorbed outward tasks."
   - Judson Brewer’s team found that [experienced meditators](https://doi.org/10.1073/pnas.1112029108) showed less activity in this network. Robin Carhart-Harris and Karl Friston proposed that the network helps hold our highest-level beliefs and expectations in place, and that [loosening its grip](https://doi.org/10.1124/pr.118.017160) can make those beliefs more open to change.

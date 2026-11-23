@@ -38,5 +38,5 @@ related:
   - arthur-aron
   - social-connection
   - crucial-conversations
-heartLine: You don't have to be a natural. You just have to be curious and keep practicing.
+heartLine: You don’t have to be a natural. You just have to be curious and keep practicing.
 ---

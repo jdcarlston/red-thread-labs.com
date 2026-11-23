@@ -43,5 +43,5 @@ sources:
 related:
   - dw-winnicott
   - virginia-satir
-heartLine: There are no bad parts, only good parts in hard roles.
+heartLine: Every part is trying to help. Listen before you push.
 ---

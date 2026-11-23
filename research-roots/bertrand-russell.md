@@ -6,7 +6,7 @@ order: 30
 title: Logical Types
 people: Bertrand Russell (1872–1970)
 field: Mathematical logic · Philosophy
-tagline: Talking about a thing is not the same as doing it.
+tagline: A statement about the game is not a move in the game.
 who:
   - "Bertrand Russell worked to keep mathematics free of paradox, especially the kind that appears when a set refers to itself. His answer, set out in [a 1908 paper](https://doi.org/10.2307/2369948) and in *Principia Mathematica* with Alfred North Whitehead, was the theory of logical types: each level of abstraction is a different kind of thing, and mixing them produces paradox."
   - "Gregory Bateson saw that the same idea describes how living systems learn: information about a level is not the same as being at that level."
@@ -41,5 +41,5 @@ related:
   - gregory-bateson
   - alfred-korzybski
   - ken-wilber
-heartLine: You can’t think your way into a level. You have to step in.
+heartLine: Notice which level you’re on, and you’ll see where change can happen.
 ---

@@ -44,5 +44,5 @@ related:
   - david-marr
   - marvin-minsky
   - cybernetics
-heartLine: If it’s defined by its role, something kinder can play the part.
+heartLine: A mind is defined by what it does, so new patterns make a new you.
 ---

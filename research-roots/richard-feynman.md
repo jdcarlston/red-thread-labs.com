@@ -44,5 +44,5 @@ related:
   - david-bohm
   - donald-hoffman
   - predictive-processing
-heartLine: Many small things add up. Change what cancels the good.
+heartLine: Every possible path counts. Small changes shift where you land.
 ---

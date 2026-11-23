@@ -51,5 +51,5 @@ related:
   - clarissa-pinkola-estes
   - maureen-murdock
   - richard-schwartz
-heartLine: The parts you hid were trying to help. They can come home.
+heartLine: Wholeness, not perfection. What you take back makes you more yourself.
 ---

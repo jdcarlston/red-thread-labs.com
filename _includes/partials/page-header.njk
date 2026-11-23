@@ -1,4 +1,4 @@
-{#- Inner-page header: the roots photo toned to oxblood, faint threads in the menu bar, then the page title.
+{#- Inner-page header, a shorter version of the Love Lab hero: the page's photo under a dark veil, faint threads in the menu bar, then the page title, centered.
     Set `kicker`, `title` and optional `subtitle` / `kickerLink` in the page.
     The photo comes from `header` (image, position, zoom, and color: true to keep the photo's own colors) if the page sets one, otherwise site.defaultHeader (lineage pages use site.lineageHeader).
     Research Roots pages set headerTone = "red" for the deep oxblood look; other pages keep more of the photo's color. -#}
@@ -13,6 +13,7 @@
   <div class="page-head__title">
     {%- if kicker %}<p class="kicker">{% if kickerLink %}<a href="{{ kickerLink }}">{{ kicker | safe }}</a>{% else %}{{ kicker | safe }}{% endif %}{% if kickerExtra %} · {{ kickerExtra | safe }}{% endif %}</p>{% endif %}
     <h1>{{ (heading or title) | safe }}</h1>
+    <hr class="rule">
     {%- if subtitle %}<p class="page-head__subtitle">{{ subtitle | safe }}</p>{% endif %}
   </div>
 </div>

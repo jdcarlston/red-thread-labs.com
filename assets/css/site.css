@@ -787,3 +787,64 @@ body.menu-open { overflow: hidden; }
 .lm-column__arrow { fill: var(--oxblood) !important; }
 .lineage-map__panel .lm-panel__links li { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
 @media (max-width: 700px) { .lm-bubble__count { font-size: 30px; } }
+
+
+/* ==========================================================================
+   Every page in the Love Lab look
+   The inner-page header is a shorter version of the Love Lab hero: the page's own photo in full color
+   under the same dark veil, title centered over a red rule. The light "reading" sections turn dark,
+   alternating with the dark bands the way the Love Lab page does.
+   To go back to cream pages and toned headers, delete this block (and the <hr class="rule"> in page-header.njk).
+   ========================================================================== */
+.page-head { min-height: max(56vh, 460px); display: flex; flex-direction: column; }
+.page-head .page-head__photo, .page-head--red .page-head__photo, .page-head--color .page-head__photo { filter: none; }
+.page-head .page-head__tint { display: none; }
+.page-head .page-head__veil, .page-head--red .page-head__veil, .page-head--color .page-head__veil {
+  opacity: 1; background: linear-gradient(180deg, rgba(26, 11, 10, 0.78) 0%, rgba(26, 11, 10, 0.45) 40%, rgba(26, 11, 10, 0.85) 100%);
+}
+.page-head__title { flex: 1; align-items: center; justify-content: center; text-align: center; max-width: none; margin: 0 auto; padding: 40px var(--gutter) 64px; }
+.page-head__title h1 { font-size: clamp(32px, 4.4vw, 58px); letter-spacing: 0.18em; padding-left: 0.18em; }
+.page-head__subtitle { max-width: 640px; }
+
+/* Dark reading sections. The light colors are swapped for the Love Lab's darks here,
+   so the cards, forms, lists and labels inside follow without their own rules. */
+.reading {
+  --cream: #251210;
+  --paper: rgba(255, 255, 255, 0.04);
+  --ink: var(--cream-text);
+  --ink-soft: var(--muted-on-dark);
+  --rule: rgba(255, 119, 119, 0.25);
+  --red-on-light: var(--coral);
+  --teal-on-light: var(--teal);
+  background: #251210; color: var(--cream-text);
+}
+.reading .card, .reading .steps li, .reading .concept, .reading .entry-card a, .reading .contact-form,
+.reading .stepped, .reading .exercise { box-shadow: none; border: 1px solid rgba(255, 119, 119, 0.25); }
+.reading .exercise { border-left: 3px solid var(--thread); }
+.reading .btn--primary, .reading .btn--send { background: var(--thread); color: var(--cream-text); }
+.reading .btn--primary:hover, .reading .btn--send:hover, .reading a.btn--primary:hover { background: var(--coral); color: var(--oxblood-deep); }
+.reading .field input, .reading .field select, .reading .field textarea, .reading .signup__row input {
+  border-color: rgba(255, 119, 119, 0.45); background: rgba(20, 8, 7, 0.7); color: var(--cream-text);
+}
+.reading .field select option { background: var(--oxblood-deep); }
+/* Words that were oxblood on cream become rose on the dark, and the faint oxblood outlines become coral. */
+.reading .entry-card__tagline, .reading .entry__tagline, .reading .heart-line, .reading .lm-panel__tagline { color: var(--rose); }
+.reading .lm-panel__read, .reading .link-button, .reading .lm-panel__links a:hover, .reading .lm-panel__links button:hover,
+.reading .lineage-map__back, .reading .row-nav__btn { color: var(--coral); }
+.reading .lineage-map__back, .reading .chip, .reading .row-nav__btn { border-color: rgba(255, 119, 119, 0.35); }
+.reading .lm-panel__links a, .reading .lm-panel__links button { text-decoration-color: rgba(255, 119, 119, 0.4); }
+/* The Research Roots map on the dark: a dark hub ringed in coral, dark people-dots ringed in rose, rose cross-links. */
+.reading .lm-hub circle { fill: var(--oxblood-deep); }
+.reading .lm-node circle { fill: var(--oxblood-deep); stroke: var(--rose); }
+.reading .lm-node:hover circle:first-child, .reading .lm-node:focus-visible circle:first-child { fill: var(--oxblood); }
+.reading .lm-xlink { stroke: var(--rose); }
+/* Research Roots "Who they were": a light cream panel, so the person's story stands apart from the dark page.
+   The light colors are put back inside it, so its text and links use the cream-page colors. */
+.reading .entry__who {
+  --ink: #1D1C1A; --ink-soft: #4A4744; --red-on-light: #B3261E; --teal-on-light: #2E6B6E;
+  padding: 32px 36px; border-radius: 14px; background: var(--cream-text); color: var(--ink);
+}
+.reading .entry__who a { color: var(--teal-on-light); }
+.reading .entry__who a:hover { color: var(--ink); }
+.reading .entry__who .label { color: var(--red-on-light); }
+@media (max-width: 700px) { .reading .entry__who { padding: 24px 22px; } }

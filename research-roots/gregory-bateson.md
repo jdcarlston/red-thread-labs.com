@@ -42,5 +42,5 @@ related:
   - cybernetics
   - robert-dilts
   - bandler-grinder
-heartLine: The answer is always relationship.
+heartLine: Look for the pattern that connects.
 ---

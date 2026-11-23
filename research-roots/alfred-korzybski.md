@@ -6,7 +6,7 @@ order: 20
 title: The Map Is Not the Territory
 people: Alfred Korzybski (1879–1950)
 field: General semantics
-tagline: The map is not the territory. The name is not the thing.
+tagline: The map is not the territory. The word is not the thing.
 who:
   - "Alfred Korzybski, a Polish-American engineer and philosopher, developed general semantics in *Science and Sanity* (1933): a way of noticing how our nervous systems, through language, build our experience of reality."
   - His best-known line, “the map is not the territory,” became a founding idea of NLP and of much systems thinking. A map is useful when its structure matches the territory, but it is never the territory. He offered simple habits, like dating and indexing words, to keep our maps honest.
@@ -38,5 +38,5 @@ related:
   - gregory-bateson
   - bandler-grinder
   - predictive-processing
-heartLine: Stop reading the map. Go there.
+heartLine: Hold your map lightly, and keep checking it against the ground.
 ---

@@ -6,7 +6,7 @@ order: 20
 title: Brave Spaces
 people: Brian Arao & Kristi Clemens (2013) · adapted by JD Carlston
 field: Facilitation
-tagline: Safety is the goal. Bravery is what makes it reachable.
+tagline: No room can promise perfect safety. Bravery is how real conversation happens anyway.
 who:
   - "Brian Arao and Kristi Clemens introduced the brave spaces framework in “From Safe Spaces to Brave Spaces,” a chapter in *The Art of Effective Facilitation* (2013). Working in social justice education, they noticed that promising “safe spaces” promised something impossible: real dialogue without discomfort or risk."
   - Their answer was to replace the promise of safety with an invitation to bravery, while still doing everything possible to make the room safe. JD Carlston adapted their framework into ten communication guidelines used in Red Thread Labs gatherings.

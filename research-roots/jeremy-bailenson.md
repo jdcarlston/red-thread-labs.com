@@ -6,7 +6,7 @@ order: 80
 title: Presence and the Screen
 people: Jeremy Bailenson
 field: Communication · Virtual human interaction
-tagline: You can meet through a screen. It’s harder to fully co-regulate through one.
+tagline: You can meet through a screen, but some of what two bodies share gets lost.
 who:
   - "Jeremy Bailenson founded Stanford’s Virtual Human Interaction Lab, which studies presence, embodiment and communication through technology. His [2021 paper “Nonverbal Overload”](https://doi.org/10.1037/tmb0000030) named four likely causes of video-call fatigue: intense close-up eye contact, constantly seeing yourself, being stuck in place, and the extra effort of reading flattened body language."
   - His book *Experience on Demand* (2018) looks at how strongly the nervous system responds to presence, and how differently it behaves through a frame.

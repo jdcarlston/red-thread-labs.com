@@ -41,5 +41,5 @@ related:
   - c-sue-carter
   - helen-fisher
   - jaak-panksepp
-heartLine: Who you bond to is learned, and what is learned can be relearned.
+heartLine: Bonds are shaped by what you live through together, and that keeps changing.
 ---

@@ -45,5 +45,5 @@ related:
   - marc-brackett
   - bud-craig
   - antonio-damasio
-heartLine: Feelings are built, and you can learn to build them truer.
+heartLine: The more words you have for a feeling, the more you can do with it.
 ---

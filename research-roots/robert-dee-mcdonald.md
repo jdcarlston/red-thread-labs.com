@@ -3,9 +3,9 @@ slug: robert-dee-mcdonald
 status: review
 cluster: change-work
 order: 30
-title: Rev. Dr. Robert Dee McDonald
+title: The Destination Method
 people: Rev. Dr. Robert Dee McDonald · Telos Healing Center
-field: Clinical psychology · NLP · The Destination Method · Transpersonal teaching
+field: Clinical research · NLP · Transpersonal teaching
 tagline: What the body feels becomes what we mean.
 who:
   - Rev. Dr. Robert Dee McDonald trained as a clinical researcher at the VA, studied NLP in the lineage of Bandler, Grinder and Robert Dilts, and earned a Doctor of Divinity from the Emerson Theological Institute. With his wife, Rev. Dr. Luzette McDonald, he founded the [Telos Healing Center](https://teloscenter.com) in Yorba Linda, California.

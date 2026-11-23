@@ -41,5 +41,5 @@ related:
   - david-schnarch
   - emily-nagoski
   - sue-johnson
-heartLine: Two whole selves, choosing each other on purpose.
+heartLine: Keep enough space between you that there’s someone to reach for.
 ---

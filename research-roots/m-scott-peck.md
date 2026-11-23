@@ -42,5 +42,5 @@ related:
   - erich-fromm
   - thomas-aquinas
   - priya-parker
-heartLine: Love is not the feeling that arrives. It’s the effort you choose.
+heartLine: Love is the will to extend yourself for someone’s growth, including your own.
 ---

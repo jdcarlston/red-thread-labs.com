@@ -3,7 +3,7 @@ slug: matthew-lieberman
 status: review
 cluster: nervous-system
 order: 100
-title: Name It to Tame It
+title: Affect Labeling
 people: Matthew Lieberman
 field: Social cognitive neuroscience
 tagline: The moment you name it, you’re no longer only inside it.
