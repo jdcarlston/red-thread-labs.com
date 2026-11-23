@@ -1001,3 +1001,21 @@ html body .entry__tagline, html body .entry > .heart-line { font-family: var(--f
 .framework__items li::before { content: counter(fw); position: absolute; left: 20px; top: 14px; font-family: var(--font-sans); font-size: 30px; font-weight: 700; color: var(--coral); }
 .framework__items h4 { margin: 0 0 6px; font-family: var(--font-sans); font-size: 17px; font-weight: 700; }
 .framework__items p { margin: 0; font-size: 15px; line-height: 1.55; color: var(--muted-on-dark); }
+
+/* Library Index (/library/index/): pages and ideas A to Z. */
+.lib-index { display: flex; flex-direction: column; gap: 36px; }
+.lib-index__jump { display: flex; gap: 12px; }
+.lib-index__jump a { padding: 7px 16px; border: 1px solid var(--rose); border-radius: 999px; color: var(--rose); text-decoration: none; font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.lib-index__jump a:hover { background: var(--rose); color: var(--oxblood-deep); }
+.lib-index__part { scroll-margin-top: 20px; }
+.lib-index__letters { display: flex; flex-wrap: wrap; gap: 4px 10px; margin: 6px 0 18px; font-weight: 700; }
+.lib-index__letters a { color: var(--coral); text-decoration: none; }
+.lib-index__letters a:hover { text-decoration: underline; }
+.lib-index__part { columns: 2 380px; column-gap: 48px; }
+.lib-index__part > h2, .lib-index__part > .lib-index__letters { column-span: all; }
+.lib-index__group { break-inside: avoid; margin-bottom: 18px; scroll-margin-top: 20px; }
+.lib-index__group h3 { margin: 0 0 6px; font-family: var(--font-sans); font-size: 22px; font-weight: 700; color: var(--coral); }
+.lib-index__group ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 5px; }
+.lib-index__group a { color: var(--cream-text, #f3e7e2); text-decoration: none; font-weight: 500; }
+.lib-index__group a:hover { color: var(--coral); text-decoration: underline; }
+.lib-index__group span { font-size: 14px; color: var(--muted-on-dark); }

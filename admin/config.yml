@@ -815,6 +815,7 @@ collections:
               - lineage-browse
               - lineage-map
               - lineage-radar
+              - lineage-index
               hint: The words of about-jd are under Pages → Shared blocks.
             - name: signupSource
               label: 'Booking: where they signed up'
@@ -1109,6 +1110,21 @@ collections:
     - name: research-roots
       label: Research Library
       file: _data/pages/research-roots.yml
+      fields:
+      - *id016
+      - *id017
+      - *id018
+      - *id019
+      - *id020
+      - *id021
+      - name: lineageHeader
+        label: Use the Research Library header photo
+        widget: boolean
+        required: false
+      - *id022
+    - name: library-index
+      label: Library Index
+      file: _data/pages/library-index.yml
       fields:
       - *id016
       - *id017

@@ -1,0 +1,24 @@
+{#- The Library Index: every Library page A to Z, then every idea named on a page (key concepts and
+    core frameworks) A to Z, each linking to its page. Built by the libraryIndex filter in eleventy.config.js.
+    The headings come from the page's words file (indexBlock). -#}
+{%- set idx = lineageVisible | libraryIndex(lineage.clusters) %}
+<div class="lib-index">
+  <nav class="lib-index__jump" aria-label="Jump to">
+    <a href="#pages">{{ indexBlock.pagesHeading or "Pages" }}</a>
+    <a href="#ideas">{{ indexBlock.ideasHeading or "Ideas" }}</a>
+  </nav>
+  {%- for part in [["pages", indexBlock.pagesHeading or "Pages", idx.pages], ["ideas", indexBlock.ideasHeading or "Ideas", idx.ideas]] %}
+  <section class="lib-index__part" id="{{ part[0] }}" aria-labelledby="{{ part[0] }}-title">
+    <h2 id="{{ part[0] }}-title" class="cluster__title">{{ part[1] }}</h2>
+    <p class="lib-index__letters">{% for g in part[2] %}<a href="#{{ part[0] }}-{{ g.letter }}">{{ g.letter }}</a>{% endfor %}</p>
+    {%- for g in part[2] %}
+    <div class="lib-index__group" id="{{ part[0] }}-{{ g.letter }}">
+      <h3>{{ g.letter }}</h3>
+      <ul>
+        {%- for i in g.items %}<li><a href="/library/{{ i.slug }}/">{{ i.name }}</a> <span>{{ i.note }}</span></li>{% endfor %}
+      </ul>
+    </div>
+    {%- endfor %}
+  </section>
+  {%- endfor %}
+</div>

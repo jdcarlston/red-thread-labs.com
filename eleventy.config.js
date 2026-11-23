@@ -116,6 +116,34 @@ module.exports = function (eleventyConfig) {
       .join(" ").replace(/<[^>]+>/g, "").replace(/&amp;/g, "&").toLowerCase();
   eleventyConfig.addFilter("searchText", searchText);
 
+  // The Library Index (/library/index/): every page, and every idea named on a page, A to Z.
+  // Returns { pages: [{ letter, items }], ideas: [{ letter, items }] }, each item { name, slug, note }.
+  eleventyConfig.addFilter("libraryIndex", (entries, clusters) => {
+    const plain = (s) => String(s || "").replace(/<[^>]+>/g, "").replace(/&amp;/g, "&");
+    const short = Object.fromEntries(clusters.map((c) => [c.id, c.short || c.title]));
+    const sortKey = (s) => s.replace(/^(the|a|an)\s+/i, "").normalize("NFD").replace(/[^\w\s]/g, "").toLowerCase();
+    const group = (items) => {
+      const out = [];
+      items.sort((a, b) => sortKey(a.name).localeCompare(sortKey(b.name))).forEach((i) => {
+        const k = sortKey(i.name)[0] || "#";
+        const letter = /[a-z]/.test(k) ? k.toUpperCase() : "#";
+        if (!out.length || out[out.length - 1].letter !== letter) out.push({ letter, items: [] });
+        out[out.length - 1].items.push(i);
+      });
+      return out;
+    };
+    const pages = entries.map((e) => ({ name: plain(e.title), slug: e.slug, note: `${plain(e.people)} · ${short[e.cluster]}` }));
+    const ideas = [];
+    entries.forEach((e) => {
+      (e.concepts || []).forEach((c) => ideas.push({ name: plain(c.term), slug: e.slug, note: plain(e.title) }));
+      if (e.framework && e.framework.name) {
+        ideas.push({ name: plain(e.framework.name), slug: e.slug, note: plain(e.title) });
+        (e.framework.items || []).forEach((i) => ideas.push({ name: plain(i.name), slug: e.slug, note: `${plain(e.framework.name)} · ${plain(e.title)}` }));
+      }
+    });
+    return { pages: group(pages), ideas: group(ideas) };
+  });
+
   // The data the Research Radar (assets/js/lineage-radar.js) draws from, as JSON for a <script> tag.
   // Pages with no ring aren't on the radar. In your preview they're listed under it as "not on the radar yet".
   eleventyConfig.addFilter("radarData", (entries, clusters) => {
