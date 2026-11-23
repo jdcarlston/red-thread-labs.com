@@ -48,6 +48,7 @@ sources:
     label: Read the review
 related:
   - michael-sorensen
+  - daniel-wile
   - carl-rogers
   - marshall-rosenberg
   - murray-bowen

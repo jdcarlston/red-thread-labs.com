@@ -19,7 +19,7 @@ concepts:
     def: Every partner comes with some. The question is how you live with them.
   - term: Leading with the feeling
     def: Saying the vulnerable thing first changes the whole exchange.
-context: "Wile explains why ongoing disagreements don’t doom a relationship, and why repair matters more than winning. His platform is what we practice in the labs as stepping back to observe: two people standing side by side, looking at the pattern instead of at each other as the problem."
+context: "Wile explains why ongoing disagreements don’t doom a relationship, and why repair matters more than winning. His platform is what we practice in the labs as stepping back to observe: two people standing side by side, looking at the pattern instead of at each other as the problem. [Michael Nichols](/library/michael-nichols/) covers a lot of the same ground from the listener’s side, and his take is the one I use most in the labs."
 exercise:
   title: The conversation underneath
   time: About 15 minutes
@@ -38,6 +38,7 @@ sources:
     url: https://search.worldcat.org/search?q=After+the+Fight+Daniel+Wile
     label: Find the book
 related:
+  - michael-nichols
   - john-gottman
   - harriet-lerner
   - rupture-and-repair
