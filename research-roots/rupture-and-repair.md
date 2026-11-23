@@ -1,7 +1,7 @@
 ---
 slug: rupture-and-repair
 status: review
-ring: core
+ring: practice
 cluster: attachment
 order: 60
 title: Rupture and Repair

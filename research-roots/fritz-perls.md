@@ -1,7 +1,7 @@
 ---
 slug: fritz-perls
 status: review
-ring: practice
+ring: core
 cluster: therapy
 order: 30
 title: Gestalt Therapy

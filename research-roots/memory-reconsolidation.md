@@ -1,7 +1,7 @@
 ---
 slug: memory-reconsolidation
 status: review
-ring: practice
+ring: core
 cluster: nervous-system
 order: 130
 title: Memory Reconsolidation

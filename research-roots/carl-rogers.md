@@ -1,7 +1,7 @@
 ---
 slug: carl-rogers
 status: review
-ring: core
+ring: practice
 cluster: therapy
 order: 10
 title: Person-Centered Therapy

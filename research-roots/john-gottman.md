@@ -1,7 +1,7 @@
 ---
 slug: john-gottman
 status: review
-ring: core
+ring: practice
 cluster: relationships
 order: 10
 title: Relationship Science

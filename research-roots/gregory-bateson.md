@@ -1,7 +1,7 @@
 ---
 slug: gregory-bateson
 status: review
-ring: practice
+ring: core
 cluster: systems
 order: 10
 title: The Pattern That Connects

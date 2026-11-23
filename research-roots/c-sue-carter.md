@@ -1,7 +1,7 @@
 ---
 slug: c-sue-carter
 status: review
-ring: exploring
+ring: hold
 cluster: attachment
 order: 90
 title: Oxytocin and Safety

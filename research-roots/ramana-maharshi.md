@@ -1,7 +1,7 @@
 ---
 slug: ramana-maharshi
 status: review
-ring: exploring
+ring: practice
 cluster: contemplative
 order: 30
 title: Self-Inquiry

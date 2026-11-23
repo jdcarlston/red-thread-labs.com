@@ -1,7 +1,7 @@
 ---
 slug: jeremy-bailenson
 status: review
-ring: exploring
+ring: practice
 cluster: perception
 order: 80
 title: Presence and the Screen
