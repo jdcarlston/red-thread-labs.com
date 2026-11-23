@@ -61,7 +61,7 @@ kickerLink: /library/
       <h3 class="framework__name">{{ entry.framework.name }}</h3>
       {%- if entry.framework.intro %}<p class="framework__intro">{{ entry.framework.intro | safe }}</p>{% endif %}
       <ol class="framework__items">
-        {%- for i in entry.framework.items %}<li><h4>{{ i.name }}</h4><p>{{ i.def | safe }}</p></li>{% endfor %}
+        {%- for i in entry.framework.items %}<li{% if i.mark %} data-mark="{{ i.mark }}"{% endif %}><h4>{{ i.name }}</h4><p>{{ i.def | safe }}</p></li>{% endfor %}
       </ol>
     </section>
     {%- endif %}

@@ -1,0 +1,11 @@
+---
+layout: layouts/base.njk
+pageKey: holiday-huddle
+permalink: /holiday-huddle/
+ogImage: /img/cherished-and-chosen-share.jpg
+eleventyComputed:
+  title: "{{ pages[pageKey].title }}"
+  description: "{{ pages[pageKey].description }}"
+---
+{#- The words are in _data/pages/holiday-huddle.yml (edit in /admin under Pages → Holiday Huddle). -#}
+{% include "partials/page-from-data.njk" %}

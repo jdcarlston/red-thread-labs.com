@@ -1,0 +1,50 @@
+# The Holiday Huddle page (/holiday-huddle/). Edit in /admin under Pages → Holiday Huddle, or here.
+# Text uses Markdown: *italic*, **bold**, [link text](https://...).
+title: Holiday Huddle
+description: Stay close to each other through the holidays. Three coaching sessions over six weeks with JD Carlston, plus text support between sessions.
+kicker: Events
+heading: Holiday Huddle
+subtitle: Stay close to each other through the holidays.
+header: {image: img/love-lab-candles.jpg, position: 50% 50%, zoom: 1}
+rows:
+  - style: band
+    blocks:
+      - type: text
+        bare: true
+        statement: The holidays bring out the oldest loops. *Practice staying close anyway.*
+        paragraphs:
+          - Family, travel, money, old roles and too little sleep. The holidays press on every pattern you have. The Holiday Huddle gives you somewhere to bring it while it’s happening, so you can stay close to each other instead of just getting through it.
+  - style: reading
+    main: true
+    blocks:
+      - type: checklist
+        label: This is for you if
+        items:
+          - You want to feel close to your partner through the busiest, most loaded season of the year.
+          - Being around family pulls you back into old roles.
+          - You want help in the moment, not just a debrief in January.
+          - You’d rather practice together than white-knuckle it.
+      - type: steps
+        heading: How it works
+        items:
+          - {num: "01", title: Three sessions, text: "Three one-hour coaching sessions with JD, spread over six weeks."}
+          - {num: "02", title: Text support, text: "Text JD between sessions when something comes up in real time."}
+          - {num: "03", title: A write-up, text: "After each session you get a written summary of what came up and what to practice, so it doesn’t get lost in the holiday rush."}
+      - type: text
+        heading: Come together, pay once
+        paragraphs:
+          - $693 for all three sessions. Couples who come together pay the same as one person, and you’re welcome to come on your own.
+        buttons:
+          - {text: Book the Holiday Huddle, link: "https://square.link/u/fxH8RSeB", style: primary}
+        note: Questions first, or want to pay in three parts? [Email JD](@email?subject=Holiday%20Huddle) or DM “HUDDLE” on Instagram.
+      - type: include
+        name: about-jd
+      - type: faq
+        heading: Questions
+        items:
+          - q: Do I need to bring a partner?
+            a: No. Come as a couple, or come on your own and work on how you show up with the people you love.
+          - q: Is this therapy?
+            a: No. It’s coaching and skill practice with honest feedback. You are the scientist of your own life; the sessions give you the instruments.
+          - q: What happens after six weeks?
+            a: If you want to keep going, you can continue into [Level-Up Sessions](/level-up/).

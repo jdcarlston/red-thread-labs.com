@@ -1,7 +1,8 @@
 ---
 slug: william-james
 status: review
-ring: exploring
+ring: practice
+quadrant: it
 cluster: change-work
 order: 5
 title: Habit, and Truth That Works

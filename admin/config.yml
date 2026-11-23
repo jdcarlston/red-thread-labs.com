@@ -93,6 +93,7 @@ collections:
             summary: "{{fields.name}}"
             fields:
               - { name: name, label: Name, widget: string }
+              - { name: mark, label: Marker (optional), widget: string, required: false, hint: "Shown instead of the number, like a letter of an acronym (C, H, E…)." }
               - { name: def, label: What it means, widget: text }
       - { name: context, label: Context (the oxblood panel), widget: text, hint: "How this connects to the work. Be honest about the evidence." }
       - name: exercise
@@ -1088,6 +1089,17 @@ collections:
     - name: thanks
       label: 'Contact: thank you'
       file: _data/pages/thanks.yml
+      fields:
+      - *id016
+      - *id017
+      - *id018
+      - *id019
+      - *id020
+      - *id021
+      - *id022
+    - name: holiday-huddle
+      label: Holiday Huddle
+      file: _data/pages/holiday-huddle.yml
       fields:
       - *id016
       - *id017

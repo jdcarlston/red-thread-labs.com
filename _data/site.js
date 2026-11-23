@@ -59,10 +59,11 @@ module.exports = {
       ],
     },
     {
-      label: "Upcoming Events",
+      label: "Events",
       href: "/love/",
       children: [
         { label: "The Love Lab", href: "/love/" },
+        { label: "Holiday Huddle", href: "/holiday-huddle/" },
         { label: "Schedule a Level-Up", href: "/level-up/#book" }, // jumps to "Choose where to start" on the Level-Up page
       ],
     },

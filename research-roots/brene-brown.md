@@ -32,18 +32,25 @@ framework:
   intro: Brown breaks trust into seven parts so you can see which one is strong and which one needs repair. It works with someone else, and it works turned inward, because trusting yourself runs on the same seven.
   items:
     - name: Boundaries
+      mark: B
       def: You respect my limits, and you ask when you’re not sure what’s okay. You can say no, and so can I.
     - name: Reliability
+      mark: R
       def: You do what you say you’ll do, over and over, and you’re honest about what you can take on.
     - name: Accountability
+      mark: A
       def: When you get it wrong, you own it, apologize and make it right.
     - name: Vault
+      mark: V
       def: What I tell you in confidence stays with you, and I see you keep other people’s confidences too.
     - name: Integrity
+      mark: I
       def: You choose courage over comfort, and you live your values instead of only talking about them.
     - name: Nonjudgment
+      mark: N
       def: We can both ask for what we need and say how we feel without being judged for it.
     - name: Generosity
+      mark: G
       def: You assume the best about my intentions, words and actions, and check with me before deciding otherwise.
 context: "Brown names the fear at the center of many patterns: that if people really saw us, they’d leave. Her work on shame, vulnerability, trust and courage runs through much of what we do. The labs give people safe practice at being seen, so it gets more survivable each time. Trust is how two people learn it’s safe to be seen, a marble at a time, and courage is what it takes to go first. BRAVING gives people words for which part of trust is strong between them and which part needs repair."
 exercise:

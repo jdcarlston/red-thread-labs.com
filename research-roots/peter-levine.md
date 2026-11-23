@@ -1,7 +1,7 @@
 ---
 slug: peter-levine
 status: review
-ring: practice
+ring: core
 cluster: nervous-system
 order: 40
 title: Somatic Experiencing

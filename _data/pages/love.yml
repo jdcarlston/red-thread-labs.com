@@ -83,9 +83,10 @@ rows:
         heading: Holiday Huddle
         lede: Stay close to each other through the holidays. Three coaching sessions over six weeks, plus text support between sessions for the moments that come up in real time.
         paragraphs:
-          - $600. Couples who come together pay the same. Spots are limited.
+          - $693. Couples who come together pay the same. Spots are limited.
         buttons:
           - {text: Book the Holiday Huddle, link: "https://square.link/u/fxH8RSeB", style: primary}
+          - {text: Learn more, link: /holiday-huddle/, style: ghost}
         note: Questions first? [Email JD](@email?subject=Holiday%20Huddle) or DM “HUDDLE” on Instagram.
       - type: faq
         heading: Questions

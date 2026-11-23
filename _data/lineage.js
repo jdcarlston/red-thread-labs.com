@@ -57,7 +57,7 @@ function toHtml(e) {
   out.who = (e.who || []).map(inline);
   out.concepts = (e.concepts || []).map((c) => ({ term: c.term, def: inline(c.def) }));
   // The core framework (optional): a named, numbered set, like Terry Real's Five Losing Strategies.
-  if (e.framework) out.framework = { ...e.framework, intro: inline(e.framework.intro), items: (e.framework.items || []).map((i) => ({ name: i.name, def: inline(i.def) })) };
+  if (e.framework) out.framework = { ...e.framework, intro: inline(e.framework.intro), items: (e.framework.items || []).map((i) => ({ name: i.name, def: inline(i.def), mark: i.mark })) };
   if (e.exercise) out.exercise = { ...e.exercise, title: inline(e.exercise.title), steps: (e.exercise.steps || []).map(inline), why: inline(e.exercise.why) };
   out.sources = (e.sources || []).map((s) => ({ ...s, cite: inline(s.cite) }));
   out.related = e.related || [];

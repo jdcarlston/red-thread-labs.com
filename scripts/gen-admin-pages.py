@@ -172,6 +172,7 @@ files = [
     page("practice-labs", "Practice Labs (draft)"),
     page("contact", "Contact", desc="The email, phone and social links on this page come from _data/site.js."),
     page("thanks", "Contact: thank you"),
+    page("holiday-huddle", "Holiday Huddle"),
     page("blog", "Blog"),
     page("research-roots", "Research Library", [F("lineageHeader", "Use the Research Library header photo", "boolean", required=False)]),
     page("library-browse", "Browse the Library", [F("lineageHeader", "Use the Research Library header photo", "boolean", required=False)]),

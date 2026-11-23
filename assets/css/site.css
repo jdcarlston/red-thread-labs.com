@@ -1042,3 +1042,5 @@ html body .entry__tagline, html body .entry > .heart-line { font-family: var(--f
 .radar__svg .rd-dot.is-on :is(circle, path, polygon) { fill: #fff; stroke: var(--coral); stroke-width: 3; stroke-dasharray: none; }
 .radar__svg .rd-dot.is-on .rd-num { fill: #1a0b0a; }
 .radar__svg.is-searching .rd-dot.is-match:not(.is-on) :is(circle, path, polygon) { fill: rgba(243, 231, 226, .55); }
+/* A framework item with its own marker (like the letters of CHERISH or BRAVING) shows it instead of the number. */
+.framework__items li[data-mark]::before { content: attr(data-mark); }
