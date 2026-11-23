@@ -60,7 +60,7 @@ types = [
     ]),
     T("steps", "Steps", [F("items", "Steps", "list", summary="{{fields.num}} {{fields.title}}", fields=[
         F("num", "Number", required=False), F("title", "Title", required=False), F("text", "Text", "text")])]),
-    T("cards", "Cards", [F("items", "Cards", "list", summary="{{fields.title}}", fields=[
+    T("cards", "Cards", [F("columns", "Cards per row", "select", options=[{"label": "Two (half width)", "value": 2}, {"label": "As many as fit", "value": 0}], required=False), F("items", "Cards", "list", summary="{{fields.title}}", fields=[
         F("id", "Address (id)", required=False), F("label", "Small label", required=False), F("title", "Title"),
         F("text", "Text", "text"), F("button", "Button text", required=False), F("link", "Button link", required=False)])]),
     T("facts", "Facts", [F("items", "Facts", "list", summary="{{fields.label}}: {{fields.value}}", fields=[

@@ -453,6 +453,15 @@ collections:
             - *id010
             - *id011
             - *id012
+            - name: columns
+              label: Cards per row
+              widget: select
+              options:
+              - label: Two (half width)
+                value: 2
+              - label: As many as fit
+                value: 0
+              required: false
             - name: items
               label: Cards
               widget: list

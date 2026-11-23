@@ -61,38 +61,35 @@ rows:
             text: Multi-day immersions for people ready to go deep. Like carbon under heat and pressure, a small group, a held place and days of practice turn insight into who you are.
             button: Ask about Crucibles
             link: /contact/
-      - type: text
-        id: level-up
-        label: One-on-one and couples
-        heading: Level-Up Sessions
-        paragraphs:
-          - A focused session to name the loop you keep running, shift it where talking alone can’t reach, and leave with something to practice the same day. Follow-ups and support between sessions, so the change has somewhere to land.
-        buttons:
-          - {text: Level-Up Sessions, link: /level-up/, style: ghost}
-      - type: text
-        id: retreats
-        label: Retreats & gatherings
-        heading: Dinners, retreats and ceremonies
-        paragraphs:
-          - Special lab dinners, multi-day retreats, lunch-and-learns, and ceremonies for the turning points of a life. We plan the room, the food, the flow and the care, so the people in it can do the real work.
-        buttons:
-          - {text: Plan something with us, link: /contact/, style: ghost}
-      - type: text
-        id: teams
-        label: For teams & organizations
-        heading: The same loops run a team
-        paragraphs:
-          - "How a team decides, disagrees and repairs runs on the same habits as a relationship. We bring Practice Labs and more than twenty years of engineering leadership to teams, leaders and organizations: working sessions, offsites, lunch-and-learns, leadership coaching and labs built around what your organization is actually facing."
-        buttons:
-          - {text: Talk about your team, link: /contact/, style: ghost}
-      - type: text
-        id: families
-        label: For families & friends
-        heading: Grow and learn together
-        paragraphs:
-          - Change is easier when the people you love are learning it with you. We bring Practice Labs to your family or your circle of friends, in your home or a private gathering. You get a shared language, practice with each other in the room, and tools you can keep using together long after.
-        buttons:
-          - {text: Learn together, link: /contact/, style: ghost}
+      # Level-Up, retreats, teams and families: two cards to a row. Each card's id matches a link
+      # in the Practice Labs menu (_data/site.js), so keep the ids.
+      - type: cards
+        columns: 2
+        items:
+          - id: level-up
+            label: One-on-one and couples
+            title: Level-Up Sessions
+            text: A focused session to name the loop you keep running, shift it where talking alone can’t reach, and leave with something to practice the same day. Follow-ups and support between sessions, so the change has somewhere to land.
+            button: Level-Up Sessions
+            link: /level-up/
+          - id: retreats
+            label: Retreats & gatherings
+            title: Dinners, retreats and ceremonies
+            text: Special lab dinners, multi-day retreats, lunch-and-learns, and ceremonies for the turning points of a life. We plan the room, the food, the flow and the care, so the people in it can do the real work.
+            button: Plan something with us
+            link: /contact/
+          - id: teams
+            label: For teams & organizations
+            title: The same loops run a team
+            text: "How a team decides, disagrees and repairs runs on the same habits as a relationship. We bring Practice Labs and more than twenty years of engineering leadership to teams, leaders and organizations: working sessions, offsites, lunch-and-learns, leadership coaching and labs built around what your organization is actually facing."
+            button: Talk about your team
+            link: /contact/
+          - id: families
+            label: For families & friends
+            title: Grow and learn together
+            text: Change is easier when the people you love are learning it with you. We bring Practice Labs to your family or your circle of friends, in your home or a private gathering. You get a shared language, practice with each other in the room, and tools you can keep using together long after.
+            button: Learn together
+            link: /contact/
   - style: reading
     blocks:
       - type: text

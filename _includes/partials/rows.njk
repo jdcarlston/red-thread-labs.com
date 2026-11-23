@@ -12,7 +12,7 @@
       text       label, statement, heading, lede, paragraphs (softer text), plain (regular text), prose, buttons
       checklist  ...text fields, listLabel, items, ordered
       steps      items { num, title, text }
-      cards      items { id, label, title, text, button, link }
+      cards      items { id, label, title, text, button, link }, columns: 2 for two per row
       facts      items { label, value, note }
       values     items { name, text }
       offers     items { title, text, linkText, link }
@@ -83,7 +83,7 @@
 </ol>
 
 {%- elif b.type == "cards" %}
-<ul class="cards">{% for c in b.items %}
+<ul class="cards{% if b.columns == 2 %} cards--two{% endif %}">{% for c in b.items %}
   <li class="card"{% if c.id %} id="{{ c.id }}"{% endif %}>
     {% if c.label %}<p class="label">{{ c.label | md | safe }}</p>{% endif %}
     <h3>{{ c.title | md | safe }}</h3>
