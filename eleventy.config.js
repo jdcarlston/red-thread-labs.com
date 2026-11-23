@@ -154,6 +154,7 @@ module.exports = function (eleventyConfig) {
       .map((e) => ({
         slug: e.slug, title: plain(e.title), people: plain(e.people), tagline: plain(e.tagline),
         cluster: short[e.cluster], quadrant: e.quadrant, ring: e.ring || null, evidence: e.evidence,
+        search: searchText(e, (clusters.find((c) => c.id === e.cluster) || {}).title),
       }));
     return JSON.stringify(data).replace(/</g, "\\u003c");
   });

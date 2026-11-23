@@ -210,6 +210,44 @@
     if (a) svg.querySelector(`.rd-dot[data-slug="${a.dataset.slug}"]`)?.classList.add("is-hover");
   });
 
+  // Search: the same searchable words as the Library page (the searchText filter in eleventy.config.js).
+  // Matching dots stay lit and the rest fade; the list below shows only the matches.
+  // Enter opens the first match in the side panel.
+  const searchBox = document.getElementById("radar-search");
+  const count = document.getElementById("radar-count");
+  function applySearch() {
+    const words = searchBox.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
+    const hit = (e) => words.every((w) => e.search.includes(w));
+    const hits = placed.filter(hit);
+    svg.classList.toggle("is-searching", words.length > 0);
+    svg.querySelectorAll(".rd-dot").forEach((d) => {
+      const e = placed.find((p) => p.slug === d.dataset.slug);
+      d.classList.toggle("is-match", words.length > 0 && hit(e));
+    });
+    list.querySelectorAll("li").forEach((li) => {
+      const a = li.querySelector("a[data-slug]");
+      if (a) li.hidden = words.length > 0 && !hit(placed.find((p) => p.slug === a.dataset.slug));
+    });
+    // Hide a ring or quadrant heading in the list when nothing under it matches.
+    list.querySelectorAll(".radar__groups h4").forEach((h) => {
+      const ol = h.nextElementSibling;
+      const any = [...ol.children].some((li) => !li.hidden);
+      h.hidden = ol.hidden = !any;
+    });
+    list.querySelectorAll(".radar__groups section").forEach((sec) => {
+      sec.hidden = ![...sec.querySelectorAll("li")].some((li) => !li.hidden);
+    });
+    count.textContent = words.length ? (hits.length ? `${hits.length} of ${placed.length} on the radar` : "Nothing on the radar matches that yet.") : "";
+    return hits;
+  }
+  if (searchBox) {
+    searchBox.addEventListener("input", applySearch);
+    searchBox.addEventListener("keydown", (ev) => {
+      if (ev.key === "Enter") { ev.preventDefault(); const hits = applySearch(); if (hits.length) showEntry(hits[0].slug); }
+      if (ev.key === "Escape") { searchBox.value = ""; applySearch(); }
+    });
+  }
+
   draw();
   drawList();
   // /library/radar/#<page-slug> opens with that page selected.

@@ -19,9 +19,10 @@ kickerLink: /library/
 {% include "partials/page-header.njk" %}
 <main id="main" class="reading">
   <article class="reading__inner entry">
-    {#- Breadcrumb back to the Library, with a link to the Source Map on its left. -#}
+    {#- Breadcrumb back to the Library, with links to this page on the Source Map and the Research Radar on its left. -#}
     <nav class="crumbs" aria-label="Breadcrumb">
       <a class="crumbs__map" href="/library/map/#{{ entry.slug }}">View Map</a>
+      <a class="crumbs__map" href="/library/radar/#{{ entry.slug }}">View Radar</a>
       <ol>
         <li><a href="/library/browse/">Library</a></li>
         <li><a href="/library/browse/#{{ cluster.id }}">{{ cluster.short or cluster.title }}</a></li>

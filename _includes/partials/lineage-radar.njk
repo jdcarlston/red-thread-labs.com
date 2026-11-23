@@ -5,6 +5,14 @@
 <section class="radar" aria-labelledby="radar-title">
   <h2 id="radar-title" class="cluster__title">{{ radarBlock.radarTitle or "The radar" }}</h2>
   {%- if radarBlock.radarBlurb %}<p class="cluster__blurb">{{ radarBlock.radarBlurb | md | safe }}</p>{% endif %}
+  {#- Search: the same words as the Library search. Matching dots stay lit; the rest fade. -#}
+  <div class="radar__search">
+    <label class="browse__search">
+      <span class="visually-hidden">Search the radar</span>
+      <input type="search" id="radar-search" placeholder="{{ radarBlock.searchPlaceholder or 'Search names and ideas' }}" autocomplete="off">
+    </label>
+    <p class="browse__count" id="radar-count" aria-live="polite"></p>
+  </div>
   <div class="lineage-map__frame radar__frame">
     <div class="radar__stage">
       <svg id="radar" class="radar__svg" role="group" aria-label="Research Radar"></svg>

@@ -12,6 +12,7 @@ rows:
       - type: include
         name: lineage-radar
         radarTitle: How we use our sources
+        searchPlaceholder: "Search names and ideas: shame, Gottman, nervous system…"
         radarBlurb: "The four quadrants come from Ken Wilber: what happens inside a person (I), in the body and behavior (It), between people (We), and in the systems around us (Its). The closer a source sits to the center, the more the labs are built on it."
       - type: text
         center: true

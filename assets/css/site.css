@@ -1019,3 +1019,8 @@ html body .entry__tagline, html body .entry > .heart-line { font-family: var(--f
 .lib-index__group a { color: var(--cream-text, #f3e7e2); text-decoration: none; font-weight: 500; }
 .lib-index__group a:hover { color: var(--coral); text-decoration: underline; }
 .lib-index__group span { font-size: 14px; color: var(--muted-on-dark); }
+
+/* Research Radar search: while searching, dots that don't match fade back. */
+.radar__search { display: flex; flex-direction: column; gap: 6px; max-width: 560px; }
+.radar__svg.is-searching .rd-dot:not(.is-match) { opacity: .15; }
+.radar__svg.is-searching .rd-dot.is-match :is(circle, path, polygon) { fill: var(--cream-text, #f3e7e2); }
