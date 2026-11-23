@@ -1024,3 +1024,8 @@ html body .entry__tagline, html body .entry > .heart-line { font-family: var(--f
 .radar__search { display: flex; flex-direction: column; gap: 6px; max-width: 560px; }
 .radar__svg.is-searching .rd-dot:not(.is-match) { opacity: .15; }
 .radar__svg.is-searching .rd-dot.is-match :is(circle, path, polygon) { fill: var(--cream-text, #f3e7e2); }
+/* The radar icon at the far right of the breadcrumb row: this page on the Research Radar. */
+.crumbs__radar { margin-left: auto; display: inline-flex; width: 30px; height: 30px; padding: 3px; border-radius: 50%; color: var(--rose); }
+.crumbs__radar svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.3; }
+.crumbs__radar .crumbs__radar-dot { fill: currentColor; stroke: none; }
+.crumbs__radar:hover, .crumbs__radar:focus-visible { color: var(--coral); background: rgba(232, 120, 106, .12); }

@@ -19,15 +19,18 @@ kickerLink: /library/
 {% include "partials/page-header.njk" %}
 <main id="main" class="reading">
   <article class="reading__inner entry">
-    {#- Breadcrumb back to the Library, with links to this page on the Source Map and the Research Radar on its left. -#}
+    {#- Breadcrumb back to the Library, with a link to this page on the Source Map on its left and a radar icon on the far right. -#}
     <nav class="crumbs" aria-label="Breadcrumb">
       <a class="crumbs__map" href="/library/map/#{{ entry.slug }}">View Map</a>
-      <a class="crumbs__map" href="/library/radar/#{{ entry.slug }}">View Radar</a>
       <ol>
         <li><a href="/library/browse/">Library</a></li>
         <li><a href="/library/browse/#{{ cluster.id }}">{{ cluster.short or cluster.title }}</a></li>
         <li aria-current="page">{{ entry.title }}</li>
       </ol>
+      {#- A small radar icon, on the far right: this page on the Research Radar. -#}
+      <a class="crumbs__radar" href="/library/radar/#{{ entry.slug }}" aria-label="See this page on the Research Radar" title="See it on the Research Radar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/><path d="M12 2v20M2 12h20"/><circle class="crumbs__radar-dot" cx="16.5" cy="7.5" r="1.8"/></svg>
+      </a>
     </nav>
     {%- if entry.status == "hidden" %}<p class="draft-banner">Hidden. This page only shows in your preview. Set its status to “Review” or “Published” to put it on the live site.</p>
     {%- elif entry.status != "published" and reviewMode %}<p class="draft-note">Draft · this page is still being reviewed and may change.</p>{% endif %}
