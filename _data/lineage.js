@@ -38,7 +38,20 @@ const inline = (text) => (typeof text === "string" ? md.renderInline(text) : tex
 
 // An entry's text fields as HTML, ready for library/entry.njk.
 // The page title and the concept names stay plain text: the templates escape those themselves.
+// A paragraph that holds a colon followed by a space (like "Family Therapy: Concepts") can be read
+// as a label instead of text unless it's in quotes. Catch that here and say how to fix it.
+function mustBeText(list, field, slug) {
+  (list || []).forEach((item, i) => {
+    if (typeof item !== "string") {
+      throw new Error(`Research Library: ${slug}.md, "${field}" item ${i + 1} isn't plain text. ` +
+        `It probably has a colon followed by a space; put the whole item in "double quotes".`);
+    }
+  });
+}
+
 function toHtml(e) {
+  mustBeText(e.who, "who", e.slug);
+  mustBeText(e.exercise && e.exercise.steps, "exercise steps", e.slug);
   const out = { ...e };
   for (const k of ["people", "tagline", "context", "heartLine"]) out[k] = inline(e[k]);
   out.who = (e.who || []).map(inline);

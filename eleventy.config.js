@@ -1,7 +1,6 @@
 // Eleventy setup for red-thread-labs.com.
 const { heroArtwork, menuThreads } = require("./lib/hero");
 const { logoSvg } = require("./lib/logo");
-const lineage = require("./_data/lineage");
 const site = require("./_data/site");
 
 // Research Library pages have a status:
@@ -18,6 +17,9 @@ const useBucket = site.media.useBucket && !previewing && process.env.RTL_LOCAL_M
 
 function visibleEntries() {
   const live = ["published", "review"];
+  // Read the pages fresh each build, so an edit shows in the preview without restarting it.
+  delete require.cache[require.resolve("./_data/lineage")];
+  const lineage = require("./_data/lineage");
   return lineage.entries.filter((e) => live.includes(e.status) || (reviewMode && e.status === "hidden"));
 }
 

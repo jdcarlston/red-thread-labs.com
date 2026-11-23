@@ -67,7 +67,7 @@ collections:
           - { name: image, label: Image, widget: string, hint: "e.g. img/heart.jpg (the file goes in media/img/)" }
           - { name: position, label: Position, widget: string, default: "50% 50%" }
           - { name: zoom, label: Zoom, widget: number, value_type: float, default: 1 }
-      - { name: who, label: Who they were, widget: list, field: { name: paragraph, label: Paragraph, widget: text }, hint: "Two short paragraphs: what they found, and why it matters." }
+      - { name: who, label: Who they are, widget: list, field: { name: paragraph, label: Paragraph, widget: text }, hint: "Two short paragraphs: what they found, and why it matters." }
       - name: concepts
         label: Key concepts
         widget: list

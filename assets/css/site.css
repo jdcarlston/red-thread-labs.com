@@ -842,7 +842,7 @@ body.menu-open { overflow: hidden; }
 .reading .lm-node circle { fill: var(--oxblood-deep); stroke: var(--rose); }
 .reading .lm-node:hover circle:first-child, .reading .lm-node:focus-visible circle:first-child { fill: var(--oxblood); }
 .reading .lm-xlink { stroke: var(--rose); }
-/* Research Library "Who they were": a light cream panel, so the person's story stands apart from the dark page.
+/* Research Library "Who they are": a light cream panel, so the person's story stands apart from the dark page.
    The light colors are put back inside it, so its text and links use the cream-page colors. */
 .reading .entry__who {
   --ink: #1D1C1A; --ink-soft: #4A4744; --red-on-light: #B3261E; --teal-on-light: #2E6B6E;

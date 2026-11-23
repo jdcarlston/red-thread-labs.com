@@ -28,9 +28,9 @@ tagline: One line, in plain words, of what this research means for a person.
 #   position: 50% 50%
 #   zoom: 1
 
-# Who they were: two short paragraphs. What they found, and why it matters.
+# Who they are: two short paragraphs. What they found, and why it matters.
 who:
-  - "Paragraph one: who they were and what they found."
+  - "Paragraph one: who they are and what they found."
   - "Paragraph two: what their work led to, and why it matters now."
 
 # Key concepts: four short cards. Bold the names of things with **double stars**.
