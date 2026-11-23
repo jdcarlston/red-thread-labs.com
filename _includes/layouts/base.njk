@@ -19,7 +19,11 @@
   <meta property="og:image" content="{{ ogImage | absoluteUrl }}">
   <meta name="twitter:card" content="summary_large_image">
   {%- endif %}
-  <link rel="icon" href="/assets/img/rtl-logo-oxblood.svg" type="image/svg+xml">
+  {#- Browser tab and bookmark icons: the black logo (assets/img/rtl-logo-black.svg, made from lib/logo.js).
+      favicon.ico (in legacy/) is for older browsers; apple-touch-icon is what iPhones and iPads show for a saved bookmark. #}
+  <link rel="icon" href="/assets/img/rtl-logo-black.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/icon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
   {#- Fonts are served from this site (assets/fonts), so they look the same everywhere. #}
   <link rel="preload" href="/assets/fonts/dm-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/fraunces-latin-wght-italic.woff2" as="font" type="font/woff2" crossorigin>

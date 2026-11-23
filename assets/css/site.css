@@ -870,3 +870,6 @@ body.menu-open { overflow: hidden; }
 .site-footer { position: relative; overflow: hidden; }
 .site-footer .menu-threads { top: 35px; z-index: 0; }
 .site-footer > :not(.menu-threads) { position: relative; z-index: 1; }
+
+/* A reading section on the page's darkest background (like the dark bands), for alternating sections. */
+.reading--dark { background: var(--oxblood-deep); }
