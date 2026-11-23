@@ -22,7 +22,7 @@ collections:
   - name: research-roots
     label: Research Library
     label_singular: Research Library page
-    description: The lineage behind Practice Labs. Text fields use Markdown, *italic*, **bold**, [link text](https://doi.org/...). New pages start as drafts (status "Review"): live on the site, marked Draft. Set "Published" once you've reviewed one, or "Hidden" to keep it off the live site.
+    description: The lineage behind Practice Labs. Text fields use Markdown, *italic*, **bold**, [link text](https://doi.org/...). New pages start as drafts (status "Review"), live on the site and marked Draft. Set "Published" once you've reviewed one, or "Hidden" to keep it off the live site.
     folder: research-roots
     extension: md
     format: frontmatter

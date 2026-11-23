@@ -22,6 +22,14 @@ function visibleEntries() {
 }
 
 module.exports = function (eleventyConfig) {
+  // The site editor (/admin) can't open if admin/config.yml has a YAML mistake, and it only says
+  // "can't be parsed". Check it here so the build stops and names the line instead.
+  try {
+    require("js-yaml").load(require("fs").readFileSync("admin/config.yml", "utf8"));
+  } catch (err) {
+    throw new Error(`admin/config.yml can't be read, so the site editor won't open:\n${err.message}`);
+  }
+
   // private/ is in .gitignore, so it never reaches GitHub or the live site, but it should still
   // build in your preview. Eleventy skips git-ignored files by default; turn that off, and list
   // what it should skip in .eleventyignore instead.
