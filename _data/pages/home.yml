@@ -1,0 +1,7 @@
+# The home page (/). Edit in /admin under Pages → Home, or here.
+# The name over the artwork is the site name (_data/site.js).
+tagline: Practice Labs to shift the habit loops shaping your life. Choose what you weave next.
+background: img/hero-weave-sideways.jpg
+signup:
+  button: Join the list
+  fine: Writing, new labs and first pick of seats. Unsubscribe anytime.

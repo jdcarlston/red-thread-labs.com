@@ -1,0 +1,24 @@
+# The Contact page (/contact/). Edit in /admin under Pages → Contact, or here.
+# The email, phone and social links listed on the page come from _data/site.js.
+title: Contact
+description: Reach Red Thread Labs by email, phone or a free conversation with JD in Salt Lake City.
+kicker: Contact
+heading: Get in *touch*
+subtitle: Questions about a lab, coaching, an event, or bringing Practice Labs to your team. Send a note and we’ll write back.
+header: { image: img/pomegranate-plate.jpg, position: 50% 62%, zoom: 1 }
+rows:
+  - style: reading
+    main: true
+    inner: contact
+    blocks:
+      - type: include
+        name: contact
+        heading: Reach us *directly*
+        # The choices in "What's it about?"
+        topics:
+          - Practice Labs and events
+          - Coaching
+          - Planning an event or ceremony
+          - Bringing Practice Labs to a team
+          - Something else
+        button: Send message

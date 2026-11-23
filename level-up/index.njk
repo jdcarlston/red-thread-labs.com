@@ -1,92 +1,12 @@
 ---
 layout: layouts/base.njk
-title: Level-Up Sessions
-kicker: Level-Up Sessions
-heading: Level up, and get the <em>Love of your Life.</em>
-subtitle: "<em>Practice Labs</em> to find the hidden habits holding you back."
-description: Level-Up Sessions with JD Carlston. Find the hidden habits holding you back, and practice until the change holds.
-ogImage: /img/cherished-and-chosen-share.jpg
-header: { image: "img/photo-embrace.jpg", position: "50% 30%", zoom: 1 }
+pageKey: level-up
 permalink: /level-up/
+ogImage: /img/cherished-and-chosen-share.jpg
 scripts: ["signup.js"]
+eleventyComputed:
+  title: "{{ pages[pageKey].title }}"
+  description: "{{ pages[pageKey].description }}"
 ---
-{%- from "partials/booking.njk" import bookingOptions with context -%}
-{#- Moved from the old site's home page (Level-Up Sessions). The Nov 11 event banner was dropped; that event is over. -#}
-{% include "partials/page-header.njk" %}
-
-<section class="band">
-  <div class="band__inner">
-    <p class="statement">Notice what pulls you. <em>Choose what you pull in.</em></p>
-    <p class="soft">The defaults you picked up as a kid are still running your life. You didn’t choose them, and they can be changed. When you do, you <strong>level up</strong>.</p>
-  </div>
-</section>
-
-<main id="main" class="reading">
-  <div class="reading__inner">
-    <section class="section">
-      <h2>You know something <em>needs to change.</em></h2>
-      <hr class="rule">
-      <p class="lede">You’re here because you want to show up as a better you:</p>
-      <ul class="checklist">
-        <li>Tired of being someone you don’t recognize in your relationships?</li>
-        <li>Tired of the same hurt in different packaging?</li>
-        <li>Ready to close the gap between who you are and who you know you can be?</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <p class="label">This is for you if</p>
-      <ol class="checklist">
-        <li>You keep ending up in the same dynamic — different day, same feeling.</li>
-        <li>You know what you want but something keeps getting in the way of having it.</li>
-        <li>You may have done the reading, the therapy, the journaling — and still feel stuck in the same place.</li>
-        <li>You want to be someone your people can count on — and you want to count on yourself.</li>
-        <li>You’re ready to stop explaining the problem and start living differently.</li>
-      </ol>
-    </section>
-
-    <section class="section">
-      <h2>See · Shift · <em>Prove</em></h2>
-      <hr class="rule">
-      <p class="soft">The method is simple — three steps. Every Level-Up Session runs on them.</p>
-      <ol class="steps">
-        <li><span class="steps__num">01</span><h3>See</h3><p>Name the loop that keeps running your love life.</p></li>
-        <li><span class="steps__num">02</span><h3>Shift</h3><p>Change how that loop runs, where talking alone can’t reach.</p></li>
-        <li><span class="steps__num">03</span><h3>Prove</h3><p>Practice with real people until the change holds.</p></li>
-      </ol>
-    </section>
-
-    <section class="section">
-      <h2>What you walk <em>away with</em></h2>
-      <hr class="rule">
-      <p class="soft">A Level-Up Session works directly with the parts of you that talking won’t reach. It draws on NLP and The Destination Method, developed by Dr. Robert Dee McDonald at the <a href="https://teloscenter.com" target="_blank" rel="noopener">Telos Healing Center</a>. You don’t need to understand how it works. You just need to show up, curious.</p>
-      <p class="label">After a session</p>
-      <ol class="checklist">
-        <li><strong>The thing you keep doing — named in one sentence.</strong> Clear, specific, yours. Not a diagnosis. A starting point.</li>
-        <li><strong>A real shift, not a new idea.</strong> Something actually different in how that part of you is running — not advice to try later, a change you can feel now.</li>
-        <li><strong>More room to move.</strong> More room to choose. More room to be who you actually want to be in the moments that matter most.</li>
-      </ol>
-    </section>
-
-    {% include "partials/about-jd.njk" %}
-
-    <section class="section">
-      <div class="photo-row">
-        <img src="{{ 'img/couple1.jpg' | media }}" alt="JD and Chick" loading="lazy">
-        <img src="{{ 'img/couple2.jpg' | media }}" alt="JD and Chick" loading="lazy">
-        <img src="{{ 'img/couple3.jpg' | media }}" alt="JD and Chick" loading="lazy">
-        <img src="{{ 'img/couple4.jpg' | media }}" alt="JD and Chick" loading="lazy">
-      </div>
-    </section>
-
-    {{ bookingOptions(source="Level-Up page", consultWas="$93", price="$500", priceWas="$993", rate="Intro rate.") }}
-  </div>
-</main>
-
-<section class="band band--center">
-  <div class="band__inner heart-close">
-    <p>“You can choose differently.”</p>
-    <p>“Infinitely innocent and incomparably good.”</p>
-    <p class="anchor">Love Labs · Being Cherished. Choosing Real Love.</p>
-  </div>
-</section>
+{#- The words are in _data/pages/level-up.yml (edit in /admin under Pages → Level-Up Sessions). -#}
+{% include "partials/page-from-data.njk" %}

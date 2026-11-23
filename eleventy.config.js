@@ -62,6 +62,23 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("longDate", (d) =>
     new Date(d).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" })
   );
+  // Data files can be YAML (like _data/jd.yml, which the site editor writes).
+  eleventyConfig.addDataExtension("yml,yaml", (contents) => require("js-yaml").load(contents));
+  // {{ text | md | safe }}: one paragraph of Markdown (links, *italic*, **bold**) as HTML, for words edited in /admin.
+  // Links to other sites open in a new tab.
+  const mdInline = require("markdown-it")({ html: true });
+  const mdLinkOpen = mdInline.renderer.rules.link_open || ((t, i, o, e, self) => self.renderToken(t, i, o));
+  mdInline.renderer.rules.link_open = (t, i, o, e, self) => {
+    if (/^https?:/.test(t[i].attrGet("href"))) { t[i].attrSet("target", "_blank"); t[i].attrSet("rel", "noopener"); }
+    return mdLinkOpen(t, i, o, e, self);
+  };
+  // In links, @booking means the Calendly link and @email the contact address (site.js), so they stay in one place.
+  const siteLinks = (text) => String(text || "")
+    .replace(/\]\(@booking\)/g, `](${site.bookingUrl})`)
+    .replace(/\]\(@email/g, `](mailto:${site.email}`)
+    // Practice Labs is still a draft, so on the live site its links go to the contact page.
+    .replace(/\]\(\/practice-labs\/[^)]*\)/g, (m) => (reviewMode ? m : "](/contact/)"));
+  eleventyConfig.addFilter("md", (text) => mdInline.renderInline(siteLinks(text)));
   eleventyConfig.addFilter("absoluteUrl", (path) => new URL(path, site.url).href);
   eleventyConfig.addGlobalData("year", new Date().getFullYear());
   eleventyConfig.addGlobalData("lineageVisible", visibleEntries);

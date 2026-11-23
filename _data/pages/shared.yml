@@ -1,0 +1,26 @@
+# Words used on more than one page. Edit in /admin under Pages → Shared blocks, or here.
+# Text uses Markdown: *italic*, **bold**, [link text](https://...).
+
+# "Your guide, JD": the short About JD block on the Love Lab and Level-Up pages.
+aboutJd:
+  heading: Your guide, *JD*
+  image: img/jd-lighting-candles.jpg
+  alt: JD Carlston lighting candles at a Love Lab dinner
+  paragraphs:
+    - "**JD Carlston is a Human Engineer.** She spent more than twenty years leading engineering teams and architecture, most recently as Director of Product Engineering at Stack Overflow. Now she brings that same rigor to the patterns that shape how people love, work and belong: see the pattern, test one change, practice until it holds."
+    - "She studied directly with Dr. Robert Dee McDonald, NLP architect, clinical researcher and co-founder of the [Telos Healing Center](https://teloscenter.com), and has woven his teaching together with attachment science, nervous-system work and decades of leading people into a method of her own: **Practice Labs**."
+    - Since her teens she has coached, trained peer supporters, facilitated groups for volunteer and philanthropic organizations, and hosted gatherings; she is also a crisis responder, and has held rituals and ceremonies since 2012. JD and her husband Chick did this work on themselves first. At Red Thread Labs, we practice before we teach.
+  links:
+    - text: More about JD →
+      link: /about/jd/
+    - text: Her art, music and poetry at Madder Craft ↗
+      link: https://maddercraft.com
+
+# The mail-list band that closes the blog and every post.
+blogCta:
+  label: Keep reading
+  heading: Sign up to get the latest news from *Red Thread Labs*.
+  text: "Essays like this one land in the mail list first, along with first notice on labs and open sessions. No sequence, no funnel theatre: the writing, and an occasional invitation."
+  button: Join the mail list
+  fine: One click to confirm. Leave whenever you like.
+  after: Or bring something specific to a session. [Book a free consult →](@booking)

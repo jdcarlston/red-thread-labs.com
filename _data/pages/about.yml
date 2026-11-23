@@ -1,0 +1,119 @@
+# The About page (/about/). Edit in /admin under Pages → About, or here.
+# Text uses Markdown: *italic*, **bold**, [link text](https://...). See _includes/partials/rows.njk for the block types.
+title: About Red Thread Labs
+description: Red Thread Labs is a Salt Lake City-based organization that helps people build long-lasting, authentic relationship skills, using evidence-based methods to find the patterns, practice new skills and shift behavior.
+kicker: About
+heading: Red Thread Labs
+subtitle: We help people practice what is being preached.
+header: {image: img/love-lab-candelabra.jpg, position: 40% 10%, zoom: 1}
+rows:
+  - style: band
+    id: mission
+    blocks:
+      - type: text
+        bare: true
+        label: What we believe
+        statement: The loops you learned early run your love life, your friendships and your work. *Change one, and you feel it everywhere.*
+        rule: true
+        lede: Our mission is to help you build the skills to relate and connect with the people in your life more effectively, wherever you are in the country.
+        paragraphs:
+          - We imagine a world full of people who can stay close through the hard moments, in love, with friends, at work and in their communities, and an earth that gets to be a better, healthier playground for all of us.
+  - style: reading
+    main: true
+    blocks:
+      - type: values
+        id: values
+        label: What you can count on
+        heading: Our values
+        items:
+          - name: Connection
+            text: People heal and grow in relationship. We gather in person whenever we can.
+          - name: Compassion in action
+            text: We look closely, and we’re kind and honest about what we see.
+          - name: Curiosity
+            text: Feelings carry information and instructions. We get curious about what they’re telling us.
+          - name: Discernment and choice
+            text: Good judgment can be learned. Every choice is yours, and each one teaches you something.
+          - name: Practice
+            text: Love is an action. Like any skill, it can be practiced, tested and improved.
+          - name: Coherence
+            text: Who you are inside and how you show up can match. We help you show up authentically and resourcefully, wherever you are.
+          - name: Open-minded rigor
+            text: We consider the source, and we stay open to ideas others have dismissed.
+        after:
+          - You’re the scientist of your own life, and we bring the tools and the room. Nothing about you needs fixing. What gets shared in the room stays there.
+  - style: band
+    id: story
+    blocks:
+      - type: text
+        bare: true
+        label: Why this exists
+        heading: Practice, not just insight
+        prose:
+          - "JD Carlston comes from a family of engineers and teachers. She spent more than twenty years leading engineering teams, and even longer hosting gatherings and peer support in her community. Both taught her the same thing: people rarely change because they understand something. They change when they get to practice it, safely, with honest feedback, until it holds."
+          - Red Thread Labs is that practice, built for how we love, befriend and work together. The red thread is the pattern you carry from room to room. Once you can see it, you can choose differently.
+  - style: band-alt
+    id: people
+    blocks:
+      - bare: true
+        type: about
+        label: Who you’ll work with
+        heading: Built it. Live it. Teach it.
+        image: img/photo-stairway.jpg
+        alt: JD Carlston and Chick Adams
+        text:
+          - "**JD Carlston** is a Human Engineer and the founder of Red Thread Labs. She turned two decades of engineering rigor on the patterns that shape how we love. [Read JD’s story →](/about/jd/)"
+          - "**Chick Adams** is co-founder, a DevOps engineer, and JD’s husband. They did this work on themselves first, and still do. We practice before we teach."
+          - Behind them is a small network of coaches and facilitators we trust, so you get the right person for what you’re working on.
+  - style: reading-dark
+    blocks:
+      - type: offers
+        id: work-with-us
+        label: How we work with you
+        heading: Ways to work together
+        items:
+          - title: You, or you and a partner
+            text: Level-Up Sessions that name the loop you keep running and give you something to practice the same day.
+            linkText: Level-Up Sessions →
+            link: /level-up/
+          - title: In a group
+            text: Practice Labs and evening Love Labs, where you try something new with real people and take the skill home.
+            linkText: The Love Lab →
+            link: /love/
+          - title: With your family or friends
+            text: We bring a lab to your home or a private gathering, so the people you love learn the same language with you.
+            linkText: Learn together →
+            link: /practice-labs/#families
+          - title: With your team
+            text: The loops that run a relationship run a team. Working sessions, offsites and leadership coaching.
+            linkText: For teams →
+            link: /practice-labs/#teams
+          - title: Dinners, retreats and ceremonies
+            text: Lab dinners, retreats and ceremonies for the turning points of a life. We plan the room so the people in it can do the real work.
+            linkText: Plan something →
+            link: /contact/
+          - title: Inside and out
+            text: "Consulting that lines up how you feel inside with how you show up in the world: inner work, together with styling."
+            linkText: Styling →
+            link: https://maddercraft.com/fashion/#styling
+        after:
+          - "Every one of these runs on the same three steps: see the loop, shift it, and prove the change with real people."
+  - style: reading
+    blocks:
+      - type: text
+        id: roots
+        label: Where it comes from
+        heading: Rigor, and roots
+        prose:
+          - Practice Labs is JD Carlston’s method. It draws on her study with Dr. Robert Dee McDonald, NLP architect, clinical researcher and co-founder of the [Telos Healing Center](https://teloscenter.com), and weaves his teaching together with attachment science, nervous-system work, humanistic therapy and an engineer’s habit of testing what actually works.
+          - We keep our sources in the open. [Research Roots](/lineage/) walks through the people and the research behind each idea we use, with every study linked.
+  - style: band-center
+    blocks:
+      - type: text
+        bare: true
+        heading: Start with a conversation
+        paragraphs:
+          - Tell us what you’re working on. We’ll tell you honestly whether we’re the right fit, and if we’re not, who might be.
+        buttons:
+          - {text: Book a free consultation, link: "@booking", style: primary}
+          - {text: Send a message, link: /contact/, style: ghost}

@@ -1,0 +1,16 @@
+{#- A page drawn from its words file, _data/pages/<pageKey>.yml (edited in /admin under Pages):
+    the photo header (or the Love Lab style event hero, if the file has a `hero`), then its rows. -#}
+{%- set p = pages[pageKey] -%}
+{%- set kicker = p.kicker -%}
+{%- set heading = p.heading | md if p.heading else "" -%}
+{%- set subtitle = p.subtitle | md if p.subtitle else "" -%}
+{%- if p.header %}{% set header = p.header %}{% endif -%}
+{%- if p.lineageHeader %}{% set header = site.lineageHeader %}{% set headerTone = "red" %}{% endif -%}
+{%- if p.hero -%}
+{%- set hero = p.hero -%}
+{% include "partials/event-hero.njk" %}
+{%- else -%}
+{% include "partials/page-header.njk" %}
+{%- endif %}
+{%- set rows = p.rows -%}
+{% include "partials/rows.njk" %}

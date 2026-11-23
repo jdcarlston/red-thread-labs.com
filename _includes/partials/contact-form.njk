@@ -1,0 +1,60 @@
+{#- The contact page's ways to reach us and the message form (handled by Netlify Forms).
+    Each message is emailed to site.email once "Form notifications" are turned on in Netlify
+    (Site configuration → Forms → Form notifications). The ways to reach us come from _data/site.js;
+    anything left empty there is skipped. The heading, topics and button text come from the page's
+    words file (contactBlock). -#}
+{%- set ways = [
+  { label: "Email", text: site.email, href: "mailto:" + site.email },
+  { label: "Phone", text: site.phone, href: ("tel:" + (site.phone | replace(" ", ""))) if site.phone else "" },
+  { label: "Book a free consultation", text: "Pick a time on Calendly", href: site.bookingUrl },
+  { label: "Instagram · Red Thread Labs", text: "@red.thread.labs", href: site.instagram },
+  { label: "Instagram · JD", text: "@jaidy.93", href: site.instagramPersonal },
+  { label: "LinkedIn · Red Thread Labs", text: "Red Thread Labs", href: site.linkedin },
+  { label: "LinkedIn · JD", text: "JD Carlston", href: site.linkedinPersonal },
+  { label: "Facebook", text: "Red Thread Labs", href: site.facebook },
+  { label: "Mail", text: site.mailingAddress, href: "", plain: true }
+] -%}
+<div class="contact__intro">
+      <h2 class="contact__heading">{{ (contactBlock.heading or "Reach us *directly*") | md | safe }}</h2>
+      <ul class="ways">
+        {%- for w in ways %}{% if w.text and (w.href or w.plain) %}
+        <li>
+          <span class="label">{{ w.label }}</span>
+          {%- if w.href %}
+          <a href="{{ w.href }}"{% if w.href.startsWith("http") %} target="_blank" rel="noopener"{% endif %}>{{ w.text }}</a>
+          {%- else %}
+          <span>{{ w.text }}</span>
+          {%- endif %}
+        </li>
+        {%- endif %}{% endfor %}
+      </ul>
+    </div>
+    <form class="contact-form" name="contact" method="POST" action="/contact/thanks/" data-netlify="true" netlify-honeypot="company">
+      <input type="hidden" name="form-name" value="contact">
+      <p class="sr-only"><label>Leave this empty: <input name="company" tabindex="-1" autocomplete="off"></label></p>
+      <div class="field">
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="email">Your email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label for="phone">Your phone <span class="field__optional">(optional)</span></label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel">
+      </div>
+      <div class="field">
+        <label for="topic">What’s it about?</label>
+        <select id="topic" name="topic">
+          {%- for t in contactBlock.topics %}
+          <option>{{ t }}</option>
+          {%- endfor %}
+        </select>
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="7" required></textarea>
+      </div>
+      <button class="btn btn--primary" type="submit">{{ contactBlock.button or "Send message" }}</button>
+    </form>

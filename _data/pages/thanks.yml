@@ -1,0 +1,13 @@
+# The page people see after sending the contact form (/contact/thanks/). Edit in /admin under Pages → Contact: thank you.
+title: Thank you
+kicker: Contact
+heading: Thank you. Your message is on its way.
+rows:
+  - style: reading
+    main: true
+    blocks:
+      - type: text
+        bare: true
+        lede: We read every note and will write back to the email you gave us. If it’s time-sensitive, you can also [book a conversation](@booking).
+        plain:
+          - "[← Back to the home page](/)"

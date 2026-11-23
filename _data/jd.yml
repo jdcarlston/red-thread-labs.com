@@ -1,0 +1,59 @@
+subtitle: Human Engineer. Founder of Red Thread Labs.
+photo: img/jd-headshot.jpg
+photoAlt: JD Carlston
+lede: I grew up on my grandparents’ farm on the edge of Salt Lake City, in a family of engineers and teachers.
+story:
+  - |-
+    I was the kid in the field riding horses or shooting hoops one moment and in the basement taking computers apart to see how they worked the next. I still love trying to build and break systems. 
+
+    People turned out to be the most interesting of all. I've always been drawn to seek the hidden patterns we live inside, and I’ve been reverse engineering what love is for as long as I can remember. We are beings, not actions, nor things nor systems of things.  And love is an action, a set of actions, even more than it is a feeling.
+  - These days I help people discover those patterns and practice something new. I see myself as a Human Engineer. I bring over twenty years of engineering leadership to the way we love, work and belong.
+practices:
+  label: Where I’m coming from
+  heading: Four practices, one thread
+  cards:
+    - label: Engineering leader
+      heading: Twenty years of building teams
+      text: I was Director of Product Engineering at Stack Overflow, where I led the Architecture Group and the teams behind the public platform. Before that I was a Senior Director at Pluralsight, looking after architecture for an engineering org of 300 to 500 people. I’ve hired, grown and led teams across the US, Europe, India, Australia and Brazil, and I still love nerding out on the code.
+      button: Engineering work ↗
+      link: https://jdcarlston.com
+    - label: Coach
+      heading: Since I was a teenager
+      text: I started out coaching kids in swimming and soccer and basically never stopped coaching people. Since my teens I’ve trained peer supporters and facilitated groups for volunteer and philanthropic organizations, and I’m a crisis responder. I also studied directly with Dr. Robert Dee McDonald, co-founder of the [Telos Healing Center](https://teloscenter.com). His teaching shaped how I listen and how I build each process.
+      button: Level-Up Sessions
+      link: /level-up/
+    - label: Facilitator and speaker
+      heading: Hands-on rooms
+      text: I’ve spoken internationally and run hands-on workshops for engineers, community organizations and conferences, from domain modeling at Explore DDD to design work for a major metro water utility. I like groups of ten to fifty where everybody gets to roll up their sleeves.
+      button: Practice Labs
+      link: /love/
+    - label: Event and ceremony maker
+      heading: Hosting since my teens
+      text: I’ve been hosting gatherings since I was a teenager, and designing and holding rituals and ceremonies since 2012. I’ve led a volunteer sanctuary team at large arts gatherings for years, and planned everything from a 35-person wedding camp to candlelit lab dinners. I love setting up a room so people feel safe enough to be themselves in it.
+      button: What Red Thread Labs does
+      link: /about/
+method:
+  label: The method
+  heading: Practice Labs
+  text:
+    - Practice Labs is the method I use one-on-one and in groups. It works with how we hold our inner experience, and how changing that changes how we feel and act. My study with Dr. McDonald is a big part of it, and I’ve woven in attachment science, nervous-system work, humanistic therapy and the engineering habit of testing one change at a time.
+    - It’s so important to consider the source, so I keep mine in the open. [Research Roots](/lineage/) links the research behind every idea I use.
+artist:
+  label: The artist
+  heading: Under all of it, one practice
+  text:
+    - I’m an engineer and an artist, and I stopped treating those as two different things a long time ago. I paint, build fiber and sculpture pieces like the Windward Weave behind our home page, make music, and write poetry under the name Roz Madder.
+    - 'In all of it I’m interested in what holds up under strain, and how broken strands become part of a bigger pattern. That’s what I help people do too: see the patterns they live inside, and practice something new.'
+  links:
+    - text: My art, music and poetry at Madder Craft ↗
+      link: https://maddercraft.com
+    - text: LinkedIn ↗
+      link: https://www.linkedin.com/in/jdcarlston
+partner:
+  label: Partner in all of it
+  photo: img/photo-embrace.jpg
+  photoAlt: JD and Chick
+  text: My husband, Chick Adams, co-founded Red Thread Labs with me. He’s a DevOps engineer, and he did this work right alongside me before we ever taught it. Our relationship is our favorite lab.
+closing:
+  heading: Let’s talk
+  text: The first conversation is free. Bring what you’re working on.

@@ -1,12 +1,14 @@
-{#- Closes the blog index and every post: the mailing-list sign-up and a link to book a consult. -#}
+{#- Closes the blog index and every post: the mailing-list sign-up and a link to book a consult.
+    The words are in _data/pages/shared.yml (blogCta), editable in /admin under Pages → Shared blocks. -#}
 {%- from "partials/signup.njk" import signup -%}
+{%- set c = pages.shared.blogCta -%}
 <section class="band">
   <div class="band__inner">
-    <p class="label">Keep reading</p>
-    <h2>Sign up to get the latest news from <em>Red Thread Labs</em>.</h2>
+    <p class="label">{{ c.label }}</p>
+    <h2>{{ c.heading | md | safe }}</h2>
     <hr class="rule">
-    <p class="soft">Essays like this one land in the mail list first, along with first notice on labs and open sessions. No sequence, no funnel theatre: the writing, and an occasional invitation.</p>
-    {{ signup(source="Blog", button="Join the mail list", fine="One click to confirm. Leave whenever you like.", id="blog-signup") }}
-    <p class="soft">Or bring something specific to a session. <a href="{{ site.bookingUrl }}" target="_blank" rel="noopener">Book a free consult →</a></p>
+    <p class="soft">{{ c.text | md | safe }}</p>
+    {{ signup(source="Blog", button=c.button, fine=c.fine, id="blog-signup") }}
+    <p class="soft">{{ c.after | md | safe }}</p>
   </div>
 </section>

@@ -1,0 +1,16 @@
+# The blog index (/blog/). Edit in /admin under Pages → Blog, or here.
+# The posts themselves are under Blog posts; the sign-up band at the bottom is under Pages → Shared blocks.
+title: Blog
+description: Essays by JD Carlston on love, desire, and how people change.
+kicker: Red Thread Labs
+heading: Blog
+subtitle: Essays by JD Carlston on love, desire, and how people change.
+header: { image: img/jd-speaking-weave.jpg, position: 50% 40%, zoom: 1 }
+rows:
+  - style: reading
+    main: true
+    blocks:
+      - type: include
+        name: posts
+        moreText: Read the essay →
+  - include: blog-cta

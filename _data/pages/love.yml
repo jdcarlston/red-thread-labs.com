@@ -1,0 +1,115 @@
+# The Love Lab page (/love/). Edit in /admin under Pages → The Love Lab, or here.
+# Text uses Markdown: *italic*, **bold**, [link text](https://...). <br> starts a new line.
+title: The Love Lab
+ogTitle: The Love Lab · Next lab in January
+description: The next Love Lab is in January in Salt Lake City. An interactive evening for creating loving connection + healthier relationships, with dinner included. Join the list to get the date first and first pick of seats.
+heading: The Love Lab
+# The full-height photo at the top.
+hero:
+  image: img/love-lab-candles.jpg
+  position: 50% 60%
+  kicker: Red Thread Labs presents
+  tagline: An interactive experience for creating loving connection<br>+ healthier relationships
+  date: January
+  place: Salt Lake City
+  cta: Join the list
+  note: The list hears the date first and gets first pick of seats<br>Dinner included · Intimate by design
+rows:
+  - style: band
+    label: Event details
+    blocks:
+      - bare: true
+        type: facts
+        items:
+          - {label: When, value: January, note: Date goes to the list first}
+          - {label: Where, value: Salt Lake City, note: Address sent with your confirmation}
+          - {label: Seats, value: Limited, note: Intimate by design}
+          - {label: Dinner, value: Included, note: Every dietary need covered}
+        buttons:
+          - {text: Join the list, link: "#join", style: primary}
+  - style: band-alt
+    main: true
+    blocks:
+      - type: text
+        label: Single or partnered
+        statement: The way you give, receive and experience love is shaped by *habits you may not even realize* you’re carrying.
+        rule: true
+      - type: text
+        label: The evening
+        heading: The Love Lab
+        lede: An interactive evening for noticing the patterns running underneath how you love, then testing something different with real people, in real time.
+        paragraphs:
+          - A little teaching, guided exercises and real practice. The room is space to explore, try something new and see what happens.
+      - type: steps
+        heading: What we’ll cover
+        items:
+          - {num: "1", text: Recognize habits that get in the way of connection}
+          - {num: "2", text: Understand how you give and receive love}
+          - {num: "3", text: Practice skills you can actually use after you leave}
+      - type: text
+        label: Who it’s for
+        heading: Bring a partner, a friend<br>or just yourself.
+        lede: Singles, couples, ’cules and friends are all welcome. Eat, learn, laugh and practice with real people in a warm room made for exploring and testing new ways of connecting, free of judgment and shame.
+        paragraphs:
+          - Every exercise has an opt-out, and what’s shared in the room stays in the room.
+  - style: band-center
+    blocks:
+      - type: text
+        bare: true
+        label: The goal
+        statement: Leave feeling easier to love,<br>*and better at loving.*
+        rule: true
+  - style: band-alt
+    blocks:
+      - type: include
+        name: about-jd
+  - style: band
+    id: join
+    blocks:
+      - bare: true
+        type: signup
+        label: Next lab · January
+        heading: Join the list
+        paragraphs:
+          - Be the first to hear the January date and get first pick of seats. You’ll also get Practice Lab updates and new writing from JD.
+        signupSource: Love Lab January list
+        button: Join the list →
+        names: true
+        formId: join
+  - style: band-alt
+    blocks:
+      - type: text
+        label: Can’t wait until January?
+        heading: Holiday Huddle
+        lede: Stay close to each other through the holidays. Three coaching sessions over six weeks, plus text support between sessions for the moments that come up in real time.
+        paragraphs:
+          - $600. Couples who come together pay the same. Spots are limited.
+        buttons:
+          - {text: Book the Holiday Huddle, link: "https://square.link/u/fxH8RSeB", style: primary}
+        note: Questions first? [Email JD](@email?subject=Holiday%20Huddle) or DM “HUDDLE” on Instagram.
+      - type: faq
+        heading: Questions
+        items:
+          - q: Do I need to bring a partner?
+            a: No. Bring a partner, a friend or just yourself. If you come on your own, you’ll pair with others for short exercises. Partners, ’cules and friend groups are welcome too.
+          - q: Will I have to share personal things?
+            a: Only what you choose. Every exercise has an opt-out, and what’s shared in the room stays in the room.
+          - q: Is this therapy?
+            a: No. It’s skill practice with honest feedback. You are the scientist of your own life; the lab gives you the instruments.
+          - q: Is dinner included?
+            a: Yes. Let us know about dietary needs or allergies for everyone in your group when you reserve.
+          - q: What’s the refund policy?
+            a: Tickets are non-refundable, but they are transferable. If you can’t make it, you’re welcome to pass your seat to someone else. Just email [contact@red-thread-labs.com](@email) with their name so we can update the guest list.
+          - q: Want to go deeper after?
+            a: 1:1 coaching is available through our network of coaches. [Tell us what you’re working on](@email) and we’ll connect you with the right fit.
+  - style: photo
+    image: img/love-lab-candles.jpg
+    blocks:
+      - bare: true
+        type: bigdate
+        label: Next lab
+        big: January
+        place: Salt Lake City
+        buttons:
+          - {text: Join the list, link: "#join", style: primary}
+        note: Hear the date first · Dinner included

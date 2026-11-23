@@ -1,15 +1,10 @@
 ---
 layout: layouts/base.njk
-title: Thank you
-kicker: Contact
-heading: Thank you. Your message is on its way.
+pageKey: thanks
 permalink: /contact/thanks/
 eleventyExcludeFromCollections: true
+eleventyComputed:
+  title: "{{ pages[pageKey].title }}"
 ---
-{% include "partials/page-header.njk" %}
-<main id="main" class="reading">
-  <div class="reading__inner">
-    <p class="lede">We read every note and will write back to the email you gave us. If it’s time-sensitive, you can also <a href="{{ site.bookingUrl }}" target="_blank" rel="noopener">book a conversation</a>.</p>
-    <p><a href="/">← Back to the home page</a></p>
-  </div>
-</main>
+{#- The words are in _data/pages/thanks.yml (edit in /admin under Pages → Contact: thank you). -#}
+{% include "partials/page-from-data.njk" %}

@@ -1,0 +1,20 @@
+# The Research Roots index (/lineage/). Edit in /admin under Pages → Research Roots, or here.
+# The pages themselves are under Research Roots in the editor. The header photo is site.lineageHeader in _data/site.js.
+title: Research Roots
+description: The research and teachers behind Practice Labs, with links to the original studies.
+kicker: Lineage
+subtitle: The teachers, researchers and traditions woven into Practice Labs.
+lineageHeader: true
+rows:
+  - style: reading
+    main: true
+    blocks:
+      - type: text
+        bare: true
+        lede: Practice Labs draws on more than a century of research into how people bond, change and grow. These pages credit the people whose work it builds on, explain what we take from each, and link straight to the original research so you can check our sources yourself.
+      - type: include
+        name: lineage-browse
+        mapTitle: How it all connects
+        mapBlurb: Start with the big picture, then open a cluster to see its pages and how they link to each other.
+        searchPlaceholder: "Search names and ideas: shame, Gottman, nervous system…"
+        emptyText: Nothing matches that yet. Try another word, or

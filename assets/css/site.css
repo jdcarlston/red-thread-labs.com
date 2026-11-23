@@ -880,3 +880,10 @@ html body :is(h1, h2, h3, legend, .cluster__title) em { /* "html body" so this w
   font-family: inherit; font-style: normal; font-weight: inherit; font-size: inherit;
   text-transform: inherit; letter-spacing: inherit; color: inherit;
 }
+
+/* JD's page (about/jd): four kinds of work in a two-column list, each with a short heading, a paragraph and a link. */
+.bio-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 40px 56px; }
+.bio-list li { display: flex; flex-direction: column; gap: 12px; padding-top: 22px; border-top: 1px solid rgba(255, 119, 119, 0.3); }
+.bio-list h3 { margin: 0; font-size: 15px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--coral); }
+.bio-list p { margin: 0; font-size: 17px; line-height: 1.65; color: var(--muted-on-dark); }
+.bio-list a { align-self: flex-start; font-weight: 700; text-decoration: none; }

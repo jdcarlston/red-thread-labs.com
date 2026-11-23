@@ -4,22 +4,26 @@ title: Red Thread Labs
 headerStyle: home
 bodyClass: page-home
 scripts: ["signup.js"]
+eleventyComputed:
+  description: "{{ pages.home.tagline }}"
 ---
 {%- from "partials/signup.njk" import signup -%}
+{#- The words are in _data/pages/home.yml (edit in /admin under Pages → Home). -#}
+{%- set p = pages.home -%}
 <div class="hero">
   {#- Background: the Windward Weave turned on its side, under an oxblood veil. -#}
-  <img class="hero__photo" src="{{ 'img/hero-weave-sideways.jpg' | media }}" alt="" aria-hidden="true">
+  <img class="hero__photo" src="{{ p.background | media }}" alt="" aria-hidden="true">
   <div class="hero__veil" aria-hidden="true"></div>
   {% include "partials/header.njk" %}
   <main id="main" class="hero__stage">
     <div class="hero__art">{% heroArtwork %}</div>
     <div class="hero__text">
       <h1 class="hero__title">{{ site.name }}</h1>
-      <p class="hero__tagline">{{ site.tagline }}</p>
+      <p class="hero__tagline">{{ p.tagline | md | safe }}</p>
       {%- set iconsClass = "hero__icons" %}
       {% include "partials/contact-icons.njk" %}
       <div class="hero__signup">
-        {{ signup(source="Home page", button="Join the list", fine="Writing, new labs and first pick of seats. Unsubscribe anytime.", id="home-signup") }}
+        {{ signup(source="Home page", button=p.signup.button, fine=p.signup.fine, id="home-signup") }}
       </div>
     </div>
   </main>
