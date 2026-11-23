@@ -42,8 +42,8 @@ sources:
     url: https://doi.org/10.1111/j.1467-9280.2005.01600.x
     label: Read the study
   - cite: "Ethan Kross, Emma Bruehlman-Senecal, Jiyoung Park and others (2014), Self-talk as a regulatory mechanism: How you do it matters. *Journal of Personality and Social Psychology*, 106(2), 304–324."
-    url: https://scholar.google.com/scholar?q=Kross+2014+Self-talk+as+a+regulatory+mechanism+how+you+do+it+matters
-    label: Find the paper
+    url: https://doi.org/10.1037/a0035173
+    label: Read the paper
 related:
   - judith-delozier
   - robert-dee-mcdonald

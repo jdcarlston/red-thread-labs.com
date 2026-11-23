@@ -31,6 +31,8 @@ exercise:
   why: "[Ainsworth found](https://doi.org/10.4324/9780203758045) that a secure figure does two jobs: a base to explore from and a haven to come back to. Under stress, people lean on a habitual strategy of reaching or withdrawing. Seeing your own strategy, and practicing a small reach, is the first step toward choosing it."
 sources:
   - cite: John Bowlby, *Attachment and Loss*, 3 vols. (1969–1980).
+    url: https://search.worldcat.org/search?q=Attachment+and+Loss+Bowlby
+    label: Find the book
   - cite: "Mary D. S. Ainsworth & Silvia M. Bell (1970), “Attachment, exploration, and separation: Illustrated by the behavior of one-year-olds in a strange situation,” *Child Development* 41(1), 49–67."
     url: https://doi.org/10.2307/1127388
     label: Read the study

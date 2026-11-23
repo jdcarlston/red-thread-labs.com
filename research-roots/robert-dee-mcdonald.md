@@ -36,11 +36,11 @@ sources:
     url: https://teloscenter.com
     label: Visit the site
   - cite: "A. D. Craig (2009), How do you feel — now? The anterior insula and human awareness. *Nature Reviews Neuroscience*, 10(1), 59–70."
-    url: https://scholar.google.com/scholar?q=Craig+2009+How+do+you+feel+now+anterior+insula+human+awareness
-    label: Find the paper
+    url: https://doi.org/10.1038/nrn2555
+    label: Read the paper
   - cite: "J. Füstös, K. Gramann, B. M. Herbert and O. Pollatos (2013), On the embodiment of emotion regulation: interoceptive awareness facilitates reappraisal. *Social Cognitive and Affective Neuroscience*, 8(8), 911–917."
-    url: https://scholar.google.com/scholar?q=Fustos+2013+embodiment+of+emotion+regulation+interoceptive+awareness+reappraisal
-    label: Find the paper
+    url: https://doi.org/10.1093/scan/nss089
+    label: Read the paper
 related:
   - bud-craig
   - lisa-feldman-barrett

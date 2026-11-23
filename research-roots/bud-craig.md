@@ -38,8 +38,8 @@ sources:
     url: https://search.worldcat.org/search?q=How+Do+You+Feel+Bud+Craig+interoceptive
     label: Find the book
   - cite: "Rainer Schandry (1981), Heart beat perception and emotional experience. *Psychophysiology*, 18(4), 483–488."
-    url: https://scholar.google.com/scholar?q=Schandry+1981+Heart+beat+perception+and+emotional+experience
-    label: Find the paper
+    url: https://doi.org/10.1111/j.1469-8986.1981.tb02486.x
+    label: Read the paper
 related:
   - antonio-damasio
   - peter-levine

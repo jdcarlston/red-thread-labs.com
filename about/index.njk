@@ -9,130 +9,55 @@ header: { image: "img/jd-speaking-weave.jpg", position: "50% 40%", zoom: 1 }
 ogImage: /img/cherished-and-chosen-share.jpg
 permalink: /about/
 ---
-{#- DRAFT for JD's review: the business About page. -#}
+{#- The About page, in reading order: what we believe, our values, why this exists, who you'll work with,
+    the ways to work together, where the method comes from, then the invitation.
+    Links to Practice Labs sections go to the contact page until that page is published (it's a draft). -#}
+{%- set labs = "/practice-labs/" if reviewMode else "/contact/" -%}
 {% include "partials/page-header.njk" %}
 
-<section class="band">
+<section class="band" id="mission">
   <div class="band__inner">
-    <p class="statement">The loops you learned early tend to run your love life, your friendships and your work. <em>Change them once, and they change everywhere.</em></p>
-    <p class="soft">Red Thread Labs LLC is a Salt Lake City-based organization that helps people build long-lasting, authentic relationship skills. We find the patterns, test and practice new skills, and actually shift behavior using evidence-based methods. Our goal is to help people across the country build skills that allow them to relate and connect with others more effectively.</p>
+    <p class="label">What we believe</p>
+    <p class="statement">The loops you learned early run your love life, your friendships and your work. <em>Change one, and you feel it everywhere.</em></p>
+    <hr class="rule">
+    <p class="lede">Our mission is to help you build the skills to relate and connect with the people in your life more effectively, wherever you are in the country.</p>
+    <p class="soft">We imagine a world full of people who can stay close through the hard moments, in love, with friends, at work and in their communities, and an earth that gets to be a better, healthier playground for all of us.</p>
   </div>
 </section>
 
 <main id="main" class="reading">
   <div class="reading__inner">
-    {#- Mission, Vision, Values and Principles: a draft until JD reviews it (the mission is her own wording).
-        Delete the draft and enddraft lines to publish. -#}
-    {% draft "Mission, values and principles" %}
-    <section class="section" id="mission">
-      <p class="label">Mission</p>
-      <h2>Why we <em>do this</em></h2>
-      <hr class="rule">
-      <p class="lede">We help you build the skills to relate and connect with the people in your life more effectively, wherever you are in the country.</p>
-      <p class="soft">That work runs from the inside out. In our labs and sessions you learn to notice what you feel and what it’s telling you. Through consulting, we also help you map how you feel inside to how you show up in the world: inner work, together with <a href="{{ site.maddercraft }}/fashion/#styling">styling</a> for how you look and carry yourself, so that who you are and how you appear line up. The result is a life that feels more aligned and coherent, in everything you do.</p>
-      <p class="label">Vision</p>
-      <p class="soft">Imagine being able to stay close to the people who matter through the hard moments, in love, with friends, at work and in your community. We’re working toward a world full of people who can, and an earth that gets to be a better, healthier playground for all of us.</p>
-    </section>
-
     <section class="section" id="values">
-      <p class="label">Values</p>
-      <h2>What you can <em>count on</em></h2>
+      <p class="label">What you can count on</p>
+      <h2>Our <em>values</em></h2>
       <hr class="rule">
-      <ul class="cards">
-        <li class="card"><h3>Connection</h3><p>You heal and grow in relationship. That’s why we meet you in person, in real rooms, where connection can actually be practiced.</p></li>
-        <li class="card"><h3>Compassion in action</h3><p>You get care that does something. We hold a space free of judgment and shame for you, and we still tell you the truth.</p></li>
-        <li class="card"><h3>Curiosity</h3><p>Your feelings carry information and instructions. We help you get curious about what they’re telling you instead of judging them.</p></li>
-        <li class="card"><h3>Practice</h3><p>We practice what we teach before we teach it, so you can practice it too. Insight is a start; repetition is what changes your loop.</p></li>
-        <li class="card"><h3>Choice</h3><p>You can choose differently. The defaults you were handed are a starting point, not a sentence.</p></li>
-        <li class="card"><h3>Coherence</h3><p>How you feel inside and how you show up outside belong together. We help you bring them into line, from your inner life to how you carry yourself in the world.</p></li>
-        <li class="card"><h3>Rigor in the open</h3><p>We test what works, keep what holds up, and show you our sources so you can check them yourself.</p></li>
+      <ul class="values-list">
+        <li><strong>Connection</strong><span>You grow in relationship, so we meet you in real rooms, with real people.</span></li>
+        <li><strong>Compassion in action</strong><span>No judgment and no shame, and we still tell you the truth.</span></li>
+        <li><strong>Curiosity</strong><span>Your feelings carry information. We help you listen to them instead of judging them.</span></li>
+        <li><strong>Choice</strong><span>You decide what you share and what you try, and you can always opt out.</span></li>
+        <li><strong>Practice</strong><span>Insight is a start. Repetition is what changes the loop, so we practice what we teach.</span></li>
+        <li><strong>Coherence</strong><span>How you feel inside and how you show up in the world belong together.</span></li>
+        <li><strong>Rigor in the open</strong><span>We test what works, keep what holds up, and show our sources so you can check them.</span></li>
       </ul>
-    </section>
-
-    <section class="section" id="principles">
-      <p class="label">Principles</p>
-      <h2>How we hold <em>the room for you</em></h2>
-      <hr class="rule">
-      <ol class="steps">
-        <li><span class="steps__num">01</span><h3>You’re the scientist</h3><p>You run the experiment on your own life. We bring the instruments and the room.</p></li>
-        <li><span class="steps__num">02</span><h3>Nothing to fix</h3><p>Nothing about you needs fixing. We help you see the patterns you live inside, and practice something new.</p></li>
-        <li><span class="steps__num">03</span><h3>You can always opt out</h3><p>You choose what you share and what you try. What you share in the room stays in the room.</p></li>
-        <li><span class="steps__num">04</span><h3>Clear agreements</h3><p>You’ll know how the room works before we start, and we keep a plan for when things get real.</p></li>
-        <li><span class="steps__num">05</span><h3>Speak from the heart</h3><p>You get honest feedback, given with care. The right people stay.</p></li>
-      </ol>
-    </section>
-    {% enddraft %}
-
-    <section class="section">
-      <p class="label">What we do</p>
-      <h2>Six ways we <em>work with you</em></h2>
-      <hr class="rule">
-      <p class="soft">Most of us talk about our patterns with a therapist, a coach or a friend. Fewer of us get to actually test something new, with honest feedback, and keep iterating until it holds. Everything we offer is built around that practice, because insight is a start and practice is what changes the loop.</p>
-      <ul class="cards">
-        <li class="card">
-          <p class="label">Coach</p>
-          <h3>One-on-one and couples</h3>
-          <p>Level-Up Sessions that name the loop you keep running, shift it where talking alone can’t reach, and give you something to practice the same day. Follow-ups and support between sessions, so the change has somewhere to land.</p>
-          <div class="card__actions"><a class="btn btn--ghost" href="/level-up/">Level-Up Sessions</a></div>
-        </li>
-        <li class="card">
-          <p class="label">Facilitator</p>
-          <h3>Practice Labs and workshops</h3>
-          <p>Hands-on group labs where you come as the scientist of your own life: you practice, notice what happens, and take the skill home. Every exercise has an opt-out, and what’s shared in the room stays in the room.</p>
-          <div class="card__actions"><a class="btn btn--ghost" href="/love/">The Love Lab</a></div>
-        </li>
-        <li class="card">
-          <p class="label">Educator</p>
-          <h3>Families and friends, together</h3>
-          <p>Change is easier when the people you love are learning it with you. We bring Practice Labs to your family or your circle of friends, in your home or a private gathering, so you share the same language, practice with each other, and keep the tools going long after.</p>
-          <div class="card__actions"><a class="btn btn--ghost" href="/contact/">Learn together</a></div>
-        </li>
-        <li class="card">
-          <p class="label">Event planner</p>
-          <h3>Dinners, retreats and ceremonies</h3>
-          <p>Candlelit lab dinners, multi-day retreats, lunch-and-learns, and ceremonies for the turning points of a life. We plan the room, the food, the flow and the care, so the people in it can do the real work.</p>
-          <div class="card__actions"><a class="btn btn--ghost" href="/contact/">Plan something with us</a></div>
-        </li>
-        <li class="card">
-          <p class="label">Consultant</p>
-          <h3>Teams and leaders</h3>
-          <p>The same loops that run a relationship run a team. We bring two decades of engineering leadership to the human side of how groups decide, disagree and deliver: working sessions, offsites and leadership coaching.</p>
-          <div class="card__actions"><a class="btn btn--ghost" href="/contact/">Talk about your team</a></div>
-        </li>
-        <li class="card">
-          <p class="label">Leader</p>
-          <h3>Building rooms people trust</h3>
-          <p>JD has led engineering organizations, volunteer care teams and community gatherings. That experience shows up in how we hold a room: clear agreements, steady presence, and a plan for when things get real.</p>
-          <div class="card__actions"><a class="btn btn--ghost" href="/about/jd/">About JD</a></div>
-        </li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <p class="label">How it works</p>
-      <h2>See · Shift · <em>Prove</em></h2>
-      <hr class="rule">
-      <p class="soft">Whether it’s a two-hour session or a five-day retreat, the method underneath is the same.</p>
-      <ol class="steps">
-        <li><span class="steps__num">01</span><h3>See</h3><p>Name the loop that keeps running, in one clear sentence. Not a diagnosis. A starting point.</p></li>
-        <li><span class="steps__num">02</span><h3>Shift</h3><p>Change how that loop runs, where talking alone can’t reach.</p></li>
-        <li><span class="steps__num">03</span><h3>Prove</h3><p>Practice with real people until the change holds.</p></li>
-      </ol>
-    </section>
-
-    <section class="section">
-      <p class="label">Where it comes from</p>
-      <h2>Rigor, <em>and roots</em></h2>
-      <hr class="rule">
-      <div class="prose">
-        <p>Practice Labs is JD Carlston’s method. It draws on her study with Dr. Robert Dee McDonald, NLP architect, clinical researcher and co-founder of the <a href="https://teloscenter.com" target="_blank" rel="noopener">Telos Healing Center</a>, and weaves his teaching together with attachment science, nervous-system work, humanistic therapy and an engineer’s habit of testing what actually works.</p>
-        <p>We keep our sources in the open. <a href="/lineage/">Research Roots</a> walks through the research and the people behind each idea we use, with every study linked.</p>
-      </div>
+      <p class="soft">In practice, that means you’re the scientist of your own life and we bring the instruments and the room. Nothing about you needs fixing. What’s shared in the room stays in the room.</p>
     </section>
   </div>
 </main>
 
-<section class="band">
+<section class="band" id="story">
+  <div class="band__inner">
+    <p class="label">Why this exists</p>
+    <h2>Practice, <em>not just insight</em></h2>
+    <hr class="rule">
+    <div class="prose">
+      <p>JD Carlston comes from a family of engineers and teachers. She spent more than twenty years leading engineering teams, and even longer hosting gatherings and peer support in her community. Both taught her the same thing: people rarely change because they understand something. They change when they get to practice it, safely, with honest feedback, until it holds.</p>
+      <p>Red Thread Labs is that practice, built for how we love, befriend and work together. The red thread is the pattern you carry from room to room. Once you can see it, you can choose differently.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band band--alt" id="people">
   <div class="band__inner">
     <p class="label">Who you’ll work with</p>
     <h2>Built it. <em>Live it.</em> Teach it.</h2>
@@ -140,8 +65,8 @@ permalink: /about/
     <div class="about">
       <img src="{{ 'img/photo-stairway.jpg' | media }}" alt="JD Carlston and Chick Adams" loading="lazy">
       <div class="prose">
-        <p><strong>JD Carlston</strong> is a Human Engineer and the founder of Red Thread Labs. She spent more than twenty years leading engineering teams and architecture before turning that rigor on the patterns that shape how we love. <a href="/about/jd/">Read JD’s story →</a></p>
-        <p><strong>Chick Adams</strong> is co-founder, a DevOps engineer, and JD’s husband. They did this work on themselves first, and still do. At Red Thread Labs, we practice before we teach.</p>
+        <p><strong>JD Carlston</strong> is a Human Engineer and the founder of Red Thread Labs. She turned two decades of engineering rigor on the patterns that shape how we love. <a href="/about/jd/">Read JD’s story →</a></p>
+        <p><strong>Chick Adams</strong> is co-founder, a DevOps engineer, and JD’s husband. They did this work on themselves first, and still do. We practice before we teach.</p>
         <p>Behind them is a small network of coaches and facilitators we trust, so you get the right person for what you’re working on.</p>
       </div>
     </div>
@@ -150,11 +75,38 @@ permalink: /about/
 
 <section class="reading">
   <div class="reading__inner">
-    <section class="section section--center">
-      <h2>Start with a <em>conversation</em></h2>
+    <section class="section" id="work-with-us">
+      <p class="label">How we work with you</p>
+      <h2>Ways to <em>work together</em></h2>
       <hr class="rule">
-      <p class="soft">Tell us what you’re working on. We’ll tell you honestly whether we’re the right fit, and if we’re not, who might be.</p>
-      <div class="btn-row"><a class="btn btn--primary" href="{{ site.bookingUrl }}" target="_blank" rel="noopener">Book a free consultation</a><a class="btn btn--ghost" href="/contact/">Send a message</a></div>
+      <ul class="offer-list">
+        <li><h3>You, or you and a partner</h3><p>Level-Up Sessions that name the loop you keep running and give you something to practice the same day.</p><a href="/level-up/">Level-Up Sessions →</a></li>
+        <li><h3>In a group</h3><p>Practice Labs and evening Love Labs, where you try something new with real people and take the skill home.</p><a href="/love/">The Love Lab →</a></li>
+        <li><h3>With your family or friends</h3><p>We bring a lab to your home or a private gathering, so the people you love learn the same language with you.</p><a href="{{ labs }}{% if reviewMode %}#families{% endif %}">Learn together →</a></li>
+        <li><h3>With your team</h3><p>The loops that run a relationship run a team. Working sessions, offsites and leadership coaching.</p><a href="{{ labs }}{% if reviewMode %}#teams{% endif %}">For teams →</a></li>
+        <li><h3>Dinners, retreats and ceremonies</h3><p>Lab dinners, retreats and ceremonies for the turning points of a life. We plan the room so the people in it can do the real work.</p><a href="/contact/">Plan something →</a></li>
+        <li><h3>Inside and out</h3><p>Consulting that lines up how you feel inside with how you show up in the world: inner work, together with styling.</p><a href="{{ site.maddercraft }}/fashion/#styling">Styling →</a></li>
+      </ul>
+      <p class="soft">Every one of these runs on the same three steps: see the loop, shift it, and prove the change with real people.{% if reviewMode %} <a href="/practice-labs/#how-it-works">How Practice Labs work →</a>{% endif %}</p>
     </section>
+
+    <section class="section" id="roots">
+      <p class="label">Where it comes from</p>
+      <h2>Rigor, <em>and roots</em></h2>
+      <hr class="rule">
+      <div class="prose">
+        <p>Practice Labs is JD Carlston’s method. It draws on her study with Dr. Robert Dee McDonald, NLP architect, clinical researcher and co-founder of the <a href="https://teloscenter.com" target="_blank" rel="noopener">Telos Healing Center</a>, and weaves his teaching together with attachment science, nervous-system work, humanistic therapy and an engineer’s habit of testing what actually works.</p>
+        <p>We keep our sources in the open. <a href="/lineage/">Research Roots</a> walks through the people and the research behind each idea we use, with every study linked.</p>
+      </div>
+    </section>
+  </div>
+</section>
+
+<section class="band band--center">
+  <div class="band__inner">
+    <h2>Start with a <em>conversation</em></h2>
+    <hr class="rule">
+    <p class="soft">Tell us what you’re working on. We’ll tell you honestly whether we’re the right fit, and if we’re not, who might be.</p>
+    <div class="btn-row"><a class="btn btn--primary" href="{{ site.bookingUrl }}" target="_blank" rel="noopener">Book a free consultation</a><a class="btn btn--ghost" href="/contact/">Send a message</a></div>
   </div>
 </section>

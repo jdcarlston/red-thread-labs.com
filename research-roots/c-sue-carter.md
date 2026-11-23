@@ -35,8 +35,8 @@ sources:
     url: https://doi.org/10.1016/S0306-4530(98)00055-9
     label: Read the study
   - cite: "Julianne Holt-Lunstad, Wendy A. Birmingham & Kathleen C. Light (2008), Influence of a “warm touch” support enhancement intervention among married couples on ambulatory blood pressure, oxytocin, alpha amylase, and cortisol. *Psychosomatic Medicine*, 70(9), 976–985."
-    url: https://scholar.google.com/scholar?q=Holt-Lunstad+2008+warm+touch+support+enhancement+intervention
-    label: Find the paper
+    url: https://doi.org/10.1097/PSY.0b013e318187aef7
+    label: Read the paper
 related:
   - young-insel
   - stan-tatkin

@@ -31,8 +31,8 @@ exercise:
     - Look for something you’re custom-building that could be standard, or something new you’re treating as settled.
   why: This is a simplified Wardley map. Placing parts of a problem by how evolved they are shows where to innovate and where to use what already exists.
 sources:
-  - cite: Simon Wardley, *Wardley Maps* (free, Creative Commons), with learning resources.
-    url: https://learnwardleymapping.com/
+  - cite: Simon Wardley, *Wardley Maps* (free, Creative Commons), first published chapter by chapter on Medium.
+    url: https://medium.com/wardleymaps
     label: Read the book
 related:
   - wisecrowding
