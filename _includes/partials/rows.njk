@@ -30,7 +30,7 @@
 {%- from "partials/booking.njk" import bookingOptions with context -%}
 
 {%- macro href(link) -%}
-{%- if link == "@booking" -%}{{ site.bookingUrl }}{%- elif link.startsWith("/practice-labs") and not reviewMode -%}/contact/{%- elif link.startsWith("@email") -%}mailto:{{ site.email }}{{ link.slice(6) }}{%- else -%}{{ link }}{%- endif -%}
+{%- if link == "@booking" -%}{{ site.bookingUrl }}{%- elif link.startsWith("@email") -%}mailto:{{ site.email }}{{ link.slice(6) }}{%- else -%}{{ link }}{%- endif -%}
 {%- endmacro -%}
 {%- macro ext(link) -%}{%- set u = href(link) -%}{%- if u.startsWith("http") %} target="_blank" rel="noopener"{% endif -%}{%- endmacro -%}
 

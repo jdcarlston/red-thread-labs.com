@@ -88,9 +88,7 @@ module.exports = function (eleventyConfig) {
   // In links, @booking means the Calendly link and @email the contact address (site.js), so they stay in one place.
   const siteLinks = (text) => String(text || "")
     .replace(/\]\(@booking\)/g, `](${site.bookingUrl})`)
-    .replace(/\]\(@email/g, `](mailto:${site.email}`)
-    // Practice Labs is still a draft, so on the live site its links go to the contact page.
-    .replace(/\]\(\/practice-labs\/[^)]*\)/g, (m) => (reviewMode ? m : "](/contact/)"));
+    .replace(/\]\(@email/g, `](mailto:${site.email}`);
   eleventyConfig.addFilter("md", (text) => mdInline.renderInline(siteLinks(text)));
   eleventyConfig.addFilter("absoluteUrl", (path) => new URL(path, site.url).href);
   eleventyConfig.addGlobalData("year", new Date().getFullYear());
