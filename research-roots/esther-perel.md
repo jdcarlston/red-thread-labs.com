@@ -1,6 +1,7 @@
 ---
 slug: esther-perel
 status: review
+ring: practice
 cluster: relationships
 order: 90
 title: Desire and Security

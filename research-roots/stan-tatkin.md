@@ -1,6 +1,7 @@
 ---
 slug: stan-tatkin
 status: review
+ring: practice
 cluster: attachment
 order: 50
 title: Secure Functioning

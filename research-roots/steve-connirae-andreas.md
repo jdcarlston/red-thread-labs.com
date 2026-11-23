@@ -1,6 +1,7 @@
 ---
 slug: steve-connirae-andreas
 status: review
+ring: core
 cluster: change-work
 order: 60
 title: Change That Lasts

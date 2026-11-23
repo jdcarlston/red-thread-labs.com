@@ -1,6 +1,7 @@
 ---
 slug: sue-johnson
 status: review
+ring: practice
 cluster: attachment
 order: 40
 title: Emotionally Focused Therapy

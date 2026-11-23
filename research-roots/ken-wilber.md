@@ -1,6 +1,7 @@
 ---
 slug: ken-wilber
 status: review
+ring: practice
 cluster: systems
 order: 40
 title: Integral Theory

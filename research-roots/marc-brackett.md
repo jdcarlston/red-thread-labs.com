@@ -1,6 +1,7 @@
 ---
 slug: marc-brackett
 status: review
+ring: practice
 cluster: therapy
 order: 130
 title: Emotional Intelligence as a Skill

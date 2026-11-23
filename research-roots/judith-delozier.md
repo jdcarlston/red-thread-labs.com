@@ -1,6 +1,7 @@
 ---
 slug: judith-delozier
 status: review
+ring: practice
 cluster: change-work
 order: 50
 title: Positions in the Body

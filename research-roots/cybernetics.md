@@ -1,6 +1,7 @@
 ---
 slug: cybernetics
 status: review
+ring: practice
 cluster: systems
 order: 80
 title: Cybernetics

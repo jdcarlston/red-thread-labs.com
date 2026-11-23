@@ -24,6 +24,9 @@
     </div>
     <aside id="radar-panel" class="lineage-map__panel" aria-live="polite"></aside>
   </div>
+  {#- What the rings mean (written by assets/js/lineage-radar.js, so the words live in one place). -#}
+  <div id="radar-rings" class="radar__rings"></div>
+  {#- Only in your preview: pages without a Radar ring, as a to-do list. -#}
   <div id="radar-list" class="radar__list"></div>
   <script type="application/json" id="radar-data">{{ lineageVisible | radarData(lineage.clusters) | safe }}</script>
   <script src="/assets/js/lineage-radar.js" defer></script>

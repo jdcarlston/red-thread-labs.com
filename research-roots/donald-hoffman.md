@@ -1,6 +1,7 @@
 ---
 slug: donald-hoffman
 status: review
+ring: hold
 cluster: perception
 order: 70
 title: The Interface Theory of Perception

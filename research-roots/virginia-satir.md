@@ -1,6 +1,7 @@
 ---
 slug: virginia-satir
 status: review
+ring: core
 cluster: therapy
 order: 40
 title: Survival Stances

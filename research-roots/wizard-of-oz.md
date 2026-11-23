@@ -1,6 +1,7 @@
 ---
 slug: wizard-of-oz
 status: review
+ring: practice
 cluster: mythopoetic
 order: 30
 title: The Wizard of Oz

@@ -1,6 +1,7 @@
 ---
 slug: david-marr
 status: review
+ring: exploring
 cluster: systems
 order: 60
 title: Three Levels of Analysis

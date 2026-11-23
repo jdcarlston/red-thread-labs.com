@@ -1,6 +1,7 @@
 ---
 slug: robert-sapolsky
 status: review
+ring: exploring
 cluster: nervous-system
 order: 80
 title: Stress and the Body

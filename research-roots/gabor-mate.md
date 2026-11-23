@@ -1,6 +1,7 @@
 ---
 slug: gabor-mate
 status: review
+ring: practice
 cluster: nervous-system
 order: 20
 title: Trauma and the Hidden Cost of Belonging

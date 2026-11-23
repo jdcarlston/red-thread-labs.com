@@ -1,6 +1,7 @@
 ---
 slug: daniel-wile
 status: review
+ring: practice
 cluster: relationships
 order: 20
 title: Collaborative Couple Therapy

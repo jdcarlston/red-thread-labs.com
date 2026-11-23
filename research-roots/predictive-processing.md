@@ -1,6 +1,7 @@
 ---
 slug: predictive-processing
 status: review
+ring: exploring
 cluster: perception
 order: 10
 title: Predictive Processing

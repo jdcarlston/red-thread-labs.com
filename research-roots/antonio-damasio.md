@@ -1,6 +1,7 @@
 ---
 slug: antonio-damasio
 status: review
+ring: exploring
 cluster: perception
 order: 30
 title: The Feeling Body

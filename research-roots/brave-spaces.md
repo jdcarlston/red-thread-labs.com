@@ -1,6 +1,7 @@
 ---
 slug: brave-spaces
 status: review
+ring: core
 cluster: facilitation
 order: 20
 title: Brave Spaces

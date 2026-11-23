@@ -1,6 +1,7 @@
 ---
 slug: allan-schore
 status: review
+ring: exploring
 cluster: attachment
 order: 70
 title: Regulation Theory

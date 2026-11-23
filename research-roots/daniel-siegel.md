@@ -1,6 +1,7 @@
 ---
 slug: daniel-siegel
 status: review
+ring: practice
 cluster: nervous-system
 order: 50
 title: Interpersonal Neurobiology

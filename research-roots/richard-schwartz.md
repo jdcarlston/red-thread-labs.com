@@ -1,6 +1,7 @@
 ---
 slug: richard-schwartz
 status: review
+ring: practice
 cluster: therapy
 order: 120
 title: Internal Family Systems

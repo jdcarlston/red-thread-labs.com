@@ -1,6 +1,7 @@
 ---
 slug: michael-gazzaniga
 status: review
+ring: exploring
 cluster: perception
 order: 40
 title: The Interpreter

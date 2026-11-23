@@ -1,6 +1,7 @@
 ---
 slug: kristin-neff
 status: review
+ring: practice
 cluster: therapy
 order: 80
 title: Self-Compassion

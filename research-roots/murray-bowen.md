@@ -1,6 +1,7 @@
 ---
 slug: murray-bowen
 status: review
+ring: core
 cluster: relationships
 order: 50
 title: Family Systems Theory

@@ -1,6 +1,7 @@
 ---
 slug: gi-gurdjieff
 status: review
+ring: exploring
 cluster: contemplative
 order: 90
 title: Self-Remembering

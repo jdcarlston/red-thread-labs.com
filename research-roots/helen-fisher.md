@@ -1,6 +1,7 @@
 ---
 slug: helen-fisher
 status: review
+ring: exploring
 cluster: relationships
 order: 120
 title: The Brain in Love

@@ -1,6 +1,7 @@
 ---
 slug: bandler-grinder
 status: review
+ring: core
 cluster: change-work
 order: 10
 title: Neuro-Linguistic Programming

@@ -1,6 +1,7 @@
 ---
 slug: priya-parker
 status: review
+ring: practice
 cluster: facilitation
 order: 10
 title: The Art of Gathering

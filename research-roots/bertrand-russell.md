@@ -1,6 +1,7 @@
 ---
 slug: bertrand-russell
 status: review
+ring: exploring
 cluster: systems
 order: 30
 title: Logical Types

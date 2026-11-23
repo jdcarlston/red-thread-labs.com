@@ -1,6 +1,7 @@
 ---
 slug: wisecrowding
 status: review
+ring: core
 cluster: facilitation
 order: 30
 title: Wisecrowding

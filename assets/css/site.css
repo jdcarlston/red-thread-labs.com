@@ -1028,3 +1028,17 @@ html body .entry__tagline, html body .entry > .heart-line { font-family: var(--f
 .crumbs__icon svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.3; }
 .crumbs__icon .crumbs__icon-fill { fill: currentColor; stroke: none; }
 .crumbs__icon:hover, .crumbs__icon:focus-visible { color: var(--coral); background: rgba(232, 120, 106, .12); }
+/* Research Radar, in your preview only: pages you haven't reviewed have a dotted outline. */
+.rd-dot.is-draft :is(circle, path, polygon) { fill: rgba(232, 120, 106, .18); stroke: var(--coral); stroke-width: 1.6; stroke-dasharray: 3 2.5; }
+.rd-dot.is-draft .rd-num { fill: var(--cream-text, #f3e7e2); }
+.rd-dot.is-draft.is-hover :is(circle, path, polygon), .rd-dot.is-draft:hover :is(circle, path, polygon) { fill: var(--cream-text, #f3e7e2); }
+.rd-dot.is-draft.is-hover .rd-num, .rd-dot.is-draft:hover .rd-num { fill: #1a0b0a; }
+/* Research Radar: what the rings mean, under the radar. */
+.radar__rings h3 { margin: 6px 0 10px; font-family: var(--font-sans); font-size: 20px; font-weight: 700; }
+.radar__rings ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.radar__rings li { padding: 14px 16px; border: 1px solid rgba(232, 120, 106, .3); border-radius: 10px; font-size: 15px; line-height: 1.5; color: var(--muted-on-dark); }
+.radar__rings strong { display: block; margin-bottom: 4px; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--coral); }
+/* The selected dot stands out from the other search matches. */
+.radar__svg .rd-dot.is-on :is(circle, path, polygon) { fill: #fff; stroke: var(--coral); stroke-width: 3; stroke-dasharray: none; }
+.radar__svg .rd-dot.is-on .rd-num { fill: #1a0b0a; }
+.radar__svg.is-searching .rd-dot.is-match:not(.is-on) :is(circle, path, polygon) { fill: rgba(243, 231, 226, .55); }

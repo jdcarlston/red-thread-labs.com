@@ -1,6 +1,7 @@
 ---
 slug: milton-erickson
 status: review
+ring: practice
 cluster: therapy
 order: 150
 title: Utilization

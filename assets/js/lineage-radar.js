@@ -6,8 +6,8 @@
 //   - its ring: Core (center), In practice, Exploring, Hold (outer edge).
 // The dot's shape says what kind of evidence is behind it: a circle for research studies,
 // a diamond for clinical or practitioner work, a star for tradition, philosophy or story.
-// Clicking a dot shows the page in the side panel. The numbered list under the radar is the
-// same pages in words, for phones and screen readers.
+// Clicking (or tapping) a dot shows the page in the side panel.
+// Each dot is also a keyboard stop with its page's name, for screen readers.
 //
 // The data comes from the radarData filter in eleventy.config.js.
 (function () {
@@ -29,9 +29,9 @@
     { id: "its", name: "Its", label: "Systems and structures", from: 0, to: 90 },
   ];
   const RINGS = [
-    { id: "core", label: "Core", about: "We teach it and build labs on it.", r0: 0, r1: 0.32 },
-    { id: "practice", label: "In practice", about: "We use it in labs and are still testing how it lands.", r0: 0.32, r1: 0.56 },
-    { id: "exploring", label: "Exploring", about: "We're reading it, training in it, or watching it.", r0: 0.56, r1: 0.79 },
+    { id: "core", label: "Core", about: "We teach it and build labs on it.", r0: 0, r1: 0.36 },
+    { id: "practice", label: "In practice", about: "We use it in labs and are still testing how it lands.", r0: 0.36, r1: 0.58 },
+    { id: "exploring", label: "Exploring", about: "We're reading it, training in it, or watching it.", r0: 0.58, r1: 0.79 },
     { id: "hold", label: "Hold", about: "Useful ideas we use with care, or have moved past.", r0: 0.79, r1: 1 },
   ];
   const EVIDENCE = { research: "Research studies", practice: "Clinical or practitioner work", tradition: "Tradition, philosophy or story" };
@@ -56,22 +56,26 @@
 
   // ---------- where each dot goes ----------
   // Each quadrant-and-ring cell is split into rows (arcs). A row holds as many dots as fit along it
-  // with GAP pixels between them; the outer rows fill first. Dots stay AXIS pixels clear of the axes.
-  const GAP = 30, AXIS = 18;
+  // with `gap` pixels between them; the outer rows fill first. A crowded cell packs tighter, down to
+  // MIN_GAP, so its dots don't overlap. Dots stay AXIS pixels clear of the axes.
+  const GAP = 30, MIN_GAP = 21, AXIS = 16;
+  function rowsFor(inner, outer, gap) {
+    const radii = [];
+    for (let r = outer - gap / 2; r >= inner + 6; r -= gap * 0.88) radii.push(r);
+    if (!radii.length) radii.push((inner + outer) / 2);
+    return radii.map((r) => ({ r, cap: Math.max(1, Math.floor(((Math.PI / 2) * r - 2 * AXIS) / gap)), items: [] }));
+  }
   function positions() {
     const pos = {};
     QUADRANTS.forEach((q) => RINGS.forEach((ring) => {
       const cell = placed.filter((e) => e.quadrant === q.id && e.ring === ring.id);
       if (!cell.length) return;
-      const inner = Math.max(ring.r0 * R, 34), outer = ring.r1 * R;
-      const radii = [];
-      for (let r = outer - GAP / 2; r >= inner + 8; r -= GAP * 0.9) radii.push(r);
-      if (!radii.length) radii.push((inner + outer) / 2);
-      const span = (r) => (Math.PI / 2) * r - 2 * AXIS; // usable arc length at radius r
-      const rows = radii.map((r) => ({ r, cap: Math.max(1, Math.floor(span(r) / GAP)), items: [] }));
+      const inner = Math.max(ring.r0 * R, 26), outer = ring.r1 * R;
+      let gap = GAP, rows = rowsFor(inner, outer, gap);
+      while (gap > MIN_GAP && rows.reduce((n, r) => n + r.cap, 0) < cell.length) rows = rowsFor(inner, outer, --gap);
       let i = 0;
       for (const row of rows) while (row.items.length < row.cap && i < cell.length) row.items.push(cell[i++]);
-      while (i < cell.length) rows[i % rows.length].items.push(cell[i++]); // more than fits: squeeze in
+      while (i < cell.length) rows[i % rows.length].items.push(cell[i++]); // still more than fits: squeeze in
       rows.forEach((row) => {
         const margin = (AXIS / row.r) * (180 / Math.PI);
         const width = q.to - q.from - 2 * margin;
@@ -85,7 +89,7 @@
   }
 
   function shape(evidence, x, y) {
-    const s = 11;
+    const s = 10;
     if (evidence === "practice") return el("path", { d: `M${x} ${y - s * 1.2}L${x + s * 1.2} ${y}L${x} ${y + s * 1.2}L${x - s * 1.2} ${y}Z` });
     if (evidence === "tradition") {
       const pts = [];
@@ -126,14 +130,11 @@
     const pos = positions();
     placed.forEach((e) => {
       const [x, y] = pos[e.slug];
-      const g = el("g", { class: "rd-dot", tabindex: "0", role: "button", "data-slug": e.slug, "aria-label": `${e.n}. ${e.title}` });
+      const g = el("g", { class: "rd-dot" + (e.draft ? " is-draft" : ""), tabindex: "0", role: "button", "data-slug": e.slug, "aria-label": `${e.n}. ${e.title}` });
       g.append(shape(e.evidence, x, y));
       const num = el("text", { x, y: y + 4, "text-anchor": "middle", class: "rd-num" });
       num.textContent = e.n;
       g.append(num);
-      const tip = el("title");
-      tip.textContent = `${e.title} · ${e.cluster}`;
-      g.append(tip);
       svg.append(g);
     });
 
@@ -148,16 +149,29 @@
   // ---------- the side panel ----------
   function showIntro() {
     panel.innerHTML = `
-      <p class="lm-panel__kicker">The rings</p>
-      <h3>How much we rely on it</h3>
-      <ul class="rd-panel__rings">${RINGS.map((r) => `<li><strong>${r.label}.</strong> ${r.about}</li>`).join("")}</ul>
-      <p class="lm-panel__hint">Pick a dot to see the source.</p>`;
+      <p class="lm-panel__kicker">The radar</p>
+      <h3>Pick a dot</h3>
+      <p class="lm-panel__hint">Each dot is a source. Click one to see it here, or search above the radar.</p>`;
   }
+  // Under the radar: what the rings mean.
+  function drawRings() {
+    const box = document.getElementById("radar-rings");
+    if (!box) return;
+    box.innerHTML = `
+      <h3>How much we rely on it</h3>
+      <ul>${RINGS.map((r) => `<li><strong>${r.label}</strong> ${r.about}</li>`).join("")}</ul>`;
+  }
+  // The page that was clicked (or found by searching) is shown in the panel.
+  let selected = null;
   function showEntry(slug) {
-    const e = placed.find((p) => p.slug === slug);
-    if (!e) return;
+    if (!placed.some((p) => p.slug === slug)) return;
+    selected = slug;
     svg.querySelectorAll(".rd-dot.is-on").forEach((d) => d.classList.remove("is-on"));
     svg.querySelector(`.rd-dot[data-slug="${slug}"]`)?.classList.add("is-on");
+    renderEntry(slug);
+  }
+  function renderEntry(slug) {
+    const e = placed.find((p) => p.slug === slug);
     const q = QUADRANTS.find((x) => x.id === e.quadrant), ring = RINGS.find((x) => x.id === e.ring);
     panel.innerHTML = `
       <p class="lm-panel__kicker">${esc(q.name)} · ${esc(q.label)}</p>
@@ -165,27 +179,18 @@
       <p class="lm-panel__people">${esc(e.people)}</p>
       <p class="lm-panel__tagline">${esc(e.tagline)}</p>
       <p class="rd-panel__facts"><strong>${esc(ring.label)}.</strong> ${esc(ring.about)}<br>${esc(EVIDENCE[e.evidence] || "")} · ${esc(e.cluster)}</p>
-      <a class="lm-panel__read" href="/library/${e.slug}/">Read the page →</a>
-      <p><button type="button" class="link-button" data-intro>← About the rings</button></p>`;
+      <a class="lm-panel__read" href="/library/${e.slug}/">Read the page →</a>`;
   }
 
-  // ---------- the list under the radar ----------
+  // ---------- under the radar ----------
+  // Only in your preview: pages that don't have a Radar ring yet, as a to-do list.
+  // (The pages on the radar are read by pointing at their dots.)
   function drawList() {
-    const groups = QUADRANTS.map((q) => {
-      const rings = RINGS.map((ring) => {
-        const items = placed.filter((e) => e.quadrant === q.id && e.ring === ring.id);
-        if (!items.length) return "";
-        return `<h4>${ring.label}</h4><ol>${items.map((e) =>
-          `<li value="${e.n}"><a href="/library/${e.slug}/" data-slug="${e.slug}">${esc(e.title)}</a></li>`).join("")}</ol>`;
-      }).join("");
-      return rings ? `<section><h3><span>${q.name}</span> ${q.label}</h3>${rings}</section>` : "";
-    }).join("");
-    const notYet = unplaced.length
+    list.innerHTML = unplaced.length
       ? `<section class="radar__unplaced"><h3>Not on the radar yet (${unplaced.length})</h3>
          <p>Only you see this, in your preview. Give a page a Radar ring in /admin to place it.</p>
          <ul>${unplaced.map((e) => `<li><a href="/library/${e.slug}/">${esc(e.title)}</a></li>`).join("")}</ul></section>`
       : "";
-    list.innerHTML = (groups ? `<div class="radar__groups">${groups}</div>` : "") + notYet;
   }
 
   // ---------- wiring ----------
@@ -197,22 +202,10 @@
     const d = ev.target.closest(".rd-dot");
     if (d && (ev.key === "Enter" || ev.key === " ")) { ev.preventDefault(); showEntry(d.dataset.slug); }
   });
-  panel.addEventListener("click", (ev) => {
-    if (ev.target.closest("[data-intro]")) {
-      svg.querySelectorAll(".rd-dot.is-on").forEach((d) => d.classList.remove("is-on"));
-      showIntro();
-    }
-  });
-  // Hovering a page in the list lights up its dot.
-  list.addEventListener("mouseover", (ev) => {
-    const a = ev.target.closest("a[data-slug]");
-    svg.querySelectorAll(".rd-dot.is-hover").forEach((d) => d.classList.remove("is-hover"));
-    if (a) svg.querySelector(`.rd-dot[data-slug="${a.dataset.slug}"]`)?.classList.add("is-hover");
-  });
 
   // Search: the same searchable words as the Library page (the searchText filter in eleventy.config.js).
-  // Matching dots stay lit and the rest fade; the list below shows only the matches.
-  // Enter opens the first match in the side panel.
+  // Matching dots stay lit and the rest fade, and the first match is selected and shown in the
+  // side panel as you type. Enter steps to the next match. Clearing the box goes back to the rings.
   const searchBox = document.getElementById("radar-search");
   const count = document.getElementById("radar-count");
   function applySearch() {
@@ -224,31 +217,38 @@
       const e = placed.find((p) => p.slug === d.dataset.slug);
       d.classList.toggle("is-match", words.length > 0 && hit(e));
     });
-    list.querySelectorAll("li").forEach((li) => {
-      const a = li.querySelector("a[data-slug]");
-      if (a) li.hidden = words.length > 0 && !hit(placed.find((p) => p.slug === a.dataset.slug));
-    });
-    // Hide a ring or quadrant heading in the list when nothing under it matches.
-    list.querySelectorAll(".radar__groups h4").forEach((h) => {
-      const ol = h.nextElementSibling;
-      const any = [...ol.children].some((li) => !li.hidden);
-      h.hidden = ol.hidden = !any;
-    });
-    list.querySelectorAll(".radar__groups section").forEach((sec) => {
-      sec.hidden = ![...sec.querySelectorAll("li")].some((li) => !li.hidden);
-    });
-    count.textContent = words.length ? (hits.length ? `${hits.length} of ${placed.length} on the radar` : "Nothing on the radar matches that yet.") : "";
+    count.textContent = !words.length ? "" : !hits.length ? "Nothing on the radar matches that yet."
+      : hits.length === 1 ? "1 match" : `1 of ${hits.length} matches · Enter for the next`;
     return hits;
   }
   if (searchBox) {
-    searchBox.addEventListener("input", applySearch);
+    let hitIndex = 0;
+    const clearSelection = () => {
+      selected = null;
+      svg.querySelectorAll(".rd-dot.is-on").forEach((d) => d.classList.remove("is-on"));
+      showIntro();
+    };
+    searchBox.addEventListener("input", () => {
+      const hits = applySearch();
+      hitIndex = 0;
+      if (hits.length) showEntry(hits[0].slug);
+      else clearSelection();
+    });
     searchBox.addEventListener("keydown", (ev) => {
-      if (ev.key === "Enter") { ev.preventDefault(); const hits = applySearch(); if (hits.length) showEntry(hits[0].slug); }
-      if (ev.key === "Escape") { searchBox.value = ""; applySearch(); }
+      if (ev.key === "Enter") {
+        ev.preventDefault();
+        const hits = applySearch();
+        if (!hits.length) return;
+        hitIndex = (hitIndex + 1) % hits.length;
+        showEntry(hits[hitIndex].slug);
+        if (hits.length > 1) count.textContent = `${hitIndex + 1} of ${hits.length} matches · Enter for the next`;
+      }
+      if (ev.key === "Escape") { searchBox.value = ""; applySearch(); clearSelection(); }
     });
   }
 
   draw();
+  drawRings();
   drawList();
   // /library/radar/#<page-slug> opens with that page selected.
   const fromAddress = decodeURIComponent(location.hash.slice(1));

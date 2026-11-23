@@ -1,6 +1,7 @@
 ---
 slug: alfred-adler
 status: review
+ring: exploring
 cluster: change-work
 order: 70
 title: Individual Psychology

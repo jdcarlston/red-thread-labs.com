@@ -1,6 +1,7 @@
 ---
 slug: harriet-lerner
 status: review
+ring: practice
 cluster: relationships
 order: 30
 title: Changing Your Steps in the Dance

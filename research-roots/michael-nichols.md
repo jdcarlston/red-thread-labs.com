@@ -1,6 +1,7 @@
 ---
 slug: michael-nichols
 status: review
+ring: core
 cluster: therapy
 order: 65
 title: Michael P. Nichols

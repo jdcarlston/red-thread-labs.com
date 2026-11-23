@@ -1,6 +1,7 @@
 ---
 slug: immanuel-kant
 status: review
+ring: exploring
 cluster: philosophy
 order: 50
 title: Persons as Ends

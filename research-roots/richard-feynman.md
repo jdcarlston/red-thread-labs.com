@@ -1,6 +1,7 @@
 ---
 slug: richard-feynman
 status: review
+ring: exploring
 cluster: perception
 order: 120
 title: Sum Over Paths

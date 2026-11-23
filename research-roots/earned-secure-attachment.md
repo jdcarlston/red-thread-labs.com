@@ -1,6 +1,7 @@
 ---
 slug: earned-secure-attachment
 status: published
+ring: core
 cluster: attachment
 order: 30
 title: Earned Secure Attachment

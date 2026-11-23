@@ -1,6 +1,7 @@
 ---
 slug: scott-page
 status: review
+ring: practice
 cluster: systems
 order: 110
 title: Scott E. Page

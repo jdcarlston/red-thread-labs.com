@@ -1,6 +1,7 @@
 ---
 slug: crucial-conversations
 status: review
+ring: practice
 cluster: relationships
 order: 70
 title: Crucial Conversations

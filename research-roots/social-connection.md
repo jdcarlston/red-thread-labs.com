@@ -1,6 +1,7 @@
 ---
 slug: social-connection
 status: review
+ring: practice
 cluster: relationships
 order: 140
 title: Social Connection and Loneliness

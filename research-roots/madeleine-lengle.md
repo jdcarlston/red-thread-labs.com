@@ -1,6 +1,7 @@
 ---
 slug: madeleine-lengle
 status: review
+ring: core
 cluster: facilitation
 order: 35
 # On the Research Radar it sits with the "We" pages: it happens between two people.

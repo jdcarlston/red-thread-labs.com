@@ -1,6 +1,7 @@
 ---
 slug: m-scott-peck
 status: review
+ring: core
 cluster: philosophy
 order: 20
 title: Love as Will

@@ -1,6 +1,7 @@
 ---
 slug: david-bohm
 status: review
+ring: exploring
 cluster: perception
 order: 110
 title: Wholeness and Dialogue

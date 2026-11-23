@@ -1,6 +1,7 @@
 ---
 slug: norman-doidge
 status: review
+ring: exploring
 cluster: nervous-system
 order: 110
 title: Neuroplasticity

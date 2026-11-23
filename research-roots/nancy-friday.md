@@ -1,6 +1,7 @@
 ---
 slug: nancy-friday
 status: review
+ring: exploring
 cluster: relationships
 order: 150
 title: The Inner Life of Desire

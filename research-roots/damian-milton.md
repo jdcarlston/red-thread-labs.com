@@ -1,6 +1,7 @@
 ---
 slug: damian-milton
 status: review
+ring: practice
 cluster: relationships
 order: 80
 title: The Double Empathy Problem

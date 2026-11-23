@@ -1,6 +1,7 @@
 ---
 slug: functionalism
 status: review
+ring: exploring
 cluster: systems
 order: 70
 title: Mind as Pattern

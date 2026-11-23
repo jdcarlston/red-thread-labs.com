@@ -1,6 +1,7 @@
 ---
 slug: young-insel
 status: review
+ring: exploring
 cluster: attachment
 order: 80
 title: The Neuroscience of Pair Bonding

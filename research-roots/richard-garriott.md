@@ -1,6 +1,7 @@
 ---
 slug: richard-garriott
 status: review
+ring: exploring
 cluster: mythopoetic
 order: 50
 title: Virtue as the Goal of the Game

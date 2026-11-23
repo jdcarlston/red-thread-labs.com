@@ -1,6 +1,7 @@
 ---
 slug: carl-jung
 status: review
+ring: practice
 cluster: mythopoetic
 order: 15
 title: The Shadow and the Whole Self

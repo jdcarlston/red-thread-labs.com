@@ -1,6 +1,7 @@
 ---
 slug: john-odonohue
 status: review
+ring: practice
 cluster: contemplative
 order: 40
 title: Anam Cara

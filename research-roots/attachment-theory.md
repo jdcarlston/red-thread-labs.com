@@ -1,6 +1,7 @@
 ---
 slug: attachment-theory
 status: published
+ring: core
 cluster: attachment
 order: 10
 title: Attachment Theory

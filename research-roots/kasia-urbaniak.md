@@ -1,6 +1,7 @@
 ---
 slug: kasia-urbaniak
 status: review
+ring: practice
 cluster: relationships
 order: 170
 title: Power and the Direct Ask

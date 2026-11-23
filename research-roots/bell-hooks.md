@@ -1,6 +1,7 @@
 ---
 slug: bell-hooks
 status: review
+ring: core
 cluster: philosophy
 order: 30
 title: All About Love

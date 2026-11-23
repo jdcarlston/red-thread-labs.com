@@ -1,6 +1,7 @@
 ---
 slug: martha-beck
 status: review
+ring: exploring
 cluster: contemplative
 order: 50
 title: The Way of Integrity

@@ -1,6 +1,7 @@
 ---
 slug: clarissa-pinkola-estes
 status: review
+ring: exploring
 cluster: contemplative
 order: 70
 title: Story as Medicine

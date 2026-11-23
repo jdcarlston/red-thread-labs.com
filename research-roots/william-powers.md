@@ -1,6 +1,7 @@
 ---
 slug: william-powers
 status: review
+ring: exploring
 cluster: perception
 order: 60
 title: Perceptual Control Theory

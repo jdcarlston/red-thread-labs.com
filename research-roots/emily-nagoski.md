@@ -1,6 +1,7 @@
 ---
 slug: emily-nagoski
 status: review
+ring: practice
 cluster: relationships
 order: 100
 title: Completing the Stress Cycle

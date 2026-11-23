@@ -1,6 +1,7 @@
 ---
 slug: ts-eliot
 status: review
+ring: exploring
 cluster: contemplative
 order: 60
 title: The Still Point

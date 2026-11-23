@@ -1,6 +1,7 @@
 ---
 slug: marvin-minsky
 status: review
+ring: exploring
 cluster: systems
 order: 50
 title: The Society of Mind

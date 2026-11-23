@@ -1,6 +1,7 @@
 ---
 slug: karl-pillemer
 status: review
+ring: exploring
 cluster: relationships
 order: 60
 title: Family Estrangement and Reconciliation

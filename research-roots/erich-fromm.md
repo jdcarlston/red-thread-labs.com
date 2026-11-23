@@ -1,6 +1,7 @@
 ---
 slug: erich-fromm
 status: review
+ring: practice
 cluster: philosophy
 order: 10
 title: The Art of Loving

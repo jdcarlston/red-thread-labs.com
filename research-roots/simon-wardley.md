@@ -1,6 +1,7 @@
 ---
 slug: simon-wardley
 status: review
+ring: practice
 cluster: facilitation
 order: 40
 title: Wardley Mapping

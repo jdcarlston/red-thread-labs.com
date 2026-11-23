@@ -1,6 +1,7 @@
 ---
 slug: arthur-aron
 status: review
+ring: practice
 cluster: relationships
 order: 130
 title: Closeness on Purpose

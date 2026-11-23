@@ -1,6 +1,7 @@
 ---
 slug: thomas-aquinas
 status: review
+ring: core
 cluster: philosophy
 order: 40
 title: To Will the Good of Another

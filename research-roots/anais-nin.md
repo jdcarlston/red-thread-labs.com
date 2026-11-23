@@ -1,6 +1,7 @@
 ---
 slug: anais-nin
 status: review
+ring: exploring
 cluster: philosophy
 order: 80
 title: We See Things as We Are

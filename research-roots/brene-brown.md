@@ -1,6 +1,7 @@
 ---
 slug: brene-brown
 status: review
+ring: practice
 cluster: therapy
 order: 110
 title: Shame and Vulnerability

@@ -1,6 +1,7 @@
 ---
 slug: russell-ackoff
 status: review
+ring: practice
 cluster: systems
 order: 90
 title: Russell Ackoff

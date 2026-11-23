@@ -1,6 +1,7 @@
 ---
 slug: toto
 status: review
+ring: core
 cluster: mythopoetic
 order: 40
 title: Toto, the Revealer

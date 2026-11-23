@@ -1,6 +1,7 @@
 ---
 slug: karen-pryor
 status: review
+ring: exploring
 cluster: facilitation
 order: 50
 title: Shaping with Positive Reinforcement

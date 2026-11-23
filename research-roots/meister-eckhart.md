@@ -1,6 +1,7 @@
 ---
 slug: meister-eckhart
 status: review
+ring: exploring
 cluster: contemplative
 order: 20
 title: Letting Go

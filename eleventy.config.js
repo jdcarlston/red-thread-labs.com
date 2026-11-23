@@ -157,6 +157,8 @@ module.exports = function (eleventyConfig) {
         slug: e.slug, title: plain(e.title), people: plain(e.people), tagline: plain(e.tagline),
         cluster: short[e.cluster], quadrant: e.quadrant, ring: e.ring || null, evidence: e.evidence,
         search: searchText(e, (clusters.find((c) => c.id === e.cluster) || {}).title),
+        // Unreviewed pages get a dotted outline on the radar, only in your preview.
+        draft: reviewMode && e.status !== "published",
       }));
     return JSON.stringify(data).replace(/</g, "\\u003c");
   });

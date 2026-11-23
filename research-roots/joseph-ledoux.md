@@ -1,6 +1,7 @@
 ---
 slug: joseph-ledoux
 status: review
+ring: exploring
 cluster: nervous-system
 order: 90
 title: Threat Learning

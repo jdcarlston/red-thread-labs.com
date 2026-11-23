@@ -1,6 +1,7 @@
 ---
 slug: david-schnarch
 status: review
+ring: practice
 cluster: relationships
 order: 110
 title: Differentiation and Desire

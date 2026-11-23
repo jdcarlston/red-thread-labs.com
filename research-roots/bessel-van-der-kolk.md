@@ -1,6 +1,7 @@
 ---
 slug: bessel-van-der-kolk
 status: review
+ring: exploring
 cluster: nervous-system
 order: 30
 title: The Body Keeps the Score

@@ -1,6 +1,7 @@
 ---
 slug: deb-dana
 status: review
+ring: hold
 cluster: nervous-system
 order: 10
 title: Applied Polyvagal Theory

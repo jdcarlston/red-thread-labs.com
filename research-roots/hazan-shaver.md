@@ -1,6 +1,7 @@
 ---
 slug: hazan-shaver
 status: published
+ring: core
 cluster: attachment
 order: 20
 title: Adult Attachment

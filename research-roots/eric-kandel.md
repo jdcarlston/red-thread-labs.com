@@ -1,6 +1,7 @@
 ---
 slug: eric-kandel
 status: review
+ring: exploring
 cluster: nervous-system
 order: 120
 title: The Biology of Memory

@@ -1,6 +1,7 @@
 ---
 slug: michael-sorensen
 status: review
+ring: core
 cluster: therapy
 order: 70
 title: Validation

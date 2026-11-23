@@ -1,6 +1,7 @@
 ---
 slug: maureen-murdock
 status: review
+ring: practice
 cluster: mythopoetic
 order: 20
 title: The Heroine’s Journey

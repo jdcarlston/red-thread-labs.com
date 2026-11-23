@@ -1,6 +1,7 @@
 ---
 slug: robert-dee-mcdonald
 status: review
+ring: core
 cluster: change-work
 order: 30
 title: The Destination Method

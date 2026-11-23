@@ -1,6 +1,7 @@
 ---
 slug: lisa-feldman-barrett
 status: review
+ring: practice
 cluster: perception
 order: 20
 title: Constructed Emotion

@@ -1,6 +1,7 @@
 ---
 slug: robert-dilts
 status: review
+ring: core
 cluster: change-work
 order: 20
 title: Logical Levels of Change

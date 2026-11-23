@@ -1,6 +1,7 @@
 ---
 slug: helen-block-lewis
 status: review
+ring: practice
 cluster: therapy
 order: 90
 title: Unacknowledged Shame

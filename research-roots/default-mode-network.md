@@ -1,6 +1,7 @@
 ---
 slug: default-mode-network
 status: review
+ring: exploring
 cluster: perception
 order: 50
 title: The Default Mode Network

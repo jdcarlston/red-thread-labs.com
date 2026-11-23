@@ -1,6 +1,7 @@
 ---
 slug: leil-lowndes
 status: review
+ring: exploring
 cluster: relationships
 order: 95
 title: Small Moves That Open a Conversation

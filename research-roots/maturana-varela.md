@@ -1,6 +1,7 @@
 ---
 slug: maturana-varela
 status: review
+ring: exploring
 cluster: perception
 order: 100
 title: Autopoiesis and Enaction

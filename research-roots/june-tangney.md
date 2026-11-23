@@ -1,6 +1,7 @@
 ---
 slug: june-tangney
 status: review
+ring: practice
 cluster: therapy
 order: 100
 title: Shame, Guilt and Repair

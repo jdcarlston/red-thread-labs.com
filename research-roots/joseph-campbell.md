@@ -1,6 +1,7 @@
 ---
 slug: joseph-campbell
 status: review
+ring: practice
 cluster: mythopoetic
 order: 10
 title: The Hero’s Journey

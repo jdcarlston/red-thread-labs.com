@@ -1,6 +1,7 @@
 ---
 slug: robert-heinlein
 status: review
+ring: practice
 cluster: mythopoetic
 order: 60
 title: To Grok

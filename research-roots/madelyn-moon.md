@@ -1,6 +1,7 @@
 ---
 slug: madelyn-moon
 status: review
+ring: practice
 cluster: relationships
 order: 160
 title: Sacred Theater

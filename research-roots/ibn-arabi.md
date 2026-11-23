@@ -1,6 +1,7 @@
 ---
 slug: ibn-arabi
 status: review
+ring: exploring
 cluster: contemplative
 order: 80
 title: The Religion of Love

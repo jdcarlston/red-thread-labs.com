@@ -1,6 +1,7 @@
 ---
 slug: thich-nhat-hanh
 status: review
+ring: practice
 cluster: contemplative
 order: 10
 title: Mindfulness and Presence

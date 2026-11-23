@@ -1,6 +1,7 @@
 ---
 slug: betty-martin
 status: review
+ring: practice
 cluster: relationships
 order: 97
 title: The Wheel of Consent

@@ -1,6 +1,7 @@
 ---
 slug: terry-real
 status: review
+ring: core
 cluster: relationships
 order: 40
 title: Relational Life Therapy

@@ -1,6 +1,7 @@
 ---
 slug: naomi-aldort
 status: review
+ring: exploring
 cluster: therapy
 order: 140
 title: SALVE

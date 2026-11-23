@@ -1,6 +1,7 @@
 ---
 slug: martin-buber
 status: review
+ring: practice
 cluster: philosophy
 order: 60
 title: I and Thou

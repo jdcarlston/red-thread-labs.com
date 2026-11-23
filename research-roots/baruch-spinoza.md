@@ -1,6 +1,7 @@
 ---
 slug: baruch-spinoza
 status: review
+ring: exploring
 cluster: philosophy
 order: 70
 title: Understanding the Emotions

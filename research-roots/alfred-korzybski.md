@@ -1,6 +1,7 @@
 ---
 slug: alfred-korzybski
 status: review
+ring: core
 cluster: systems
 order: 20
 title: The Map Is Not the Territory

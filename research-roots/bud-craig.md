@@ -1,6 +1,7 @@
 ---
 slug: bud-craig
 status: review
+ring: practice
 cluster: nervous-system
 order: 70
 title: Interoception

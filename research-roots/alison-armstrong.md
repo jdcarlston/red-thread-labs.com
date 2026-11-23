@@ -1,6 +1,7 @@
 ---
 slug: alison-armstrong
 status: review
+ring: practice
 cluster: relationships
 order: 180
 title: Partnering, Not Managing

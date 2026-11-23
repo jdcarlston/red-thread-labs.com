@@ -1,6 +1,7 @@
 ---
 slug: george-kelly
 status: review
+ring: exploring
 cluster: perception
 order: 90
 title: Personal Construct Theory

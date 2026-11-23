@@ -1,6 +1,7 @@
 ---
 slug: matthew-lieberman
 status: review
+ring: practice
 cluster: nervous-system
 order: 100
 title: Affect Labeling

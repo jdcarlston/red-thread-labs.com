@@ -1,6 +1,7 @@
 ---
 slug: marshall-rosenberg
 status: review
+ring: core
 cluster: therapy
 order: 50
 title: Nonviolent Communication

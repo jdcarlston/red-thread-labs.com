@@ -1,6 +1,7 @@
 ---
 slug: jaak-panksepp
 status: review
+ring: exploring
 cluster: nervous-system
 order: 60
 title: Affective Neuroscience

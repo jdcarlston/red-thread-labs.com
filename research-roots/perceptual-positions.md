@@ -1,6 +1,7 @@
 ---
 slug: perceptual-positions
 status: review
+ring: core
 cluster: change-work
 order: 40
 title: Perspective as a Capacity

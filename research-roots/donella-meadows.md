@@ -1,6 +1,7 @@
 ---
 slug: donella-meadows
 status: review
+ring: practice
 cluster: systems
 order: 100
 title: Donella Meadows
