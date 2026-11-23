@@ -24,7 +24,7 @@
       bigdate    label, big, place, buttons, note (the big date on a photo band)
       include    name: about-jd | booking | posts | contact | lineage-browse
     A row can instead be include: blog-cta (the mail-list sign-up band that closes the blog).
-    Any block can also have: id, center (centers it), bare (no section box around it), after (paragraphs after a list).
+    Any block can also have: id, center (centers it), wide (text runs the full width), bare (no section box around it), after (paragraphs after a list).
     Buttons: { text, link, style: primary | ghost }. -#}
 {%- from "partials/signup.njk" import signup -%}
 {%- from "partials/booking.njk" import bookingOptions with context -%}
@@ -155,7 +155,7 @@
 {%- elif b.bare -%}
 {{ blockBody(b) }}
 {%- else -%}
-<section class="section{% if b.center %} section--center{% endif %}"{% if b.id %} id="{{ b.id }}"{% endif %}>
+<section class="section{% if b.center %} section--center{% endif %}{% if b.wide %} section--wide{% endif %}"{% if b.id %} id="{{ b.id }}"{% endif %}>
 {{ blockBody(b) }}
 </section>
 {%- endif -%}

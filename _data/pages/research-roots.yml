@@ -10,8 +10,23 @@ rows:
     main: true
     blocks:
       - type: text
-        bare: true
-        lede: Practice Labs draws on more than a century of research into how people bond, change and grow. These pages credit the people whose work it builds on, explain what we take from each, and link straight to the original research so you can check our sources yourself.
+        wide: true
+        lede: Red Thread Labs draws on more than a century of research into how people bond, change and grow. These pages credit the people whose work it builds on, summarize what we take from each, and give you exercises you can practice on your own. We link straight to the original research so you can check our sources yourself.
+      - type: text
+        id: why
+        wide: true
+        label: Why this is here
+        heading: A note on these pages
+        paragraphs:
+          - Research Roots is a summary of the library behind Practice Labs. I’ve been reverse engineering and debugging love for as long as I can remember, and this is where I keep track of what I’ve learned and who I learned it from.
+          - Information wants to be free, and we want it to grow into knowledge and wisdom in our community. Most of it comes from people who spent their lives studying how we bond, change and heal. Every page links to the original books and studies, and the exercises stay as close to the original material as they can.
+          - "It’s taken years of reading, training with teachers, testing ideas in my own relationships and with the people I work with, and checking each claim against the research. It keeps growing as I learn and my skills are far from perfected. — JD"
+      - type: text
+        id: disclaimer
+        wide: true
+        heading: Disclaimer
+        paragraphs:
+          - These pages are here to help you learn the basis of what we do in our labs. They aren’t medical or psychological advice or a substitute for therapy. The ideas belong to the researchers and teachers named on each page, and any mistakes in explaining them are mine.
       - type: include
         name: lineage-browse
         mapTitle: How it all connects

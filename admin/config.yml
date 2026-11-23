@@ -153,31 +153,31 @@ collections:
       label: About
       file: _data/pages/about.yml
       fields:
-      - &id015
+      - &id016
         name: title
         label: Page title (browser tab)
         widget: string
-      - &id016
+      - &id017
         name: description
         label: Description (search results and shares)
         widget: text
         required: false
-      - &id017
+      - &id018
         name: kicker
         label: Small label above the heading
         widget: string
         required: false
-      - &id018
+      - &id019
         name: heading
         label: Heading
         widget: string
         required: false
-      - &id019
+      - &id020
         name: subtitle
         label: Subtitle
         widget: string
         required: false
-      - &id020
+      - &id021
         name: header
         label: Header photo
         widget: object
@@ -200,7 +200,7 @@ collections:
           label: Keep full color
           widget: boolean
           required: false
-      - &id021
+      - &id022
         name: rows
         label: Sections (top to bottom)
         widget: list
@@ -273,34 +273,40 @@ collections:
               widget: boolean
               required: false
             - &id004
+              name: wide
+              label: Full-width text
+              widget: boolean
+              required: false
+              hint: Text runs the full width of the page.
+            - &id005
               name: label
               label: Small label
               widget: string
               required: false
-            - &id005
+            - &id006
               name: statement
               label: Big italic statement
               widget: text
               required: false
               hint: 'Markdown: *italic*, **bold**, [link](https://...). Links can be @booking or @email.'
-            - &id006
+            - &id007
               name: heading
               label: Heading
               widget: string
               required: false
-            - &id007
+            - &id008
               name: rule
               label: Red line under a statement
               widget: boolean
               required: false
               hint: A heading always gets the red line.
-            - &id008
+            - &id009
               name: lede
               label: Lead paragraph
               widget: text
               required: false
               hint: 'Markdown: *italic*, **bold**, [link](https://...). Links can be @booking or @email.'
-            - &id009
+            - &id010
               name: paragraphs
               label: Paragraphs (softer text)
               widget: list
@@ -309,7 +315,7 @@ collections:
                 label: Paragraph
                 widget: text
               required: false
-            - &id010
+            - &id011
               name: plain
               label: Paragraphs (regular text)
               widget: list
@@ -318,7 +324,7 @@ collections:
                 label: Paragraph
                 widget: text
               required: false
-            - &id011
+            - &id012
               name: prose
               label: Paragraphs (reading width)
               widget: list
@@ -327,7 +333,7 @@ collections:
                 label: Paragraph
                 widget: text
               required: false
-            - &id012
+            - &id013
               name: after
               label: Paragraphs after the list
               widget: list
@@ -336,7 +342,7 @@ collections:
                 label: Paragraph
                 widget: text
               required: false
-            - &id013
+            - &id014
               name: buttons
               label: Buttons
               widget: list
@@ -357,7 +363,7 @@ collections:
                 - primary
                 - ghost
                 default: primary
-            - &id014
+            - &id015
               name: note
               label: Small note at the end
               widget: text
@@ -377,6 +383,7 @@ collections:
             - *id009
             - *id010
             - *id011
+            - *id012
             - name: listLabel
               label: Label right above the list
               widget: string
@@ -392,9 +399,9 @@ collections:
                 name: i
                 label: Item
                 widget: text
-            - *id012
             - *id013
             - *id014
+            - *id015
           - name: steps
             label: Steps
             widget: object
@@ -410,6 +417,7 @@ collections:
             - *id009
             - *id010
             - *id011
+            - *id012
             - name: items
               label: Steps
               widget: list
@@ -426,9 +434,9 @@ collections:
               - name: text
                 label: Text
                 widget: text
-            - *id012
             - *id013
             - *id014
+            - *id015
           - name: cards
             label: Cards
             widget: object
@@ -444,6 +452,7 @@ collections:
             - *id009
             - *id010
             - *id011
+            - *id012
             - name: items
               label: Cards
               widget: list
@@ -471,9 +480,9 @@ collections:
                 label: Button link
                 widget: string
                 required: false
-            - *id012
             - *id013
             - *id014
+            - *id015
           - name: facts
             label: Facts
             widget: object
@@ -489,6 +498,7 @@ collections:
             - *id009
             - *id010
             - *id011
+            - *id012
             - name: items
               label: Facts
               widget: list
@@ -504,9 +514,9 @@ collections:
                 label: Note
                 widget: string
                 required: false
-            - *id012
             - *id013
             - *id014
+            - *id015
           - name: values
             label: Values list
             widget: object
@@ -522,6 +532,7 @@ collections:
             - *id009
             - *id010
             - *id011
+            - *id012
             - name: items
               label: Values
               widget: list
@@ -533,9 +544,9 @@ collections:
               - name: text
                 label: Text
                 widget: text
-            - *id012
             - *id013
             - *id014
+            - *id015
           - name: offers
             label: Ways to work together
             widget: object
@@ -551,6 +562,7 @@ collections:
             - *id009
             - *id010
             - *id011
+            - *id012
             - name: items
               label: Rows
               widget: list
@@ -570,9 +582,9 @@ collections:
                 label: Link
                 widget: string
                 required: false
-            - *id012
             - *id013
             - *id014
+            - *id015
           - name: faq
             label: Questions
             widget: object
@@ -588,6 +600,7 @@ collections:
             - *id009
             - *id010
             - *id011
+            - *id012
             - name: items
               label: Questions
               widget: list
@@ -599,9 +612,9 @@ collections:
               - name: a
                 label: Answer
                 widget: text
-            - *id012
             - *id013
             - *id014
+            - *id015
           - name: about
             label: Photo beside text
             widget: object
@@ -617,6 +630,7 @@ collections:
             - *id009
             - *id010
             - *id011
+            - *id012
             - name: image
               label: Photo (like img/photo.jpg)
               widget: string
@@ -630,9 +644,9 @@ collections:
                 name: p
                 label: Paragraph
                 widget: text
-            - *id012
             - *id013
             - *id014
+            - *id015
           - name: photos
             label: Row of photos
             widget: object
@@ -648,6 +662,7 @@ collections:
             - *id009
             - *id010
             - *id011
+            - *id012
             - name: images
               label: Photos
               widget: list
@@ -658,9 +673,9 @@ collections:
               - name: alt
                 label: Photo description
                 widget: string
-            - *id012
             - *id013
             - *id014
+            - *id015
           - name: signup
             label: Mail-list sign-up
             widget: object
@@ -676,6 +691,7 @@ collections:
             - *id009
             - *id010
             - *id011
+            - *id012
             - name: signupSource
               label: Where they signed up (shows in Kit)
               widget: string
@@ -696,9 +712,9 @@ collections:
               widget: string
               required: false
               hint: Leave as it is.
-            - *id012
             - *id013
             - *id014
+            - *id015
           - name: heart
             label: Closing heart-lines
             widget: object
@@ -714,6 +730,7 @@ collections:
             - *id009
             - *id010
             - *id011
+            - *id012
             - name: lines
               label: Lines
               widget: list
@@ -725,9 +742,9 @@ collections:
               label: Last line
               widget: string
               required: false
-            - *id012
             - *id013
             - *id014
+            - *id015
           - name: bigdate
             label: Big date
             widget: object
@@ -743,6 +760,7 @@ collections:
             - *id009
             - *id010
             - *id011
+            - *id012
             - name: big
               label: Big word (the date)
               widget: string
@@ -750,9 +768,9 @@ collections:
               label: Place
               widget: string
               required: false
-            - *id012
             - *id013
             - *id014
+            - *id015
           - name: include
             label: Built-in section
             widget: object
@@ -954,12 +972,12 @@ collections:
       label: The Love Lab
       file: _data/pages/love.yml
       fields:
-      - *id015
       - *id016
       - *id017
       - *id018
       - *id019
       - *id020
+      - *id021
       - name: ogTitle
         label: Title when shared
         widget: string
@@ -992,78 +1010,78 @@ collections:
         - name: note
           label: Note under the button
           widget: text
-      - *id021
+      - *id022
     - name: level-up
       label: Level-Up Sessions
       file: _data/pages/level-up.yml
       fields:
-      - *id015
       - *id016
       - *id017
       - *id018
       - *id019
       - *id020
       - *id021
+      - *id022
     - name: practice-labs
       label: Practice Labs (draft)
       file: _data/pages/practice-labs.yml
       fields:
-      - *id015
       - *id016
       - *id017
       - *id018
       - *id019
       - *id020
       - *id021
+      - *id022
     - name: contact
       label: Contact
       file: _data/pages/contact.yml
       fields:
-      - *id015
       - *id016
       - *id017
       - *id018
       - *id019
       - *id020
       - *id021
+      - *id022
       description: The email, phone and social links on this page come from _data/site.js.
     - name: thanks
       label: 'Contact: thank you'
       file: _data/pages/thanks.yml
       fields:
-      - *id015
       - *id016
       - *id017
       - *id018
       - *id019
       - *id020
       - *id021
+      - *id022
     - name: blog
       label: Blog
       file: _data/pages/blog.yml
       fields:
-      - *id015
       - *id016
       - *id017
       - *id018
       - *id019
       - *id020
       - *id021
+      - *id022
     - name: research-roots
       label: Research Roots
       file: _data/pages/research-roots.yml
       fields:
-      - *id015
       - *id016
       - *id017
       - *id018
       - *id019
       - *id020
+      - *id021
       - name: lineageHeader
         label: Use the Research Roots header photo
         widget: boolean
         required: false
-      - *id021
+      - *id022
     - name: shared
       label: Shared blocks
       file: _data/pages/shared.yml

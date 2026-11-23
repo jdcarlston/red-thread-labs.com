@@ -887,3 +887,16 @@ html body :is(h1, h2, h3, legend, .cluster__title) em { /* "html body" so this w
 .bio-list h3 { margin: 0; font-size: 15px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--coral); }
 .bio-list p { margin: 0; font-size: 17px; line-height: 1.65; color: var(--muted-on-dark); }
 .bio-list a { align-self: flex-start; font-weight: 700; text-decoration: none; }
+
+/* Text that runs the full width of its section, lining up with the cards and photo rows around it
+   (the method and artist sections on JD's page). */
+.prose--wide { max-width: none; }
+
+/* A section whose text runs the full width of the page instead of stopping at a reading width
+   (set "Full-width text" on a block in the site editor). */
+.section--wide .soft, .section--wide .lede, .section--wide .prose, .section--wide p { max-width: none; }
+
+/* The subtitle under each page's title (like "The teachers, researchers and traditions woven into
+   Practice Labs.") in the sans-serif body font instead of the italic serif. */
+.page-head__subtitle { font-family: var(--font-sans); font-style: normal; font-weight: 400; font-size: clamp(17px, 1.4vw, 20px); }
+.page-head__subtitle em { font-style: italic; }

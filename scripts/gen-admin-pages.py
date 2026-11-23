@@ -34,6 +34,7 @@ common = [
     F("id", "Section address (id)", required=False, hint="Lets a link jump here, like /about/#values. Keep it if a menu uses it."),
     F("bare", "No box around it", "boolean", required=False, hint="Used in the colored bands; leave as it is."),
     F("center", "Centered", "boolean", required=False),
+    F("wide", "Full-width text", "boolean", required=False, hint="Text runs the full width of the page."),
     F("label", "Small label", required=False),
     F("statement", "Big italic statement", "text", required=False, hint=MD),
     F("heading", "Heading", required=False),

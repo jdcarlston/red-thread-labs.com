@@ -48,7 +48,7 @@ permalink: /about/jd/
       <p class="label">{{ jd.method.label }}</p>
       <h2>{{ jd.method.heading }}</h2>
       <hr class="rule">
-      <div class="prose">
+      <div class="prose prose--wide">
         {% for p in jd.method.text %}<p>{{ p | md | safe }}</p>
         {% endfor %}
       </div>
@@ -58,7 +58,7 @@ permalink: /about/jd/
       <p class="label">{{ jd.artist.label }}</p>
       <h2>{{ jd.artist.heading }}</h2>
       <hr class="rule">
-      <div class="prose">
+      <div class="prose prose--wide">
         {% for p in jd.artist.text %}<p>{{ p | md | safe }}</p>
         {% endfor %}
         <p class="about__links">{% for l in jd.artist.links %}{{ linkTo(l.link, l.text) }} {% endfor %}</p>
