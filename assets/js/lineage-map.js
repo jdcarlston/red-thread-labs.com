@@ -137,7 +137,7 @@
   function showOverviewPanel() {
     panel.innerHTML = `
       <p class="lm-panel__kicker">The map</p>
-      <h3>Practice Labs, and its roots</h3>
+      <h3>Research Roots</h3>
       <p>Each bubble is a cluster of research; the number is how many pages it holds. Lines show where pages in different clusters link to each other, and thicker lines mean more links.</p>
       <p>Pick a cluster to open it.</p>
       <ul class="lm-panel__links">${data.clusters.map((c) =>
