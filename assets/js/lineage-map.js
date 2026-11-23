@@ -349,5 +349,16 @@
     current ? drawCluster(current) : drawOverview();
   });
 
-  drawOverview();
+  // Open the map at a place named in the address: /library/map/#<page-slug> opens that page's
+  // cluster with the page selected (the "View Map" button on each page links this way), and
+  // /library/map/#<cluster-id> opens a cluster. No #, or one that matches nothing, shows the whole map.
+  function openFromAddress() {
+    const id = decodeURIComponent(location.hash.slice(1));
+    if (bySlug[id]) showEntry(id);
+    else if (byCluster[id]) drawCluster(id);
+    else { current = null; drawOverview(); return; }
+    svg.closest(".lineage-map").scrollIntoView({ block: "start" });
+  }
+  window.addEventListener("hashchange", openFromAddress);
+  openFromAddress();
 })();

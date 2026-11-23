@@ -21,7 +21,7 @@ kickerLink: /library/
   <article class="reading__inner entry">
     {#- Breadcrumb back to the Library, with a link to the Source Map on its left. -#}
     <nav class="crumbs" aria-label="Breadcrumb">
-      <a class="crumbs__map" href="/library/map/">View Map</a>
+      <a class="crumbs__map" href="/library/map/#{{ entry.slug }}">View Map</a>
       <ol>
         <li><a href="/library/">Library</a></li>
         <li><a href="/library/#{{ cluster.id }}">{{ cluster.short or cluster.title }}</a></li>
