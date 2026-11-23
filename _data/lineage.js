@@ -56,11 +56,18 @@ function toHtml(e) {
   for (const k of ["people", "tagline", "context", "heartLine"]) out[k] = inline(e[k]);
   out.who = (e.who || []).map(inline);
   out.concepts = (e.concepts || []).map((c) => ({ term: c.term, def: inline(c.def) }));
+  // The core framework (optional): a named, numbered set, like Terry Real's Five Losing Strategies.
+  if (e.framework) out.framework = { ...e.framework, intro: inline(e.framework.intro), items: (e.framework.items || []).map((i) => ({ name: i.name, def: inline(i.def) })) };
   if (e.exercise) out.exercise = { ...e.exercise, title: inline(e.exercise.title), steps: (e.exercise.steps || []).map(inline), why: inline(e.exercise.why) };
   out.sources = (e.sources || []).map((s) => ({ ...s, cite: inline(s.cite) }));
   out.related = e.related || [];
   return out;
 }
+
+// Research Radar values. A page with no ring isn't on the radar yet.
+const RINGS = ["core", "practice", "exploring", "hold"];
+const QUADRANTS = ["i", "it", "we", "its"];
+const EVIDENCE = ["research", "practice", "tradition"];
 
 const clusters = yaml.load(fs.readFileSync(path.join(dir, "clusters.yml"), "utf8"));
 const clusterRank = Object.fromEntries(clusters.map((c, i) => [c.id, i]));
@@ -74,8 +81,15 @@ const entries = fs
     const slug = f.replace(/\.md$/, "");
     if (e.slug !== slug) throw new Error(`Research Library: ${f} has slug "${e.slug}" (it should be "${slug}")`);
     if (!(e.cluster in clusterRank)) throw new Error(`Research Library: "${slug}" has an unknown cluster "${e.cluster}"`);
+    // Research Radar: the page's ring, and its quadrant and evidence (from its cluster unless the page sets its own).
+    const cluster = clusters[clusterRank[e.cluster]];
+    e.quadrant = e.quadrant || cluster.quadrant;
+    e.evidence = e.evidence || cluster.evidence;
+    for (const [k, ok] of [["ring", RINGS], ["quadrant", QUADRANTS], ["evidence", EVIDENCE]]) {
+      if (e[k] && !ok.includes(e[k])) throw new Error(`Research Library: ${f} has ${k} "${e[k]}" (it should be one of: ${ok.join(", ")})`);
+    }
     return toHtml(e);
   })
   .sort((a, b) => clusterRank[a.cluster] - clusterRank[b.cluster] || (a.order ?? 0) - (b.order ?? 0));
 
-module.exports = { clusters, entries };
+module.exports = { clusters, entries, RINGS, QUADRANTS, EVIDENCE };

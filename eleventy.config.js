@@ -116,6 +116,20 @@ module.exports = function (eleventyConfig) {
       .join(" ").replace(/<[^>]+>/g, "").replace(/&amp;/g, "&").toLowerCase();
   eleventyConfig.addFilter("searchText", searchText);
 
+  // The data the Research Radar (assets/js/lineage-radar.js) draws from, as JSON for a <script> tag.
+  // Pages with no ring aren't on the radar; in your preview they're listed under it as "not placed yet".
+  eleventyConfig.addFilter("radarData", (entries, clusters) => {
+    const plain = (s) => String(s || "").replace(/<[^>]+>/g, "").replace(/&amp;/g, "&");
+    const short = Object.fromEntries(clusters.map((c) => [c.id, c.short || c.title]));
+    const data = entries
+      .filter((e) => e.ring || reviewMode)
+      .map((e) => ({
+        slug: e.slug, title: plain(e.title), people: plain(e.people), tagline: plain(e.tagline),
+        cluster: short[e.cluster], quadrant: e.quadrant, ring: e.ring || null, evidence: e.evidence,
+      }));
+    return JSON.stringify(data).replace(/</g, "\\u003c");
+  });
+
   // The data the lineage map (assets/js/lineage-map.js) draws from, as JSON for a <script> tag.
   // Only the fields the map shows; HTML tags are stripped so the map can use them as plain text.
   eleventyConfig.addFilter("lineageMapData", (entries, clusters) => {
@@ -126,7 +140,8 @@ module.exports = function (eleventyConfig) {
       clusters: shown.map((c) => ({ id: c.id, title: c.title, short: c.short || c.title, blurb: c.blurb })),
       entries: entries.map((e) => ({
         slug: e.slug, cluster: e.cluster, title: plain(e.title), people: plain(e.people),
-        tagline: plain(e.tagline), draft: e.status !== "published",
+        // Unreviewed pages get a dotted outline on the map, but only in your preview, not on the live site.
+        tagline: plain(e.tagline), draft: reviewMode && e.status !== "published",
         search: searchText(e, (clusters.find((c) => c.id === e.cluster) || {}).title),
         related: (e.related || []).filter((r) => slugs.has(r)),
       })),

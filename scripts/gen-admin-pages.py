@@ -83,7 +83,7 @@ types = [
     T("heart", "Closing heart-lines", [F("lines", "Lines", "list", field=F("l", "Line")), F("anchor", "Last line", required=False)]),
     T("bigdate", "Big date", [F("big", "Big word (the date)"), F("place", "Place", required=False)]),
     {"name": "include", "label": "Built-in section", "widget": "object", "fields": [
-        F("name", "Which one", "select", options=["about-jd", "booking", "posts", "contact", "lineage-browse", "lineage-map"],
+        F("name", "Which one", "select", options=["about-jd", "booking", "posts", "contact", "lineage-browse", "lineage-map", "lineage-radar"],
           hint="The words of about-jd are under Pages → Shared blocks."),
         F("signupSource", "Booking: where they signed up", required=False),
         F("consultWas", "Booking: consult was", required=False),
@@ -97,6 +97,8 @@ types = [
         F("mapTitle", "Research Library: map title", required=False),
         F("mapBlurb", "Research Library: map hint", "text", required=False),
         F("searchPlaceholder", "Research Library: search hint", required=False),
+        F("radarTitle", "Research Radar: title", required=False),
+        F("radarBlurb", "Research Radar: intro", "text", required=False),
         F("emptyText", "Research Library: nothing found text", required=False),
     ]},
 ]
@@ -172,6 +174,7 @@ files = [
     page("thanks", "Contact: thank you"),
     page("blog", "Blog"),
     page("research-roots", "Research Library", [F("lineageHeader", "Use the Research Library header photo", "boolean", required=False)]),
+    page("research-radar", "Research Radar (draft)", [F("lineageHeader", "Use the Research Library header photo", "boolean", required=False)]),
     page("source-map", "Source Map", [F("lineageHeader", "Use the Research Library header photo", "boolean", required=False)]),
     {"name": "shared", "label": "Shared blocks", "file": "_data/pages/shared.yml",
      "description": "Words that appear on more than one page.", "fields": [

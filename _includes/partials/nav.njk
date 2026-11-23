@@ -1,16 +1,21 @@
-{#- Menu items, with the Lineage submenu filled from the published lineage clusters. -#}
+{#- Menu items. The Library submenu is built here, not in _data/site.js. -#}
 {%- macro navItems(site, lineage, lineageVisible, page, reviewMode) -%}
 {%- for item in site.nav -%}
 {%- if reviewMode or not item.draft -%}
   {%- set children = item.children -%}
-  {%- if item.fromLineage -%}
-    {%- set children = [{ label: "Overview", href: "/library/" }, { label: "Source Map", href: "/library/map/" }] -%}
-    {%- for c in lineage.clusters | clustersWithEntries(lineageVisible) -%}
-      {%- set children = (children.push({ label: c.title, href: "/library/#" + c.id }), children) -%}
-    {%- endfor -%}
-  {%- endif -%}
+  {%- set href = item.href if (reviewMode or not item.liveHref) else item.liveHref %}
+  {%- if item.fromLineage %}
+  {#- The Library menu: the Library page, the Source Map, and (in your preview) the Research Radar. -#}
+  <li class="has-sub">
+    <a href="{{ href }}"{% if page.url.startsWith(item.href) %} aria-current="page"{% endif %}>{{ item.label }}</a>
+    <ul class="sub">
+      <li><a href="/library/">Browse the Library</a></li>
+      <li><a href="/library/map/">Source Map</a></li>
+      {%- if reviewMode %}<li><a href="/library/radar/">Research Radar</a></li>{% endif %}
+    </ul>
+  </li>
+  {%- else %}
   <li class="{{ 'has-sub' if children }}">
-    {%- set href = item.href if (reviewMode or not item.liveHref) else item.liveHref %}
     <a href="{{ href }}"{% if page.url.startsWith(item.href) and item.href != '#' %} aria-current="page"{% endif %}>{{ item.label }}</a>
     {%- if children %}
     <ul class="sub">
@@ -18,6 +23,7 @@
     </ul>
     {%- endif %}
   </li>
+  {%- endif %}
 {%- endif -%}
 {%- endfor -%}
 {%- endmacro -%}

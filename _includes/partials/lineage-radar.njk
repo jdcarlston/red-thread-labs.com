@@ -1,0 +1,22 @@
+{#- The Research Radar: every Library page placed by how much the labs rely on it (the rings) and which of
+    Ken Wilber's four quadrants it speaks to. Drawn by assets/js/lineage-radar.js. A page's ring, quadrant
+    and evidence are set on the page (in /admin, or its file in research-roots/); quadrant and evidence
+    default to its cluster's (research-roots/clusters.yml). The words come from the page's words file (radarBlock). -#}
+<section class="radar" aria-labelledby="radar-title">
+  <h2 id="radar-title" class="cluster__title">{{ radarBlock.radarTitle or "The radar" }}</h2>
+  {%- if radarBlock.radarBlurb %}<p class="cluster__blurb">{{ radarBlock.radarBlurb | md | safe }}</p>{% endif %}
+  <div class="lineage-map__frame radar__frame">
+    <div class="radar__stage">
+      <svg id="radar" class="radar__svg" role="group" aria-label="Research Radar"></svg>
+      <ul class="radar__key" aria-label="Key">
+        <li><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6"/></svg> Research studies</li>
+        <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5 14.5 8 8 14.5 1.5 8Z"/></svg> Clinical or practitioner work</li>
+        <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1l2.1 4.4 4.8.6-3.5 3.3.9 4.8L8 11.8 3.7 14.1l.9-4.8L1.1 6l4.8-.6Z"/></svg> Tradition, philosophy or story</li>
+      </ul>
+    </div>
+    <aside id="radar-panel" class="lineage-map__panel" aria-live="polite"></aside>
+  </div>
+  <div id="radar-list" class="radar__list"></div>
+  <script type="application/json" id="radar-data">{{ lineageVisible | radarData(lineage.clusters) | safe }}</script>
+  <script src="/assets/js/lineage-radar.js" defer></script>
+</section>

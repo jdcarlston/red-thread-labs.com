@@ -1,0 +1,20 @@
+# The Research Radar page (/library/radar/). Edit in /admin under Pages → Research Radar, or here.
+# Each Library page's ring is set on that page (Radar ring), not here.
+title: Research Radar
+description: How much Practice Labs relies on each source, and which part of a person's life it speaks to.
+kicker: Research Library
+subtitle: Where each source sits in the labs, and what it helps with.
+lineageHeader: true
+rows:
+  - style: reading
+    main: true
+    blocks:
+      - type: include
+        name: lineage-radar
+        radarTitle: How we use our sources
+        radarBlurb: "The four quadrants come from Ken Wilber: what happens inside a person (I), in the body and behavior (It), between people (We), and in the systems around us (Its). The closer a source sits to the center, the more the labs are built on it."
+      - type: text
+        center: true
+        buttons:
+          - {text: View the Source Map, link: /library/map/, style: ghost}
+          - {text: Browse the Library, link: /library/, style: ghost}

@@ -44,6 +44,18 @@ kickerLink: /library/
       </ul>
     </section>
 
+    {#- Core framework (optional): a named, numbered set from this source, like the Five Losing Strategies. #}
+    {%- if entry.framework and entry.framework.items.length %}
+    <section class="entry__section framework">
+      <h2 class="label">Core framework</h2>
+      <h3 class="framework__name">{{ entry.framework.name }}</h3>
+      {%- if entry.framework.intro %}<p class="framework__intro">{{ entry.framework.intro | safe }}</p>{% endif %}
+      <ol class="framework__items">
+        {%- for i in entry.framework.items %}<li><h4>{{ i.name }}</h4><p>{{ i.def | safe }}</p></li>{% endfor %}
+      </ol>
+    </section>
+    {%- endif %}
+
     {#- Left column: Context, then Sources. Right column: In the Practice Labs.
         Side by side on wide screens, stacked on phones. #}
     <div class="entry__pair">

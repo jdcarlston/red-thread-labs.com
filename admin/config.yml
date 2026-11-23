@@ -37,6 +37,9 @@ collections:
     fields:
       - { name: slug, label: Page address, widget: string, pattern: ['^[a-z0-9]+(-[a-z0-9]+)*$', 'Lowercase words joined by hyphens, like sue-johnson'], hint: "The page appears at /library/<this>/. Don't change it once a page is published." }
       - { name: status, label: Status, widget: select, default: review, options: [ { label: "Review (live, marked Draft)", value: review }, { label: "Published (live, reviewed)", value: published }, { label: "Hidden (preview only)", value: hidden } ] }
+      - { name: ring, label: Radar ring, widget: select, required: false, options: [ { label: "Core: we teach it and build labs on it", value: core }, { label: "In practice: we use it and are still testing it", value: practice }, { label: "Exploring: reading, training, watching", value: exploring }, { label: "Hold: useful, used with care or moved past", value: hold } ], hint: "Where this page sits on the Research Radar. Leave empty to keep it off the radar for now." }
+      - { name: quadrant, label: Radar quadrant (optional), widget: select, required: false, options: [ { label: "I: inner experience", value: i }, { label: "It: body and behavior", value: it }, { label: "We: relationship and culture", value: we }, { label: "Its: systems and structures", value: its } ], hint: "Leave empty to use the cluster's quadrant." }
+      - { name: evidence, label: Radar evidence (optional), widget: select, required: false, options: [ { label: "Research studies", value: research }, { label: "Clinical or practitioner work", value: practice }, { label: "Tradition, philosophy or story", value: tradition } ], hint: "Leave empty to use the cluster's. Sets the shape of the dot." }
       - name: cluster
         label: Cluster
         widget: select
@@ -75,6 +78,22 @@ collections:
         fields:
           - { name: term, label: Term, widget: string }
           - { name: def, label: Definition, widget: text }
+      - name: framework
+        label: Core framework (optional)
+        widget: object
+        required: false
+        collapsed: true
+        hint: "A named, numbered set from this source, like Terry Real's Five Losing Strategies. Shown under Key concepts."
+        fields:
+          - { name: name, label: Name, widget: string, hint: "e.g. The Five Losing Strategies" }
+          - { name: intro, label: Intro (optional), widget: text, required: false }
+          - name: items
+            label: Items, in order
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: def, label: What it means, widget: text }
       - { name: context, label: Context (the oxblood panel), widget: text, hint: "How this connects to the work. Be honest about the evidence." }
       - name: exercise
         label: In the Practice Labs (exercise)
@@ -795,6 +814,7 @@ collections:
               - contact
               - lineage-browse
               - lineage-map
+              - lineage-radar
               hint: The words of about-jd are under Pages → Shared blocks.
             - name: signupSource
               label: 'Booking: where they signed up'
@@ -847,6 +867,14 @@ collections:
             - name: searchPlaceholder
               label: 'Research Library: search hint'
               widget: string
+              required: false
+            - name: radarTitle
+              label: 'Research Radar: title'
+              widget: string
+              required: false
+            - name: radarBlurb
+              label: 'Research Radar: intro'
+              widget: text
               required: false
             - name: emptyText
               label: 'Research Library: nothing found text'
@@ -1081,6 +1109,21 @@ collections:
     - name: research-roots
       label: Research Library
       file: _data/pages/research-roots.yml
+      fields:
+      - *id016
+      - *id017
+      - *id018
+      - *id019
+      - *id020
+      - *id021
+      - name: lineageHeader
+        label: Use the Research Library header photo
+        widget: boolean
+        required: false
+      - *id022
+    - name: research-radar
+      label: Research Radar (draft)
+      file: _data/pages/research-radar.yml
       fields:
       - *id016
       - *id017

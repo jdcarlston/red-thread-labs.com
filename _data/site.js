@@ -69,7 +69,7 @@ module.exports = {
     {
       label: "Library", // the menu says "Library"; the page itself is titled "Research Library"
       href: "/library/",
-      // Cluster links are built from _data/lineage.js, so only clusters with published pages show.
+      // Its submenu (Browse the Library, Source Map, Research Radar) is in _includes/partials/nav.njk.
       fromLineage: true,
     },
     { label: "Blog", href: "/blog/" },

@@ -44,6 +44,17 @@ concepts:
   - term: Concept four
     def: One or two sentences.
 
+# Core framework (optional): a named, numbered set from this source, like Terry Real's
+# Five Losing Strategies. Delete these lines if the source doesn't have one.
+framework:
+  name: The framework's name
+  intro: One sentence on what it's for.
+  items:
+    - name: First item
+      def: One or two sentences.
+    - name: Second item
+      def: One or two sentences.
+
 # Context (the oxblood panel): how this research connects to the work. Be honest about
 # the strength of the evidence and where it's debated.
 context: How this shows up in what people bring to a lab, and what the research does and doesn't support.
