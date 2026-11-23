@@ -53,4 +53,4 @@ const file =
 
 fs.writeFileSync(target, file);
 console.log(`Created research-roots/${slug}.md (cluster "${cluster}", order ${order}).`);
-console.log(`Fill it in, then preview it at http://localhost:8080/lineage/${slug}/`);
+console.log(`Fill it in, then preview it at http://localhost:8080/library/${slug}/`);

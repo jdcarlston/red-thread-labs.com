@@ -19,7 +19,7 @@ concepts:
     def: Expectations of the self and a partner set how much closeness feels safe, and how conflict goes.
   - term: Continuity, not destiny
     def: Patterns carry forward, but [only moderately](https://doi.org/10.1207/S15327957PSPR0602_03). They are habits of relating, not fixed traits.
-context: "This is the bridge from childhood to the patterns people bring into a lab: the reason you keep landing in the same kind of relationship is often an attachment style, learned early and running quietly. It makes it reasonable to talk about “your pattern” in adult love. To be honest about the evidence, the link between infancy and adulthood is [real but moderate](https://doi.org/10.1207/S15327957PSPR0602_03), which is good news. Paired with the research on [earned security](/lineage/earned-secure-attachment/), it’s why we treat patterns as something you can practice your way out of."
+context: "This is the bridge from childhood to the patterns people bring into a lab: the reason you keep landing in the same kind of relationship is often an attachment style, learned early and running quietly. It makes it reasonable to talk about “your pattern” in adult love. To be honest about the evidence, the link between infancy and adulthood is [real but moderate](https://doi.org/10.1207/S15327957PSPR0602_03), which is good news. Paired with the research on [earned security](/library/earned-secure-attachment/), it’s why we treat patterns as something you can practice your way out of."
 exercise:
   title: Which description sounds like you?
   time: About 10 minutes

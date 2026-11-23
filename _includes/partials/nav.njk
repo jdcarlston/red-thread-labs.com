@@ -4,9 +4,9 @@
 {%- if reviewMode or not item.draft -%}
   {%- set children = item.children -%}
   {%- if item.fromLineage -%}
-    {%- set children = [{ label: "Overview", href: "/lineage/" }, { label: "Source Map", href: "/lineage/map/" }] -%}
+    {%- set children = [{ label: "Overview", href: "/library/" }, { label: "Source Map", href: "/library/map/" }] -%}
     {%- for c in lineage.clusters | clustersWithEntries(lineageVisible) -%}
-      {%- set children = (children.push({ label: c.title, href: "/lineage/#" + c.id }), children) -%}
+      {%- set children = (children.push({ label: c.title, href: "/library/#" + c.id }), children) -%}
     {%- endfor -%}
   {%- endif -%}
   <li class="{{ 'has-sub' if children }}">

@@ -33,7 +33,7 @@
           {%- for entry in lineageVisible | inCluster(cluster.id) %}
           <li class="entry-card{% if entry.status == 'hidden' %} is-draft{% endif %}"
               data-search="{{ [entry.title, entry.people, entry.field, entry.tagline, cluster.title] | join(' ') | striptags | lower }} {% for c in entry.concepts %}{{ c.term | striptags | lower }} {% endfor %}">
-            <a href="/lineage/{{ entry.slug }}/">
+            <a href="/library/{{ entry.slug }}/">
               {%- if entry.status == "hidden" %}<span class="draft-badge">Hidden · preview only</span>
               {%- elif entry.status != "published" %}<span class="draft-badge draft-badge--quiet">Draft</span>{% endif %}
               <h3>{{ entry.title }}</h3>

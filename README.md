@@ -21,7 +21,7 @@ Every Research Library page has a status:
 
 Every Research Library page is one file in `research-roots/` (or edit it at `/admin`). To review one:
 
-1. Run `npm start` and open `http://localhost:8080/lineage/`.
+1. Run `npm start` and open `http://localhost:8080/library/`.
 2. Edit its file in `research-roots/`. The page updates when you save.
 3. Check every source has a `url` (a DOI link where one exists), so the research is linked.
 4. When it's ready, change `status: "review"` to `status: "published"`. The Draft marker goes away.
@@ -33,8 +33,8 @@ The Esoteric & spiritual cluster is held back from this site for now.
 | Path | What it is |
 | --- | --- |
 | `index.njk` | Home page (the hero) |
-| `lineage/index.njk` | Research Library index |
-| `lineage/entry.njk` | Template for every lineage page |
+| `library/index.njk` | Research Library index |
+| `library/entry.njk` | Template for every lineage page |
 | `_data/site.js` | Site name, contact details, booking link and the menu |
 | `_data/lineage.js` | Lineage clusters and pages |
 | `_includes/` | Page layout, header, menu and footer |
@@ -105,7 +105,7 @@ labeled fields between the `---` lines at the top. Text uses Markdown: `*italic*
   for example `npm run new:lineage -- sue-johnson attachment`. That copies
   `scripts/research-roots-template.md` to `research-roots/sue-johnson.md` with the slug, cluster and
   order filled in; every field is explained in the template.
-- **Clusters** (and their order on `/lineage/`) are in `research-roots/clusters.yml`.
+- **Clusters** (and their order on `/library/`) are in `research-roots/clusters.yml`.
 - **Order within a cluster:** the `order` number, lowest first (10, 20, 30...).
 - **Publish:** change `status: review` to `status: published`. Review entries only show
   while previewing, with a DRAFT ribbon.

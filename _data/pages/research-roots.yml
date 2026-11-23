@@ -1,4 +1,4 @@
-# The Research Library index (/lineage/). Edit in /admin under Pages → Research Library, or here.
+# The Research Library index (/library/). Edit in /admin under Pages → Research Library, or here.
 # The pages themselves are under Research Library in the editor. The header photo is site.lineageHeader in _data/site.js.
 title: Research Library
 description: The research and teachers behind Practice Labs, with links to the original studies.
@@ -31,7 +31,7 @@ rows:
         id: source-map
         center: true
         buttons:
-          - {text: Enter the Library, link: /lineage/map/, style: primary}
+          - {text: Enter the Library, link: /library/map/, style: primary}
       - type: include
         name: lineage-browse
         searchPlaceholder: "Search names and ideas: shame, Gottman, nervous system…"

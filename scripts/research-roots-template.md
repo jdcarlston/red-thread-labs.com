@@ -13,7 +13,7 @@
 # link it right there too: [the 1987 study](https://doi.org/...)
 # Put text in "double quotes" if it contains a colon followed by a space.
 
-slug: SLUG                  # the page address: /lineage/SLUG/ (must match the file name)
+slug: SLUG                  # the page address: /library/SLUG/ (must match the file name)
 status: review              # review = only visible while previewing; published = live
 cluster: CLUSTER            # a cluster id from research-roots/clusters.yml
 order: 0                    # position within the cluster: lower comes first (10, 20, 30...)

@@ -68,7 +68,7 @@ module.exports = {
     },
     {
       label: "Library", // the menu says "Library"; the page itself is titled "Research Library"
-      href: "/lineage/",
+      href: "/library/",
       // Cluster links are built from _data/lineage.js, so only clusters with published pages show.
       fromLineage: true,
     },

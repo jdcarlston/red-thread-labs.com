@@ -40,3 +40,10 @@
   to = "/love/"
   status = 301
   force = true
+
+# The Research Library moved from /lineage/ to /library/. Keep old links working.
+[[redirects]]
+  from = "/lineage/*"
+  to = "/library/:splat"
+  status = 301
+  force = true

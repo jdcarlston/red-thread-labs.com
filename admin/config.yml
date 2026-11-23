@@ -35,7 +35,7 @@ collections:
       - { label: Cluster, field: cluster }
       - { label: Status, field: status }
     fields:
-      - { name: slug, label: Page address, widget: string, pattern: ['^[a-z0-9]+(-[a-z0-9]+)*$', 'Lowercase words joined by hyphens, like sue-johnson'], hint: "The page appears at /lineage/<this>/. Don't change it once a page is published." }
+      - { name: slug, label: Page address, widget: string, pattern: ['^[a-z0-9]+(-[a-z0-9]+)*$', 'Lowercase words joined by hyphens, like sue-johnson'], hint: "The page appears at /library/<this>/. Don't change it once a page is published." }
       - { name: status, label: Status, widget: select, default: review, options: [ { label: "Review (live, marked Draft)", value: review }, { label: "Published (live, reviewed)", value: published }, { label: "Hidden (preview only)", value: hidden } ] }
       - name: cluster
         label: Cluster

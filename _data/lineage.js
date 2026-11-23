@@ -1,8 +1,8 @@
 // Research Library: the lineage behind Practice Labs.
 //
 // The content lives in research-roots/:
-//   research-roots/clusters.yml   the clusters, in the order they appear on /lineage/
-//   research-roots/<slug>.md      one file per entry; each becomes a page at /lineage/<slug>/
+//   research-roots/clusters.yml   the clusters, in the order they appear on /library/
+//   research-roots/<slug>.md      one file per entry; each becomes a page at /library/<slug>/
 //   scripts/research-roots-template.md   the layout new entries start from
 //
 // Each entry is plain text: labeled fields between the --- lines at the top of the file.
@@ -36,7 +36,7 @@ md.renderer.rules.link_open = (tokens, i, opts, env, self) => {
 };
 const inline = (text) => (typeof text === "string" ? md.renderInline(text) : text);
 
-// An entry's text fields as HTML, ready for lineage/entry.njk.
+// An entry's text fields as HTML, ready for library/entry.njk.
 // The page title and the concept names stay plain text: the templates escape those themselves.
 function toHtml(e) {
   const out = { ...e };

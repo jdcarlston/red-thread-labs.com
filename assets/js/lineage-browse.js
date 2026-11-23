@@ -1,6 +1,6 @@
-// Browsing the Research Library on /lineage/: cluster filter chips, a search box,
+// Browsing the Research Library on /library/: cluster filter chips, a search box,
 // and the ‹ › buttons that scroll each side-scrolling row of cards.
-// Each card carries its searchable text in data-search (written by lineage/index.njk).
+// Each card carries its searchable text in data-search (written by library/index.njk).
 (function () {
   const chips = [...document.querySelectorAll(".browse__chips .chip")];
   const search = document.getElementById("browse-search");

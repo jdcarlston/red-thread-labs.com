@@ -1,4 +1,4 @@
-# The Source Map page (/lineage/map/): Lab Sources at the center, one bubble per cluster.
+# The Source Map page (/library/map/): Lab Sources at the center, one bubble per cluster.
 # Edit in /admin under Pages → Source Map, or here. The map itself is drawn from the Research Library pages.
 title: Source Map
 description: A map of the research behind Practice Labs, and how the ideas connect.
@@ -16,4 +16,4 @@ rows:
       - type: text
         center: true
         buttons:
-          - {text: Browse the Library, link: /lineage/, style: ghost}
+          - {text: Browse the Library, link: /library/, style: ghost}

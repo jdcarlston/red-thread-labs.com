@@ -1,4 +1,4 @@
-// The Research Library map on /lineage/, in two views so every label stays readable:
+// The Research Library map on /library/, in two views so every label stays readable:
 //
 //   1. Overview: Lab Sources at the centre and one bubble per cluster around it.
 //      Bubble size = how many pages the cluster has; a line between two clusters
@@ -305,7 +305,7 @@
       <h3>${esc(e.title)}</h3>
       <p class="lm-panel__people">${esc(e.people)}</p>
       <p class="lm-panel__tagline">${esc(e.tagline)}</p>
-      <a class="lm-panel__read" href="/lineage/${e.slug}/">Read the page →</a>
+      <a class="lm-panel__read" href="/library/${e.slug}/">Read the page →</a>
       ${here.length ? `<p class="lm-panel__label">Linked in this cluster</p><ul class="lm-panel__links">${here.map(item).join("")}</ul>` : ""}
       ${away.length ? `<p class="lm-panel__label">Linked in other clusters</p><ul class="lm-panel__links">${away.map(item).join("")}</ul>` : ""}`;
   }

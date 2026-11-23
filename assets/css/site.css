@@ -673,7 +673,7 @@ body.menu-open { overflow: hidden; }
 .entry > .related { margin-top: -12px; text-align: center; }  /* under the heart-line, centred like it */
 .concept p strong { color: var(--ink); font-weight: 700; }
 
-/* ---- Research Library map (lineage/index.njk + assets/js/lineage-map.js) ---- */
+/* ---- Research Library map (library/index.njk + assets/js/lineage-map.js) ---- */
 .lineage-map { display: flex; flex-direction: column; gap: 14px; margin: 8px 0 24px; }
 .lineage-map__frame {
   display: grid; grid-template-columns: minmax(0, 3fr) minmax(260px, 1fr);
@@ -738,7 +738,7 @@ body.menu-open { overflow: hidden; }
   .lineage-map__stage { border-right: 0; border-bottom: 1px solid rgba(29, 28, 26, .12); }
 }
 
-/* ---- Browsing the Research Library (lineage/index.njk + assets/js/lineage-browse.js) ---- */
+/* ---- Browsing the Research Library (library/index.njk + assets/js/lineage-browse.js) ---- */
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .browse { display: flex; flex-direction: column; gap: 48px; }
 .browse__bar {

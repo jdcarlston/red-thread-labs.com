@@ -4,12 +4,12 @@ pagination:
   data: lineageVisible
   size: 1
   alias: entry
-permalink: "/lineage/{{ entry.slug }}/"
+permalink: "/library/{{ entry.slug }}/"
 eleventyComputed:
   title: "{{ entry.title }}"
   description: "{{ entry.title }}: part of Research Library, the lineage behind Practice Labs."
 kicker: Research Library
-kickerLink: /lineage/
+kickerLink: /library/
 ---
 {%- set cluster = lineage.clusters | clusterById(entry.cluster) -%}
 {%- set kickerExtra = cluster.title -%}
@@ -21,10 +21,10 @@ kickerLink: /lineage/
   <article class="reading__inner entry">
     {#- Breadcrumb back to the Library, with a link to the Source Map on its left. -#}
     <nav class="crumbs" aria-label="Breadcrumb">
-      <a class="crumbs__map" href="/lineage/map/">View Map</a>
+      <a class="crumbs__map" href="/library/map/">View Map</a>
       <ol>
-        <li><a href="/lineage/">Library</a></li>
-        <li><a href="/lineage/#{{ cluster.id }}">{{ cluster.short or cluster.title }}</a></li>
+        <li><a href="/library/">Library</a></li>
+        <li><a href="/library/#{{ cluster.id }}">{{ cluster.short or cluster.title }}</a></li>
         <li aria-current="page">{{ entry.title }}</li>
       </ol>
     </nav>
@@ -86,13 +86,13 @@ kickerLink: /lineage/
     {%- set relatedShown = [] -%}
       {%- for slug in entry.related %}{% set r = lineageVisible | entryBySlug(slug) %}{% if r %}{% set relatedShown = (relatedShown.push(r), relatedShown) %}{% endif %}{% endfor %}
       {%- if relatedShown.length %}
-      <p class="related">Related: {% for r in relatedShown %}<a href="/lineage/{{ r.slug }}/">{{ r.title }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
+      <p class="related">Related: {% for r in relatedShown %}<a href="/library/{{ r.slug }}/">{{ r.title }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
       {%- endif %}
 
     <nav class="entry__pager" aria-label="Research Library pages">
-      <a href="/lineage/">← Research Library</a>
+      <a href="/library/">← Research Library</a>
       {%- set nextEntry = lineageVisible[pagination.pageNumber + 1] %}
-      {%- if nextEntry %}<a href="/lineage/{{ nextEntry.slug }}/">Next: {{ nextEntry.title }} →</a>{% endif %}
+      {%- if nextEntry %}<a href="/library/{{ nextEntry.slug }}/">Next: {{ nextEntry.title }} →</a>{% endif %}
     </nav>
   </article>
 </main>
