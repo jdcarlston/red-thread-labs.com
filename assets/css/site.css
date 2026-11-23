@@ -904,3 +904,8 @@ html body :is(h1, h2, h3, legend, .cluster__title) em { /* "html body" so this w
 /* Cards two to a row (half the page width each), one per row on phones. */
 .cards--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 @media (max-width: 700px) { .cards--two { grid-template-columns: 1fr; } }
+
+/* The big statements (like "The loops you learned early run your love life...") in the sans-serif
+   body font instead of the italic serif. The highlighted part stays coral, in sans-serif italic. */
+.statement { font-family: var(--font-sans); font-style: normal; font-weight: 300; letter-spacing: 0; }
+.statement em { font-family: var(--font-sans); font-style: italic; }
