@@ -873,3 +873,10 @@ body.menu-open { overflow: hidden; }
 
 /* A reading section on the page's darkest background (like the dark bands), for alternating sections. */
 .reading--dark { background: var(--oxblood-deep); }
+
+/* Headings in one font: a highlighted word inside a heading (like "Live it" in "Built it. Live it. Teach it.")
+   now matches the rest of the heading instead of switching to the coral italic serif. */
+html body :is(h1, h2, h3, legend, .cluster__title) em { /* "html body" so this wins over the older, more specific heading rules */
+  font-family: inherit; font-style: normal; font-weight: inherit; font-size: inherit;
+  text-transform: inherit; letter-spacing: inherit; color: inherit;
+}
