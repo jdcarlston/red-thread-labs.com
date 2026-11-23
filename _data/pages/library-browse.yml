@@ -1,0 +1,21 @@
+# The Browse the Library page (/library/browse/): filter chips, search, and one row of pages per topic.
+# Edit in /admin under Pages → Browse the Library, or here.
+title: Browse the Library
+description: Browse every source in the Research Library by topic, or search by name and idea.
+kicker: Research Library
+subtitle: Every source, by topic. Search by name or idea.
+lineageHeader: true
+rows:
+  - style: reading
+    main: true
+    blocks:
+      - type: include
+        name: lineage-browse
+        searchPlaceholder: "Search names and ideas: shame, Gottman, nervous system…"
+        emptyText: Nothing matches that yet. Try another word, or
+      - type: text
+        center: true
+        buttons:
+          - {text: View the Source Map, link: /library/map/, style: ghost}
+          - {text: Library Index, link: /library/index/, style: ghost}
+          - {text: About the Library, link: /library/, style: ghost}

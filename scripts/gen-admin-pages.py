@@ -174,6 +174,7 @@ files = [
     page("thanks", "Contact: thank you"),
     page("blog", "Blog"),
     page("research-roots", "Research Library", [F("lineageHeader", "Use the Research Library header photo", "boolean", required=False)]),
+    page("library-browse", "Browse the Library", [F("lineageHeader", "Use the Research Library header photo", "boolean", required=False)]),
     page("library-index", "Library Index", [F("lineageHeader", "Use the Research Library header photo", "boolean", required=False)]),
     page("research-radar", "Research Radar", [F("lineageHeader", "Use the Research Library header photo", "boolean", required=False)]),
     page("source-map", "Source Map", [F("lineageHeader", "Use the Research Library header photo", "boolean", required=False)]),

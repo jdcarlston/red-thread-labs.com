@@ -17,4 +17,4 @@ rows:
         center: true
         buttons:
           - {text: View the Source Map, link: /library/map/, style: ghost}
-          - {text: Browse the Library, link: /library/, style: ghost}
+          - {text: Browse the Library, link: /library/browse/, style: ghost}

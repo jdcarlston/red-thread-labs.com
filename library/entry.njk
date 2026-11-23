@@ -23,8 +23,8 @@ kickerLink: /library/
     <nav class="crumbs" aria-label="Breadcrumb">
       <a class="crumbs__map" href="/library/map/#{{ entry.slug }}">View Map</a>
       <ol>
-        <li><a href="/library/">Library</a></li>
-        <li><a href="/library/#{{ cluster.id }}">{{ cluster.short or cluster.title }}</a></li>
+        <li><a href="/library/browse/">Library</a></li>
+        <li><a href="/library/browse/#{{ cluster.id }}">{{ cluster.short or cluster.title }}</a></li>
         <li aria-current="page">{{ entry.title }}</li>
       </ol>
     </nav>
@@ -102,7 +102,7 @@ kickerLink: /library/
       {%- endif %}
 
     <nav class="entry__pager" aria-label="Research Library pages">
-      <a href="/library/">← Research Library</a>
+      <a href="/library/browse/">← Browse the Library</a>
       {%- set nextEntry = lineageVisible[pagination.pageNumber + 1] %}
       {%- if nextEntry %}<a href="/library/{{ nextEntry.slug }}/">Next: {{ nextEntry.title }} →</a>{% endif %}
     </nav>

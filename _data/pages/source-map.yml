@@ -17,4 +17,4 @@ rows:
       - type: text
         center: true
         buttons:
-          - {text: Browse the Library, link: /library/, style: ghost}
+          - {text: Browse the Library, link: /library/browse/, style: ghost}

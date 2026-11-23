@@ -1122,6 +1122,21 @@ collections:
         widget: boolean
         required: false
       - *id022
+    - name: library-browse
+      label: Browse the Library
+      file: _data/pages/library-browse.yml
+      fields:
+      - *id016
+      - *id017
+      - *id018
+      - *id019
+      - *id020
+      - *id021
+      - name: lineageHeader
+        label: Use the Research Library header photo
+        widget: boolean
+        required: false
+      - *id022
     - name: library-index
       label: Library Index
       file: _data/pages/library-index.yml
