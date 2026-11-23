@@ -8,7 +8,7 @@ quadrant: we
 title: Kything
 people: JD Carlston · original practice, inspired by Madeleine L’Engle (1918–2007)
 field: Original practice · Fantasy literature
-tagline: Share through every sense so someone else can stand as closely as possible inside it with you.
+tagline: Spoken communion through every sense.
 who:
   - "Madeleine L’Engle was an American writer best known for *A Wrinkle in Time* (1962). In its sequel, *A Wind in the Door* (1973), she introduced “kything”: her characters share thoughts and feelings without words, so fully that one can almost see through the other’s eyes and feel through their senses."
   - She found the word in an old Scots dictionary, where to kythe means to make known, to show, to let yourself be seen. It comes from the same Old English root as “kith,” the people you know well, as in “kith and kin.” Where Heinlein’s “grok” names understanding something so completely it becomes part of you, kything names making yourself known to someone else, and letting them all the way in.
