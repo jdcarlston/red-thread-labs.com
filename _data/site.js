@@ -61,7 +61,10 @@ module.exports = {
     {
       label: "Upcoming Events",
       href: "/love/",
-      children: [{ label: "The Love Lab", href: "/love/" }],
+      children: [
+        { label: "The Love Lab", href: "/love/" },
+        { label: "Schedule a Level-Up", href: "/level-up/#book" }, // jumps to "Choose where to start" on the Level-Up page
+      ],
     },
     {
       label: "Research Roots",
