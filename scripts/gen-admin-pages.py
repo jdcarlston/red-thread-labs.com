@@ -94,10 +94,10 @@ types = [
         F("topics", "Contact: topics", "list", required=False, field=F("t", "Topic")),
         F("button", "Contact: button text", required=False),
         F("moreText", "Blog: read more text", required=False),
-        F("mapTitle", "Research Roots: map title", required=False),
-        F("mapBlurb", "Research Roots: map hint", "text", required=False),
-        F("searchPlaceholder", "Research Roots: search hint", required=False),
-        F("emptyText", "Research Roots: nothing found text", required=False),
+        F("mapTitle", "Research Library: map title", required=False),
+        F("mapBlurb", "Research Library: map hint", "text", required=False),
+        F("searchPlaceholder", "Research Library: search hint", required=False),
+        F("emptyText", "Research Library: nothing found text", required=False),
     ]},
 ]
 
@@ -171,7 +171,7 @@ files = [
     page("contact", "Contact", desc="The email, phone and social links on this page come from _data/site.js."),
     page("thanks", "Contact: thank you"),
     page("blog", "Blog"),
-    page("research-roots", "Research Roots", [F("lineageHeader", "Use the Research Roots header photo", "boolean", required=False)]),
+    page("research-roots", "Research Library", [F("lineageHeader", "Use the Research Library header photo", "boolean", required=False)]),
     {"name": "shared", "label": "Shared blocks", "file": "_data/pages/shared.yml",
      "description": "Words that appear on more than one page.", "fields": [
          F("aboutJd", "Your guide, JD (Love Lab and Level-Up)", "object", fields=[

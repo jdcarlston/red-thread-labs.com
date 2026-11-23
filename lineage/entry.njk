@@ -7,8 +7,8 @@ pagination:
 permalink: "/lineage/{{ entry.slug }}/"
 eleventyComputed:
   title: "{{ entry.title }}"
-  description: "{{ entry.title }}: part of Research Roots, the lineage behind Practice Labs."
-kicker: Research Roots
+  description: "{{ entry.title }}: part of Research Library, the lineage behind Practice Labs."
+kicker: Research Library
 kickerLink: /lineage/
 ---
 {%- set cluster = lineage.clusters | clusterById(entry.cluster) -%}
@@ -19,7 +19,8 @@ kickerLink: /lineage/
 {% include "partials/page-header.njk" %}
 <main id="main" class="reading">
   <article class="reading__inner entry">
-    {%- if entry.status != "published" %}<p class="draft-banner">Draft · in review. This page is only visible while previewing; it won’t be published until its status is set to “published”.</p>{% endif %}
+    {%- if entry.status == "hidden" %}<p class="draft-banner">Hidden. This page only shows in your preview. Set its status to “Review” or “Published” to put it on the live site.</p>
+    {%- elif entry.status != "published" %}<p class="draft-note">Draft · this page is still being reviewed and may change.</p>{% endif %}
     <p class="entry__tagline">{{ entry.tagline | safe }}</p>
 
     <section class="entry__section entry__who">
@@ -79,8 +80,8 @@ kickerLink: /lineage/
       <p class="related">Related: {% for r in relatedShown %}<a href="/lineage/{{ r.slug }}/">{{ r.title }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
       {%- endif %}
 
-    <nav class="entry__pager" aria-label="Research Roots pages">
-      <a href="/lineage/">← Research Roots</a>
+    <nav class="entry__pager" aria-label="Research Library pages">
+      <a href="/lineage/">← Research Library</a>
       {%- set nextEntry = lineageVisible[pagination.pageNumber + 1] %}
       {%- if nextEntry %}<a href="/lineage/{{ nextEntry.slug }}/">Next: {{ nextEntry.title }} →</a>{% endif %}
     </nav>

@@ -11,17 +11,20 @@ npm start        # builds the site and serves it at http://localhost:8080, rebui
 
 Stop the preview with `Ctrl + C`.
 
-While previewing, lineage pages marked `status: "review"` are shown with a dashed **Draft · in review** border.
-They are left out of the real build (`npm run build`), so nothing goes live until you publish it.
+Every Research Library page has a status:
 
-## Reviewing and publishing a Research Roots page
+- `published`: you've reviewed it. Live, no marker.
+- `review`: not reviewed yet. Live, with a small **Draft** marker.
+- `hidden`: kept off the live site. Shows only in your preview, with a dashed **Hidden** border.
 
-Every lineage page is one entry in `_data/lineage.js`. To review one:
+## Reviewing and publishing a Research Library page
+
+Every Research Library page is one file in `research-roots/` (or edit it at `/admin`). To review one:
 
 1. Run `npm start` and open `http://localhost:8080/lineage/`.
-2. Edit the entry's text in `_data/lineage.js`. The page updates when you save.
+2. Edit its file in `research-roots/`. The page updates when you save.
 3. Check every source has a `url` (a DOI link where one exists), so the research is linked.
-4. When it's ready, change `status: "review"` to `status: "published"`.
+4. When it's ready, change `status: "review"` to `status: "published"`. The Draft marker goes away.
 
 The Esoteric & spiritual cluster is held back from this site for now.
 
@@ -30,7 +33,7 @@ The Esoteric & spiritual cluster is held back from this site for now.
 | Path | What it is |
 | --- | --- |
 | `index.njk` | Home page (the hero) |
-| `lineage/index.njk` | Research Roots index |
+| `lineage/index.njk` | Research Library index |
 | `lineage/entry.njk` | Template for every lineage page |
 | `_data/site.js` | Site name, contact details, booking link and the menu |
 | `_data/lineage.js` | Lineage clusters and pages |
@@ -89,7 +92,7 @@ is still at `/img/rtl-email-logo.png` for emails already sent. Redirects are in 
 **New photos:** put them in `media/img/`, then run `npm run media:upload`. While previewing (`npm start`)
 photos load from your Mac, so you can see them before uploading.
 
-## Research Roots (the lineage pages)
+## Research Library (the lineage pages)
 
 Each entry is its own plain-text file in `research-roots/`, like `research-roots/attachment-theory.md`:
 labeled fields between the `---` lines at the top. Text uses Markdown: `*italic*`, `**bold**`,
@@ -98,7 +101,7 @@ labeled fields between the `---` lines at the top. Text uses Markdown: `*italic*
 - **Edit in the site editor:** while previewing, open http://localhost:8080/admin/ in Chrome or Edge,
   choose "Work with Local Repository" and pick this folder. Save, then commit and push as usual.
 - **Or edit the file** in any text editor.
-- **Add an entry:** "New Research Roots page" in the editor, or `npm run new:lineage -- <slug> <cluster>`,
+- **Add an entry:** "New Research Library page" in the editor, or `npm run new:lineage -- <slug> <cluster>`,
   for example `npm run new:lineage -- sue-johnson attachment`. That copies
   `scripts/research-roots-template.md` to `research-roots/sue-johnson.md` with the slug, cluster and
   order filled in; every field is explained in the template.

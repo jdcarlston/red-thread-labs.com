@@ -1,4 +1,4 @@
-// The Research Roots map on /lineage/, in two views so every label stays readable:
+// The Research Library map on /lineage/, in two views so every label stays readable:
 //
 //   1. Overview: Practice Labs at the centre and one bubble per cluster around it.
 //      Bubble size = how many pages the cluster has; a line between two clusters

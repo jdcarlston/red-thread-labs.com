@@ -6,7 +6,7 @@
 #
 # On the live site: "Sign In Using Access Token" with a GitHub personal access token.
 #
-# What's editable here: every page's words and photos (Pages), Research Roots pages and Markdown blog posts.
+# What's editable here: every page's words and photos (Pages), Research Library pages and Markdown blog posts.
 # The page layouts themselves (.njk) and the menu (_data/site.js) are edited in a text editor.
 
 backend:
@@ -18,11 +18,11 @@ media_folder: media/img
 public_folder: /img
 
 collections:
-  # ---------- Research Roots: one file per page in research-roots/ ----------
+  # ---------- Research Library: one file per page in research-roots/ ----------
   - name: research-roots
-    label: Research Roots
-    label_singular: Research Roots page
-    description: The lineage behind Practice Labs. Text fields use Markdown, *italic*, **bold**, [link text](https://doi.org/...). New pages start as drafts (status "review"), visible only while previewing.
+    label: Research Library
+    label_singular: Research Library page
+    description: The lineage behind Practice Labs. Text fields use Markdown, *italic*, **bold**, [link text](https://doi.org/...). New pages start as drafts (status "Review"): live on the site, marked Draft. Set "Published" once you've reviewed one, or "Hidden" to keep it off the live site.
     folder: research-roots
     extension: md
     format: frontmatter
@@ -36,7 +36,7 @@ collections:
       - { label: Status, field: status }
     fields:
       - { name: slug, label: Page address, widget: string, pattern: ['^[a-z0-9]+(-[a-z0-9]+)*$', 'Lowercase words joined by hyphens, like sue-johnson'], hint: "The page appears at /lineage/<this>/. Don't change it once a page is published." }
-      - { name: status, label: Status, widget: select, default: review, options: [ { label: "Review (draft, preview only)", value: review }, { label: "Published (live)", value: published } ] }
+      - { name: status, label: Status, widget: select, default: review, options: [ { label: "Review (live, marked Draft)", value: review }, { label: "Published (live, reviewed)", value: published }, { label: "Hidden (preview only)", value: hidden } ] }
       - name: cluster
         label: Cluster
         widget: select
@@ -836,19 +836,19 @@ collections:
               widget: string
               required: false
             - name: mapTitle
-              label: 'Research Roots: map title'
+              label: 'Research Library: map title'
               widget: string
               required: false
             - name: mapBlurb
-              label: 'Research Roots: map hint'
+              label: 'Research Library: map hint'
               widget: text
               required: false
             - name: searchPlaceholder
-              label: 'Research Roots: search hint'
+              label: 'Research Library: search hint'
               widget: string
               required: false
             - name: emptyText
-              label: 'Research Roots: nothing found text'
+              label: 'Research Library: nothing found text'
               widget: string
               required: false
     - name: jd
@@ -1078,7 +1078,7 @@ collections:
       - *id021
       - *id022
     - name: research-roots
-      label: Research Roots
+      label: Research Library
       file: _data/pages/research-roots.yml
       fields:
       - *id016
@@ -1088,7 +1088,7 @@ collections:
       - *id020
       - *id021
       - name: lineageHeader
-        label: Use the Research Roots header photo
+        label: Use the Research Library header photo
         widget: boolean
         required: false
       - *id022

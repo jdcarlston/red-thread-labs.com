@@ -1,6 +1,6 @@
-# The Research Roots index (/lineage/). Edit in /admin under Pages → Research Roots, or here.
-# The pages themselves are under Research Roots in the editor. The header photo is site.lineageHeader in _data/site.js.
-title: Research Roots
+# The Research Library index (/lineage/). Edit in /admin under Pages → Research Library, or here.
+# The pages themselves are under Research Library in the editor. The header photo is site.lineageHeader in _data/site.js.
+title: Research Library
 description: The research and teachers behind Practice Labs, with links to the original studies.
 kicker: Lineage
 subtitle: The teachers, researchers and traditions woven into Practice Labs.
@@ -18,7 +18,7 @@ rows:
         label: Why this is here
         heading: A note on these pages
         paragraphs:
-          - Research Roots is a summary of the library behind Practice Labs. I’ve been reverse engineering and debugging love for as long as I can remember, and this is where I keep track of what I’ve learned and who I learned it from.
+          - The Research Library is a summary of the books and studies behind Practice Labs. I’ve been reverse engineering and debugging love for as long as I can remember, and this is where I keep track of what I’ve learned and who I learned it from.
           - Information wants to be free, and we want it to grow into knowledge and wisdom in our community. Most of it comes from people who spent their lives studying how we bond, change and heal. Every page links to the original books and studies, and the exercises stay as close to the original material as they can.
           - "It’s taken years of reading, training with teachers, testing ideas in my own relationships and with the people I work with, and checking each claim against the research. It keeps growing as I learn and my skills are far from perfected. — JD"
       - type: text

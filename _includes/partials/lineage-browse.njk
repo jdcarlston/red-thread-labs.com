@@ -1,5 +1,5 @@
-{#- The Research Roots map and the browse rows (filter chips, search, one row per cluster).
-    Drawn by assets/js/lineage-map.js and lineage-browse.js from the Research Roots pages.
+{#- The Research Library map and the browse rows (filter chips, search, one row per cluster).
+    Drawn by assets/js/lineage-map.js and lineage-browse.js from the Research Library pages.
     The headings and hints come from the page's words file (browseBlock). -#}
     {#- The map: drawn by assets/js/lineage-map.js from the entries below. -#}
     <section class="lineage-map" aria-labelledby="lineage-map-title">
@@ -8,7 +8,7 @@
       <div class="lineage-map__frame">
         <div class="lineage-map__stage">
           <button type="button" class="lineage-map__back" id="lineage-map-back" hidden>← All clusters</button>
-          <svg id="lineage-map" class="lineage-map__svg" role="group" aria-label="Map of the Research Roots"></svg>
+          <svg id="lineage-map" class="lineage-map__svg" role="group" aria-label="Map of the Research Library"></svg>
         </div>
         <aside id="lineage-map-panel" class="lineage-map__panel" aria-live="polite"></aside>
       </div>
@@ -16,7 +16,7 @@
       <script src="/assets/js/lineage-map.js" defer></script>
     </section>
     {#- Browse: filter chips and search (assets/js/lineage-browse.js), then one side-scrolling row per cluster. -#}
-    <section class="browse" aria-label="Browse the Research Roots">
+    <section class="browse" aria-label="Browse the Research Library">
       <div class="browse__bar">
         <div class="browse__chips" role="group" aria-label="Show one cluster">
           <button type="button" class="chip is-on" data-filter="all" aria-pressed="true">All</button>
@@ -25,7 +25,7 @@
           {%- endfor %}
         </div>
         <label class="browse__search">
-          <span class="visually-hidden">Search the Research Roots</span>
+          <span class="visually-hidden">Search the Research Library</span>
           <input type="search" id="browse-search" placeholder="{{ browseBlock.searchPlaceholder }}" autocomplete="off">
         </label>
         <p class="browse__count" id="browse-count" aria-live="polite"></p>
@@ -45,10 +45,11 @@
         </div>
         <ul class="entry-cards entry-cards--row">
           {%- for entry in lineageVisible | inCluster(cluster.id) %}
-          <li class="entry-card{% if entry.status != 'published' %} is-draft{% endif %}"
+          <li class="entry-card{% if entry.status == 'hidden' %} is-draft{% endif %}"
               data-search="{{ [entry.title, entry.people, entry.field, entry.tagline, cluster.title] | join(' ') | striptags | lower }} {% for c in entry.concepts %}{{ c.term | striptags | lower }} {% endfor %}">
             <a href="/lineage/{{ entry.slug }}/">
-              {%- if entry.status != "published" %}<span class="draft-badge">Draft · in review</span>{% endif %}
+              {%- if entry.status == "hidden" %}<span class="draft-badge">Hidden · preview only</span>
+              {%- elif entry.status != "published" %}<span class="draft-badge draft-badge--quiet">Draft</span>{% endif %}
               <h3>{{ entry.title }}</h3>
               <p class="entry-card__people">{{ entry.people | safe }}</p>
               <p class="entry-card__tagline">{{ entry.tagline | safe }}</p>

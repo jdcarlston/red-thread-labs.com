@@ -1,4 +1,4 @@
-// Research Roots: the lineage behind Practice Labs.
+// Research Library: the lineage behind Practice Labs.
 //
 // The content lives in research-roots/:
 //   research-roots/clusters.yml   the clusters, in the order they appear on /lineage/
@@ -9,7 +9,7 @@
 // Edit them in any text editor, or in the site editor at /admin while previewing.
 // Text fields use Markdown: *italic*, **bold**, [link text](https://...).
 //
-// Add an entry:   npm run new:lineage -- <slug> <cluster>   (or "New Research Roots page" in /admin)
+// Add an entry:   npm run new:lineage -- <slug> <cluster>   (or "New Research Library page" in /admin)
 // Publish one:    change its status from "review" to "published"
 //
 // This file reads the entries, turns their Markdown into HTML for the page templates,
@@ -59,8 +59,8 @@ const entries = fs
     const e = matter(fs.readFileSync(path.join(dir, f), "utf8")).data;
     // Catch typos early: the slug must match the file name, and the cluster must exist.
     const slug = f.replace(/\.md$/, "");
-    if (e.slug !== slug) throw new Error(`Research Roots: ${f} has slug "${e.slug}" (it should be "${slug}")`);
-    if (!(e.cluster in clusterRank)) throw new Error(`Research Roots: "${slug}" has an unknown cluster "${e.cluster}"`);
+    if (e.slug !== slug) throw new Error(`Research Library: ${f} has slug "${e.slug}" (it should be "${slug}")`);
+    if (!(e.cluster in clusterRank)) throw new Error(`Research Library: "${slug}" has an unknown cluster "${e.cluster}"`);
     return toHtml(e);
   })
   .sort((a, b) => clusterRank[a.cluster] - clusterRank[b.cluster] || (a.order ?? 0) - (b.order ?? 0));

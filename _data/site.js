@@ -19,8 +19,8 @@ module.exports = {
   // The photo behind an inner page's header, unless the page sets its own with `header:` in its front matter.
   // position = which part of the photo stays in view; zoom = how far it's enlarged (1 = not at all).
   defaultHeader: { image: "img/love-lab-table.jpg", position: "50% 55%", zoom: 1 },
-  // The roots photo is only for the Research Roots (lineage) pages, unless an entry or cluster sets its own.
-  lineageHeader: { image: "img/roots-web.jpg", position: "75% 0%", zoom: 1.25 },
+  // The library photo (stacks of books) is only for the Research Library (lineage) pages, unless an entry or cluster sets its own.
+  lineageHeader: { image: "img/library-books.jpg", position: "50% 45%", zoom: 1 },
 
   // Ways to reach Red Thread Labs. These fill the icon rail on the right of the home page and the footer.
   // Leave a value empty ("") and its icon is simply left out.
@@ -67,7 +67,7 @@ module.exports = {
       ],
     },
     {
-      label: "Research Roots",
+      label: "Research Library",
       href: "/lineage/",
       // Cluster links are built from _data/lineage.js, so only clusters with published pages show.
       fromLineage: true,

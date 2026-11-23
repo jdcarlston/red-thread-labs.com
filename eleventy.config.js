@@ -4,8 +4,10 @@ const { logoSvg } = require("./lib/logo");
 const lineage = require("./_data/lineage");
 const site = require("./_data/site");
 
-// While previewing (npm start) pages marked status: "review" are shown, with a DRAFT ribbon.
-// A normal build (npm run build, and Netlify) only includes published pages.
+// Research Library pages have a status:
+//   published = reviewed by JD. Live, no marker.
+//   review    = not reviewed yet. Live, marked "Draft".
+//   hidden    = not ready to show anyone. Only in your preview (npm start, or RTL_REVIEW=1).
 const previewing = process.env.ELEVENTY_RUN_MODE === "serve";
 const reviewMode = previewing || process.env.RTL_REVIEW === "1";
 
@@ -15,7 +17,8 @@ const reviewMode = previewing || process.env.RTL_REVIEW === "1";
 const useBucket = site.media.useBucket && !previewing && process.env.RTL_LOCAL_MEDIA !== "1";
 
 function visibleEntries() {
-  return lineage.entries.filter((e) => e.status === "published" || (reviewMode && e.status === "review"));
+  const live = ["published", "review"];
+  return lineage.entries.filter((e) => live.includes(e.status) || (reviewMode && e.status === "hidden"));
 }
 
 module.exports = function (eleventyConfig) {
@@ -24,7 +27,7 @@ module.exports = function (eleventyConfig) {
   // what it should skip in .eleventyignore instead.
   eleventyConfig.setUseGitIgnore(false);
 
-  // Research Roots entries live in research-roots/ (read by _data/lineage.js); rebuild when they change.
+  // Research Library entries live in research-roots/ (read by _data/lineage.js); rebuild when they change.
   eleventyConfig.addWatchTarget("./research-roots/");
   eleventyConfig.addPassthroughCopy("assets");
   // The site editor (Sveltia CMS) at /admin. Its settings are in admin/config.yml.

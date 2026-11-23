@@ -1,13 +1,13 @@
 #!/usr/bin/env node
-// Start a new Research Roots entry from the template.
+// Start a new Research Library entry from the template.
 //
 //   npm run new:lineage -- <slug> <cluster>
 //   npm run new:lineage -- sue-johnson attachment
 //
 // Creates research-roots/<slug>.md with the slug, cluster and status ("review") filled in,
 // and an order that puts it after the cluster's existing entries. Then open the file (or use the
-// site editor at /admin) and replace the placeholder text. It shows up in the preview (npm start)
-// with a DRAFT ribbon.
+// site editor at /admin) and replace the placeholder text. It goes live with the next push,
+// marked "Draft" until you set its status to "published". Set it to "hidden" to keep it off the live site.
 
 const fs = require("fs");
 const path = require("path");

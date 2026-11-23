@@ -1,7 +1,7 @@
 ---
-# Research Roots entry template, laid out like the Attachment Theory page.
+# Research Library entry template, laid out like the Attachment Theory page.
 #
-# Don't edit this file to add an entry. Either use "New Research Roots page" in the site editor
+# Don't edit this file to add an entry. Either use "New Research Library page" in the site editor
 # (/admin while previewing), or run:
 #     npm run new:lineage -- <slug> <cluster>
 # e.g. npm run new:lineage -- sue-johnson attachment
@@ -65,7 +65,7 @@ sources:
     url: https://doi.org/...
     label: Read the study       # or View the book, Find the book
 
-# Slugs of other Research Roots pages to link to under the heart-line.
+# Slugs of other Research Library pages to link to under the heart-line.
 related: []
 
 # The closing line, shown large and italic at the bottom of the page.

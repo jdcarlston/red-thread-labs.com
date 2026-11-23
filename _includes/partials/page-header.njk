@@ -1,7 +1,7 @@
 {#- Inner-page header, a shorter version of the Love Lab hero: the page's photo under a dark veil, faint threads in the menu bar, then the page title, centered.
     Set `kicker`, `title` and optional `subtitle` / `kickerLink` in the page.
     The photo comes from `header` (image, position, zoom, and color: true to keep the photo's own colors) if the page sets one, otherwise site.defaultHeader (lineage pages use site.lineageHeader).
-    Research Roots pages set headerTone = "red" for the deep oxblood look; other pages keep more of the photo's color. -#}
+    Research Library pages set headerTone = "red" for the deep oxblood look; other pages keep more of the photo's color. -#}
 {%- set h = header or site.defaultHeader -%}
 <div class="page-head{% if h.color %} page-head--color{% elif headerTone == 'red' or h.tone == 'red' %} page-head--red{% endif %}">
   {#- The photo sits in its own clipped box so a zoomed photo stays inside the header, while the menu's dropdowns can hang below it. #}
