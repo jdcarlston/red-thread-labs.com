@@ -3,11 +3,12 @@ layout: layouts/base.njk
 scripts: ["signup.js"]
 ---
 {#- Layout for one blog post. The post's front matter sets title, dek (one-line summary),
-    description, date and optionally header (photo). The sign-up and consult link close every post. -#}
+    description, date and optionally definition (a line shown above the dek, like a word's original meaning)
+    and header (photo). The sign-up and consult link close every post. -#}
 {%- from "partials/signup.njk" import signup -%}
 {%- set kicker = "Blog" -%}
 {%- set kickerLink = "/blog/" -%}
-{%- set subtitle = dek -%}
+{%- set subtitle = ('<span class="definition">' + (definition | md) + '</span>' + dek) if definition else dek -%}
 {% include "partials/page-header.njk" %}
 <main id="main" class="reading">
   <article class="reading__inner post">

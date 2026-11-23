@@ -113,6 +113,7 @@ collections:
       - { name: date, label: Date, widget: datetime, date_format: YYYY-MM-DD, time_format: false, picker_utc: true, format: YYYY-MM-DD }
       - { name: permalink, label: Page address, widget: string, hint: "e.g. /blog/my-post-title/" }
       - { name: medium_url, label: Original on Medium, widget: string, required: false }
+      - { name: definition, label: Definition line (optional), widget: string, required: false, hint: "Shown above the summary, like a word's original meaning. Markdown: *italic*." }
       - name: header
         label: Header photo (optional)
         widget: object

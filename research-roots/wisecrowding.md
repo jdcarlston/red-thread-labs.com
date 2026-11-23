@@ -47,5 +47,6 @@ related:
   - simon-wardley
   - brave-spaces
   - priya-parker
+  - scott-page
 heartLine: Build the crowd, then let it be wiser than any one of you.
 ---

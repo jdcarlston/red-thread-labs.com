@@ -44,5 +44,6 @@ related:
   - gregory-bateson
   - william-powers
   - marvin-minsky
+  - donella-meadows
 heartLine: See the loop, and you can change your part of it.
 ---
