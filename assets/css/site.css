@@ -941,3 +941,14 @@ html body .entry__tagline, html body .entry > .heart-line { font-family: var(--f
 .crumbs ol { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 0; padding: 0; list-style: none; color: var(--muted-on-dark); }
 .crumbs li + li::before { content: "›"; margin-right: 6px; opacity: 0.6; }
 .crumbs [aria-current] { color: var(--cream-text, #f3e7e2); }
+
+/* Source Map search: a search box above the map, with a short list of matching clusters and pages. */
+.map-search { position: relative; max-width: 560px; }
+.map-search__results {
+  position: absolute; z-index: 6; left: 0; right: 0; top: calc(100% + 6px); margin: 0; padding: 6px; list-style: none;
+  background: #2b1816; border: 1px solid rgba(232, 120, 106, .35); border-radius: 10px; box-shadow: 0 12px 30px rgba(0, 0, 0, .45); /* solid, so the map does not show through */
+}
+.map-search__results a { display: flex; justify-content: space-between; gap: 12px; padding: 9px 12px; border-radius: 8px; color: var(--ink); text-decoration: none; }
+.map-search__results a:hover, .map-search__results a:focus { background: rgba(232, 120, 106, .16); outline: none; }
+.map-search__where { flex: none; font-size: 13px; color: var(--ink-soft); }
+.map-search__more { padding: 9px 12px; font-size: 14px; color: var(--ink-soft); }

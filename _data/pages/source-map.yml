@@ -13,6 +13,7 @@ rows:
         name: lineage-map
         mapTitle: How it all connects
         mapBlurb: Start with the big picture, then open a cluster to see its pages and how they link to each other.
+        searchPlaceholder: "Search names and ideas: shame, Gottman, nervous system…"
       - type: text
         center: true
         buttons:

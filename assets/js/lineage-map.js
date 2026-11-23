@@ -360,5 +360,45 @@
     svg.closest(".lineage-map").scrollIntoView({ block: "start" });
   }
   window.addEventListener("hashchange", openFromAddress);
+
+  // Search: the same searchable words as the Library page (built by the searchText filter in
+  // eleventy.config.js). Matching clusters come first, then pages. Picking one changes the
+  // address to #<cluster> or #<page>, and openFromAddress above opens it on the map.
+  const searchBox = document.getElementById("map-search");
+  const results = document.getElementById("map-search-results");
+  if (searchBox && results) {
+    const MAX = 8;
+    const showResults = () => {
+      const words = searchBox.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
+      if (!words.length) { results.hidden = true; results.replaceChildren(); return; }
+      const clusterHits = data.clusters.filter((c) =>
+        words.every((w) => `${c.title} ${c.short}`.toLowerCase().includes(w)));
+      const pageHits = data.entries.filter((e) => words.every((w) => e.search.includes(w)));
+      const items = [
+        ...clusterHits.map((c) => ({ id: c.id, name: c.title, where: "Cluster" })),
+        ...pageHits.map((e) => ({ id: e.slug, name: e.title, where: byCluster[e.cluster].short })),
+      ];
+      results.innerHTML = items.length
+        ? items.slice(0, MAX).map((i) =>
+            `<li><a href="#${i.id}"><span>${esc(i.name)}</span> <span class="map-search__where">${esc(i.where)}</span></a></li>`).join("") +
+          (items.length > MAX ? `<li class="map-search__more">${items.length - MAX} more. Add a word to narrow it down.</li>` : "")
+        : `<li class="map-search__more">Nothing matches that yet. Try another word.</li>`;
+      results.hidden = false;
+    };
+    searchBox.addEventListener("input", showResults);
+    // Picking a result: close the list (the link itself changes the address).
+    results.addEventListener("click", (ev) => {
+      if (!ev.target.closest("a")) return;
+      results.hidden = true;
+      searchBox.value = "";
+      // Picking the page that's already in the address wouldn't fire hashchange, so open it here.
+      const id = ev.target.closest("a").getAttribute("href").slice(1);
+      if (decodeURIComponent(location.hash.slice(1)) === id) { ev.preventDefault(); openFromAddress(); }
+    });
+    searchBox.addEventListener("keydown", (ev) => {
+      if (ev.key === "Escape") { searchBox.value = ""; showResults(); }
+      if (ev.key === "Enter") { ev.preventDefault(); results.querySelector("a")?.click(); }
+    });
+  }
   openFromAddress();
 })();

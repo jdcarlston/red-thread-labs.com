@@ -106,6 +106,14 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("clustersWithEntries", (clusters, entries) =>
     clusters.filter((c) => entries.some((e) => e.cluster === c.id))
   );
+  // The words a page can be found by, in lowercase: its title, people, field, tagline, cluster and
+  // key concepts. The Library search (data-search on each card) and the Source Map search both use
+  // this, so the two always find the same pages.
+  const searchText = (e, clusterTitle) =>
+    [e.title, e.people, e.field, e.tagline, clusterTitle, ...(e.concepts || []).map((c) => c.term)]
+      .join(" ").replace(/<[^>]+>/g, "").replace(/&amp;/g, "&").toLowerCase();
+  eleventyConfig.addFilter("searchText", searchText);
+
   // The data the lineage map (assets/js/lineage-map.js) draws from, as JSON for a <script> tag.
   // Only the fields the map shows; HTML tags are stripped so the map can use them as plain text.
   eleventyConfig.addFilter("lineageMapData", (entries, clusters) => {
@@ -117,6 +125,7 @@ module.exports = function (eleventyConfig) {
       entries: entries.map((e) => ({
         slug: e.slug, cluster: e.cluster, title: plain(e.title), people: plain(e.people),
         tagline: plain(e.tagline), draft: e.status !== "published",
+        search: searchText(e, (clusters.find((c) => c.id === e.cluster) || {}).title),
         related: (e.related || []).filter((r) => slugs.has(r)),
       })),
     };
