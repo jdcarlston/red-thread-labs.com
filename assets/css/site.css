@@ -928,3 +928,6 @@ html body :is(h1, h2, h3, legend, .cluster__title) em { /* "html body" so this w
 
 /* Source Map side panel: its headings (the map title, a cluster's or a page's name) in the sans-serif font. */
 html body .lineage-map__panel h3 { font-family: var(--font-sans); font-style: normal; font-weight: 500; letter-spacing: 0; }
+
+/* Research Library pages: the opening quote (tagline) and the closing line (heart-line) in bold sans-serif. */
+html body .entry__tagline, html body .entry > .heart-line { font-family: var(--font-sans); font-style: normal; font-weight: 700; letter-spacing: -0.005em; }
