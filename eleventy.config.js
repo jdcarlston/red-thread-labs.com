@@ -118,15 +118,17 @@ module.exports = function (eleventyConfig) {
 
   // The Library Index (/library/index/): every page, and every idea named on a page, A to Z.
   // Returns { pages: [{ letter, items }], ideas: [{ letter, items }] }, each item { name, slug, note }.
+  // How the index sorts a name ("The Art of Loving" goes under A), and which letter it's filed under.
+  const sortKey = (s) => String(s).replace(/<[^>]+>/g, "").replace(/^(the|a|an)\s+/i, "").normalize("NFD").replace(/[^\w\s]/g, "").toLowerCase();
+  const indexLetter = (s) => { const k = sortKey(s)[0] || "#"; return /[a-z]/.test(k) ? k.toUpperCase() : "#"; };
+  eleventyConfig.addFilter("indexLetter", indexLetter);
   eleventyConfig.addFilter("libraryIndex", (entries, clusters) => {
     const plain = (s) => String(s || "").replace(/<[^>]+>/g, "").replace(/&amp;/g, "&");
     const short = Object.fromEntries(clusters.map((c) => [c.id, c.short || c.title]));
-    const sortKey = (s) => s.replace(/^(the|a|an)\s+/i, "").normalize("NFD").replace(/[^\w\s]/g, "").toLowerCase();
     const group = (items) => {
       const out = [];
       items.sort((a, b) => sortKey(a.name).localeCompare(sortKey(b.name))).forEach((i) => {
-        const k = sortKey(i.name)[0] || "#";
-        const letter = /[a-z]/.test(k) ? k.toUpperCase() : "#";
+        const letter = indexLetter(i.name);
         if (!out.length || out[out.length - 1].letter !== letter) out.push({ letter, items: [] });
         out[out.length - 1].items.push(i);
       });

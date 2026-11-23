@@ -19,17 +19,23 @@ kickerLink: /library/
 {% include "partials/page-header.njk" %}
 <main id="main" class="reading">
   <article class="reading__inner entry">
-    {#- Breadcrumb back to the Library, with a link to this page on the Source Map on its left and a radar icon on the far right. -#}
+    {#- Breadcrumb back to the Library, with three small icons on the far right: the Library Index, the Source Map and the Research Radar. -#}
     <nav class="crumbs" aria-label="Breadcrumb">
-      <a class="crumbs__map" href="/library/map/#{{ entry.slug }}">View Map</a>
       <ol>
         <li><a href="/library/browse/">Library</a></li>
         <li><a href="/library/browse/#{{ cluster.id }}">{{ cluster.short or cluster.title }}</a></li>
         <li aria-current="page">{{ entry.title }}</li>
       </ol>
-      {#- A small radar icon, on the far right: this page on the Research Radar. -#}
-      <a class="crumbs__radar" href="/library/radar/#{{ entry.slug }}" aria-label="See this page on the Research Radar" title="See it on the Research Radar">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/><path d="M12 2v20M2 12h20"/><circle class="crumbs__radar-dot" cx="16.5" cy="7.5" r="1.8"/></svg>
+      {#- Three small icons on the far right: this page in the Library Index (A to Z, at its letter),
+          on the Source Map (a hub and its links), and on the Research Radar. -#}
+      <a class="crumbs__icon crumbs__icon--first" href="/library/index/#pages-{{ entry.title | indexLetter }}" aria-label="See this page in the Library Index" title="See it in the Library Index">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3.5h11.5l4.5 4.5v12.5H4Z"/><path d="M15.5 3.5V8H20"/><path d="M7.5 11.5h9M7.5 14.5h9M7.5 17.5h6"/></svg>
+      </a>
+      <a class="crumbs__icon" href="/library/map/#{{ entry.slug }}" aria-label="See this page on the Source Map" title="See it on the Source Map">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12 5 5M12 12l7-7M12 12l-7 7M12 12l7 7M5 5h0"/><circle cx="12" cy="12" r="3.2"/><circle class="crumbs__icon-fill" cx="4.5" cy="4.5" r="2.2"/><circle class="crumbs__icon-fill" cx="19.5" cy="4.5" r="2.2"/><circle class="crumbs__icon-fill" cx="4.5" cy="19.5" r="2.2"/><circle class="crumbs__icon-fill" cx="19.5" cy="19.5" r="2.2"/></svg>
+      </a>
+      <a class="crumbs__icon" href="/library/radar/#{{ entry.slug }}" aria-label="See this page on the Research Radar" title="See it on the Research Radar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/><path d="M12 2v20M2 12h20"/><circle class="crumbs__icon-fill" cx="16.5" cy="7.5" r="1.8"/></svg>
       </a>
     </nav>
     {%- if entry.status == "hidden" %}<p class="draft-banner">Hidden. This page only shows in your preview. Set its status to “Review” or “Published” to put it on the live site.</p>
