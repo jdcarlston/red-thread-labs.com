@@ -85,8 +85,11 @@
     svg.setAttribute("viewBox", `0 0 ${SIZE} ${SIZE}`);
     const R = 300;
     const pos = {};
+    // The clusters go clockwise in clusters.yml order, with TOP_CLUSTER at 12 o'clock.
+    const TOP_CLUSTER = "relationships";
+    const top = Math.max(0, data.clusters.findIndex((c) => c.id === TOP_CLUSTER));
     data.clusters.forEach((cl, i) => {
-      const a = -90 + (360 / data.clusters.length) * i;
+      const a = -90 + (360 / data.clusters.length) * (i - top);
       const [x, y] = polar(R, a);
       pos[cl.id] = { x, y, a, r: 26 + members(cl.id).length * 1.6 };
     });
