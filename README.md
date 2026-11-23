@@ -14,7 +14,7 @@ Stop the preview with `Ctrl + C`.
 Every Research Library page has a status:
 
 - `published`: you've reviewed it. Live, no marker.
-- `review`: not reviewed yet. Live, with a small **Draft** marker.
+- `review`: not reviewed yet. Live, with a small **Draft** marker that only shows in your preview.
 - `hidden`: kept off the live site. Shows only in your preview, with a dashed **Hidden** border.
 
 ## Reviewing and publishing a Research Library page

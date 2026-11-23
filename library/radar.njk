@@ -2,12 +2,11 @@
 layout: layouts/base.njk
 pageKey: research-radar
 permalink: /library/radar/
-draft: true
 eleventyComputed:
   title: "{{ pages[pageKey].title }}"
   description: "{{ pages[pageKey].description }}"
 ---
-{#- The Research Radar. A draft (only in your preview) until you've placed the pages and take out `draft: true` above.
+{#- The Research Radar. Pages show on it once they have a Radar ring.
     The words are in _data/pages/research-radar.yml (edit in /admin under Pages → Research Radar).
     The radar is _includes/partials/lineage-radar.njk. -#}
 {% include "partials/page-from-data.njk" %}

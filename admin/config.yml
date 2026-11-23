@@ -22,7 +22,7 @@ collections:
   - name: research-roots
     label: Research Library
     label_singular: Research Library page
-    description: The lineage behind Practice Labs. Text fields use Markdown, *italic*, **bold**, [link text](https://doi.org/...). New pages start as drafts (status "Review"), live on the site and marked Draft. Set "Published" once you've reviewed one, or "Hidden" to keep it off the live site.
+    description: The lineage behind Practice Labs. Text fields use Markdown, *italic*, **bold**, [link text](https://doi.org/...). New pages start as drafts (status "Review"), live on the site, and marked Draft only in your preview. Set "Published" once you've reviewed one, or "Hidden" to keep it off the live site.
     folder: research-roots
     extension: md
     format: frontmatter
@@ -36,7 +36,7 @@ collections:
       - { label: Status, field: status }
     fields:
       - { name: slug, label: Page address, widget: string, pattern: ['^[a-z0-9]+(-[a-z0-9]+)*$', 'Lowercase words joined by hyphens, like sue-johnson'], hint: "The page appears at /library/<this>/. Don't change it once a page is published." }
-      - { name: status, label: Status, widget: select, default: review, options: [ { label: "Review (live, marked Draft)", value: review }, { label: "Published (live, reviewed)", value: published }, { label: "Hidden (preview only)", value: hidden } ] }
+      - { name: status, label: Status, widget: select, default: review, options: [ { label: "Review (live; marked Draft only in your preview)", value: review }, { label: "Published (live, reviewed)", value: published }, { label: "Hidden (preview only)", value: hidden } ] }
       - { name: ring, label: Radar ring, widget: select, required: false, options: [ { label: "Core: we teach it and build labs on it", value: core }, { label: "In practice: we use it and are still testing it", value: practice }, { label: "Exploring: reading, training, watching", value: exploring }, { label: "Hold: useful, used with care or moved past", value: hold } ], hint: "Where this page sits on the Research Radar. Leave empty to keep it off the radar for now." }
       - { name: quadrant, label: Radar quadrant (optional), widget: select, required: false, options: [ { label: "I: inner experience", value: i }, { label: "It: body and behavior", value: it }, { label: "We: relationship and culture", value: we }, { label: "Its: systems and structures", value: its } ], hint: "Leave empty to use the cluster's quadrant." }
       - { name: evidence, label: Radar evidence (optional), widget: select, required: false, options: [ { label: "Research studies", value: research }, { label: "Clinical or practitioner work", value: practice }, { label: "Tradition, philosophy or story", value: tradition } ], hint: "Leave empty to use the cluster's. Sets the shape of the dot." }
@@ -1122,7 +1122,7 @@ collections:
         required: false
       - *id022
     - name: research-radar
-      label: Research Radar (draft)
+      label: Research Radar
       file: _data/pages/research-radar.yml
       fields:
       - *id016

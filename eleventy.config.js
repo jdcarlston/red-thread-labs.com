@@ -5,7 +5,7 @@ const site = require("./_data/site");
 
 // Research Library pages have a status:
 //   published = reviewed by JD. Live, no marker.
-//   review    = not reviewed yet. Live, marked "Draft".
+//   review    = not reviewed yet. Live; marked "Draft" only in your preview, so visitors don't see it.
 //   hidden    = not ready to show anyone. Only in your preview (npm start, or RTL_REVIEW=1).
 const previewing = process.env.ELEVENTY_RUN_MODE === "serve";
 const reviewMode = previewing || process.env.RTL_REVIEW === "1";
@@ -117,7 +117,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("searchText", searchText);
 
   // The data the Research Radar (assets/js/lineage-radar.js) draws from, as JSON for a <script> tag.
-  // Pages with no ring aren't on the radar; in your preview they're listed under it as "not placed yet".
+  // Pages with no ring aren't on the radar. In your preview they're listed under it as "not on the radar yet".
   eleventyConfig.addFilter("radarData", (entries, clusters) => {
     const plain = (s) => String(s || "").replace(/<[^>]+>/g, "").replace(/&amp;/g, "&");
     const short = Object.fromEntries(clusters.map((c) => [c.id, c.short || c.title]));

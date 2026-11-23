@@ -35,7 +35,7 @@
               data-search="{{ entry | searchText(cluster.title) }}">
             <a href="/library/{{ entry.slug }}/">
               {%- if entry.status == "hidden" %}<span class="draft-badge">Hidden · preview only</span>
-              {%- elif entry.status != "published" %}<span class="draft-badge draft-badge--quiet">Draft</span>{% endif %}
+              {%- elif entry.status != "published" and reviewMode %}<span class="draft-badge draft-badge--quiet">Draft</span>{% endif %}
               <h3>{{ entry.title }}</h3>
               <p class="entry-card__people">{{ entry.people | safe }}</p>
               <p class="entry-card__tagline">{{ entry.tagline | safe }}</p>

@@ -5,13 +5,13 @@
   {%- set children = item.children -%}
   {%- set href = item.href if (reviewMode or not item.liveHref) else item.liveHref %}
   {%- if item.fromLineage %}
-  {#- The Library menu: the Library page, the Source Map, and (in your preview) the Research Radar. -#}
+  {#- The Library menu: the Library page, the Source Map and the Research Radar. -#}
   <li class="has-sub">
     <a href="{{ href }}"{% if page.url.startsWith(item.href) %} aria-current="page"{% endif %}>{{ item.label }}</a>
     <ul class="sub">
       <li><a href="/library/">Browse the Library</a></li>
       <li><a href="/library/map/">Source Map</a></li>
-      {%- if reviewMode %}<li><a href="/library/radar/">Research Radar</a></li>{% endif %}
+      <li><a href="/library/radar/">Research Radar</a></li>
     </ul>
   </li>
   {%- else %}

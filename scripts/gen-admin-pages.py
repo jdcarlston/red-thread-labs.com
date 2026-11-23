@@ -174,7 +174,7 @@ files = [
     page("thanks", "Contact: thank you"),
     page("blog", "Blog"),
     page("research-roots", "Research Library", [F("lineageHeader", "Use the Research Library header photo", "boolean", required=False)]),
-    page("research-radar", "Research Radar (draft)", [F("lineageHeader", "Use the Research Library header photo", "boolean", required=False)]),
+    page("research-radar", "Research Radar", [F("lineageHeader", "Use the Research Library header photo", "boolean", required=False)]),
     page("source-map", "Source Map", [F("lineageHeader", "Use the Research Library header photo", "boolean", required=False)]),
     {"name": "shared", "label": "Shared blocks", "file": "_data/pages/shared.yml",
      "description": "Words that appear on more than one page.", "fields": [
