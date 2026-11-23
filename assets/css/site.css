@@ -865,3 +865,8 @@ body.menu-open { overflow: hidden; }
   .offer-list li { grid-template-columns: 1fr; }
   .offer-list a { grid-column: 1; grid-row: auto; margin-top: 4px; }
 }
+
+/* The menu bar's threads repeated along the footer, behind the logo line (partials/footer.njk). */
+.site-footer { position: relative; overflow: hidden; }
+.site-footer .menu-threads { top: 35px; z-index: 0; }
+.site-footer > :not(.menu-threads) { position: relative; z-index: 1; }

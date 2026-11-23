@@ -7,3 +7,4 @@ research-roots/
 scripts/
 _site/
 private/notes-for-claude.md
+.wtmp/
