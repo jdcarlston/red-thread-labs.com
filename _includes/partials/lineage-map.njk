@@ -1,0 +1,15 @@
+{#- The Source Map: Lab Sources at the center, one bubble per cluster, drawn by assets/js/lineage-map.js.
+    Used on the Source Map page (/lineage/map/). The heading and hint come from the page's words file (mapBlock). -#}
+    <section class="lineage-map" aria-labelledby="lineage-map-title">
+      <h2 id="lineage-map-title" class="cluster__title">{{ mapBlock.mapTitle or "How it all connects" }}</h2>
+      <p class="cluster__blurb">{{ mapBlock.mapBlurb | md | safe }}</p>
+      <div class="lineage-map__frame">
+        <div class="lineage-map__stage">
+          <button type="button" class="lineage-map__back" id="lineage-map-back" hidden>← All clusters</button>
+          <svg id="lineage-map" class="lineage-map__svg" role="group" aria-label="Map of the Research Library"></svg>
+        </div>
+        <aside id="lineage-map-panel" class="lineage-map__panel" aria-live="polite"></aside>
+      </div>
+      <script type="application/json" id="lineage-map-data">{{ lineageVisible | lineageMapData(lineage.clusters) | safe }}</script>
+      <script src="/assets/js/lineage-map.js" defer></script>
+    </section>

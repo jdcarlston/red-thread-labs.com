@@ -1,6 +1,6 @@
 // The Research Library map on /lineage/, in two views so every label stays readable:
 //
-//   1. Overview: Practice Labs at the centre and one bubble per cluster around it.
+//   1. Overview: Lab Sources at the centre and one bubble per cluster around it.
 //      Bubble size = how many pages the cluster has; a line between two clusters
 //      means pages in them link to each other (thicker = more links).
 //   2. Close-up: pick a cluster and its pages circle it, with lines between pages
@@ -110,7 +110,7 @@
 
     const hub = el("g", { class: "lm-hub" });
     hub.append(el("circle", { cx: C, cy: C, r: 72 }));
-    hub.append(label(C, C, ["PRACTICE", "LABS"], { "text-anchor": "middle" }));
+    hub.append(label(C, C, ["LAB", "SOURCES"], { "text-anchor": "middle" }));
     svg.append(hub);
 
     const fs = small() ? 32 : 22;

@@ -27,9 +27,12 @@ rows:
         heading: Disclaimer
         paragraphs:
           - These pages are here to help you learn the basis of what we do in our labs. They aren’t medical or psychological advice or a substitute for therapy. The ideas belong to the researchers and teachers named on each page, and any mistakes in explaining them are mine.
+      - type: text
+        id: source-map
+        center: true
+        buttons:
+          - {text: Enter the Library, link: /lineage/map/, style: primary}
       - type: include
         name: lineage-browse
-        mapTitle: How it all connects
-        mapBlurb: Start with the big picture, then open a cluster to see its pages and how they link to each other.
         searchPlaceholder: "Search names and ideas: shame, Gottman, nervous system…"
         emptyText: Nothing matches that yet. Try another word, or

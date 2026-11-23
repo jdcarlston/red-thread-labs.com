@@ -83,7 +83,7 @@ types = [
     T("heart", "Closing heart-lines", [F("lines", "Lines", "list", field=F("l", "Line")), F("anchor", "Last line", required=False)]),
     T("bigdate", "Big date", [F("big", "Big word (the date)"), F("place", "Place", required=False)]),
     {"name": "include", "label": "Built-in section", "widget": "object", "fields": [
-        F("name", "Which one", "select", options=["about-jd", "booking", "posts", "contact", "lineage-browse"],
+        F("name", "Which one", "select", options=["about-jd", "booking", "posts", "contact", "lineage-browse", "lineage-map"],
           hint="The words of about-jd are under Pages → Shared blocks."),
         F("signupSource", "Booking: where they signed up", required=False),
         F("consultWas", "Booking: consult was", required=False),
@@ -172,6 +172,7 @@ files = [
     page("thanks", "Contact: thank you"),
     page("blog", "Blog"),
     page("research-roots", "Research Library", [F("lineageHeader", "Use the Research Library header photo", "boolean", required=False)]),
+    page("source-map", "Source Map", [F("lineageHeader", "Use the Research Library header photo", "boolean", required=False)]),
     {"name": "shared", "label": "Shared blocks", "file": "_data/pages/shared.yml",
      "description": "Words that appear on more than one page.", "fields": [
          F("aboutJd", "Your guide, JD (Love Lab and Level-Up)", "object", fields=[

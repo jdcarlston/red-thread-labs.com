@@ -1,20 +1,6 @@
-{#- The Research Library map and the browse rows (filter chips, search, one row per cluster).
-    Drawn by assets/js/lineage-map.js and lineage-browse.js from the Research Library pages.
-    The headings and hints come from the page's words file (browseBlock). -#}
-    {#- The map: drawn by assets/js/lineage-map.js from the entries below. -#}
-    <section class="lineage-map" aria-labelledby="lineage-map-title">
-      <h2 id="lineage-map-title" class="cluster__title">{{ browseBlock.mapTitle or "How it all connects" }}</h2>
-      <p class="cluster__blurb">{{ browseBlock.mapBlurb | md | safe }}</p>
-      <div class="lineage-map__frame">
-        <div class="lineage-map__stage">
-          <button type="button" class="lineage-map__back" id="lineage-map-back" hidden>← All clusters</button>
-          <svg id="lineage-map" class="lineage-map__svg" role="group" aria-label="Map of the Research Library"></svg>
-        </div>
-        <aside id="lineage-map-panel" class="lineage-map__panel" aria-live="polite"></aside>
-      </div>
-      <script type="application/json" id="lineage-map-data">{{ lineageVisible | lineageMapData(lineage.clusters) | safe }}</script>
-      <script src="/assets/js/lineage-map.js" defer></script>
-    </section>
+{#- The Research Library browse rows (filter chips, search, one row per cluster), drawn by
+    assets/js/lineage-browse.js. The search hint and "nothing found" text come from the page's words file (browseBlock).
+    The map is its own section now (partials/lineage-map.njk), on the Source Map page. -#}
     {#- Browse: filter chips and search (assets/js/lineage-browse.js), then one side-scrolling row per cluster. -#}
     <section class="browse" aria-label="Browse the Research Library">
       <div class="browse__bar">

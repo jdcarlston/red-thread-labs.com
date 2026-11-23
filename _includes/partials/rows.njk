@@ -22,7 +22,7 @@
       signup     signupSource, button, names, fine, formId
       heart      lines, anchor (the closing heart-lines)
       bigdate    label, big, place, buttons, note (the big date on a photo band)
-      include    name: about-jd | booking | posts | contact | lineage-browse
+      include    name: about-jd | booking | posts | contact | lineage-browse | lineage-map
     A row can instead be include: blog-cta (the mail-list sign-up band that closes the blog).
     Any block can also have: id, center (centers it), wide (text runs the full width), bare (no section box around it), after (paragraphs after a list).
     Buttons: { text, link, style: primary | ghost }. -#}
@@ -151,6 +151,7 @@
   {%- elif b.name == "posts" %}{% include "partials/post-list.njk" %}
   {%- elif b.name == "contact" %}{% set contactBlock = b %}{% include "partials/contact-form.njk" %}
   {%- elif b.name == "lineage-browse" %}{% set browseBlock = b %}{% include "partials/lineage-browse.njk" %}
+  {%- elif b.name == "lineage-map" %}{% set mapBlock = b %}{% include "partials/lineage-map.njk" %}
   {%- endif -%}
 {%- elif b.bare -%}
 {{ blockBody(b) }}

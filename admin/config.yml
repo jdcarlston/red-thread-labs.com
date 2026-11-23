@@ -794,6 +794,7 @@ collections:
               - posts
               - contact
               - lineage-browse
+              - lineage-map
               hint: The words of about-jd are under Pages → Shared blocks.
             - name: signupSource
               label: 'Booking: where they signed up'
@@ -1080,6 +1081,21 @@ collections:
     - name: research-roots
       label: Research Library
       file: _data/pages/research-roots.yml
+      fields:
+      - *id016
+      - *id017
+      - *id018
+      - *id019
+      - *id020
+      - *id021
+      - name: lineageHeader
+        label: Use the Research Library header photo
+        widget: boolean
+        required: false
+      - *id022
+    - name: source-map
+      label: Source Map
+      file: _data/pages/source-map.yml
       fields:
       - *id016
       - *id017

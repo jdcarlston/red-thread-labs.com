@@ -922,3 +922,9 @@ html body :is(h1, h2, h3, legend, .cluster__title) em { /* "html body" so this w
    (Hidden pages, preview only, keep the louder dashed style above.) */
 .draft-badge--quiet { color: var(--rose); opacity: 0.85; }
 .draft-note { margin: 0; font-size: 13px; letter-spacing: 0.04em; color: var(--rose); opacity: 0.85; }
+
+/* Source Map: the intro text runs the full width of the map below it. */
+.lineage-map .cluster__blurb { max-width: none; }
+
+/* Source Map side panel: its headings (the map title, a cluster's or a page's name) in the sans-serif font. */
+html body .lineage-map__panel h3 { font-family: var(--font-sans); font-style: normal; font-weight: 500; letter-spacing: 0; }
