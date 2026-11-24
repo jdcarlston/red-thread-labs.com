@@ -39,5 +39,5 @@ For me to do that I must live and love from that place and keep my priorities, m
 
 * * *
 
-![Taking time to feel and reflect.]({{ "img/blog/on-being-an-entrepreneur/01-1-5FygATYFfYSUlBydMM7X5w.jpeg" | media }})
+![A laptop resting on an unmade bed beside a red blanket, in a sunlit bedroom with a vintage dresser and mirror.]({{ "img/blog/on-being-an-entrepreneur/01-1-5FygATYFfYSUlBydMM7X5w.jpeg" | media }})
 *Taking time to feel and reflect.*

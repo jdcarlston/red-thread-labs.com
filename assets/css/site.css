@@ -1044,3 +1044,30 @@ html body .entry__tagline, html body .entry > .heart-line { font-family: var(--f
 .radar__svg.is-searching .rd-dot.is-match:not(.is-on) :is(circle, path, polygon) { fill: rgba(243, 231, 226, .55); }
 /* A framework item with its own marker (like the letters of CHERISH or BRAVING) shows it instead of the number. */
 .framework__items li[data-mark]::before { content: attr(data-mark); }
+/* Source Map: the search box on the left, the Library Index and Research Radar icons on the right. */
+.map-search-row { display: flex; align-items: center; gap: 6px; }
+.map-search-row .map-search { flex: 1 1 auto; }
+.map-search-row .crumbs__icon { flex: none; }
+.reading .crumbs__icon { color: var(--rose); }
+.reading .crumbs__icon:hover, .reading .crumbs__icon:focus-visible { color: var(--coral); }
+/* Library Index search row and count. */
+.lib-index > .browse__count { margin-top: -24px; }
+/* Radar: the search row runs the full width so its icons sit at the far right, like the other Library pages. */
+.radar__search { max-width: none; }
+.radar__search .map-search { max-width: 560px; }
+
+/* Icon tooltips: any link or button with data-tip="Label" shows that label on hover
+   and on keyboard focus. Anchored to the right edge so icons at the end of a row
+   never push the tooltip off screen. */
+[data-tip] { position: relative; }
+[data-tip]::after {
+  content: attr(data-tip);
+  position: absolute; top: calc(100% + 6px); right: 0; z-index: 20;
+  padding: 4px 9px; border-radius: 6px;
+  background: #1D1C1A; color: #FBF3EC; border: 1px solid rgba(232, 120, 106, .55);
+  font: 600 .75rem/1.3 var(--font-sans); letter-spacing: .01em;
+  white-space: nowrap; pointer-events: none;
+  opacity: 0; transform: translateY(-2px); transition: opacity .12s ease .15s, transform .12s ease .15s;
+}
+[data-tip]:hover::after, [data-tip]:focus-visible::after { opacity: 1; transform: none; }
+@media (hover: none) { [data-tip]::after { display: none; } }

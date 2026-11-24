@@ -1,6 +1,6 @@
 subtitle: Human Engineer. Founder of Red Thread Labs.
 photo: img/jd-headshot.jpg
-photoAlt: JD Carlston
+photoAlt: "JD Carlston, close up, with wavy pink hair and a soft smile"
 lede: I grew up on my grandparents’ farm on the edge of Salt Lake City, in a family of engineers and teachers.
 story:
   - |-
@@ -52,7 +52,7 @@ artist:
 partner:
   label: Partner in all of it
   photo: img/photo-embrace.jpg
-  photoAlt: JD and Chick
+  photoAlt: "Chick kissing JD on the cheek as she looks toward the camera"
   text: My husband, Chick Adams, co-founded Red Thread Labs with me. He’s a DevOps engineer, and he did this work right alongside me before we ever taught it. Our relationship is our favorite lab.
 closing:
   heading: Let’s talk

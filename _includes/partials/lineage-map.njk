@@ -4,12 +4,18 @@
       <h2 id="lineage-map-title" class="cluster__title">{{ mapBlock.mapTitle or "How it all connects" }}</h2>
       <p class="cluster__blurb">{{ mapBlock.mapBlurb | md | safe }}</p>
       {#- Search: finds pages with the same words as the Library search; picking one opens its cluster on the map. -#}
+      {#- The search on the left; icons to the Library Index and the Research Radar on the right. -#}
+      {%- from "partials/library-icons.njk" import libraryIcon %}
+      <div class="map-search-row">
       <div class="map-search">
         <label class="browse__search">
           <span class="visually-hidden">Search the map</span>
           <input type="search" id="map-search" placeholder="{{ mapBlock.searchPlaceholder or 'Search names and ideas' }}" autocomplete="off" aria-controls="map-search-results">
         </label>
         <ul class="map-search__results" id="map-search-results" hidden></ul>
+      </div>
+      {{ libraryIcon("index", "/library/index/", "Library Index", true) }}
+      {{ libraryIcon("radar", "/library/radar/", "Research Radar") }}
       </div>
       <div class="lineage-map__frame">
         <div class="lineage-map__stage">

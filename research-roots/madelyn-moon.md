@@ -2,6 +2,7 @@
 slug: madelyn-moon
 status: review
 ring: practice
+quadrant: its
 cluster: relationships
 order: 160
 title: Sacred Theater
@@ -36,6 +37,7 @@ sources:
     url: https://search.worldcat.org/search?q=Artist+of+Love+Madelyn+Moon
     label: Find the book
 related:
+  - voice-song-laughter
   - kasia-urbaniak
   - fritz-perls
   - esther-perel

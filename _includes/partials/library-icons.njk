@@ -1,0 +1,12 @@
+{#- Small icon links to the Library's three views, used on Library pages and the Source Map.
+    libraryIcon("index" | "map" | "radar", href, label, first): first = true pushes it (and the
+    icons after it) to the far right of its row. The label is read by screen readers
+    (aria-label) and shown as a small text tooltip on hover or keyboard focus (data-tip). -#}
+{%- macro libraryIcon(kind, href, label, first) -%}
+<a class="crumbs__icon{% if first %} crumbs__icon--first{% endif %}" href="{{ href }}" aria-label="{{ label }}" data-tip="{{ label }}">
+  {%- if kind == "index" %}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3.5h11.5l4.5 4.5v12.5H4Z"/><path d="M15.5 3.5V8H20"/><path d="M7.5 11.5h9M7.5 14.5h9M7.5 17.5h6"/></svg>
+  {%- elif kind == "map" %}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12 5 5M12 12l7-7M12 12l-7 7M12 12l7 7"/><circle cx="12" cy="12" r="3.2"/><circle class="crumbs__icon-fill" cx="4.5" cy="4.5" r="2.2"/><circle class="crumbs__icon-fill" cx="19.5" cy="4.5" r="2.2"/><circle class="crumbs__icon-fill" cx="4.5" cy="19.5" r="2.2"/><circle class="crumbs__icon-fill" cx="19.5" cy="19.5" r="2.2"/></svg>
+  {%- elif kind == "radar" %}<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/><path d="M12 2v20M2 12h20"/><circle class="crumbs__icon-fill" cx="16.5" cy="7.5" r="1.8"/></svg>
+  {%- endif %}
+</a>
+{%- endmacro -%}

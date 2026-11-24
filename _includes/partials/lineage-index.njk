@@ -1,8 +1,19 @@
 {#- The Library Index: every Library page A to Z, then every idea named on a page (key concepts and
     core frameworks) A to Z, each linking to its page. Built by the libraryIndex filter in eleventy.config.js.
     The headings come from the page's words file (indexBlock). -#}
+{%- from "partials/library-icons.njk" import libraryIcon %}
 {%- set idx = lineageVisible | libraryIndex(lineage.clusters) %}
 <div class="lib-index">
+  {#- Search (assets/js/lineage-index.js) on the left; icons to the Source Map and Research Radar on the right. -#}
+  <div class="map-search-row">
+    <label class="browse__search map-search">
+      <span class="visually-hidden">Search the index</span>
+      <input type="search" id="index-search" placeholder="{{ indexBlock.searchPlaceholder or 'Search pages and ideas' }}" autocomplete="off">
+    </label>
+    {{ libraryIcon("map", "/library/map/", "Source Map", true) }}
+    {{ libraryIcon("radar", "/library/radar/", "Research Radar") }}
+  </div>
+  <p class="browse__count" id="index-count" aria-live="polite"></p>
   <nav class="lib-index__jump" aria-label="Jump to">
     <a href="#pages">{{ indexBlock.pagesHeading or "Pages" }}</a>
     <a href="#ideas">{{ indexBlock.ideasHeading or "Ideas" }}</a>
@@ -15,10 +26,12 @@
     <div class="lib-index__group" id="{{ part[0] }}-{{ g.letter }}">
       <h3>{{ g.letter }}</h3>
       <ul>
-        {%- for i in g.items %}<li><a href="/library/{{ i.slug }}/">{{ i.name }}</a> <span>{{ i.note }}</span></li>{% endfor %}
+        {%- for i in g.items %}<li data-search="{{ (i.name + ' ' + i.note) | lower }}"><a href="/library/{{ i.slug }}/">{{ i.name }}</a> <span>{{ i.note }}</span></li>{% endfor %}
       </ul>
     </div>
     {%- endfor %}
   </section>
   {%- endfor %}
+  <p class="browse__empty" id="index-empty" hidden>Nothing in the index matches that yet. Try another word.</p>
+  <script src="/assets/js/lineage-index.js" defer></script>
 </div>

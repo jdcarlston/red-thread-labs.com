@@ -7,7 +7,7 @@ permalink: /blog/you-have-been-chosen/
 ---
 Being chosen means that *You, as a sovereign being,* choose the life *You* want. You choose yourself every time. You listen to your heart, your body, and you align with your mind.
 
-![Thank ChatGPT and a multitude of artist copyright violations for the image]({{ "img/blog/you-have-been-chosen/01-0-mMHbKYB80FePK_cU.png" | media }})
+![An ornate black-and-white engraving-style illustration of a compass rose inside nested rings of symbols, with a crescent moon, stars and pentacles around it.]({{ "img/blog/you-have-been-chosen/01-0-mMHbKYB80FePK_cU.png" | media }})
 **Thank ChatGPT and a multit*ude of artist copyright violations for the image*
 
 You may now follow your own internal compass. You follow the path of greatest joy. You refuse to push your needs onto others, or allow others to push their needs onto you. You become the person who is being reacted to by sharing your truth. People then sort themselves into and out of your life. Choosing yourself allows you to act with a force of will and purpose.
@@ -60,7 +60,7 @@ I may find this challenging if:
 
 ## Flow
 
-![Mental state in terms of challenge and skill level, according to Csikszentmihalyi’s flow model.]({{ "img/blog/you-have-been-chosen/02-0-wrMzHCt3KTlH_H8w.png" | media }})
+![Graph of Csikszentmihalyi’s flow model, with challenge on the vertical axis and skill on the horizontal. A diagonal flow channel runs between anxiety (high challenge, low skill) and boredom (low challenge, high skill).]({{ "img/blog/you-have-been-chosen/02-0-wrMzHCt3KTlH_H8w.png" | media }})
 **Mental state in terms of challenge and skill level, 
 according to* [*Csikszentmihalyi*](https://en.wikipedia.org/wiki/Mihaly_Csikszentmihalyi)*’s* [***flow*** *model*](https://www.parentcorticalmass.com/2011/06/what-is-flow.html)*.**
 
@@ -72,7 +72,7 @@ States outside of the zone of flow will cause me to feel wary or weary. Groundin
 
 The myth of others “choosing me” is based on their biased context and understanding, on their perceptual universe. They can’t really choose *me*, except in some limited form that exists between our shared realities.
 
-![Single-item inclusion of Other in the Self, Arthur Aron]({{ "img/blog/you-have-been-chosen/03-0-LDWXn52RM4G6PnGw.png" | media }})
+![Arthur Aron’s Inclusion of Other in the Self scale: seven pairs of circles labeled Self and Other, from fully separate to almost completely overlapping.]({{ "img/blog/you-have-been-chosen/03-0-LDWXn52RM4G6PnGw.png" | media }})
 *[*Single-item inclusion of Other in the Self, Arthur Aron*](https://sparqtools.org/mobility-measure/inclusion-of-other-in-the-self-ios-scale/)*
 
 *Humans are inclined to believe they understand Others.* You might think you know what they think and feel without even asking. If you start asking you’ll find out your personal narrative about what’s going on inside their minds is often very different and incorrect.
@@ -89,7 +89,7 @@ Being kind, expressing gratitude that others are a part of your life, accepting 
 
 In other words, I must state what I feel, need and want. I must identify my own pain points. And then listen to the feelings of others — *without the intention of trying to cause any change in those feelings*! When you use the expression of emotions as control mechanisms, when you manipulate and strategize rather than speak from your center, you are working from an adversarial position via dependency. Respect can increase access and privilege. Disrespect decreases it.
 
-![The Wheel of Consent, Betty Martin]({{ "img/blog/you-have-been-chosen/04-0-3qydJ8Fq28Emb84j.png" | media }})
+![Betty Martin’s Wheel of Consent: a circle split into four quadrants, Serve, Take, Allow and Accept, along the axes doing and done-to, giving and receiving.]({{ "img/blog/you-have-been-chosen/04-0-3qydJ8Fq28Emb84j.png" | media }})
 *[*The Wheel of Consent, Betty Martin*](https://www.katierittenberry.com/resources/consent-betty-martin)*
 
 ## Perceptual Positions
@@ -140,7 +140,7 @@ I give myself the opportunity to self-soothe, to speak to my best nature and tho
 
 I can imagine each of the different perceptual positions as well to get a better idea of the whole situation and empathize with my partner.
 
-![Facilitating Software Architecture, Andrew Harmel-Law]({{ "img/blog/you-have-been-chosen/05-0-GFYXabQvfARfGd0q.png" | media }})
+![Hand-drawn diagram from Andrew Harmel-Law: decision required, then option making, decision taking and decision sharing, then decision implemented. A note says sharing is only needed if someone else will implement it.]({{ "img/blog/you-have-been-chosen/05-0-GFYXabQvfARfGd0q.png" | media }})
 *[*Facilitating Software Architecture, Andrew Harmel-Law*](https://facilitatingsoftwarearchitecture.com/)*
 
 When I have chosen myself I can choose my reaction from the many options that I lay out. Knowing myself better helps me soothe my pain, to meet my needs, and reach for my desires. Again, this is a key to acting with integrity.
@@ -229,7 +229,7 @@ In order to grow I need to experience different types of relating to others and 
 
 Those who can move between all of these forms of dependence with ease can readily transition and transform when necessary. They can move from adversarial to felicitous paradigms of relating.
 
-![Source]({{ "img/blog/you-have-been-chosen/06-0-7brFugYuNaAXBKmo.jpg" | media }})
+![Stephen Covey’s 7 Habits maturity continuum: habits 1 to 3 lead from dependence to independence (private victory), habits 4 to 6 lead to interdependence (public victory), and habit 7, sharpen the saw, circles all of them.]({{ "img/blog/you-have-been-chosen/06-0-7brFugYuNaAXBKmo.jpg" | media }})
 *[*Source*](https://lyssholland.wordpress.com/2018/04/19/the-7-habits-of-highly-effective-people-pt-1/)*
 
 ## Sharing Your Truth

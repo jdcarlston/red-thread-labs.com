@@ -5,7 +5,7 @@ date: 2021-01-07
 medium_url: https://medium.com/@rozmadder/im-sorry-you-feel-that-way-fef57251277b
 permalink: /blog/im-sorry-you-feel-that-way/
 ---
-![Dammit Karen]({{ "img/blog/im-sorry-you-feel-that-way/01-1-ITtFbqEH0sV2rjZ_DYWZ6Q.jpeg" | media }})
+![A pop-art comic panel in the style of Roy Lichtenstein: a blonde woman with a tear on her cheek and a speech bubble reading “I… I’m sorry!”]({{ "img/blog/im-sorry-you-feel-that-way/01-1-ITtFbqEH0sV2rjZ_DYWZ6Q.jpeg" | media }})
 *Dammit Karen*
 
 I once had a partner that would get angry every time I said *“I’m sorry you feel that way.”* At the time they couldn’t explain their response in a way I could understand, but I’ve [since learned](https://www.youtube.com/watch?v=C8xJXKYL8pU). I truly meant it in the “I’m sorry *I made* you feel that way” terms.

@@ -11,7 +11,7 @@ permalink: /blog/what-i-care-about/
 
 I’ve been reverse engineering and debugging and nerding out about the concept of love for as long as I can remember.
 
-![Labs to Love More]({{ "img/blog/what-i-care-about/01-1-2JqccRn2Hv5jzoBGsUthJw.png" | media }})
+![The Red Thread Labs logo: a red triangle inside a white triangle on a black circle, above the words Red Thread Labs.]({{ "img/blog/what-i-care-about/01-1-2JqccRn2Hv5jzoBGsUthJw.png" | media }})
 *Labs to Love More*
 
 As a child I was fascinated by the sacred, by hidden knowledge, by people relating with one another, by understanding the beginnings of things and how they came to be. By what it meant when people told me they loved me and how that got expressed in various ways.
@@ -30,7 +30,7 @@ If love is an action then loving can be practiced in practical ways. It can be d
 
 > “do good for him who does good that he may do good” — The “Peasant’s Complaint,” a popular poem on the conflict of Maat and corruption, Egypt c. 2000 B.C.
 
-![Max Ehrmann’s Poem, often misattributed. it’s so important to consider the source.]({{ "img/blog/what-i-care-about/02-1-Pmul5ieOarCjblCC3Rb-AQ.jpeg" | media }})
+![A printed copy of the poem Desiderata in a plastic sleeve, hanging on a stainless-steel refrigerator door.]({{ "img/blog/what-i-care-about/02-1-Pmul5ieOarCjblCC3Rb-AQ.jpeg" | media }})
 *Max Ehrmann’s Poem, often misattributed. it’s so important to consider the source.*
 
 > “The essential immoral act is the inability to see other people correctly. The essential moral act is being able to cast just and loving attention on another person — looking at others with patience and discerning regard. ‘Love is knowledge of the individual.’” — Iris Murdoch
@@ -79,4 +79,4 @@ Reducing suffering, expressing authentic truth, building community, in-person. 
 
 There’s a vision of this that I want to build. I can help others get where they want to go, but following this thread upon it’s circuitous path, ultimately is my life’s work.
 
-![]({{ "img/blog/what-i-care-about/03-1-s-KK_LIct2NqHotXWLMI7Q.jpeg" | media }})
+![Two friends resting their heads together for a selfie at night, smiling softly.]({{ "img/blog/what-i-care-about/03-1-s-KK_LIct2NqHotXWLMI7Q.jpeg" | media }})

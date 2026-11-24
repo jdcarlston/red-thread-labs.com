@@ -11,6 +11,7 @@ eleventyComputed:
 kicker: Research Library
 kickerLink: /library/
 ---
+{%- from "partials/library-icons.njk" import libraryIcon -%}
 {%- set cluster = lineage.clusters | clusterById(entry.cluster) -%}
 {%- set kickerExtra = cluster.title -%}
 {%- set header = entry.header or cluster.header or site.lineageHeader -%}
@@ -27,16 +28,10 @@ kickerLink: /library/
         <li aria-current="page">{{ entry.title }}</li>
       </ol>
       {#- Three small icons on the far right: this page in the Library Index (A to Z, at its letter),
-          on the Source Map (a hub and its links), and on the Research Radar. -#}
-      <a class="crumbs__icon crumbs__icon--first" href="/library/index/#pages-{{ entry.title | indexLetter }}" aria-label="See this page in the Library Index" title="See it in the Library Index">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3.5h11.5l4.5 4.5v12.5H4Z"/><path d="M15.5 3.5V8H20"/><path d="M7.5 11.5h9M7.5 14.5h9M7.5 17.5h6"/></svg>
-      </a>
-      <a class="crumbs__icon" href="/library/map/#{{ entry.slug }}" aria-label="See this page on the Source Map" title="See it on the Source Map">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12 5 5M12 12l7-7M12 12l-7 7M12 12l7 7M5 5h0"/><circle cx="12" cy="12" r="3.2"/><circle class="crumbs__icon-fill" cx="4.5" cy="4.5" r="2.2"/><circle class="crumbs__icon-fill" cx="19.5" cy="4.5" r="2.2"/><circle class="crumbs__icon-fill" cx="4.5" cy="19.5" r="2.2"/><circle class="crumbs__icon-fill" cx="19.5" cy="19.5" r="2.2"/></svg>
-      </a>
-      <a class="crumbs__icon" href="/library/radar/#{{ entry.slug }}" aria-label="See this page on the Research Radar" title="See it on the Research Radar">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/><path d="M12 2v20M2 12h20"/><circle class="crumbs__icon-fill" cx="16.5" cy="7.5" r="1.8"/></svg>
-      </a>
+          on the Source Map, and on the Research Radar. -#}
+      {{ libraryIcon("index", "/library/index/#pages-" + (entry.title | indexLetter), "See it in the Library Index", true) }}
+      {{ libraryIcon("map", "/library/map/#" + entry.slug, "See it on the Source Map") }}
+      {{ libraryIcon("radar", "/library/radar/#" + entry.slug, "See it on the Research Radar") }}
     </nav>
     {%- if entry.status == "hidden" %}<p class="draft-banner">Hidden. This page only shows in your preview. Set its status to “Review” or “Published” to put it on the live site.</p>
     {%- elif entry.status != "published" and reviewMode %}<p class="draft-note">Draft · this page is still being reviewed and may change.</p>{% endif %}

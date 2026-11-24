@@ -13,6 +13,7 @@ rows:
         name: lineage-index
         pagesHeading: Pages
         ideasHeading: Ideas
+        searchPlaceholder: "Search pages and ideas: shame, listening, Gottman…"
       - type: text
         center: true
         buttons:

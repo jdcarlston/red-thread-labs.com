@@ -55,10 +55,10 @@ rows:
         name: about-jd
       - type: photos
         images:
-          - {image: img/couple1.jpg, alt: JD and Chick}
-          - {image: img/couple2.jpg, alt: JD and Chick}
-          - {image: img/couple3.jpg, alt: JD and Chick}
-          - {image: img/couple4.jpg, alt: JD and Chick}
+          - {image: img/couple1.jpg, alt: "JD and Chick standing together, dressed up, in a dark wood-paneled room"}
+          - {image: img/couple2.jpg, alt: "JD and Chick sitting close in a window seat lit red through stained glass"}
+          - {image: img/couple3.jpg, alt: "JD and Chick dancing in green outfits on a wide desert flat under an evening sky"}
+          - {image: img/couple4.jpg, alt: "JD in a pink bunny-ear hood and Chick in a green dinosaur hood, laughing in a selfie"}
       # "Choose where to start": the consult, the session and the mail list. Prices are set here;
       # the booking links are in _data/booking.js.
       - type: include

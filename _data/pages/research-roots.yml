@@ -34,5 +34,3 @@ rows:
         center: true
         buttons:
           - {text: Enter the Library, link: /library/map/, style: primary}
-          - {text: Browse the Library, link: /library/browse/, style: ghost}
-          - {text: Library Index, link: /library/index/, style: ghost}

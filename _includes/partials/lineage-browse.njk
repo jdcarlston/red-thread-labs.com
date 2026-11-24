@@ -10,10 +10,16 @@
           <button type="button" class="chip" data-filter="{{ cluster.id }}" aria-pressed="false">{{ cluster.short or cluster.title }}</button>
           {%- endfor %}
         </div>
-        <label class="browse__search">
+        {%- from "partials/library-icons.njk" import libraryIcon %}
+        <div class="map-search-row">
+        <label class="browse__search map-search">
           <span class="visually-hidden">Search the Research Library</span>
           <input type="search" id="browse-search" placeholder="{{ browseBlock.searchPlaceholder }}" autocomplete="off">
         </label>
+        {{ libraryIcon("index", "/library/index/", "Library Index", true) }}
+        {{ libraryIcon("map", "/library/map/", "Source Map") }}
+        {{ libraryIcon("radar", "/library/radar/", "Research Radar") }}
+        </div>
         <p class="browse__count" id="browse-count" aria-live="polite"></p>
       </div>
 
