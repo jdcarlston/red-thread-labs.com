@@ -21,7 +21,7 @@
         <li>
           <span class="label">{{ w.label }}</span>
           {%- if w.href %}
-          <a href="{{ w.href }}"{% if w.href.startsWith("http") %} target="_blank" rel="noopener"{% endif %}>{{ w.text }}</a>
+          <a href="{{ w.href }}">{{ w.text }}</a>
           {%- else %}
           <span>{{ w.text }}</span>
           {%- endif %}

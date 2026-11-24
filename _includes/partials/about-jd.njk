@@ -11,7 +11,7 @@
       {%- for p in a.paragraphs %}
       <p>{{ p | md | safe }}</p>
       {%- endfor %}
-      <p class="about__links">{% for l in a.links %}<a href="{{ l.link }}"{% if l.link.startsWith('http') %} target="_blank" rel="noopener"{% endif %}>{{ l.text }}</a> {% endfor %}</p>
+      <p class="about__links">{% for l in a.links %}<a href="{{ l.link }}">{{ l.text }}</a> {% endfor %}</p>
     </div>
   </div>
 </section>

@@ -1074,3 +1074,6 @@ html body .entry__tagline, html body .entry > .heart-line { font-family: var(--f
 
 /* **Bold** inside a statement means really bold: the statement itself is light (300). */
 .statement strong { font-weight: 700; }
+
+/* "Last updated" under a Research Library page's sources (the date comes from git). */
+.entry__updated { margin: 14px 0 0; font-size: 14px; color: var(--ink-soft); }

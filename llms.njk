@@ -1,0 +1,38 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---
+{#- A plain-language map of the site for AI tools (llmstxt.org). Built from the menu, the Research
+    Library and the blog, so it stays current on its own. -#}
+# {{ site.name }}
+
+> {{ site.tagline | safe }}
+
+Red Thread Labs LLC is a Salt Lake City-based organization that helps people build long-lasting, authentic relationship skills. Practice Labs find the habit loops shaping someone's life, then test and practice new skills to shift behavior, using evidence-based methods. Founded by JD Carlston, a Human Engineer.
+
+## Main pages
+
+- [Home]({{ "/" | absoluteUrl }}): what Practice Labs are and who they're for
+{%- for item in site.nav %}{% if not item.draft %}
+- [{{ item.label | safe }}]({{ item.href | absoluteUrl }})
+{%- for c in item.children or [] %}{% if not c.draft and not c.href.startsWith("http") %}
+- [{{ c.label | safe }}]({{ c.href | absoluteUrl }})
+{%- endif %}{% endfor %}
+{%- endif %}{% endfor %}
+- [About JD Carlston]({{ "/about/jd/" | absoluteUrl }})
+- [Contact]({{ "/contact/" | absoluteUrl }})
+
+## Research Library
+
+The research, practices and traditions behind Practice Labs, each with its sources.
+
+- [About the Library]({{ "/library/about/" | absoluteUrl }})
+- [Library Index, A to Z]({{ "/library/a-z/" | absoluteUrl }})
+{%- for e in lineageVisible %}
+- [{{ e.title | safe }}]({{ ("/library/" + e.slug + "/") | absoluteUrl }}): {{ e.tagline | striptags | safe }}
+{%- endfor %}
+
+## Blog
+{% for post in collections.post | reverse %}
+- [{{ post.data.title | safe }}]({{ post.url | absoluteUrl }}): {{ post.data.description | striptags | safe }}
+{%- endfor %}

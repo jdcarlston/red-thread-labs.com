@@ -11,6 +11,6 @@
 ] -%}
 <ul class="contact-icons {{ iconsClass }}" aria-label="Get in touch">
   {%- for l in links %}{% if l.href %}
-  <li><a href="{{ l.href }}" aria-label="{{ l.label }}"{% if l.href.startsWith("http") %} target="_blank" rel="noopener"{% endif %}><svg viewBox="0 0 24 24" aria-hidden="true">{{ l.icon | safe }}</svg></a></li>
+  <li><a href="{{ l.href }}" aria-label="{{ l.label }}"><svg viewBox="0 0 24 24" aria-hidden="true">{{ l.icon | safe }}</svg></a></li>
   {%- endif %}{% endfor %}
 </ul>

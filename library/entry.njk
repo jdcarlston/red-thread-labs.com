@@ -4,10 +4,11 @@ pagination:
   data: lineageVisible
   size: 1
   alias: entry
+  addAllPagesToCollections: true # so every Library page is in the sitemap, not just the first
 permalink: "/library/{{ entry.slug }}/"
 eleventyComputed:
   title: "{{ entry.title }}"
-  description: "{{ entry.title }}: part of Research Library, the lineage behind Practice Labs."
+  description: "{{ entry.title }}. {{ entry.tagline | striptags }} From the Research Library behind Red Thread Labs’ Practice Labs."
 kicker: Research Library
 kickerLink: /library/about/
 ---
@@ -78,6 +79,9 @@ kickerLink: /library/about/
         <li>{{ s.cite | safe }}{% if s.url %} <a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.label or "Read the source" }} <span aria-hidden="true">↗</span><span class="sr-only">(opens in a new tab)</span></a>{% endif %}</li>
         {%- endfor %}
       </ul>
+      {%- if entry.updated %}
+      <p class="entry__updated">Last updated <time datetime="{{ entry.updated }}">{{ entry.updated | longDate }}</time></p>
+      {%- endif %}
     </section>
     </div>
 

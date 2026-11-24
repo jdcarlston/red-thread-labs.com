@@ -1,0 +1,25 @@
+---
+permalink: /blog/feed.xml
+eleventyExcludeFromCollections: true
+---
+{#- RSS feed of the blog, for feed readers and anything that watches for new posts. Linked from every page's <head>. -#}
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>{{ site.name }} · Blog</title>
+  <link>{{ "/blog/" | absoluteUrl }}</link>
+  <atom:link href="{{ '/blog/feed.xml' | absoluteUrl }}" rel="self" type="application/rss+xml"/>
+  <description>{{ site.tagline }}</description>
+  <language>en-us</language>
+  {%- for post in collections.post | reverse %}
+  <item>
+    <title>{{ post.data.title }}</title>
+    <link>{{ post.url | absoluteUrl }}</link>
+    <guid>{{ post.url | absoluteUrl }}</guid>
+    <pubDate>{{ post.date.toUTCString() }}</pubDate>
+    <author>{{ site.email }} (JD Carlston)</author>
+    <description>{{ post.data.description }}</description>
+  </item>
+  {%- endfor %}
+</channel>
+</rss>

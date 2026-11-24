@@ -24,6 +24,29 @@ function visibleEntries() {
 }
 
 module.exports = function (eleventyConfig) {
+
+  // Links that leave the site open in a new tab. This is the one place that happens: it runs on
+  // every finished HTML page, so it covers links from Markdown, YAML, Sveltia and templates alike.
+  // A link is offsite when it starts with http(s):// and doesn't point at red-thread-labs.com
+  // (or one of its subdomains). Screen readers hear "(opens in a new tab)": in the aria-label
+  // when the link has one (icon links), otherwise as hidden text inside the link.
+  const OWN_SITE = /^https?:\/\/([a-z0-9-]+\.)*red-thread-labs\.com(\/|$)/i;
+  const NEW_TAB = " (opens in a new tab)";
+  eleventyConfig.addTransform("offsite-links", function (html) {
+    if (!(this.page.outputPath || "").endsWith(".html")) return html;
+    return html.replace(/<a\b([^>]*?)href="(https?:\/\/[^"]+)"([^>]*)>([\s\S]*?)<\/a>/gi,
+      (link, before, href, after, text) => {
+        if (OWN_SITE.test(href)) return link;
+        let attrs = (before + after).replace(/\s(target|rel)="[^"]*"/g, "");
+        if (/aria-label="/.test(attrs)) {
+          attrs = attrs.replace(/aria-label="([^"]*)"/, (m, label) =>
+            `aria-label="${label.endsWith(NEW_TAB) ? label : label + NEW_TAB}"`);
+        } else if (!text.includes(NEW_TAB)) {
+          text += `<span class="sr-only">${NEW_TAB}</span>`;
+        }
+        return `<a href="${href}"${attrs.replace(/\s+$/, "")} target="_blank" rel="noopener">${text}</a>`;
+      });
+  });
   // The site editor (/admin) can't open if admin/config.yml has a YAML mistake, and it only says
   // "can't be parsed". Check it here so the build stops and names the line instead.
   try {
@@ -78,13 +101,16 @@ module.exports = function (eleventyConfig) {
   // Data files can be YAML (like _data/jd.yml, which the site editor writes).
   eleventyConfig.addDataExtension("yml,yaml", (contents) => require("js-yaml").load(contents));
   // {{ text | md | safe }}: one paragraph of Markdown (links, *italic*, **bold**) as HTML, for words edited in /admin.
-  // Links to other sites open in a new tab.
+  // (Links to other sites open in a new tab: see the "offsite-links" transform at the top.)
+
+  // {% structuredData shareImage %} in the page <head>: what the page is, for search engines and AI tools.
+  // The rules are in lib/structured-data.js.
+  const { structuredData } = require("./lib/structured-data.js");
+  eleventyConfig.addShortcode("structuredData", function (shareImage) {
+    const absolute = (url) => new URL(url, this.ctx.site.url).href;
+    return structuredData({ ...this.ctx, page: this.page, shareImage }, absolute);
+  });
   const mdInline = require("markdown-it")({ html: true });
-  const mdLinkOpen = mdInline.renderer.rules.link_open || ((t, i, o, e, self) => self.renderToken(t, i, o));
-  mdInline.renderer.rules.link_open = (t, i, o, e, self) => {
-    if (/^https?:/.test(t[i].attrGet("href"))) { t[i].attrSet("target", "_blank"); t[i].attrSet("rel", "noopener"); }
-    return mdLinkOpen(t, i, o, e, self);
-  };
   // In links, @booking means the Calendly link and @email the contact address (site.js), so they stay in one place.
   const siteLinks = (text) => String(text || "")
     .replace(/\]\(@booking\)/g, `](${site.bookingUrl})`)

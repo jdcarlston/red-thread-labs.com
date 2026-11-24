@@ -15,9 +15,17 @@
   <meta property="og:url" content="{{ page.url | absoluteUrl }}">
   <meta property="og:title" content="{{ ogTitle or title or site.name }}">
   <meta property="og:description" content="{{ description or site.tagline }}">
-  {%- if ogImage %}
-  <meta property="og:image" content="{{ ogImage | absoluteUrl }}">
+  {#- The picture shown when the page is shared: the page's ogImage if it has one, otherwise its header photo,
+      otherwise site.shareImage. #}
+  {%- set pageHeader = header or (pages[pageKey].header if pageKey and pages[pageKey]) or (site.lineageHeader if entry) %}
+  {%- set shareImage = (ogImage | absoluteUrl) if ogImage else ((pageHeader.image if pageHeader else site.shareImage) | media | absoluteUrl) %}
+  <meta property="og:image" content="{{ shareImage }}">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ ogTitle or title or site.name }}">
+  <meta name="twitter:description" content="{{ description or site.tagline }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.name }} · Blog" href="/blog/feed.xml">
+  {%- if not private %}
+  {% structuredData shareImage %}
   {%- endif %}
   {#- Browser tab and bookmark icons: the black logo (assets/img/rtl-logo-black.svg, made from lib/logo.js).
       favicon.ico (in legacy/) is for older browsers; apple-touch-icon is what iPhones and iPads show for a saved bookmark. #}

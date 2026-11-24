@@ -118,6 +118,10 @@ rows = F("rows", "Sections (top to bottom)", "list", summary="{{fields.style}} {
 header = F("header", "Header photo", "object", required=False, collapsed=True, fields=[
     F("image", "Photo (like img/photo.jpg)"), F("position", "Position", default="50% 50%"),
     F("zoom", "Zoom", "number", value_type="float", default=1), F("color", "Keep full color", "boolean", required=False)])
+# What search engines are told an offer costs (structured data). Only for pages that sell something.
+offer = F("offer", "Price for search engines", "object", required=False, collapsed=True, fields=[
+    F("name", "Offer name", required=False), F("price", "Price", "number", value_type="float"),
+    F("currency", "Currency", default="USD"), F("url", "Payment or booking link", required=False)])
 head = [
     F("title", "Page title (browser tab)"),
     F("description", "Description (search results and shares)", "text", required=False),
@@ -172,7 +176,7 @@ files = [
     page("practice-labs", "Practice Labs (draft)"),
     page("contact", "Contact", desc="The email, phone and social links on this page come from _data/site.js."),
     page("thanks", "Contact: thank you"),
-    page("holiday-huddle", "Holiday Huddle"),
+    page("holiday-huddle", "Holiday Huddle", [offer]),
     page("blog", "Blog"),
     page("research-roots", "Research Library", [F("lineageHeader", "Use the Research Library header photo", "boolean", required=False)]),
     page("library-browse", "Browse the Library", [F("lineageHeader", "Use the Research Library header photo", "boolean", required=False)]),

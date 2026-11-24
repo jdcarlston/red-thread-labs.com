@@ -6,6 +6,8 @@ kicker: Events
 heading: Holiday Huddle
 subtitle: Stay close to each other through the holidays.
 header: {image: img/love-lab-candles.jpg, position: 50% 50%, zoom: 1}
+# What search engines are told this offer costs (structured data). Keep it in step with the price below.
+offer: {name: Holiday Huddle, price: 693, currency: USD, url: "https://square.link/u/fxH8RSeB"}
 rows:
   - style: band
     blocks:

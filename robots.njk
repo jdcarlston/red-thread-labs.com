@@ -1,0 +1,21 @@
+---
+permalink: /robots.txt
+eleventyExcludeFromCollections: true
+---
+{#- Tells search engines and AI crawlers what they may read. The AI training switch is in _data/site.js. -#}
+# Search engines and AI answer tools: welcome everywhere except the site editor.
+User-agent: *
+Allow: /
+Disallow: /admin/
+{% if not site.allowAITraining %}
+# AI model training: not allowed (site.allowAITraining is false in _data/site.js).
+# Answer and search crawlers (OAI-SearchBot, ChatGPT-User, Claude-SearchBot, PerplexityBot) are still welcome.
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+User-agent: meta-externalagent
+Disallow: /
+{% endif %}
+Sitemap: {{ site.url }}/sitemap.xml

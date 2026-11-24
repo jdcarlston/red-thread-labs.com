@@ -32,11 +32,10 @@
 {%- macro href(link) -%}
 {%- if link == "@booking" -%}{{ site.bookingUrl }}{%- elif link.startsWith("@email") -%}mailto:{{ site.email }}{{ link.slice(6) }}{%- else -%}{{ link }}{%- endif -%}
 {%- endmacro -%}
-{%- macro ext(link) -%}{%- set u = href(link) -%}{%- if u.startsWith("http") %} target="_blank" rel="noopener"{% endif -%}{%- endmacro -%}
 
 {%- macro buttons(list) -%}
 {%- if list and list.length %}
-<div class="btn-row">{% for b in list %}<a class="btn btn--{{ b.style or 'primary' }}" href="{{ href(b.link) }}"{{ ext(b.link) }}>{{ b.text }}</a>{% endfor %}</div>
+<div class="btn-row">{% for b in list %}<a class="btn btn--{{ b.style or 'primary' }}" href="{{ href(b.link) }}">{{ b.text }}</a>{% endfor %}</div>
 {%- endif -%}
 {%- endmacro -%}
 
@@ -88,7 +87,7 @@
     {% if c.label %}<p class="label">{{ c.label | md | safe }}</p>{% endif %}
     <h3>{{ c.title | md | safe }}</h3>
     <p>{{ c.text | md | safe }}</p>
-    {% if c.link %}<div class="card__actions"><a class="btn btn--ghost" href="{{ href(c.link) }}"{{ ext(c.link) }}>{{ c.button }}</a></div>{% endif %}
+    {% if c.link %}<div class="card__actions"><a class="btn btn--ghost" href="{{ href(c.link) }}">{{ c.button }}</a></div>{% endif %}
   </li>{% endfor %}
 </ul>
 
@@ -104,7 +103,7 @@
 
 {%- elif b.type == "offers" %}
 <ul class="offer-list">{% for o in b.items %}
-  <li><h3>{{ o.title | md | safe }}</h3><p>{{ o.text | md | safe }}</p>{% if o.link %}<a href="{{ href(o.link) }}"{{ ext(o.link) }}>{{ o.linkText }}</a>{% endif %}</li>{% endfor %}
+  <li><h3>{{ o.title | md | safe }}</h3><p>{{ o.text | md | safe }}</p>{% if o.link %}<a href="{{ href(o.link) }}">{{ o.linkText }}</a>{% endif %}</li>{% endfor %}
 </ul>
 
 {%- elif b.type == "faq" %}

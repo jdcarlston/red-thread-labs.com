@@ -72,6 +72,23 @@ const EVIDENCE = ["research", "practice", "tradition"];
 const clusters = yaml.load(fs.readFileSync(path.join(dir, "clusters.yml"), "utf8"));
 const clusterRank = Object.fromEntries(clusters.map((c, i) => [c.id, i]));
 
+// When each page last changed, from git history: { "brene-brown.md": "2026-11-23", ... }.
+// Shown as "Last updated" on the page and given to search engines. If git isn't available
+// (or a file isn't committed yet), the page simply goes without a date.
+function lastUpdated() {
+  const dates = {};
+  try {
+    const log = require("child_process").execSync(`git log --format=@%cs --name-only -- "${dir}"`, { encoding: "utf8" });
+    let day = null;
+    for (const line of log.split("\n")) {
+      if (line.startsWith("@")) day = line.slice(1);
+      else if (line.trim() && day) dates[path.basename(line.trim())] ??= day; // newest commit comes first
+    }
+  } catch (err) { /* no git: no dates */ }
+  return dates;
+}
+const updated = lastUpdated();
+
 const entries = fs
   .readdirSync(dir)
   .filter((f) => f.endsWith(".md") && !f.startsWith("_"))
@@ -88,6 +105,7 @@ const entries = fs
     for (const [k, ok] of [["ring", RINGS], ["quadrant", QUADRANTS], ["evidence", EVIDENCE]]) {
       if (e[k] && !ok.includes(e[k])) throw new Error(`Research Library: ${f} has ${k} "${e[k]}" (it should be one of: ${ok.join(", ")})`);
     }
+    e.updated = updated[f] || null;
     return toHtml(e);
   })
   .sort((a, b) => clusterRank[a.cluster] - clusterRank[b.cluster] || (a.order ?? 0) - (b.order ?? 0));

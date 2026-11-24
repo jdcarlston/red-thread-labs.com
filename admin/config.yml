@@ -1107,6 +1107,28 @@ collections:
       - *id019
       - *id020
       - *id021
+      - name: offer
+        label: Price for search engines
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+        - name: name
+          label: Offer name
+          widget: string
+          required: false
+        - name: price
+          label: Price
+          widget: number
+          value_type: float
+        - name: currency
+          label: Currency
+          widget: string
+          default: USD
+        - name: url
+          label: Payment or booking link
+          widget: string
+          required: false
       - *id022
     - name: blog
       label: Blog

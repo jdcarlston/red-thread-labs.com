@@ -1,0 +1,19 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+{#- Every public page, for search engines. Pages marked private: true (noindex) and pages from private/ are left out. -#}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for p in collections.all %}
+{%- if not p.data.private and p.url and not p.url.startsWith("/admin") and not "/private/" in p.inputPath and p.outputPath.endsWith(".html") %}
+  <url>
+    <loc>{{ p.url | absoluteUrl }}</loc>
+    {%- set updated = p.data.entry.updated if (p.data.entry and p.data.lineageVisible) else (p.date.toISOString().slice(0, 10) if "post" in (p.data.tags or []) else "") %}
+    {%- if updated %}
+    <lastmod>{{ updated }}</lastmod>
+    {%- endif %}
+  </url>
+{%- endif %}
+{%- endfor %}
+</urlset>

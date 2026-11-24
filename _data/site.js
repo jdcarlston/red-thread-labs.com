@@ -4,6 +4,14 @@
 module.exports = {
   name: "Red Thread Labs",
   url: "https://www.red-thread-labs.com",
+
+  // Search engines and AI tools (robots.txt, sitemap.xml, llms.txt and the structured data in each page).
+  // allowAITraining: true lets AI companies use the site's writing to train their models, as well as
+  // to read and cite it in answers. Set it to false to stay in AI answers but out of training.
+  allowAITraining: true,
+  // The picture shown when a page is shared (messages, social posts, search results), unless the page
+  // has its own ogImage: or header photo. A media path, like the header photos.
+  shareImage: "img/love-lab-table.jpg",
   tagline: "Practice Labs to shift the habit loops shaping your life. Choose what you weave next.",
   email: "contact@red-thread-labs.com",
   mailingAddress: "P.O. Box 266, Draper, UT 84020",
