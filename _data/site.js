@@ -67,7 +67,8 @@ module.exports = {
     },
     {
       label: "Library", // the menu says "Library"; the page itself is titled "Research Library"
-      href: "/library/",
+      href: "/library/about/",
+      section: "/library/", // highlights "Library" in the menu on every page under /library/
       // Its submenu (Browse the Library, Source Map, Research Radar) is in _includes/partials/nav.njk.
       fromLineage: true,
     },

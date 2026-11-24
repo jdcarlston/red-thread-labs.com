@@ -7,9 +7,9 @@
   {%- if item.fromLineage %}
   {#- The Library menu: about the Library, browsing it, the Library Index, the Source Map and the Research Radar. -#}
   <li class="has-sub">
-    <a href="{{ href }}"{% if page.url.startsWith(item.href) %} aria-current="page"{% endif %}>{{ item.label }}</a>
+    <a href="{{ href }}"{% if page.url.startsWith(item.section or item.href) %} aria-current="page"{% endif %}>{{ item.label }}</a>
     <ul class="sub">
-      <li><a href="/library/">About the Library</a></li>
+      <li><a href="/library/about/">About the Library</a></li>
       <li><a href="/library/browse/">Browse the Library</a></li>
       <li><a href="/library/a-z/">Library Index</a></li>
       <li><a href="/library/map/">Source Map</a></li>

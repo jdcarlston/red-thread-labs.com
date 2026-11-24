@@ -9,7 +9,7 @@ eleventyComputed:
   title: "{{ entry.title }}"
   description: "{{ entry.title }}: part of Research Library, the lineage behind Practice Labs."
 kicker: Research Library
-kickerLink: /library/
+kickerLink: /library/about/
 ---
 {%- from "partials/library-icons.njk" import libraryIcon -%}
 {%- set cluster = lineage.clusters | clusterById(entry.cluster) -%}

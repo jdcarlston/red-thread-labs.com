@@ -48,5 +48,11 @@
   status = 301
   force = true
 
-# Netlify treats /library/index/ as the folder's home page and sends it to /library/,
-# so the Library Index lives at /library/a-z/. Any old /library/index/ link lands on /library/.
+# About the Library lives at /library/about/. /library/ itself forwards there.
+# (Netlify treats /library/index/ as the folder's home page, which is why the Library Index
+# lives at /library/a-z/ instead.)
+[[redirects]]
+  from = "/library/"
+  to = "/library/about/"
+  status = 301
+  force = true
