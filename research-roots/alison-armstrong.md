@@ -20,7 +20,7 @@ concepts:
     def: What you appreciate tends to grow.
   - term: Requests over complaints
     def: Asking for what you want instead of criticizing what you got.
-context: "Armstrong offers a warm, popular version of a lesson the labs teach in many forms: stop trying to fix, correct and convince, and start partnering. We hold her gender generalizations lightly and let people test them against the real person in front of them."
+context: "Armstrong offers a warm, popular version of a lesson the labs teach in many forms: stop trying to fix, correct and convince, and start partnering. We hold her gender generalizations lightly and let people test them against the real person in front of them. Her focus on appreciation also lines up with the research on [sentiment override](/library/sentiment-override/): the warmer your overall feeling toward someone, the more kindly you read their unclear moments."
 exercise:
   title: Swap a correction for an appreciation
   time: Through the day, for a week
@@ -39,6 +39,7 @@ sources:
     url: https://search.worldcat.org/search?q=The+Queen%27s+Code+Alison+Armstrong
     label: Find the book
 related:
+  - sentiment-override
   - terry-real
   - john-gottman
   - kasia-urbaniak

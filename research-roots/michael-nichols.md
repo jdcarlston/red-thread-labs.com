@@ -12,7 +12,7 @@ header: null
 who:
   - Michael P. Nichols is a family therapist and clinical psychologist. After his PhD at the University of Rochester he trained with Salvador Minuchin at the Philadelphia Child Guidance Clinic and with Murray Bowen in Washington, D.C. He spent seventeen years at Albany Medical College, where he directed family therapy training and outpatient psychiatry, then taught psychology at the College of William & Mary from 1994. He is now professor emeritus there. His textbook *Family Therapy* has trained generations of family therapists, and he wrote books with Minuchin and with [Richard Schwartz](/library/richard-schwartz/), the founder of Internal Family Systems.
   - His own contribution was to bring the person back into the system. In *The Self in the System* (1987) he argued that family therapy had made “the system” so central that it lost sight of each family member’s own hopes, motives and feelings. In *No Place to Hide* (1991) he wrote about shame, and how much of our energy goes into hiding it or making up for it through defensiveness, arrogance, overwork or keeping people at a distance.
-  - '*The Lost Art of Listening* (1995; third edition with Martha B. Straus, 2021) brings all of this into everyday conversation. Most of us think we listen well. Nichols shows how hard it really is: to hear someone, you have to set aside your own need to be heard, the assumptions you came in with, and your reactions, which means giving up control of the conversation for a while. The third edition adds texting, social media, and talking with people across political divides.'
+  - '*The Lost Art of Listening* (1995; third edition with Martha B. Straus, 2021) brings all of this into everyday conversation. Most of us think we listen well. Nichols shows how hard it really is: to hear someone, you have to set aside your own need to be heard, the assumptions you came in with, and your reactions, which means giving up control of the conversation for a while. Research on [sentiment override](/library/sentiment-override/) shows how strong those assumptions are: how you already feel about someone changes what you hear them say. The third edition adds texting, social media, and talking with people across political divides.'
 concepts:
   - term: The yearning to be understood
     def: Being heard tells us we’re taken seriously and that what we say matters. When the people closest to us don’t listen, it hurts more than almost anything.
@@ -63,6 +63,7 @@ sources:
     url: https://doi.org/10.1146/annurev-orgpsych-012420-091013
     label: Read the review
 related:
+  - sentiment-override
   - daniel-wile
   - michael-sorensen
   - carl-rogers
