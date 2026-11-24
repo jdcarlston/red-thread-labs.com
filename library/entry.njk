@@ -29,7 +29,7 @@ kickerLink: /library/
       </ol>
       {#- Three small icons on the far right: this page in the Library Index (A to Z, at its letter),
           on the Source Map, and on the Research Radar. -#}
-      {{ libraryIcon("index", "/library/index/#pages-" + (entry.title | indexLetter), "See it in the Library Index", true) }}
+      {{ libraryIcon("index", "/library/a-z/#pages-" + (entry.title | indexLetter), "See it in the Library Index", true) }}
       {{ libraryIcon("map", "/library/map/#" + entry.slug, "See it on the Source Map") }}
       {{ libraryIcon("radar", "/library/radar/#" + entry.slug, "See it on the Research Radar") }}
     </nav>

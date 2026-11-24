@@ -1,4 +1,4 @@
-// Searching the Library Index on /library/index/.
+// Searching the Library Index on /library/a-z/.
 // Each entry carries its searchable words in data-search (its name, and its page or topic).
 // Typing hides the entries that don't match every word, then hides any letter, list or
 // letter link that has nothing left in it.

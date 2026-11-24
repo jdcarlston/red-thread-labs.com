@@ -47,3 +47,6 @@
   to = "/library/:splat"
   status = 301
   force = true
+
+# Netlify treats /library/index/ as the folder's home page and sends it to /library/,
+# so the Library Index lives at /library/a-z/. Any old /library/index/ link lands on /library/.

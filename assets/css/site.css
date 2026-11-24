@@ -1071,3 +1071,6 @@ html body .entry__tagline, html body .entry > .heart-line { font-family: var(--f
 }
 [data-tip]:hover::after, [data-tip]:focus-visible::after { opacity: 1; transform: none; }
 @media (hover: none) { [data-tip]::after { display: none; } }
+
+/* **Bold** inside a statement means really bold: the statement itself is light (300). */
+.statement strong { font-weight: 700; }

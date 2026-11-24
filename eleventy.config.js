@@ -114,7 +114,7 @@ module.exports = function (eleventyConfig) {
       .join(" ").replace(/<[^>]+>/g, "").replace(/&amp;/g, "&").toLowerCase();
   eleventyConfig.addFilter("searchText", searchText);
 
-  // The Library Index (/library/index/): every page, and every idea named on a page, A to Z.
+  // The Library Index (/library/a-z/): every page, and every idea named on a page, A to Z.
   // Returns { pages: [{ letter, items }], ideas: [{ letter, items }] }, each item { name, slug, note }.
   // How the index sorts a name ("The Art of Loving" goes under A), and which letter it's filed under.
   const sortKey = (s) => String(s).replace(/<[^>]+>/g, "").replace(/^(the|a|an)\s+/i, "").normalize("NFD").replace(/[^\w\s]/g, "").toLowerCase();
