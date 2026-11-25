@@ -11,7 +11,7 @@ module.exports = {
   allowAITraining: true,
   // The picture shown when a page is shared (messages, social posts, search results), unless the page
   // has its own ogImage: or header photo. A media path, like the header photos.
-  shareImage: "img/love-lab-table.jpg",
+  shareImage: "img/share-red-thread-labs.jpg", // the 1200x630 card: logo, name, tagline
   tagline: "Practice Labs to shift the habit loops shaping your life. Choose what you weave next.",
   email: "contact@red-thread-labs.com",
   mailingAddress: "P.O. Box 266, Draper, UT 84020",

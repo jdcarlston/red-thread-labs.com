@@ -125,7 +125,7 @@ a:hover { color: var(--cream-text); }
 .menu-panel {
   position: fixed; inset: 0; z-index: 50; overflow-y: auto;
   padding: 96px var(--gutter) 48px;
-  background: rgba(26, 11, 10, 0.97);
+  background: rgb(26, 11, 10); /* solid, so page text behind the open menu does not show through */
 }
 .menu-panel[hidden] { display: none; }
 .menu-panel ul { list-style: none; margin: 0; padding: 0; }
